@@ -49480,3 +49480,116 @@ is stopped before allocation, not every possible dimensional reduction.
   Next research requires a genuinely different construction or an actual
   missing hypothesis; no new fixed-base Hamiltonian search is selected.
   Preserve pilot-local.log, bulk artifacts and excluded nested repositories.
+
+## 2026-09-15 00:58 UTC — almost-everywhere flow completeness does not give commutation
+
+Tick began00:47:07; previous turn completed a fixed-source obstruction,
+limited screening PROGRESS, not a JC2 proof step. Fresh fetch matched
+3dcf9857940639ccfce608a6f0401928d3df4e26; only pilot-local.log dirty.
+Whole protocol/FALLACY and selected canonical history were read with
+unchanged pins. The quadratic Cremona endpoint was already in APP:
+birational linearization supplies no pole removal. No duplicate lane.
+The old Gaussian-domain/flux stop was recovered, not renewed.
+
+ROOT tested a different proposed inference for integrating Hamiltonian
+fields: infinitesimal commutation plus individual almost-everywhere
+completeness need not give commuting finite flows, EVEN for a nonsingular
+polynomial Hamiltonian field on the WHOLE complex affine plane.
+This weaker inference cannot supply the missing Keller-flow integration.
+
+Put u=x^2*y, p=x+x^5*y^2=x(1+u^2), and
+
+  q=(u+u^3/3)/p^2 = y*(1+u^2/3)/(1+u^2)^2,
+  {f,g}=f_x*g_y-f_y*g_x, delta_p={p,-}.
+
+The time coordinate q is RATIONAL, with genuine poles at u=+/-i;
+it is not a polynomial Keller mate. The polynomial p is a submersion:
+p_x=1+5u^2 and p_y=2x^3*u never vanish together. Thus
+delta_p=-2x^5*y*partial_x+(1+5x^4*y^2)*partial_y is nonzero everywhere
+and divergence-free. Directly {p,u}=xp and {p,q}=1.
+
+For every c!=0, u identifies p=c with C minus{i,-i}, by
+x=c/(1+u^2), y=u*(1+u^2)^2/c^2. On this fiber q is the restriction
+of the cubic (u+u^3/3)/c^2. Its two simple critical points +/-i are
+omitted, with critical values b_+/-(c)=+/-2i/(3c^2). Off those values
+it is a three-sheeted covering. Every horizontal or vertical q-line
+avoiding them therefore lifts for ALL real time. The exceptional initial
+points form a measure-zero set: (p,u) are global coordinates on p!=0,
+the fiberwise exceptional level sets have real area zero, and Fubini
+applies; p=0 itself has ambient measure zero.
+
+Let V and W be the realifications of delta_p and i*delta_p, normalized
+by V(q)=1 and W(q)=i. They are commuting, nonsingular real polynomial
+vector fields, and their local flows preserve ordinary real volume.
+Each is complete for almost every initial point by the preceding argument.
+But for c=1 the q-rectangle
+
+  -1+i/3 -> 1+i/3 -> 1+i -> -1+i -> -1+i/3
+
+encircles b_+=2i/3 alone. Its lifted monodromy exchanges two cubic sheets.
+Consequently the horizontal-time2 and vertical-time2/3 flow maps fail to
+commute. This is not merely a single-fiber event: all edges have positive
+distance from both critical values. Small complex variations of c and of
+the starting q retain the same monodromy; unequal endpoints persist on a
+nonempty OPEN subset of the four-real-dimensional source, hence positive
+measure. The linear control p=x, q=y has commuting complete translations.
+
+Native Astra frobenius_source_gate checked formulas, the full-plane scope,
+measure-zero qualification and open failure set, then independently observed
+COMPLETED before intake. Same-model corroboration, MANUAL/PRODUCER-CHECKED,
+UNPROMOTED, NOT FIRST. No essential-self-adjointness, operator-normality,
+polynomial-mate, actual Keller counterexample or new global restriction is
+asserted. In particular the missing SECOND polynomial coordinate is not
+recovered by this control. Stop this generic integration shortcut; no
+operator-domain, rational-mate or control-family successor is selected.
+
+Parallel native public_literature_delta completed16 multilingual searches
+and screened four works/announcement families, NO_ACTIONABLE_DELTA:
+
+- Artal Bartolo--Cassou-Nogues--Maugendre, [Quotients jacobiens d'applications
+  polynomiales](https://www.numdam.org/item/10.5802/aif.1948.pdf),2003:
+  native selected introduction/Sections3.6-3.7/4.3; ROOT independently read
+  the definition before Proposition3.14 and Corollary4.10/Remarks4.11-4.12.
+  Their all-bad-dicritical obstruction retains an unproved hypothesis for an
+  arbitrary Keller component; the paper also points to already-known Chau1999.
+  Here bad includes degree>1 OR adjacency to constant components in the
+  minimal resolution; it is not merely the degree condition. No new import.
+- [Su2023 institutional announcement](https://www.mathlabo.ecnu.edu.cn/f8/a8/c3744a522408/page.htm)
+  and [Xiang2026 AMSS announcement](https://amss.cas.cn/mzxsbg/202605/t20260509_8197791.html)
+  were search-indexed abstract/announcement checks only, colliding with
+  notes43852ff and46558ff respectively. No proof reopened or theorem imported.
+- [Ninomiya2017 thesis record](https://tokyo-metro-u.repo.nii.ac.jp/records/6425):
+  metadata/excerpts only; landing/PDF opens errored, no alternate acquisition
+  or substantive conclusion. ROOT did not read these three source bodies.
+
+Both native tasks are terminal and collected. Targeted multilingual
+discovery is not BROAD completion. No mathematical promotion or global
+rerank; this expected scoped negative is a micro-round, not a FULL trigger.
+
+## 2026-09-15 00:58 UTC LIVE STATE — flow shortcut stopped, source check collected
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved. Basis3dcf9857940639ccfce608a6f0401928d3df4e26
+  fetched equal to origin/master. Policy team/swarmHQ/README.md
+  SHA50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a;
+  COORD4ce5b29a,APPe004630b,FALLACYe47fd16c unchanged.
+- All three native agents independently COMPLETED; two bounded message-only
+  tasks collected above. No writer/model unit/science worker, provisional
+  root, FIRST debt or descendant. No verified wait or automatic successor.
+- FULL lastSep14 21:40:31,nextSep15 09:40:31; original10:17:55 miss and
+  FULL2110 qualification retained. BROAD originalSep12 21:53:56.598798932
+  overdue/access debt unchanged; stopped channels/sources and Miyanishi
+  legitimate-source gate retained. Multilingual discovery resets no clock.
+- GitHub sweep blocked, gh not authenticated; fresh tick check,0triaged,
+  openUNKNOWN,lastsuccessnone,originalSep14 16:00 miss retained. DC auth
+  still needed; no credentials, queue-body intake or GitHub communication.
+- Both personal/us-east-1 nonterminal worker selectors[] this tick.
+  Fresh00:58 coordinator3674934 tree no science, jc2 running user units0,
+  pswpin/out0/0. No AWS mutation or scientific computation. Fable cumulative
+  102473 completed lane-wall seconds unchanged; native usage/balancesUNKNOWN,
+  not a token/dollar estimate. Retained EBS remains billable.
+- Engineering CLOSED; scalar/preflight/r3 PARKED; systems NO_UPGRADE with
+  original48h debt. Bank this generic-flow inference stop and bounded watch.
+  No new closing implication was obtained. Next work must use a missing
+  ACTUAL Keller hypothesis or a genuinely different construction, not repeat
+  linearization, a.e. completeness, Gaussian moments or controls without it.
+  Preserve pilot-local.log, bulk artifacts and excluded nested repositories.

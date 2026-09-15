@@ -8,6 +8,14 @@ Its old closure statements must be read with the subsequent audit corrections.
 
 ## 2026-09-15
 
+00:58Z: [Flow-integration discriminator](notes.md#2026-09-15-0058-utc--almost-everywhere-flow-completeness-does-not-give-commutation)
+gives a nonsingular polynomial Hamiltonian field on all C2 whose real and
+imaginary flows are individually complete almost everywhere but do not
+commute on an open set. Its time coordinate is rational, NOT a polynomial
+Keller mate: the weaker integration shortcut fails, not JC2. ROOT/native
+Astra, MANUAL/PRODUCER-CHECKED, UNPROMOTED. A bounded multilingual source
+check found no actionable delta; no computation, promotion or successor.
+
 00:45Z: [Fixed Long-base Hamiltonian gate](notes.md#2026-09-15-0045-utc--fixed-long-base-has-only-one-locally-nilpotent-hamiltonian-direction)
 classifies every H in C[R,T]: its Hamiltonian is locally nilpotent exactly
 when H belongs to C[R]. Thus no algebraically independent pair in this
