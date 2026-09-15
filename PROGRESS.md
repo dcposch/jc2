@@ -8,6 +8,17 @@ Its old closure statements must be read with the subsequent audit corrections.
 
 ## 2026-09-15
 
+06:45Z: The stronger BGV local boundary-pair condition was attached at
+source-theorem scope and tested. Astra/ROOT found a simple finite free
+degree4 map from the A1 quotient, etale off a boundary whose uniformizing
+preimage is one smooth axis. Its complement is C* x C, not A2. This
+refutes the stronger LOCAL smoothness shortcut and the smooth-critical
+birationality shortcut; exact formulas are banked in notes. MANUAL/
+UNPROMOTED, not FIRST or JC2 resolution. Local tranche closed; further
+work must use global source data or an orthogonal all-degree mechanism.
+GitHub delta06:45:34 UTC empty;0 triaged/pending, next12:45:34 UTC or
+earlier tick. No paid lane, heavy computation or worker launch.
+
 06:30Z: GitHub full census/delta at06:30:05 UTC remains0 issues/0 PRs,
 0 triaged/pending; next12:30:05 UTC and every earlier tick. BGV primary
 applicability check confirms cyclic-quotient restrictions for the actual

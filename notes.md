@@ -51747,3 +51747,194 @@ remain unchanged. Event-to-terminal local test approximately7 minutes.
   two-endpoint arithmetic check was local; no heavy CAS or science job.
   Preserve pilot-local.log, bulk outputs and excluded nested repositories.
   No new global blocker, proof or counterexample.
+
+## 2026-09-15 06:37 UTC LIVE STATE — actual boundary-pair attachment
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved. Basis17dba9f13274c9bce74111b8e3edde4a5acb3de3,
+  fresh fetch matched origin; policy basis team/swarmHQ/README.md remains
+  SHA50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a.
+  Previous goal turn made scoped progress by a checked local countermodel
+  and banking, not a JC2 proof advance. Preserve unrelated pilot-local.log.
+- GitHub delta06:34:00 UTC SUCCESS/UNBLOCKED:0 issues/0 PRs changed since
+  06:30:05;0 triaged/pending. Last full census0/0 at06:30:05.
+  Next12:34:00 UTC and every earlier tick. Closed PR#1 untouched.
+- One bounded native Astra public_literature_delta source-attachment task,
+  launched about06:34, target06:43/hard06:46 UTC, message-only, no files,
+  computation, paid model or extra agent. Exact input: pinned BGVv1 proof
+  of Theorem11.2(3.c),(7), especially smooth normalized cyclic base change
+  and stabilizers on printedp54. Test whether the ACTUAL omitted-boundary
+  pair is locally a quasi-etale cyclic quotient of a smooth pair with one
+  smooth axis, not merely a cyclic quotient surface with arbitrary smooth
+  boundary. Completion/analytic/global scopes remain distinct. ROOT owns
+  independent local finite-map implications and source-history comparison.
+- This is a changed actual-source hypothesis and decisive test, not an
+  extension of the A4 coefficient/control family. The previous example's
+  lifted boundary is a cusp, so it cannot settle this stronger condition.
+  No countermodel construction or birationality theorem is assumed.
+  Other native tasks terminal; no report lease, provisional root, FIRST,
+  descendant, worker or paid lane. All46 ranks/accepted claims unchanged.
+- FULL0405 last04:39:01/next16:39:01 UTC; BROAD originalSep12
+  21:53:56.598798932 overdue/access-degraded. Systems NO_CHANGE/NO_UPGRADE,
+  original48h debt; source gates and stops retained. Engineering CLOSED;
+  scalar/preflight/r3 PARKED. Last06:30:06 fleet selectors[]/[], process
+  tree no science, running jc2 services0, swap counters0/0. No AWS mutation.
+  Fable104688 terminal lane-wall seconds unchanged, not billing/credits;
+  balancesUNKNOWN and retained EBS billable. No global blocker or cadence
+  reset; no source-to-target closing implication has yet been obtained.
+
+## 2026-09-15 06:42 UTC event — source attachment collected; literal map test
+
+Astra public_literature_delta terminal06:38:01 (start06:34:58), message-only
+source attachment collected; ROOT independently read the charged proof.
+The actual one-boundary pair is analytically (C2,{u=0})/H, H cyclic and
+small, not only a cyclic quotient surface. BGVv1 text2865--2869,
+2887--2898 gives the smooth normalized cyclic base change and disjoint
+smooth special-fiber components. For base parameter z with div(z)=qE,
+z=w^q and ord_{Y_i}(w)=1 imply q*e(Y_i/E)=q, so no inertia along E.
+Exclude the auxiliary zero fiber; the cover is then quasi-etale near the
+singular point. Use the point stabilizer H=G_p, not necessarily all of
+G=Z/q. Averaging a defining function of the one Y_i through p and a
+complementary cotangent eigenvector gives convergent analytic coordinates
+preserving the smooth axis. This is not a global polynomial coordinate
+claim, canonical index-one cover, or reduced scheme-pullback assertion.
+The KM/BCW dependencies inside BGV were not independently re-audited.
+MANUAL/UNPROMOTED source applicability; no mathematical promotion.
+
+One native Astra zero_base_constructive standalone discriminator launched
+about06:39, target06:49/hard06:52 UTC, no extension/files/CAS/paid model/
+extra agents. Literal question: can f,g in C{u,v}^{mu_m}, action
+(u,v)->(zeta*u,zeta^a*v), gcd(a,m)=1,m>1, define a finite germ with
+J(f,g)=u^k*unit? This task does NOT consume the unpromoted source
+attachment as a premise; it tests the explicit pair condition independently.
+The elementary character congruence k+1+a=0modm, hence gcd(k+1,m)=1,
+is necessary, not contradictory. Smooth ramification need not have smooth
+image or corank1: (x^2+y^3,x^3+(3/2)xy^3) is a finite degree9 control
+with Jacobian-(9/2)y^5 and cusp image of its smooth critical line.
+ROOT separately checks source implications and primary classification scope.
+Other natives terminal. No provisional root, FIRST or dependent descendant.
+No renewal beyond this changed-source tranche without a decisive change.
+
+## 2026-09-15 06:45 UTC — smooth-axis countermodel
+
+Native Astra zero_base_constructive terminal06:43:06 UTC, independently
+confirmed COMPLETED and collected. The stronger standalone local
+impossibility claim is REFUTED by the following explicit model. ROOT
+independently differentiated, checked the quotient map, supplied the monic
+finite-algebra presentation and checked the complete cusp pullback.
+MANUAL/PRODUCER-CHECKED, UNPROMOTED; no different-model FIRST, provisional
+root or downstream dependency. The source reader also independently
+confirmed terminal; its latest native wall span is183s, not billing.
+
+Take m=2,a=1 and action (u,v)->(-u,-v). Define invariant polynomials
+
+    f=uv+v^4,
+    g=3u^2+12uv^3+8v^6.
+
+Directly,
+
+    J=v(36uv^2+48v^5)-(u+4v^3)(6u+12v^3)=-6u^2.
+
+The common zero fiber is just0: f=v(u+v^3), with g=3u^2 on v=0
+and g=-v^6 on u=-v^3. Their local intersection multiplicity is2+6=8.
+On the single smooth reduced critical curve u=0, the restriction
+v->(v^4,8v^6) has degree2 onto the cusp t^2=64s^3. Thus smooth
+critical support does NOT imply a primitive/birational discriminant
+parametrization, even for finite smooth-plane germs.
+
+The quotient surface and boundary are
+
+    S=Spec C[X,Y,Z]/(XY-Z^2), E=(X=Z=0),
+    X=u^2,Y=v^2,Z=uv.
+
+S has the normal A1 cyclic quotient singularity at0; E=Spec C[Y] is
+smooth and reduced. Its descended map is
+
+    rho:S->A2_(s,t),
+    s=Z+Y^2, t=3X+12ZY+8Y^3.
+
+The exact global finite-algebra certificate is
+
+    C[S] = C[s,t,Y]/P,
+    P=Y^4-6sY^2+tY-3s^2,
+    Z=s-Y^2, X=(t-12sY+4Y^3)/3.
+
+Substitution gives XY-Z^2=P/3; these formulas are inverse ring maps.
+Since P is monic, rho is finite free of rank4. Also P_Y=3X on S,
+so the monic presentation directly proves etaleness when X!=0.
+This is exactly S\E. The uniformizing cover is etale away from0 and
+the reduced inverse image of E is the SINGLE SMOOTH axis u=0. Its
+scheme-theoretic ideal is (u^2,uv)=u(u,v), not the reduced ideal (u).
+Consequently this model satisfies the strengthened local pair condition.
+
+Keep the full target-cusp pullback, not only the critical curve:
+
+    g^2-64f^3=u^3(9u+8v^3).
+
+The second factor is a distinct, generically unramified component;
+generic ramification index along u=0 is3. Downstairs E has parameter
+Y=w and maps w->(w^2,8w^3), birationally onto the cusp. Upstairs the
+same map has normalization degree2, as the quotient formula requires.
+
+Outside-actual negative control: S\E=D(X) is explicitly
+Spec C[X^{+/-1},Z], because Y=Z^2/X there. Its nonconstant unit X
+excludes A2. Neither the nonconstant-Jacobian pair (f,g) nor the map
+from singular S is a Keller counterexample. The example refutes neither
+BGV nor the existence of stronger GLOBAL constraints on a Keller
+normalization. The degree4 proper leg is not an actual degree4 Keller
+map and does not conflict with the accepted low-geometric-degree bound.
+
+Decision: the local singularity-type and strengthened smooth-axis
+shortcuts now both fail; end this local tranche, with no parameter,
+group, singularity or control-family successor. The changed source
+attachment was worth testing, but it does not remove the global
+whole-A2-complement/finite-map compatibility gap. Next exploration must
+use that global data or pivot to an orthogonal all-degree mechanism.
+
+Primary scope this tranche: BGVv1 proof of11.2, especially normalized
+cyclic base change and stabilizers, on the prior unchanged PDF/text pins.
+ROOT's read of Orevkov2026,
+https://www.math.univ-toulouse.fr/~orevkov/k-en.pdf , Sections1--4 through
+Theorem2 and the start of its proof, confirms that its classification
+assumes a one-Puiseux-pair target curve AND componentwise bijectivity of
+the whole discriminant pullback. It cannot supply the missing
+bijectivity. No whole-paper/dependency audit or new imported theorem.
+Nine targeted ROOT discovery queries, not BROAD; incidental repository
+and secondary snippets were not opened or adopted. No stopped/denied
+source retried. No heavy computation or external paid model.
+
+## 2026-09-15 06:47 UTC LIVE STATE — local boundary-pair tranche closed
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved. Basis
+  17dba9f13274c9bce74111b8e3edde4a5acb3de3, fresh fetch matched origin.
+  Policy basis team/swarmHQ/README.md
+  SHA50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a.
+  AGENTS/COORDINATION/FALLACY and BGV source pins unchanged. Owned
+  journal/digest and APP navigation pointer only; current dirty APP
+  SHA0b2e5073ceecf92a79f70998d9c36a9660c7aa21a43a69c7c13f43f5fae28e7d.
+  All46 ranks and accepted claims unchanged; preserve pilot-local.log.
+- GitHub delta2026-09-15 06:45:34 UTC SUCCESS/UNBLOCKED:0 issues/0 PRs
+  changed since06:34:00;0 triaged/pending. Last full census0/0 at06:30:05.
+  Next2026-09-15 12:45:34 UTC and every earlier tick. No triage lane,
+  public item action or merge; closed PR#1 untouched.
+- All native tasks terminal/collected. The new source-pair attachment and
+  exact A1 degree4 countermodel are MANUAL/UNPROMOTED, not FIRST or a
+  JC2 proof advance. No active lane, worker, science, report lease,
+  provisional root, review debt from these drafts or descendant. The
+  local singularity/axis-pair tranche is CLOSED. No further local control,
+  group, coefficient or singularity-family successor. Next research must
+  test a history-checked GLOBAL whole-A2-source implication or an
+  orthogonal all-degree proof/counterexample mechanism. The global
+  normalization/finite-map compatibility gap is unchanged.
+- FULL0405 completed04:39:01/next16:39:01 UTC; original miss and
+  qualification retained. BROAD Sep12 21:53:56.598798932 remains overdue/
+  access-degraded, no clock reset. Systems NO_CHANGE/NO_UPGRADE with
+  original48h debt; stopped sources/human gates retained. Engineering
+  CLOSED; scalar/preflight/r3 PARKED.
+- Fresh06:45:34 personal/us-east-1 nonterminal worker selectors[]/[];
+  coordinator3674934 process tree no science, running jc2 services0,
+  pswpin/out0/0. No AWS mutation, paid model or heavy computation.
+  Fable104688 cumulative terminal lane-wall seconds unchanged, not billing.
+  Native source task183s reported wall span; map task only approximate
+  start recorded, no fabricated exact duration. BalancesUNKNOWN;
+  retained EBS billable. Excluded nested repositories/bulk outputs untouched.
+  No new global blocker, proof or Keller counterexample.

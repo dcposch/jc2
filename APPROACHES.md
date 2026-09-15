@@ -582,6 +582,15 @@ This locates one necessary half-ramification LC failure, not every possible
 failure. Rationality away from q does not establish LC of the pair there;
 the September14 17:58 check withdraws ROOT's stronger task wording.
 
+The September15 [smooth-axis discriminator](notes.md#2026-09-15-0645-utc--smooth-axis-countermodel),
+MANUAL/UNPROMOTED, also defeats a purely LOCAL affine-smoothness shortcut.
+BGV's cyclic-base-change proof supplies a local smooth-axis quotient pair,
+but an explicit A1-quotient finite degree4 map is etale off just such a
+boundary. Its complement is C* x C, NOT A2. Smooth critical support also
+does not force birationality onto the discriminant upstairs. The global
+whole-plane complement remains essential; no local-family successor,
+accepted-claim change or global rerank is selected.
+
 The September14 [03:41 exactness/index-one check](notes.md) reuses the
 EXISTING T:t^2-1=x^2Z, not a new surface family. Its marked plane area form
 is globally exact and nowhere zero, while the finite full-normalization map
