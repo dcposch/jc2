@@ -8,6 +8,14 @@ Its old closure statements must be read with the subsequent audit corrections.
 
 ## 2026-09-15
 
+05:31Z: Sep15 arXiv AG/AC/CV announcement lists are now fresh; bounded
+Astra/ROOT primary screening found no new closing hypothesis. Anick jet
+approximation still lacks polynomial algebraization; the conductor result
+does not prove normalization equality. An actual Keller automorphism has
+nonzero interior toric residue, so the new residue criterion cannot be
+read as a general properness test. MANUAL/UNPROMOTED source check; no
+JC2 advance, paid lane, computation or BROAD reset.
+
 05:23Z: GitHub authentication confirmed by successful full open-census
 and updated-since queries:0 issues/0 PRs, no triage or item action needed.
 Next sweep deadline11:23:18 UTC, and every earlier tick. Policy basis and

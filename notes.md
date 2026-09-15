@@ -51216,3 +51216,99 @@ flow, control, degree, minimization or compactification tranche selected.
   terminal lane-wall seconds unchanged, not credits/billing/CPU/tokens.
   Native usage/balancesUNKNOWN; retained EBS billable. Preserve unrelated
   pilot-local.log, bulk artifacts and excluded nested repositories.
+
+## 2026-09-15 05:31 UTC — Sep15 primary announcement delta collected
+
+The previous turn completed the requested GitHub sweep/bank, not a
+mathematical advance. Native Astra public_literature_delta completed its
+bounded message-only check05:19:52--05:24:23 UTC, before the05:28 hard stop;
+ROOT independently observed COMPLETED before this intake. All four charged
+APP/COORD/team/FALLACY postpins matched. No files, computation or descendants.
+
+The arXiv announcement-state limitation has changed: math.AG/new,
+math.AC/new and math.CV/new now display Tuesday September15. Native traversed
+all entries at title/abstract/replacement-comment scope, NOT all paper bodies:
+AG105=38new+15cross+52replacement; AC27=9+5+13; CV36=16+6+14. These are
+category-entry counts, not distinct-paper counts. Eight supplementary queries
+restricted to arXiv/HAL found NO_ACTIONABLE_DELTA. This is partial primary
+coverage, not an exhaustive literature claim or BROAD reset.
+
+- Diaz--Lucchini Arteche--Manzano-Flores,2609.13741v1, submitted Sep12
+  06:25:07 UTC, https://arxiv.org/html/2609.13741v1 . Theorem5.6 is Anick's
+  approximation theorem: for every jet order a possibly different tame
+  automorphism exists. It supplies neither a polynomial inverse nor a degree
+  bound independent of that order. ROOT read the introduction and whole short
+  Theorem5.6 proof, plus the selected Proposition5.4 tail, not the full
+  dependency chain. The introduction's unqualified "recently disproved"
+  parenthesis is not a new plane theorem or exhibit; do not confuse the
+  campaign's already-recorded higher-dimensional disproof with JC2.
+- Jebasingh,2609.14084v1, submitted Sep12 17:55:56 UTC,
+  https://arxiv.org/html/2609.14084v1 . Theorem1.2 concerns an oriented ideal
+  in R[T], assumes smooth normalization and a conductor-height inequality,
+  and constructs a comaximal residual complete-intersection ideal. It does
+  not identify R with its normalization. ROOT read introduction/Question1.1/
+  Theorem1.2 and selected preliminaries through Corollary2.7, not the main
+  proof. The polynomial-extension variable matters: no claim that the
+  theorem is vacuous for a two-dimensional base is made.
+- D'Andrea--Dickenstein,2601.13977v2, revised Sep12 18:58:15 UTC,
+  https://arxiv.org/html/2601.13977v2 . Metadata reports a Lemma6.1 correction.
+  Theorem1.4 relates absence of toric boundary intersections to vanishing of
+  ALL interior-support residues, under indecomposable supports and a finite
+  common-zero locus in the simplicial part. ROOT read introductory residue
+  definitions and Theorems1.1/1.4/1.5; native additionally read the corrected
+  lemma statement and selected proof excerpts. No whole-paper verification
+  or theorem promotion. The source does not derive its vanishing from det1.
+
+ROOT's direct applicability discriminator, MANUAL/PRODUCER-CHECKED,
+UNPROMOTED: take the actual automorphism p=x+y^2, q=x+y^2+y, with J=1.
+At target(a,b)=(2,3), p-a and q-b have the single torus zero(x,y)=(1,1).
+Both Newton polygons are P=conv{(0,0),(1,0),(0,2)}. The exponent(1,1)
+lies strictly inside2P, and the toric Jacobian is xy. Thus the global
+torus residue of h=xy is1, not0. The inverse is y=q-p,
+x=p-(q-p)^2. Consequently full residue vanishing is NOT a consequence of
+the Keller condition, even for a proper automorphism. Toric intersections
+at infinity for these two closures are not nonproperness of the map.
+This single source-interface check selects no residue/control family or
+mathematical promotion; a target-frame selection premise would be a separate
+missing theorem, not supplied here.
+
+Native exact-id/title history search found no lexical matches for the three
+sources in its named ledgers/reduction map; that is not novelty certification.
+Their approximation and normalization interfaces meet existing global gaps.
+ROOT's separate coframe check recovered AUDIT11609ff's Wright equivalence
+and fixed Broughton-row stop; no new elementary-matrix implication emerged.
+Four ROOT discovery queries concerned exact coframes and the introductory
+general-JC status phrase. Incidental secondary/social results were neither
+opened nor adopted; no stopped source was retried. A combined APP/source
+tool output clipped, so only subsequent visible bounded windows count as
+ROOT reads. No accepted foundation was reverified and no automatic successor
+to these source screens is selected. JC2 remains unresolved.
+
+## 2026-09-15 05:31 UTC LIVE STATE — primary check closed
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved; basis
+  168cc80c1f2c1823b8c73516a7ab639a867b7d5d, freshly matched to origin.
+  Policy basis team/swarmHQ/README.md
+  SHA50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a.
+  Journal/digest bank only; all46 ranks and accepted claims unchanged.
+- GitHub sweep05:25:10 UTC SUCCESS/UNBLOCKED, updated since05:23:18;
+  0issues/0PRs/0triaged/0pending. Last full open census0/0 at05:23:18.
+  Next deadline11:25:10 UTC, and every earlier tick. No item actions.
+- All three native agents terminal/collected. No paid lane, worker, science,
+  report lease, provisional root, FIRST debt or descendant. The targeted
+  Sep15 source check is closed without a new global closing hypothesis.
+  Next work requires a changed actual-source implication or complete
+  construction, history-checked before commissioning; no local family
+  expansion or accepted-bound recheck. Engineering CLOSED; scalar/preflight/
+  r3 PARKED; existing stops/source gates unchanged.
+- Last FULL0405 completed04:39:01/next16:39:01 UTC; original FULL miss and
+  qualification retained. BROAD Sep12 21:53:56.598798932 remains overdue/
+  access-degraded despite fresh Sep15 announcement coverage. Systems
+  NO_CHANGE/NO_UPGRADE with original48h debt retained. No global blocker
+  or proof/counterexample is declared.
+- Last verified fleet/process state05:23: both nonterminal worker selectors[],
+  coordinator tree has no science, running jc2 services0, pswpin/out0/0.
+  No AWS mutation or external paid-model use this turn. Fable cumulative
+  104688 terminal lane-wall seconds unchanged, not metered billing/credits.
+  Native author span271s, not credits; balancesUNKNOWN, retained EBS billable.
+  Preserve pilot-local.log, bulk outputs and excluded nested repositories.
