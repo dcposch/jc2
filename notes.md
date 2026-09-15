@@ -49392,3 +49392,91 @@ FIRST, classification search or successor. NO_NEW_CLOSING_TEST.
   change an actual-source test or supply a construction, not classify groups
   under the missing nonvanishing/rationality hypotheses. Preserve unrelated
   pilot-local.log, bulk artifacts and excluded nested repositories.
+
+## 2026-09-15 00:45 UTC — fixed Long base has only one locally nilpotent Hamiltonian direction
+
+Tick began00:31:58 on3ec02e626f5960acd9732f5b1f34d7616c2cd64d.
+Selected history/source reads recovered the existing embedded-plane,
+canonical fixed-pair and tangent-coordinate stops. No donor-family scan
+or repeat ambient-counterexample audit was launched. Fresh arXiv metadata
+for Gao2608.00222, Kistner-Shaska2608.02863 and Long2608.23777 showed
+the same v1 versions. Two discovery queries supplied no new selected donor;
+secondary/social hits were not evidence. This is not BROAD completion.
+
+ROOT read Long's opening, bracket convention and Section3 definitions
+through the opening of H, not the whole paper this tick. In source
+coordinates (x,q,p,z), put
+
+  a=1-3xq, beta=3x^2*p+2a*z-9q^2, y=q-x*beta/3, u=xy,
+  R=x(2-3xq),
+  T=-((1+u)^3*beta+y^2*(1+u)*(4+3u))/2,
+  {f,g}=f_p*g_x-f_x*g_p+f_z*g_q-f_q*g_z, delta_H={H,-}.
+
+These are the fixed formulas of [Long v1, Sections2-3](https://arxiv.org/html/2608.23777v1).
+The source attachment is not a promotion of its ambient claims. ROOT's
+bounded gate and native Astra corroboration give, for EVERY H(U,V) in C[U,V],
+
+  delta_(H(R,T)) is locally nilpotent iff H belongs to C[U].
+
+Proof: delta_R=-(2-6xq)*partial_p+3x^2*partial_z is locally nilpotent:
+it fixes its coefficients and lowers degree in p,z. Direct substitution
+gives delta_R(beta)=delta_R(y)=0, hence {R,T}=0. At (1,0,0,0),
+beta=y=0, beta_p=3, y_p=-1, and T_p=-3/2. Thus delta_T(x) is
+nonzero. Also dR=2dx-3dq there while dT has nonzero dp coefficient,
+so R,T are algebraically independent; no ambient symplectic audit is needed.
+
+If delta_(H(R,T)) is locally nilpotent, its invariant R=x(2-3xq)
+forces x invariant by factorial closure of an LND kernel. For completeness,
+in a characteristic-zero domain the top Leibniz term gives
+deg_delta(fg)=deg_delta(f)+deg_delta(g); an invariant product therefore
+has invariant factors. The chain rule now gives
+
+  0=delta_(H(R,T))(x)=H_V(R,T)*delta_T(x).
+
+The domain property and algebraic independence give H_V=0, hence H in C[U].
+Conversely delta_(h(R))=h'(R)*delta_R is LND because its multiplier is
+in ker(delta_R). This includes constants. Controls: H=U succeeds and
+H=V fails. In particular NO algebraically independent pair in C[R,T]
+has both Hamiltonians LND; polynomial base reparameterization cannot fix
+the proposed simultaneous-LND reduction. Hamiltonians involving D,S are
+OUTSIDE this conclusion. The putative common-kernel polynomial-plane
+quotient was conditional, not established or needed for this failed gate.
+
+Native frobenius_source_gate completed a message-only check and the all-H
+refinement; terminal COMPLETED was independently observed. It used ROOT's
+primary formulas and did not independently browse. Same-model corroboration,
+MANUAL/PRODUCER-CHECKED/UNPROMOTED, NOT FIRST. No new general JC2
+constraint, counterexample, promotion, numerical computation or automatic
+coordinate/Hamiltonian-family successor. The exact fixed-source shortcut
+is stopped before allocation, not every possible dimensional reduction.
+
+## 2026-09-15 00:45 UTC LIVE STATE — fixed-source gate collected, upstream already included
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved. Basis3ec02e626f5960acd9732f5b1f34d7616c2cd64d.
+  Fresh fetch matches origin/master; operator commits bf1e1ffe and91041f0b
+  are verified ancestors. No rebase or change to pilot-local.log was needed.
+  Policy basis team/swarmHQ/README.md
+  SHA50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a;
+  COORD4ce5b29a,APPe004630b,FALLACYe47fd16c unchanged. No global rerank.
+- All three native agents independently COMPLETED. No live writer,
+  model unit, science worker, provisional root, FIRST debt or descendant.
+  No verified wait, new closing mechanism or automatic successor claimed.
+- FULL lastSep14 21:40:31,nextSep15 09:40:31; original10:17:55 miss and
+  FULL2110 qualification retained. BROAD originalSep12 21:53:56.598798932
+  overdue/access debt retained. Stopped channels/sources and Miyanishi
+  legitimate-source gate remain as recorded00:20; targeted source reads
+  and version checks reset neither FULL nor BROAD.
+- GitHub sweep blocked, gh not authenticated; fresh post-fetch check.
+  0triaged,openUNKNOWN,lastsuccessnone; originalSep14 16:00 miss retained.
+  DC authentication need surfaced again; no credential or queue action.
+- Both personal/us-east-1 nonterminal worker selectors[] this tick;
+  second response collected after context continuation. Fresh00:45
+  coordinator3674934 process tree no science, running jc2 user units0,
+  pswpin/out0/0. No AWS mutation or scientific compute. Fable cumulative
+  102473 completed lane-wall seconds unchanged, not dollars/tokens/credits/
+  CPU. Native usage and balances UNKNOWN; retained EBS remains billable.
+- Engineering CLOSED; scalar/preflight/r3 PARKED; systems NO_UPGRADE,
+  original48h debt retained. Bank this exact source-attached discriminator.
+  Next research requires a genuinely different construction or an actual
+  missing hypothesis; no new fixed-base Hamiltonian search is selected.
+  Preserve pilot-local.log, bulk artifacts and excluded nested repositories.

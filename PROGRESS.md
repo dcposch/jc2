@@ -8,6 +8,14 @@ Its old closure statements must be read with the subsequent audit corrections.
 
 ## 2026-09-15
 
+00:45Z: [Fixed Long-base Hamiltonian gate](notes.md#2026-09-15-0045-utc--fixed-long-base-has-only-one-locally-nilpotent-hamiltonian-direction)
+classifies every H in C[R,T]: its Hamiltonian is locally nilpotent exactly
+when H belongs to C[R]. Thus no algebraically independent pair in this
+fixed subalgebra supplies the proposed simultaneous-LND reduction. Changes
+involving D,S are not excluded. ROOT/native Astra, MANUAL/PRODUCER-CHECKED,
+UNPROMOTED; no JC2 closure, computation or family successor. Fresh fetch
+confirms both operator commits already included; GitHub auth still needed.
+
 00:29Z: [Galois-volume scope check](notes.md#2026-09-15-0029-utc--galois-volume-does-not-give-a-linear-symplectic-inertia-group)
 stops a proposed monodromy shortcut: the invariant form on the Galois
 closure vanishes at ramification, so finite linear symplectic-group
