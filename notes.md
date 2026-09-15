@@ -51513,3 +51513,237 @@ repeat lane. All46 ranks and accepted claims remain unchanged.
   task start not reported, so no invented duration; balancesUNKNOWN,
   retained EBS billable. Preserve pilot-local.log, bulk outputs and excluded
   nested repositories. No new global blocker or proof/counterexample.
+
+## 2026-09-15 06:17 UTC LIVE STATE — BGV normalization applicability check
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved; basis
+  cea67adfa63dfcd34793bf52d4ef91ffc7cfd974 freshly matched to origin.
+  Policy basis remains team/swarmHQ/README.md SHA50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a.
+  Previous turn completed banking/scoped work, not a JC2 proof advance.
+- GitHub delta06:09:14 UTC SUCCESS/UNBLOCKED, updated since06:07:04,
+  0 issues/0 PRs;0 triaged/pending. Last full census0/0 at06:07:04.
+  Next12:09:14 UTC and every earlier tick. No item actions or triage lane.
+- One bounded native Astra message-only task public_literature_delta:
+  BGV2609.05746v1 Section11 applicability and its line-bundle/torsor
+  terminology; target06:24/hard06:27 UTC, no extension, files, computation,
+  extra agents or paid model. Test whether a stated theorem supplies a
+  stronger actual-source normalization condition; do not conflate a
+  one-boundary sphere-like surface with the entire normalization, or a
+  source-coordinate ruling with a target inverse-line pencil. ROOT owns
+  independent Section10/25 comparison and terminal intake. Other natives
+  remain terminal. No new claim, provisional root, FIRST or descendant.
+- Targeted boundary/lattice history recovered notes44240--44282,
+  44730--44752,45024--45060,45382--45415. Divisor independence and the
+  ordinary-versus-log ramification distinction were already recorded;
+  no repeat theorem, tree enumeration or geometry-control family.
+- FULL0405 last04:39:01/next16:39:01; BROAD originalSep12
+  21:53:56.598798932 remains overdue/access-degraded. Systems NO_CHANGE/
+  NO_UPGRADE/original48h debt, source gates and stopped channels retained.
+  Engineering CLOSED; scalar/preflight/r3 PARKED. No science, paid lane,
+  worker or AWS mutation. Last06:07:06 fleet/process check empty/no science/
+  pswpin-out0/0; Fable104688 terminal lane-wall seconds unchanged, not
+  credits/billing. BalancesUNKNOWN; retained EBS billable. Preserve
+  pilot-local.log, bulk outputs and excluded nested repositories.
+
+## 2026-09-15 06:28 UTC event — BGV intake and bounded local discriminator
+
+The preceding BGV task completed06:20:26 UTC (reported start06:17:14;
+192 seconds native wall span, not a billing meter). Its message-only
+Section11 applicability check is collected. Cor11.4 gives disjoint omitted
+A1 components, and Theorem11.2(7),(10) gives cyclic quotient singularities
+in characteristic zero, at most one per one-boundary affine enlargement.
+Cor11.8(6), not a whole-surface one-point bound, controls their total count.
+Lemma11.1 concerns SOURCE-coordinate maps to P1, not generic inverse TARGET
+lines. The Section25/Remark25.6 example makes the Section11 line-bundle
+terminology an affine-line torsor, not a promised vector-bundle zero section.
+No source-to-target closing implication or mathematical promotion follows.
+
+A native Astra message-only zero_base_constructive task launched around
+06:21 UTC: can a singular normal cyclic quotient surface admit a finite
+map to C2 that is etale off one reduced smooth irreducible curve through
+the singularity? Target06:32/hard06:35 UTC, no extension, files, heavy
+computation or extra agents. ROOT independently owns construction/attack.
+Do not assume the curve Cartier, its quotient-cover inverse image reduced
+or smooth, its image smooth, or the map a generic projection. A candidate
+A4-quotient construction is under producer check, not yet frozen, promoted
+or licensed for dependent work. The map is not a Keller map and its curve
+complement is not A2. Other native tasks terminal; no external paid lane,
+worker, report lease, FIRST or descendant. Operational clocks and policy
+basis remain those in the preceding LIVE STATE; no cadence reset.
+
+## 2026-09-15 06:30 UTC event — exact local countermodel, scoped stop
+
+Native Astra zero_base_constructive completed06:28:29 UTC, independently
+confirmed COMPLETED and collected by ROOT. MANUAL/PRODUCER-CHECKED,
+UNPROMOTED; same-model checks do not constitute FIRST. No standalone report,
+provisional root or descendant. This is a countermodel to the newly proposed
+LOCAL singularity-exclusion lemma, not a Keller pair or an actual-source
+normalization. No accepted campaign claim is overturned.
+
+The literal local implication tested was: if a normal cyclic quotient
+surface germ admits a finite dominant map to the smooth plane, etale off
+one reduced smooth irreducible curve through its singular point, then the
+surface must be smooth. The following coefficient-certified model defeats
+that implication, even with a finite GLOBAL polynomial map from the quotient.
+
+Work over C. Let b be the unique real root in (11/14,79/100) of
+
+    q(b)=14b^4+20b^3+21b^2-98b+49.
+
+The endpoint values are 3/2744>0 and -5433/50000000<0. Since
+q''(b)=168b^2+120b+42>0 for b>0, two roots inside this interval
+would force positivity at its right endpoint; existence and uniqueness
+follow. ROOT independently checked the two rational values with a tiny
+Fractions-only evaluation, not CAS or a search; the proof is manual.
+Put
+
+    a=(7/6)(1/b-b-2), c=(3a-5)/4, d=b+10/7, e=-1/(2b),
+    A(t)=1+a*t+b*t^2, B(t)=1+c*t+d*t^2+e*t^3.
+    Q(t)=4t*A'(t)*B(t)-A(t)*B(t)-3t*A(t)*B'(t).
+
+Its coefficient vector, in increasing powers, is
+
+    (-1,3a-4c,7b-7d,4bc-3ad-10e,bd-6ae,-2be).
+
+The definitions immediately give the constant, linear, quadratic and
+quintic coefficients of (t-1)^5. The cubic coefficient is
+-5b-30a/7+5/b=10. The remaining quartic equality is
+bd-6ae+5=q(b)/(14b^2)=0. Thus Q(t)=(t-1)^5 exactly.
+ROOT independently reconstructed this whole coefficient calculation.
+
+The surface and reduced curve are
+
+    Y=Spec C[U,V,W]/(UV-W^5),
+    E: U=W^2, V=W^3.
+
+Y is the normal cyclic quotient C2/mu5 for
+(x,y)->(zeta^2*x,zeta^3*y), with U=x^5,V=y^5,W=xy.
+Indeed an invariant monomial has x- and y-exponents congruent modulo5,
+giving these generators and relation. It is singular at the origin.
+The quotient ring defining E is C[W], so E is reduced, smooth, irreducible.
+Define the polynomial map
+
+    rho(U,V,W)=(V+aW^3+bUW, VW+cW^4+dUW^2+eU^2).
+
+Its lift through pi:C2->Y is the ordinary polynomial pair
+
+    f=y^5+a*x^3*y^3+b*x^6*y=y^5*A(t),
+    g=x*y^6+c*x^4*y^4+d*x^7*y^2+e*x^10=x*y^6*B(t),
+    t=x^3/y^2.
+
+The expressions using t are read first on y!=0; the expanded polynomials
+define the global map. With weights (2,3), their degrees are15 and20,
+so both are mu5-invariant. Differentiating before substitution gives
+
+    J(f,g)=5*y^10*Q(x^3/y^2)=5*(x^3-y^2)^5.
+
+Nonvanishing/finite-map check: A(0)=B(0)=1 and b,e are nonzero. At t=1,
+let m,n be the multiplicities of A,B, allowing zero. If m+n>0, the
+leading derivative coefficient of Q is a nonzero multiple of4m-3n;
+this is nonzero for 0<=m<=2,0<=n<=3 except (0,0). Therefore
+ord_1 Q=m+n-1<=4, contradicting ord_1 Q=5. Hence A(1)B(1)!=0.
+Any common root of A,B would be a zero of Q, hence1, which was excluded.
+Thus A and B are coprime. On x=0 the first component is y^5; on y=0
+the second is e*x^10; elsewhere a common zero would require a common
+root of A,B. The zero fiber is consequently just the origin.
+
+Positive weighted homogeneity upgrades this to global finiteness: R=C[x,y]
+has finite-dimensional R/(f,g); homogeneous lifts of a basis generate R
+over C[f,g] by induction on weight. The nonzero Jacobian makes f,g
+algebraically independent. They are a regular sequence, and the quotient
+Hilbert series is (1-z^15)(1-z^20)/((1-z^2)(1-z^3)), of value50 at z=1.
+The corresponding graded free module over C[f,g] surjects onto R and
+has the same Hilbert series, so its kernel is zero. Thus the lifted map
+is finite of degree50. The invariant ring is an intermediate submodule
+of this finite module over the Noetherian ring C[f,g], hence is finite
+as well. Since pi has field degree5, rho has degree10.
+
+The scheme-theoretic pullback of the ideal of E is
+
+    (x^3-y^2)*(x^2,y^3),
+
+NOT the reduced cusp ideal; its reduced support is the cusp x^3=y^2.
+The mu5 action is free off the origin. There pi is etale, and the displayed
+Jacobian shows rho is etale at every point of Y outside E. On E,
+
+    rho|E(w)=(A(1)*w^3,B(1)*w^4),
+
+so the image is a (3,4)-cusp, birationally parametrized, not a smooth curve.
+At its generic point rho has transverse ramification index6 (the
+Jacobian has order5 in characteristic zero). No Cartier, simple-branch,
+smooth-image, reduced/smooth-pullback or generic-projection assumption
+was inserted. The smooth quotient cover is NOT a canonical index-one
+cover: A4 is already Gorenstein. An earlier informal use of "index cover"
+in the message exchange is superseded by this precise distinction.
+
+Meaningful outside-actual control: h=x^3-y^2 is mu5-semi-invariant, so
+h^5 descends to a nonconstant regular function on Y whose zero support
+is E. It is a nonconstant unit on Y\E, which therefore is NOT A2.
+The pair (f,g) has nonconstant Jacobian, and rho has singular domain.
+Neither is a JC2 counterexample. Actual-source affine smoothness is not
+disproved; only the stated local shortcut is. No local family expansion,
+coefficient farm, promotion review or automatic successor is selected.
+
+Provenance and primary-source scope: ROOT first supplied a degree10 dessin
+with cycle types (4,4,2), (3,3,3,1), (6,1,1,1,1); Astra checked it and
+then solved the coefficient identity by hand. ROOT's read of Sijsling--
+Voight, https://www.numdam.org/item/10.5802/pmb.5.pdf , introduction,
+Section1 Proposition1.2/1.4 and genus formula(1.5) supports that discovery
+route. No Riemann-existence import is needed for the coefficient proof
+above, and no identification of the selected quartic root with a specific
+monodromy conjugacy class is claimed. This is not a full-paper read.
+
+The BGV source remains https://arxiv.org/pdf/2609.05746v1 ; the live arXiv
+metadata still lists only v1, submittedSep4, not a new revision inferred
+from its internal PDF date. Reused PDF SHA814c3f2572f660a47778663384077d6357e9947f1585c1e16372f6cdbe138425
+and text SHA07465b6c788a469b0d4e77f8ac2cbf7f6ae23025e6c142fcc741bc66716047b2
+at box/websweep-20260909T2220Z-astra/bgv-v1.{pdf,txt}, unchanged pre/post.
+Astra read Section11 and the Section25 torsor comparison; ROOT read
+Definition2.3, selected Sections8/9/11, Section10, and Section25 through
+Remark25.6, not the complete proof dependency chain. For the actual
+Keller normalization, the source restrictions in the preceding event
+are external-theorem applicability observations, not new campaign theorems.
+The old Borisov author PDF
+https://people.math.binghamton.edu/borisov/documents/papers/ampleramification.pdf
+already announces the cyclic-quotient restriction; ROOT read its opening,
+Section2 and Theorem3.1 statement/start, not the whole paper. Do not claim
+novelty or conflate its log ramification sum e_i*E_i with ordinary
+ramification sum (e_i-1)*E_i. The Lê--Maugendre--Weber publisher request
+yielded only the abstract, not a theorem supplying the missing implication.
+Eight targeted ROOT discovery queries this tranche, not a BROAD sweep;
+no stopped or denied source was reopened. All46 ranks and accepted claims
+remain unchanged. Event-to-terminal local test approximately7 minutes.
+
+## 2026-09-15 06:30 UTC LIVE STATE — local shortcut closed; GitHub empty
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved. Basis
+  cea67adfa63dfcd34793bf52d4ef91ffc7cfd974, fresh fetch matched origin.
+  Policy basis team/swarmHQ/README.md
+  SHA50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a;
+  AGENTS/COORDINATION/FALLACY/APP pins revalidated unchanged. Owned
+  journal/digest bank only; accepted claims and all46 ranks unchanged.
+- GitHub sweep2026-09-15 06:30:05 UTC SUCCESS/UNBLOCKED. Full open
+  censuses and deltas since06:09:14 returned0 issues/0 PRs;0 triaged,
+  pending0. No triage lane, public item action, review or merge. Closed
+  CI smoke-test PR#1 untouched. Next2026-09-15 12:30:05 UTC and every
+  earlier coordinator tick.
+- Native tasks terminal/collected. BGV applicability and the exact A4 local
+  countermodel are MANUAL/UNPROMOTED, not FIRST or JC2 progress. No active
+  paid lane, science, worker, report lease, provisional root or descendant.
+  The local singularity-exclusion shortcut is closed at its literal scope;
+  no automatic control-family successor. Next research requires a changed
+  global actual-A2-source implication or complete construction, checked
+  against history first. Engineering CLOSED; scalar/preflight/r3 PARKED.
+- FULL0405 completed04:39:01/next16:39:01 UTC, original miss and
+  qualification retained. BROAD Sep12 21:53:56.598798932 remains overdue/
+  access-degraded; stopped channels and source gates unchanged. Systems
+  NO_CHANGE/NO_UPGRADE, original48h debt retained. No cadence reset.
+- Fresh06:30:06 personal/us-east-1 nonterminal worker selectors both[];
+  coordinator3674934 tree no science, running jc2 services0, pswpin/out0/0.
+  No AWS mutation or external paid model. Fable cumulative104688 terminal
+  lane-wall seconds unchanged, not credits/billing. BGV native wall span
+  192s; local task launch only approximately timestamped, so no invented
+  exact duration. BalancesUNKNOWN; retained EBS billable. A tiny exact
+  two-endpoint arithmetic check was local; no heavy CAS or science job.
+  Preserve pilot-local.log, bulk outputs and excluded nested repositories.
+  No new global blocker, proof or counterexample.

@@ -8,6 +8,16 @@ Its old closure statements must be read with the subsequent audit corrections.
 
 ## 2026-09-15
 
+06:30Z: GitHub full census/delta at06:30:05 UTC remains0 issues/0 PRs,
+0 triaged/pending; next12:30:05 UTC and every earlier tick. BGV primary
+applicability check confirms cyclic-quotient restrictions for the actual
+affine normalization, not smoothness. A bounded Astra/ROOT test produced
+an exact degree10 finite map from the singular A4 surface to C2, etale off
+one smooth curve: the proposed local smoothness shortcut fails. Its curve
+complement is NOT A2; no Keller pair or JC2 resolution. Coefficients and
+full manual derivation banked in notes; MANUAL/UNPROMOTED, no FIRST,
+paid lane, heavy computation, rank change or automatic successor.
+
 06:07Z: Authenticated GitHub full census and delta sweep at06:07:04 UTC
 found0 open issues/0 open PRs;0 triaged/pending, no item action or lane.
 Next deadline12:07:04 UTC and every earlier tick. Banked the completed
