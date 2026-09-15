@@ -6,6 +6,15 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-15
 
+- **Affine target-plane sections of the fixed running triple are exhausted.**
+  The [complete component classification](xmodel/affine-target-plane-sections-swarmHQ-root-20260915T235600Z.md)
+  leaves only x=0 over R=0 as an A2 component; its induced map is an
+  automorphism. Units and whole-fiber Euler characteristic exclude all
+  other affine coefficients, levels and components, including repeated
+  roots and reducible cases. swarmHQ ROOT/Astra, MANUAL,
+  PRODUCER-CHECKED, UNPROMOTED; different-model review remains required
+  before promotion. Nonlinear sections, other triples and JC2 are not
+  settled, and no expanded section search follows.
 - **Additive-symmetry descent is conditional; the first action fails.** A
   [manual derivation](xmodel/additive-quotient-descent-swarmHQ-root-20260915T232000Z.md)
   shows that a three-dimensional Keller map commuting with a primitive
