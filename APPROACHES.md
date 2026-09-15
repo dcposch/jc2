@@ -498,7 +498,7 @@ geometric properties alone do not give a coordinate-pulling ruling; the
 actual etale-source implication is still missing. No donor/control successor.
 
 **Selected integral coordinate is not yet a closing implication.** The
-September13 05:49 and 23:42 [journal checks](notes.md) retain the missing
+September13 05:49 and [23:42 journal check](notes.md#2026-09-13-2342-utc----integral-coordinate-and-published-proof-scope-checks) retain the missing
 second-coordinate integrality step. [Moskowicz1509.06362v2](https://arxiv.org/html/1509.06362v2),
 Theorem5.1, explicitly assumes complementary-variable monicity; removing it
 requires an additional relation for the other coordinate in the following
@@ -507,6 +507,15 @@ source change need not preserve selected-coordinate integrality. No checked
 theorem closes the arbitrary integral-coordinate endpoint; this is a scope
 GAP, not a falsehood or exhaustive literature claim. Stop unchanged ruling
 extensions and integral-coordinate endpoint retries.
+
+The 23:42 check ALREADY includes the geometric consequence: the full
+normalization has generic A1 fiber and omitted boundary vertical over
+finitely many values of the selected coordinate; disconnected special
+fibers and poles of the other coordinate remain possible. The September15
+[02:40 retry](notes.md#2026-09-15-0240-utc--integral-coordinate-retry-stopped-at-existing-gap)
+is DUPLICATE/GAP, not new mathematics. Its algebraic variant gives
+A[x] finite free over A, not normality of A[x] or flatness of R over A[x].
+These are different arrows. No new endpoint, promotion, or successor.
 
 The [exact-volume refinement](box/exact-volume-no-coordinate-gate-fable5-20260913/INTAKE.md)
 is now PROMOTED/MANUAL after ROOT production and Fable FIRST:

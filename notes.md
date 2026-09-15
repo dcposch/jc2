@@ -50192,3 +50192,104 @@ No new theorem imported, stopped-channel access or BROAD completion.
 - Engineering CLOSED; scalar/preflight/r3 PARKED; systems NO_UPGRADE,
   original48h debt retained. Bank only notes/PROGRESS/APP; preserve
   pilot-local.log, bulk artifacts and both excluded nested repositories.
+
+## 2026-09-15 02:40 UTC — integral-coordinate retry stopped at existing gap
+
+Previous user-directed turn completed the requested Git synchronization,
+but was NO PROGRESS toward JC2, not a verified research wait. Both operator
+commits bf1e1ffe and91041f0b are ancestors of HEAD3e036cc6; pull reported
+already current. This goal tick began02:27:25 with a fresh matching fetch,
+only pilot-local.log dirty. The earlier unbanked02:12--02:24 exploration
+supplied no closing implication: Lie integration and fixed-R symplectic
+reduction collided with prior records. The contemplated all-linear Long
+Hamiltonian extension was NOT commissioned, promoted, or used downstream.
+
+This tick tested whether integrality of an arbitrary selected source
+coordinate x over A=C[f,g] forces automorphy of an actual Keller pair.
+ROOT's proposed geometric route was NOT new: the September13 23:42 event
+above already proves that the full finite normalization has generic A1
+fiber and that omitted boundary is vertical over finitely many x-values.
+It already retains disconnected special fibers and the uncontrolled y-poles.
+ROOT identified this exact collision after launch and stopped the repeat.
+The existing stop should have been followed before commissioning; this is
+a routing failure, not a third informative tranche or a new proof mechanism.
+APP now points directly to that event and states the geometric stop.
+
+Native Astra's distinct algebraic check,02:31:03--02:37:26, stayed within
+its original twelve-minute cap and ended GAP/KNOWN. ROOT independently
+observed COMPLETED before binding its final response. For
+
+  A subset B=A[x] subset S subset R=C[x,y],
+
+integrality makes the minimal polynomial monic with coefficients in the
+normal ring A, so B is finite FREE over A. The accepted Formanek field
+interface identifies Frac(B)=Frac(R), not normality of B. The transfer
+argument in Moskowicz1606.04531v2, Section2 second proof,
+https://arxiv.org/html/1606.04531v2 , requires B normal, equivalently under
+its stated hypotheses R flat over B. These concern different maps from
+B flat over A. ROOT read
+the displayed second proof and its hypotheses; the cited Adjamagbo theorem
+was NOT independently audited or newly imported. No actual B-normality,
+R/B-flatness, second integrality, or counterexample was obtained.
+
+A tiny ROOT manual wrong-arrow control, NOT a Keller source: put
+A0=C[p,q], B0=A0[t]/(t^2-p^2*q) inside R0=C[u,v] by
+p=u,q=v^2,t=uv. Both B0 and R0 are free rank2 over A0, and B0,R0
+have the same fraction field. But v is integral and absent from B0;
+at m=(p,q,t), R0/mR0=C[v]/(v^2) has dimension2 despite generic
+rank1 over B0. Thus R0 is not flat over B0. This only refutes the
+formal freeness/flatness inference after dropping etaleness: J(u,v^2)=2v.
+It does NOT refute that implication with all actual Keller hypotheses.
+MANUAL/UNPROMOTED, no FIRST or control-family successor selected.
+
+The original monicity qualification remains unchanged. ROOT's selected
+primary read of https://arxiv.org/html/1509.06362v2 covered the relevant
+preliminaries and Sections3--5; Theorem5.1 and its following paragraph
+still require complementary-variable monicity or an extra y relation.
+The rest of the ten ROOT discovery queries supplied no applicable new
+theorem. Search snippets, including Moh's same monic setting, were only
+discovery; no complete literature census or BROAD reset is claimed.
+
+ROOT whole-read FULL2110 synthesis and source-volume-residue-integration-
+root-20260911.md, SHA91ce3ee72fcdf88091806a9c7990f0c0be48006c45b42930272f5bc1a34f5eb8.
+The latter identifies the reconstructed positive-volume-order surface
+exactly as the OLD Wright m3,alpha1=-1 case. No new surface result or
+successor. The prior ruling report's selected text and current hash
+5585d8b34b45552330a95950fd01c4907f70527ea5d5f9c3b10b016ae5e160ce
+were checked; no new whole-report claim for that clipped read.
+Governing files/FALLACY were whole-read; several aggregate APP/history
+outputs clipped, so no whole-map or exhaustive-history refresh is asserted.
+Native governing/map pins matched before and after, before ROOT edits.
+No new closing test, global rerank, promotion, or scientific execution.
+
+## 2026-09-15 02:40 UTC LIVE STATE — duplicate endpoint closed
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved. Basis
+  3e036cc6c5daccb9ad592c8123284592b8375d60 matches fresh origin/master.
+  Policy basis team/swarmHQ/README.md
+  SHA50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a;
+  COORD4ce5b29a,FALLACYe47fd16c unchanged. APP change is a direct history
+  pointer and wrong-arrow warning, not a new claim or ranking.
+- All three native agents independently COMPLETED. No external model unit,
+  scientific worker/job, active provisional root, FIRST debt or descendant.
+  Integral-coordinate retry CLOSED/DUPLICATE/GAP; no automatic successor.
+- Immediate queue: bank the precise failure and stop; next protected work
+  must supply a genuinely different actual-source implication or complete
+  construction, checked against the exact dated stop before commissioning.
+  No more selected-coordinate geometric/monic/finite-free retries, abstract
+  module families, Laurent/Long extensions, or finite-window computation.
+- FULL lastSep14 21:40:31,nextSep15 09:40:31; originalSep14 10:17:55 miss
+  and FULL2110 workflow qualification retained. No critical event or reset.
+  BROAD originalSep12 21:53:56.598798932 remains overdue/access-degraded;
+  stopped channels and legitimate-source gates unchanged. Targeted reads
+  are not a complete sweep. Systems NO_UPGRADE; original48h debt retained.
+- GitHub sweep blocked, gh not authenticated, fresh02:37 check;0triaged,
+  openUNKNOWN,lastsuccessnone,originalSep14 16:00 miss retained. Requirement
+  surfaced to DC; no queue-body, credential, or external-message action.
+- Both personal/us-east-1 nonterminal worker selectors[] at02:37. Fresh
+  coordinator3674934 tree has no science, running jc2 units0, pswpin/out0/0.
+  No AWS mutation/computation or paid external lane. Fable cumulative
+  103186 terminal lane-wall seconds unchanged; native usage/balancesUNKNOWN,
+  not billing. Retained EBS remains billable. Engineering CLOSED;
+  scalar/preflight/r3 PARKED. Bank only notes/PROGRESS/APP and preserve
+  pilot-local.log, bulk artifacts and both excluded nested repositories.

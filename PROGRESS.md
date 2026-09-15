@@ -8,6 +8,12 @@ Its old closure statements must be read with the subsequent audit corrections.
 
 ## 2026-09-15
 
+02:40Z: The [selected-integral-coordinate retry](notes.md#2026-09-15-0240-utc--integral-coordinate-retry-stopped-at-existing-gap)
+returned DUPLICATE/GAP: the geometric argument was already in September13's
+journal, and finite freeness does not supply the required normality or
+second-coordinate integrality. Stopped and linked the exact earlier analysis;
+no mathematical advance, promotion, paid external lane or computation.
+
 02:10Z: The [cofinite-center cusp test](notes.md#2026-09-15-0210-utc--cofinite-center-euler-tests-do-not-supply-source-structure)
 gives a nonzero acyclic algebraic Weyl module passing joint Euler and
 tested Bass-operator injectivity in EVERY polynomial frame centered off
