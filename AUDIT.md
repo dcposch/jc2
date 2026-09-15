@@ -23113,3 +23113,55 @@ request was sent, and the Keller-specific headline itself is not refuted.
   scope. No theorem puts an arbitrary counterexample in the covered strata.
   JC2 remains unresolved. No automatic common-root family, computation,
   dimensional-descent successor or stronger classification follows.
+
+### TANGENT-GRAPH-FIRST-PAIR-1 — 2026-09-15
+
+- PROMOTED / MANUAL, self-contained polynomial proof. Producer swarmHQ
+  ROOT (gpt-6-astra), [sealed proof](xmodel/tangent-graph-first-pair-swarmHQ-root-20260915T180230Z.md),
+  full4a2b0b3b92ca94b54c8807c39fa1afed0fd6bf60e3b866fdb4fa588a0ab2de3d,
+  manifest49a6a3e610bf6d7aa301605747b88d4679981dc9b8a7cc76f2a035e36f4cdcbf.
+  [Different-model Sol review](xmodel/tangent-graph-first-pair-review-swarmHQ-sol-20260915T180600Z.md),
+  full1b9445377b234479bad14ae84518870c21d04c5879e639639caf8f48b232a8e2,
+  manifest94ec2d0fd84200fa528b5e1b8c40e6070932061b2a8cca7fc6223f35a86673ff,
+  CONFIRMED the exact degree, subalgebra and whole-triple statements.
+  Review consumed banked contributiona5431f85d9522b569109209badf05a1b32e11a65.
+  ROOT collected terminal author, verified expected basis/manifest,0444
+  modes and unchanged whole-read pre/post hashes before integration.
+- General statement over C: gamma!=0 in C[x,y], p in C[w], d=deg p>=2,
+  u=1+xy, w=gamma*u, C=x*gamma, and D=(p(w)+2gamma)/(x*gamma) POLYNOMIAL
+  on the WHOLE A2. Put n=deg_y gamma and h(x)=lc_y gamma. Then
+
+      J(C,D)=p'(w)*(gamma+x*gamma_x+gamma_y/x)+2*gamma_y/x,
+      deg_y J(C,D)=d*(n+1)-1,
+      lc_y J(C,D)=d*p_d*(x*h)^(d-1)*(h+x*h').
+
+  The first formula is derived in C(x)[y], with its whole expression
+  polynomial by hypothesis. The coefficient h+x*h' cannot vanish for
+  nonzero polynomial h in characteristic zero. The remaining derivative
+  term has degree at most n-1 and is the ZERO POLYNOMIAL when n=0, not
+  a degree-zero term. Thus the displayed positive degree is exact. The
+  polynomial chain rule and units of C[x,y] exclude every Keller pair
+  inside C[C,D], not merely the original two generators.
+- For gamma=gamma0+a*xy+b*x^2*z with gamma0*b!=0 and the literal whole
+  polynomial tangent triple (C,D,E), q'=wp'/2, the earlier necessary
+  admissibility identities p=wA,q=w^2B,A(gamma0)=-2,B(gamma0)=-1 force
+  d>=2. Substitution z=Z(x,y), for ANY polynomial Z, therefore lands in
+  the theorem. No gcd condition, graph-degree cap or fixed donor degree.
+  The proof does not require computing the ambient mapping degree or
+  rechecking any accepted low-degree Keller bound.
+- Manual controls: gamma=1,p=-2w^2 gives J=-4-4xy; gamma=1+xy with
+  the same p gives degree3 and leading -8x^3. At d=1, gamma=1,p=-2w
+  gives (x,-2y), a Keller pair, so the hypothesis is load-bearing.
+  The controls concern the larger statement, not admissible full triples.
+- Prior-scope clarification: the all-graph/linear-projection and one-sided-
+  graph/all-output theorems concern a FIXED older ambient core. They and
+  this all-p/first-pair result have complementary hypotheses, not a blanket
+  inclusion relation. The producer's 'genuinely dependent on x,y' describes
+  allowed graph dependence; neither it nor the review excludes n=0.
+  Component-fiber and embedded-source/FULL-output transfer do not supply
+  the present projection statement. No external novelty claim.
+- Pairs involving E, rational target changes, other source orientations,
+  arbitrary embedded/nonpolynomial planes, and general JC2 maps are not
+  covered. Discard this exact first-pair graph construction without a
+  coefficient search; no automatic graph, other-output, control-family
+  or rational-target successor. JC2 remains unresolved.

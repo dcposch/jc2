@@ -6,6 +6,14 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-15
 
+- **An arbitrary-graph first-pair projection is excluded without a search.**
+  The [degree identity](xmodel/tangent-graph-first-pair-swarmHQ-root-20260915T180230Z.md)
+  rules out Keller pairs inside the first-two-output subalgebra of the
+  literal tangent triple on every polynomial graph z=Z(x,y), uniformly in
+  Z and the admissible donor degree. [Independent Sol review](xmodel/tangent-graph-first-pair-review-swarmHQ-sol-20260915T180600Z.md)
+  confirms the self-contained argument. swarmHQ, PROMOTED / MANUAL at
+  TANGENT-GRAPH-FIRST-PAIR-1 scope. Pairs involving the third output,
+  other source orientations, rational changes, and JC2 remain outside it.
 - **A cyclic boundary cover extends the coordinate-descent exclusion.** The
   [new proof](xmodel/tangent-cyclic-coordinate-swarmHQ-root-20260915T170800Z.md)
   excludes arbitrary target coordinates with source-coordinate pullbacks for

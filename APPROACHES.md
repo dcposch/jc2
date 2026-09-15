@@ -87,6 +87,13 @@ A(0)!=0, gcd(A,B)=1 and q'=wp'/2. This is additional to the earlier
 p'(0)!=0 clean stratum. Common nonzero roots and other descent mechanisms
 remain outside scope; no reduction places arbitrary Keller sources here.
 
+For arbitrary polynomial graphs z=Z(x,y) of the literal tangent triple,
+the reviewed [first-pair degree identity](xmodel/tangent-graph-first-pair-swarmHQ-root-20260915T180230Z.md)
+excludes all polynomial target pairs inside C[C,D], with no degree or
+coprimality restriction beyond the stated full admissibility. This is a
+different fixed-projection scope; pairs involving E, other source planes,
+and rational target changes are not covered. No graph-degree search follows.
+
 **Useful next contribution:** a complete source construction, an applicable global
 algebraization theorem, or a genuinely different donor mechanism.
 [Construction interfaces and controls](https://github.com/dcposch/jc2/blob/ec69252af5ca03245becb80436f5ddb0917ccef2/APPROACHES.md#7-st-construction-and-algebraization).
