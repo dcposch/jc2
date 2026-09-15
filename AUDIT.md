@@ -1,3 +1,21 @@
+# Evidence navigation
+
+The ledger below preserves accepted claims and subsequent corrections. Start with
+[the current research frontier](APPROACHES.md), then retrieve the exact claim and
+review chain you need. Read historical headlines with their later corrections.
+
+- [Recent reviewed contributions and controls](PROGRESS.md)
+- [Global reduction dependencies](ladder/REDUCTION.md)
+- [Complete pre-transition scope map](https://github.com/dcposch/jc2/blob/ec69252af5ca03245becb80436f5ddb0917ccef2/APPROACHES.md)
+- [Historical derivations and failed approaches](notes.md)
+
+Search this file for exact report claim IDs or linked producer/reviewer filenames.
+An old handoff, clock, or LIVE STATE cited below is historical provenance; current
+operations belong to each swarm's separate workspace. The layout transition changes
+no mathematical statement, evidence tier, review verdict, or dependency below.
+
+---
+
 # AUDIT.md — campaign evidence and trust-boundary ledger
 
 ## Cubic-block reading correction — 2026-09-12 02:56 UTC

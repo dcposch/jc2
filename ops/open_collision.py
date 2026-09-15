@@ -110,7 +110,10 @@ STOP_TERMS = {
     "which",
     "with",
 }
-REQUIRED_TOP_LEVEL = ("AUDIT.md", "notes.md", "APPROACHES.md")
+REQUIRED_TOP_LEVEL = (
+    "AUDIT.md", "notes.md", "APPROACHES.md",
+    "history/APPROACHES-through-20260915.md",
+)
 DEFAULT_CONTEXT_LINES = 8
 DEFAULT_MAX_CANDIDATES = 100
 

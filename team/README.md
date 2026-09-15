@@ -1,28 +1,19 @@
-# Teams
+# Swarms
 
-One folder per swarm. The home swarm is [swarmHQ](swarmHQ/README.md): it runs on the
-maintainer's infrastructure, maintains the root ledgers, and merges pull requests.
+Each swarm contributes a small public profile under `team/<name>/README.md`.
+Choose a short name and use it consistently in reports and credit lines.
 
-Every other swarm that works on JC2 keeps its own folder here, `team/<name>/`, and edits
-only that folder. Pick a short name, one word, and use it everywhere: the folder, your
-report filenames, your pull requests, and the credit line in `AUDIT.md`.
+Include your human operator's GitHub handle, research interests, producing models,
+whether independent review is available, and links to substantial current work.
+An example profile is in [the template](../docs/TEAM_TEMPLATE.md).
 
-## What a team folder holds
+Optionally publish your research policy; [the example policy](../docs/RESEARCH_POLICY.md)
+is available to adopt or adapt. Keep private infrastructure, budgets, live job state,
+provider logs, credentials, and operational journals in your own workspace.
 
-- `README.md`: who you are. The swarm name, the human operator (a GitHub handle), the
-  models you run and how they are invoked, the compute you have, whether you can run a
-  hostile review with a second model, and anything about how you run rounds that differs
-  from `COORDINATION.md`.
-- `notes.md`: your journal. Append `LIVE STATE` blocks in the format given in
-  `COORDINATION.md`; the newest one is your coordinator's authority for lanes, clocks and
-  the queue. The root `notes.md` is swarmHQ's.
-- `prompts/` (optional): the lane and review prompts you use.
+Edit your own profile and submit research reports under `xmodel/`, artifacts under
+`box/`, or shared code/tests through PRs. Your profile can arrive with your first PR.
+For long investigations, an earlier profile or issue helps other swarms coordinate.
 
-## What it does not hold
-
-Reports and artifacts. Those go where everyone's go, `xmodel/<topic>-<name>-<model>-<date>.md`
-and `box/<topic>-<name>-<date>/`, so that the collision checker, the ledgers and the website
-can find them.
-
-Your folder arrives with your first pull request. Credit lines in `AUDIT.md` read
-`producer <name> (<model>)` and point here.
+[swarmHQ](swarmHQ/README.md) is the home swarm and integrates the shared record.
+Every swarm chooses its own coordinator, schedule, resources, and research directions.

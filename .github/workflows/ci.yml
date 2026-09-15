@@ -39,8 +39,8 @@ jobs:
           if grep -Eq $'^A\trefs/.*\\.pdf$' changes.txt; then
             echo '::error::third-party PDFs are not added to refs/'; fail=1
           fi
-          if [ "$ASSOCIATION" != OWNER ] && grep -Eq $'\t(AUDIT|APPROACHES|PROGRESS|notes|COORDINATION)\\.md$|\tops/FLEET\\.md$|\tteam/swarmHQ/' changes.txt; then
-            echo '::error::the root ledgers, ops/FLEET.md and team/swarmHQ/ are maintained by swarmHQ; open an issue instead'; fail=1
+          if [ "$ASSOCIATION" != OWNER ] && grep -Eq $'\t(AUDIT|APPROACHES|PROGRESS|notes|COORDINATION)\\.md$|\tteam/swarmHQ/' changes.txt; then
+            echo '::error::the root ledgers and team/swarmHQ/ are maintained by swarmHQ; open an issue instead'; fail=1
           fi
           exit $fail
       - name: PR body follows the template
@@ -66,6 +66,9 @@ jobs:
       # The planeprobe test writes its results into runs/, which is git-ignored.
       - run: mkdir -p runs
       - run: python -m pytest tests -q -p no:cacheprovider --ignore=tests/test_farm.py --ignore=tests/test_parity.py --deselect tests/test_conjE.py::test_sweep
+
+      - name: Contribution tool regressions
+        run: python -m pytest ops/test_open_collision.py ops/test_lane_fallacy.py -q
 
   reports:
     if: github.event_name == 'pull_request'

@@ -1,56 +1,24 @@
-# jc2 compute fleet (self-sufficient, math-hq-driven)
+# Optional AWS worker implementation
 
-Ephemeral CAS workers launched from **math-hq** with the **jc2-fleet** key. No
-`claude-cli` key and no IAM instance profile are needed (the role denies SSM,
-EC2 Instance Connect, and PassRole; this path avoids all three).
+This directory contains the worker launcher used by swarmHQ. Other swarms may use
+other infrastructure. Deployment configuration, machine inventory, budgets, and
+current authorization belong in the operator's workspace.
 
-## Bounded jobs: current opt-in path
+## Interfaces
 
-[job.sh](job.sh) uses one manifest and one bounded service, preserving phase
-logs, partial outputs and terminal receipts. Its corrected version passed
-different-model static review and the [September13 AWS regression](../../box/execution-reliability-pilot-root-20260913/RESULT.md).
-[JOB.md](JOB.md) is the hash-frozen reviewed interface; its introductory
-pre-test status is superseded by that result. Scientific workloads still need
-their own qualification. No implicit retries or automatic migration.
+- `fleet.sh`: provisioning, transfer, execution, and collection. Inspect the script's
+  environment/configuration assumptions before adapting it to another account.
+- `job.sh`: one manifest and one bounded service, retaining logs, partial output,
+  and terminal receipts. [JOB.md](JOB.md) is its reviewed interface.
+- Worker provisioning installs the mathematical tools used by the campaign and
+  records the installed versions; replay instructions must name those versions.
 
-The legacy commands below are historical interface examples, not launch or
-broad-termination authority. Current exact-ID ownership, registration and
-retirement rules are in [FLEET.md](../FLEET.md) and the newest LIVE STATE.
+The corrected bounded-job implementation passed the
+[September 13 regression](../../box/execution-reliability-pilot-root-20260913/RESULT.md).
+That is a scoped engineering result, not qualification of every scientific workload.
+Use the owning swarm's current runbook for launch and recovery. Confirm exact ownership
+before stopping resources; a batch finishing never authorizes fleet-wide termination.
 
-## Stack installed per worker (worker-userdata.sh)
-Singular, msolve (apt/universe), python-flint, sympy, and the campaign PyPI
-tools **qqideal** and **msolveio** (latest). Provisioning is fail-gated: a worker
-writes `~/PROVISION_DONE` only if `import sympy, qqideal, msolveio` succeeds;
-`~/PROVISION_VERSIONS` records the versions.
-
-## Networking
-Workers get a **public IP** (needed for apt/pip outbound) but are reached from
-math-hq over their **private IP** (same subnet/SG). SSH: `~/.ssh/jc2-fleet`.
-
-## Usage
-```
-ops/fleet/fleet.sh launch 4 c7i.4xlarge spot  # 4 spot workers (~58% cheaper, restartable)
-ops/fleet/fleet.sh wait all               # block until provisioned; prints versions
-ops/fleet/fleet.sh ips                     # list workers
-ops/fleet/fleet.sh push <IP> box/job/ '~/job/'
-ops/fleet/fleet.sh run  <IP> 'cd ~/job && Singular -q run.sing > out.txt'
-ops/fleet/fleet.sh pull <IP> '~/job/out.txt' ./results/
-ops/fleet/fleet.sh term-all               # terminate every jc2-worker when idle
-```
-
-## Instance types (subagent research 2026-09-05)
-- **Default `c7i.4xlarge`** (x86, 16 vCPU / **8 physical cores** / 32 GB). Run
-  ONE Singular job per physical core (~8), leave hyperthreads idle for CAS.
-- **Big-memory fallback `r7i.4xlarge`** (128 GB), `r7i.8xlarge` (256 GB) for the
-  largest standard bases.
-- **Cost lever `c7g.4xlarge`** (Graviton/arm64): **16 real cores**, ~half $/core.
-  Ubuntu ships arm64 singular/msolve; validate once, then set `DEFAULT_TYPE=c7g.4xlarge`.
-- Quota headroom ~984 On-Demand Standard vCPUs (~61 4xlarge workers). Spot is a
-  separate pool, ~55-70% cheaper, ideal for this restartable batch workload.
-
-## Stop-idle discipline
-Workers are ephemeral. `term-all` when a batch finishes. Never leave idle workers.
-
-Workers launch with `--enable-api-termination` (the installed CLI flag used by
-`fleet.sh`): keep fleet terminable; do not re-enable API termination protection.
-The former `--no-disable-api-termination` spelling was rejected by this CLI.
+See [shared compute expectations](../FLEET.md) and [replay requirements](../../docs/REPLAY.md).
+Historical scripts and registrations retain their original scope; stale example
+addresses, quotas, or commands do not authorize new work.

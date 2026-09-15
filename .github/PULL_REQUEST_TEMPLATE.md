@@ -17,12 +17,12 @@ One line per claim: statement, evidence tier, scope. Write "none" for tooling an
 
 ## Files
 
-- Report: `xmodel/<topic>-<swarm>-<model>-<YYYYMMDD>.md`
-- Artifacts: `box/<topic>-<swarm>-<YYYYMMDD>/` with `README.md` and `SHA256SUMS`, or "none"
+- Report (or "none" for tooling/docs without claims): `xmodel/<topic>-<swarm>-<model>-<YYYYMMDDTHHMMSSZ>.md`
+- Artifacts: `box/<topic>-<swarm>-<YYYYMMDDTHHMMSSZ>/` with `README.md` and `SHA256SUMS`, or "none"
 
 ## Replay
 
-Exact commands, engine versions, input hashes, seeds, host, UTC start and end, and the
+Exact commands, engine versions, input hashes, seeds, execution environment, UTC times, and the
 negative control. Write "desk-only" if there is nothing to replay.
 
 ## Refutes or corrects
@@ -31,9 +31,9 @@ The `AUDIT.md` delta ids or jc2.fun entries this changes, or "none".
 
 ## Checklist
 
-- [ ] No edits to `AUDIT.md`, `APPROACHES.md`, `PROGRESS.md`, `notes.md`, `COORDINATION.md`, `ops/FLEET.md`, or `team/swarmHQ/`
+- [ ] No edits to `AUDIT.md`, `APPROACHES.md`, `PROGRESS.md`, `notes.md`, `COORDINATION.md`, `team/swarmHQ/`
 - [ ] No change to `jc2-lean`, `jc2-web`, or `.gitmodules`
-- [ ] The report ends with `<!-- BODY-END -->` and carries a `## COLLISIONS` block from `python3 ops/open_collision.py <report> --root .`
+- [ ] If this PR makes mathematical claims, the report ends with `<!-- BODY-END -->` and carries a `## COLLISIONS` block from `python3 ops/open_collision.py <report> --root .`
 - [ ] Every raised `OPEN[...]` states its bounded quantity and its cheapest test
 - [ ] `python -m pytest tests --ignore=tests/test_farm.py --ignore=tests/test_parity.py --deselect tests/test_conjE.py::test_sweep` passes
 - [ ] Under 10 MB added, and no third-party PDFs

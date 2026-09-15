@@ -20,7 +20,9 @@ class OpenCollisionTests(unittest.TestCase):
         self.addCleanup(self.temporary.cleanup)
         self.root = Path(self.temporary.name)
         (self.root / "xmodel").mkdir()
-        for name in ("AUDIT.md", "notes.md", "APPROACHES.md"):
+        for name in ("AUDIT.md", "notes.md", "APPROACHES.md",
+                     "history/APPROACHES-through-20260915.md"):
+            (self.root / name).parent.mkdir(parents=True, exist_ok=True)
             (self.root / name).write_text("banked control\n", encoding="utf-8")
 
     def run_tool(self, report_text: str) -> subprocess.CompletedProcess[str]:
@@ -91,6 +93,17 @@ class OpenCollisionTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertIn("## COLLISIONS\n\nstatus: EMPTY", result.stdout)
         self.assertIn("`OPEN[QUASIFOAM-MERIDIAN-COUNT]` (report:3): NONE", result.stdout)
+
+    def test_archived_strategy_remains_in_the_collision_corpus(self) -> None:
+        (self.root / "xmodel" / "bank.md").write_text("unrelated banked work\n")
+        archive = self.root / "history/APPROACHES-through-20260915.md"
+        archive.write_text("The quasifoam meridian count is bounded by the degree.\n")
+        result = self.run_tool(
+            "OPENS RAISED      OPEN[QUASIFOAM-MERIDIAN-COUNT] "
+            "bound the quasifoam meridian count in terms of the degree.\n"
+        )
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("history/APPROACHES-through-20260915.md:1", result.stdout)
 
     def test_missing_required_bank_file_fails_closed_with_a_block(self) -> None:
         (self.root / "xmodel" / "bank.md").write_text("x <= y\n", encoding="utf-8")
