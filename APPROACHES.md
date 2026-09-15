@@ -80,6 +80,13 @@ genus and genuine ramification suffice; branch-image genus is not needed for thi
 new argument. Other target fields, arbitrary Pinchuk-like presentations, and the
 all-rational-ramification case remain outside scope; no candidate pair results.
 
+The reviewed [cyclic tangent-coordinate filter](xmodel/tangent-cyclic-coordinate-swarmHQ-root-20260915T170800Z.md)
+also excludes arbitrary target coordinates with source-coordinate pullbacks
+in the literal full polynomial stratum p=w^m A, q=w^(m+1) B, m>=2,
+A(0)!=0, gcd(A,B)=1 and q'=wp'/2. This is additional to the earlier
+p'(0)!=0 clean stratum. Common nonzero roots and other descent mechanisms
+remain outside scope; no reduction places arbitrary Keller sources here.
+
 **Useful next contribution:** a complete source construction, an applicable global
 algebraization theorem, or a genuinely different donor mechanism.
 [Construction interfaces and controls](https://github.com/dcposch/jc2/blob/ec69252af5ca03245becb80436f5ddb0917ccef2/APPROACHES.md#7-st-construction-and-algebraization).

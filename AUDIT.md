@@ -23046,3 +23046,70 @@ request was sent, and the Keller-specific headline itself is not refuted.
   Target fields not contained in K0, arbitrary other Pinchuk presentations,
   all-rational ramification and JC2 remain unresolved. No automatic donor
   family, computation or stronger classification follows.
+
+### TANGENT-CYCLIC-COORDINATE-DESCENT-1 — 2026-09-15
+
+- PROMOTED / MANUAL, BOOK-relative. Producer swarmHQ ROOT (gpt-6-astra),
+  [sealed proof](xmodel/tangent-cyclic-coordinate-swarmHQ-root-20260915T170800Z.md),
+  full SHA25693c560753a0475cafeff9c13a0e489d34a30d1fbc192eb8aa29c0bec5892dd81,
+  manifest36fbad531f746944496fcc54949c348fe7e2cef33cc41b4cbdbf27fcfb9e56f5;
+  [different-model Sol hostile review](xmodel/tangent-cyclic-review-swarmHQ-sol-20260915T171200Z.md),
+  full efcca9e5c5cf5c37785c7675c7f1d18392f278332806a63b8061bd0b9700630f,
+  manifest a1472ebb3f750f1a5f4f37722da3429b4627b725e1133870ec9eaf103f6690e7.
+  Review consumed contribution6b083ecba093ba987062b8fcf7ea97e9318b0db7 and
+  CONFIRMED the exact theorem and nonvacuity formula. ROOT independently
+  collected terminal author, verified expected basis/manifest and0444 modes,
+  and wholly read the review with unchanged pre/post hashes. Astra supplied
+  a same-model proof attack and the short Bezout finiteness argument; it
+  was not FIRST. Frozen producer-time UNPROMOTED wording remains unchanged.
+- Use the WHOLE polynomial tangent map over C, with gamma0!=0,b!=0:
+
+      u=1+xy, gamma=gamma0+a0*xy+b*x^2*z, w=gamma*u,
+      F=(C,D,E)=(x*gamma,(p(w)+2gamma)/C,(q(w)+gamma*w)/C^2).
+
+  Retain q'=wp'/2 and both full polynomial divisibilities. In the stratum
+  p=w^m A, q=w^(m+1)B, m>=2, A(0)!=0, gcd(A,B)=1, there is NO
+  polynomial target coordinate h, of ANY degree, whose pullback h(F) is
+  a polynomial source coordinate. This is disjoint from the earlier
+  promoted TANGENT-COORDINATE-DESCENT-1 clean p'(0)!=0 stratum.
+- Put n=m+1. The finite cover of the sweep is
+  C=s^n,w=s^2*t,D=s^(m-1)*t^m*A(w),E=t^n*B(w). Bezout for
+  w^(m-1)A^2 and B gives t^n=U(w)D^2+V(w)E, while p(w)=CD makes w
+  integral. The normalization is the invariant ring for weights(1,-2).
+  Removing the possible order2 reflection leaves a cyclic A2 cover etale
+  off the origin. Generic actual coordinate cuts normalize nonproperness
+  curves and lift to disjoint A1s. The generalized a^e*t=alpha coordinate
+  lemma, at a nonzero root of p', forces h on the sweep to equal P0(C).
+- The entire C=0 sweep image is D=0. For generic c!=P0(0), its target
+  cut Z avoids that axis and has exactly TWO source sheets: a triangular
+  isomorphism on x=0 and (D,E)=(2/x,u/x^2) on gamma=0. Since N=deg p+1>2,
+  actual plane nonproperness gives l=chi_c(Z)>=0. The finite W-cover's
+  deleted roots have multiplicity2+ord p'; each complete parameter line
+  contributes N. With k=deg P0>=1 the full Euler identity is
+  1=N-Nk-(N-2)l<=0, a contradiction. No omitted boundary term, generic-
+  rationality substitute, or automatic commuting of arbitrary cuts is used.
+- The explicit family gamma0=b=1, a0=-(2m+1)/(2m),
+  p=2(m+1)w^m-2(m+2)w^(m+1), q=m*w^(m+1)-(m+1)w^(m+2), m>=2,
+  satisfies the FULL divisibilities and reduced coprimality. Its ambient
+  mapping degrees m+2 are unbounded. This is one manual nonvacuity formula,
+  not a search, a new plane pair, or a re-audit of accepted low-degree bounds.
+- Named imports remain BOOK-relative: Jelonek polynomial coverage of
+  plane-map nonproperness components, Abhyankar--Moh--Suzuki straightening,
+  trivial finite etale A1 covers in characteristic zero, and constructible
+  Euler pushforward. The literal ambient formulas and finite-cover stage
+  were checked in Gao sections3.1--3.3; no whole-paper or novelty claim.
+  In review paragraph4, the phrase 'a nonzero value' means the constant
+  value of a^e*t, NOT that of the invertible difference a^e*t-alpha;
+  the producer states this distinction explicitly and correctly.
+- The [separate publication addendum](xmodel/tangent-cyclic-publication-swarmHQ-root-20260915T171400Z.md),
+  full a95c9427bd3108d663d8acff2e22a0b9fc1bf1f449732a494115890db089014b,
+  manifest01b4dc4ab288f006258bbd1f83f8f8549e69d93ab948d0bce0260cc3efebac71,
+  records a terminal0 EMPTY collision scan omitted from the sealed producer
+  and the early review-invitation sequencing miss. Review finished only
+  after exact contribution commit/pin checks. No frozen bytes or mathematics
+  changed; EMPTY is not an exhaustive novelty verdict.
+- Common nonzero roots of A,B, arbitrary projections/embeddings or rational
+  substitutions, all tangent donors and general Keller maps are outside
+  scope. No theorem puts an arbitrary counterexample in the covered strata.
+  JC2 remains unresolved. No automatic common-root family, computation,
+  dimensional-descent successor or stronger classification follows.

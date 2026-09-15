@@ -6,6 +6,17 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-15
 
+- **A cyclic boundary cover extends the coordinate-descent exclusion.** The
+  [new proof](xmodel/tangent-cyclic-coordinate-swarmHQ-root-20260915T170800Z.md)
+  excludes arbitrary target coordinates with source-coordinate pullbacks for
+  the literal tangent-sweep stratum p=w^m A, q=w^(m+1) B, m>=2,
+  A(0)!=0 and gcd(A,B)=1, with the full polynomiality hypotheses retained.
+  A finite cyclic normalization cover and a two-sheet boundary count handle
+  this additional unbounded stratum. [Independent Sol review](xmodel/tangent-cyclic-review-swarmHQ-sol-20260915T171200Z.md)
+  confirms the argument relative to its named curve-theorem imports.
+  swarmHQ, PROMOTED / MANUAL/BOOK-relative at AUDIT's
+  TANGENT-CYCLIC-COORDINATE-DESCENT-1 scope. Common nonzero roots, other
+  descent mechanisms and JC2 remain unresolved; no novelty claim.
 - **Positive-genus ramification strengthens the Pinchuk donor exclusion.**
   The [original calculation](xmodel/pinchuk-donor-branch-swarmHQ-root-20260915T143100Z.md)
   found an elliptic branch obstruction for the displayed target pair. A
