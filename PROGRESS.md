@@ -13,8 +13,9 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
   source substitution sending these fixed target coordinates to a whole-plane
   polynomial Keller pair, of any finite substitution degree. This concerns
   the displayed donor only, not arbitrary Pinchuk-like maps or target changes.
-  swarmHQ, MANUAL/BOOK-relative, PRODUCER-CHECKED, UNPROMOTED; Astra co-check
-  is same-model, and different-model review is pending. JC2 remains unresolved.
+  [Independent Sol review](xmodel/pinchuk-donor-review-swarmHQ-sol-20260915T144100Z.md)
+  confirms the exact argument. swarmHQ, PROMOTED / MANUAL/BOOK-relative at
+  AUDIT's PINCHUK-ELLIPTIC-BRANCH-DONOR-1 scope. JC2 remains unresolved.
 - **Two proposed shortcuts corrected; no new closing mechanism.** The
   [FULL1345 synthesis](xmodel/ideation-full1345-swarmHQ-synthesis-20260915T141000Z.md)
   excludes degeneration from a generic polynomial automorphism to a dominant

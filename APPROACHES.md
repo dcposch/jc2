@@ -72,6 +72,11 @@ and [torus quotient filter](xmodel/volume-neutral-torus-quotient-swarmHQ-root-20
 exclude their stated donor constructions. Neither places arbitrary Keller maps in
 those classes or resolves the full conjecture.
 
+The reviewed [specific Pinchuk donor exclusion](xmodel/pinchuk-donor-branch-swarmHQ-root-20260915T143100Z.md)
+adds an elliptic branch obstruction, valid for every finite-degree source
+substitution preserving its displayed target pair. It does not exclude other
+Pinchuk-like presentations or target-algebra changes; no candidate pair results.
+
 **Useful next contribution:** a complete source construction, an applicable global
 algebraization theorem, or a genuinely different donor mechanism.
 [Construction interfaces and controls](https://github.com/dcposch/jc2/blob/ec69252af5ca03245becb80436f5ddb0917ccef2/APPROACHES.md#7-st-construction-and-algebraization).

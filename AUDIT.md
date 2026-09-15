@@ -22928,3 +22928,55 @@ request was sent, and the Keller-specific headline itself is not refuted.
   conjecture are outside scope. The old dimension/tower check alone did
   not establish these source slices. No new degree bound or actual plane
   counterexample is obtained; no automatic slice/construction successor.
+
+### PINCHUK-ELLIPTIC-BRANCH-DONOR-1 — 2026-09-15
+
+- PROMOTED / MANUAL, BOOK-relative, at the literal formula-defined scope.
+  Producer swarmHQ ROOT (gpt-6-astra),
+  [sealed proof](xmodel/pinchuk-donor-branch-swarmHQ-root-20260915T143100Z.md),
+  full SHA256c2d14db83f1abced4a0e68b65bf3e0aca94b48e057c49c59d707248dbd7a0e14,
+  manifest683b4da15cfb8a451ddb259a9f0a8ca682c5182fb0fb455144b716d34c387ec8;
+  [different-model Sol FIRST](xmodel/pinchuk-donor-review-swarmHQ-sol-20260915T144100Z.md),
+  full21800e50dee5807d55d5feccd206bf31be9ba725a1446d421139f43973d7ab8c,
+  manifest4fdf6f9b138dd5bee40e40adf432aa4193d98c8851c58c92dd139653dd96af7b.
+  Review consumed public1ba6678e. ROOT collected terminal author, verified
+  expected basis/manifest and0444 modes, and wholly read the review with
+  unchanged pre/post hashes. Same-model Astra co-check was not FIRST;
+  frozen producer-time UNPROMOTED wording remains unchanged.
+- Fix independent f,h over C, p=f+h and the exact rational q displayed in
+  the proof. For A=C[p,q], K=C(f,h), the finite normalization B of A in K
+  has a ramification prime with index2 whose branch-image curve has smooth
+  projective normalization of genus1. Consequently NO C-field embedding
+  K->C(x,y), of any finite degree, sends those fixed p,q to a polynomial
+  Keller pair on the whole plane.
+- Degree[K:C(p,q)]=6 follows directly over C from the rational h-function:
+  denominator(p-h)^2, coprime numerator of degree6 with leading197/4 and
+  value-p^4(p+1)^2 at h=p. Clearing denominators makes h and f integral,
+  giving B_f=A[h]_f=C[f,f^-1,h]. The computed divisor therefore belongs
+  to the actual finite normalization, not an arbitrary rational model.
+- The critical curve is an irreducible double cover of the conic
+  r^2+(r+13+15h)^2+1=0, where r=h(f-h(h+1))/f^2. Its discriminant has
+  four simple zeros and two double poles. Riemann--Hurwitz gives genus1.
+  A degeneration at p=0 separates two nonzero critical values from four
+  values of orderp^2; exact hand nonvanishing certificates modulo7 and5
+  check squarefreeness and distinctness without lost leading degrees or
+  denominators. All six generic critical VALUES are distinct, proving
+  birationality onto the branch image. Source genus alone would not suffice.
+- For any finite extension to C(x,y), ramification indices multiply. Its
+  full finite normalization thus retains a ramified divisor omitted by
+  the etale whole-plane source. The branch image is a nonproperness
+  component. The already accepted Jelonek--Lason polynomial-coverage import
+  in LAURENT-POLYNOMIAL-DONOR-1 Section4 contradicts its genus1. This
+  application uses the reviewed transfer, not a new audit of that theorem.
+- ROOT read Campbell1202.2949v4 introduction,2.1 and2.2 through Corollary6
+  for the displayed presentation. Neither co-check nor FIRST independently
+  retrieved Campbell; attribution and a whole-paper audit are not promoted
+  beyond that source-read scope. The mathematical theorem fixes the formula.
+  No machine arithmetic, modular counterexample or polynomial lift is claimed.
+- Interface: the accepted Laurent-polynomial donor filter explicitly omits
+  this multipole rational fiber dependence; the real Nash control omits
+  complex polynomiality. The old birational rational-component obstruction
+  does not alone exclude arbitrary finite-degree source substitutions.
+  This result makes no reduction of an arbitrary Keller source to this
+  donor, covers no changed target algebra or arbitrary Pinchuk-like family,
+  supplies no JC2 proof/counterexample, and earns no automatic donor successor.
