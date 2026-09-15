@@ -49325,3 +49325,70 @@ or automatic successor. Fable cumulative102473 terminal lane-wall seconds
   hypothesis or genuinely different construction, not another integrality
   equivalence, repeated leading-form test or relaxed-control family.
   Preserve pilot-local.log, bulk artifacts and excluded nested repositories.
+
+## 2026-09-15 00:29 UTC — Galois volume does not give a linear symplectic inertia group
+
+Tick began00:21:31, fresh HEAD/origin39cbfef48fb599a09892774225d53307317ba63f;
+only pilot-local.log dirty. Previous turn completed pending review/intake
+and corrected source claims: limited screening/documentary PROGRESS,
+not a new JC2 closing implication. Current governing hashes unchanged.
+
+Preselection recovered the September13 06:06 eigenvaluation and17:57
+Cech/Galois/Cremona stops, plus current genus, normalization and dynamical
+scope. No repeated minimizer, higher-nerve, genus or construction-family
+lane was commissioned. Selected history reads, not a whole inventory audit.
+
+ROOT tested whether determinant-one local sheet changes force finite
+symplectic linear inertia, which could constrain monodromy at all degrees.
+The missing hypothesis fails already at the actual normalization interface.
+Let F:X=A2->B=A2 be Keller with JF=1, Z the normalization of B in the
+Galois closure of C(X)/C(B), and pi:Z->B finite. Write Y for the full
+source-field normalization, j:X->Y for its open immersion, and rho:Z->Y
+for the finite intermediate map. At a generic ramification
+divisor of index e>1, local coordinates give pi(w,s)=(w^e,s). Up to a
+nonvanishing invariant target-coordinate factor,
+
+  Omega=pi*(du wedge dv)=e*w^(e-1) dw wedge ds.
+
+A generator of inertia acts (w,s)->(zeta*w,s), zeta^e=1. It preserves
+Omega because zeta^(e-1)*zeta=1, but its tangent determinant is zeta,
+not1. Omega has a zero of order e-1; it is NOT a nondegenerate symplectic
+form at the fixed divisor. Thus classification of finite linear groups
+preserving a nonzero tangent volume cannot be applied there.
+Even over a retained source point, rho restricted to rho^(-1)(j(X))->X
+can ramify; F being etale does not make that different map etale. Equality
+Omega=rho*(dx wedge dy) on that open therefore does not supply nonvanishing.
+No identification of branch and nonproperness divisors was used.
+
+This is the KNOWN local ramification formula used to reject ROOT's
+proposed extra inference, MANUAL/UNPROMOTED, not a new group theorem or
+countermodel family. The earlier17:57 record separately warns that the
+Galois closure need not be rational, so a Cremona-group bound is not
+automatically available either. No new source restriction, group exclusion,
+FIRST, classification search or successor. NO_NEW_CLOSING_TEST.
+
+## 2026-09-15 00:29 UTC LIVE STATE — monodromy shortcut stopped before allocation
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved. Basis39cbfef48fb599a09892774225d53307317ba63f,
+  fetched equal to origin/master. Policy team/swarmHQ/README.md
+  SHA50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a;
+  COORD4ce5b29a,APPe004630b,FALLACYe47fd16c unchanged. No global rerank.
+- No native lane reactivated, no writer/model/science worker, provisional
+  claim, FIRST debt or descendant. Fresh00:29 jc2 running user-unit census0.
+  No verified wait or blanket retirement of a mathematical route claimed.
+- FULL lastSep14 21:40:31,nextSep15 09:40:31; original10:17:55 miss and
+  FULL2110 qualification retained. BROAD originalSep12 21:53:56.598798932
+  overdue/access debt retained. All stopped channels/sources and Miyanishi
+  legitimate-source gate remain as recorded00:20. No new web sweep or reset.
+- GitHub sweep blocked, gh not authenticated, fresh00:21 check;0triaged,
+  openUNKNOWN,lastsuccessnone,originalSep14 16:00 miss retained. DC auth
+  still needed, not a global research impasse; no credential/queue action.
+- Both personal/us-east-1 nonterminal worker selectors[] this tick;
+  coordinator3674934 tree no science at00:27; pswpin/out0/0 through00:29.
+  No AWS mutation or scientific compute. Fable cumulative102473 terminal
+  lane-wall seconds unchanged; native usage/balances unknown, EBS billable.
+- Engineering CLOSED; scalar/preflight/r3 PARKED; systems NO_UPGRADE with
+  original48h debt. Bank only this scoped stopped inference. Next work must
+  change an actual-source test or supply a construction, not classify groups
+  under the missing nonvanishing/rationality hypotheses. Preserve unrelated
+  pilot-local.log, bulk artifacts and excluded nested repositories.

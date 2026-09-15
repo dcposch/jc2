@@ -8,6 +8,12 @@ Its old closure statements must be read with the subsequent audit corrections.
 
 ## 2026-09-15
 
+00:29Z: [Galois-volume scope check](notes.md#2026-09-15-0029-utc--galois-volume-does-not-give-a-linear-symplectic-inertia-group)
+stops a proposed monodromy shortcut: the invariant form on the Galois
+closure vanishes at ramification, so finite linear symplectic-group
+classification does not apply there. Known ramification formula, not a new
+source restriction. No new closing test, model lane or computation.
+
 00:18Z: [Source-strategy intake](notes.md#2026-09-15-0018-utc--source-strategy-intake-and-moment-criterion)
 found no new closing test. Fable's Dixmier suggestion was already in the
 inventory; primary checking retains its sufficient disproof implication
