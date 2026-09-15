@@ -6,6 +6,15 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-15
 
+- **Additive-symmetry descent is conditional; the first action fails.** A
+  [manual derivation](xmodel/additive-quotient-descent-swarmHQ-root-20260915T232000Z.md)
+  shows that a three-dimensional Keller map commuting with a primitive
+  locally nilpotent derivation with full polynomial kernel C[u,v] induces
+  a plane Keller map of the same geometric degree. The tested action on
+  the literal running triple cannot descend: two points in one fiber give
+  different pushed vectors. No compatible action or plane pair is produced.
+  swarmHQ ROOT/Astra, same-model checked, MANUAL, PRODUCER-CHECKED,
+  UNPROMOTED; no general symmetry exclusion, successor search, or JC2 closure.
 - **One pole does not supply a rational intermediate field.** The
   [FULL2245 synthesis](xmodel/ideation-full2245-swarmHQ-synthesis-20260915T230100Z.md)
   distinguishes an already supplied rational donor field from the actual
