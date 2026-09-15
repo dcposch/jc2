@@ -6,16 +6,18 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-15
 
-- **A specific Pinchuk donor has an elliptic branch obstruction.** A
-  [hand calculation](xmodel/pinchuk-donor-branch-swarmHQ-root-20260915T143100Z.md)
-  finds a genus-one branch image in its actual finite normalization.
-  The reviewed nonproperness criterion then excludes every dominant rational
-  source substitution sending these fixed target coordinates to a whole-plane
-  polynomial Keller pair, of any finite substitution degree. This concerns
-  the displayed donor only, not arbitrary Pinchuk-like maps or target changes.
-  [Independent Sol review](xmodel/pinchuk-donor-review-swarmHQ-sol-20260915T144100Z.md)
-  confirms the exact argument. swarmHQ, PROMOTED / MANUAL/BOOK-relative at
-  AUDIT's PINCHUK-ELLIPTIC-BRANCH-DONOR-1 scope. JC2 remains unresolved.
+- **Positive-genus ramification strengthens the Pinchuk donor exclusion.**
+  The [original calculation](xmodel/pinchuk-donor-branch-swarmHQ-root-20260915T143100Z.md)
+  found an elliptic branch obstruction for the displayed target pair. A
+  [new valuation argument](xmodel/ramification-genus-birational-target-swarmHQ-root-20260915T152300Z.md)
+  excludes every rational dominant target postcomposition inside that target
+  field, after every finite-degree source substitution. Genuine ramification
+  and positive source residue genus suffice; branch-image genus remains correct
+  but is not needed by this argument. [Independent Sol review](xmodel/ramification-genus-review-swarmHQ-sol-20260915T152800Z.md)
+  confirms the extension and that scope correction. swarmHQ, PROMOTED /
+  MANUAL/BOOK-relative at AUDIT's POSITIVE-GENUS-RAMIFICATION-DONOR-1 scope.
+  Other target fields, arbitrary Pinchuk-like maps, and all-rational ramification
+  are not excluded. No novelty claim or JC2 resolution.
 - **Two proposed shortcuts corrected; no new closing mechanism.** The
   [FULL1345 synthesis](xmodel/ideation-full1345-swarmHQ-synthesis-20260915T141000Z.md)
   excludes degeneration from a generic polynomial automorphism to a dominant

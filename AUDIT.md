@@ -22980,3 +22980,69 @@ request was sent, and the Keller-specific headline itself is not refuted.
   This result makes no reduction of an arbitrary Keller source to this
   donor, covers no changed target algebra or arbitrary Pinchuk-like family,
   supplies no JC2 proof/counterexample, and earns no automatic donor successor.
+
+### POSITIVE-GENUS-RAMIFICATION-DONOR-1 — 2026-09-15
+
+- PROMOTED / MANUAL, BOOK-relative. Producer swarmHQ ROOT (gpt-6-astra),
+  [sealed proof and correction](xmodel/ramification-genus-birational-target-swarmHQ-root-20260915T152300Z.md),
+  full SHA256 a3a6793ba8f5c3ebccdd58e61ce8f1fa18ad4dd3d186950d2b961ac668a3a4b9,
+  manifest e36c1f8e9d6df07e3b7196f1d525ecb5dde6b6efc3a4618130b5a57a9a81ff82;
+  [different-model Sol hostile review](xmodel/ramification-genus-review-swarmHQ-sol-20260915T152800Z.md),
+  full 6d1a881c7e3aa70f6f4b81414e82b47700d305fb13e7d476a61a9131f10ddfaa,
+  manifest 45a054bfe73619750ed80172f64d25af4046fa595d451faa526db130ff8d3807.
+  Review consumed public9f1ab970 and CONFIRMED the full theorem, smaller-
+  target-subfield corollary, Pinchuk attachment and precise correction.
+  ROOT collected terminal author, verified expected basis/manifest and0444
+  modes, and wholly read the review with unchanged pre/post hashes.
+  Same-model Astra co-check covered the core, not the later corollary, and
+  was not FIRST. Frozen producer-time UNPROMOTED wording remains unchanged.
+- Let K0 be a complex rational function field of transcendence degree2 and
+  K/K0 finite. If a divisorial valuation v of K, trivial on C, has
+  e(v/v0)>1 and genus(kappa(v))>=1, then NO finite C-field embedding
+  K->C(x,y) sends ANY algebraically independent pair p',q' in K0 to
+  whole-plane polynomials with nonzero constant Jacobian. Genus means the
+  smooth projective residue-curve genus; v0 is the normalized restriction.
+  This covers rational dominant target postcomposition, not only birational
+  target changes, but only within the original target field K0.
+- Extend v to w on C(x,y). Finite residue extension and characteristic-zero
+  Riemann--Hurwitz preserve positive genus; ramification indices multiply.
+  A positive-genus divisorial valuation of a plane field must be an affine
+  curve valuation in every plane model: point-blowup exceptional curves and
+  the line at infinity are rational. A hypothetical polynomial Keller map
+  is etale and quasi-finite, so this source curve maps to a target curve;
+  the essentially etale DVR map has index1, a contradiction. For a smaller
+  rational target field C(p',q') subset K0, indices multiply once more.
+  No base residue-genus condition, source-degree bound, global finiteness,
+  or nonproperness-parametrization theorem is used in this proof.
+- Standard imports remain BOOK-relative: divisorial proper models,
+  resolution/factorization of surface birational maps by point blowups,
+  valuation extension and ramification multiplicativity, Riemann--Hurwitz,
+  and the etale DVR criterion. ROOT read the displayed Stacks0C5H and
+  0C5Q/0C5R statements/proofs; Sol reconstructed the argument without a
+  fresh source audit. No foundational theorem or novelty claim is upgraded.
+- PINCHUK-ELLIPTIC-BRANCH-DONOR-1 supplies the literal fields K0=C(p,q),
+  K=C(f,h), actual normalization chart B_f=C[f,f^-1,h], and a genus1
+  ramification prime of index2. The new theorem therefore excludes all
+  rational dominant postcompositions inside C(p,q), after every finite
+  source embedding. The accepted formula arithmetic is consumed, not
+  recomputed. This is an extension of that claim's fixed-target conclusion.
+- **Scoped correction to the preceding entry and sealed Pinchuk reports:**
+  their unqualified statement that source genus alone is insufficient is
+  too broad for donor exclusion. Source genus alone does not determine
+  branch-image genus; the six-distinct-critical-values calculation and
+  branch-image conclusion remain correct and load-bearing for their old
+  target-nonproperness proof. Once genuine ramification is attached,
+  positive source residue genus already excludes the donor by this new
+  argument. Only the claimed necessity of the extra branch-image step for
+  exclusion is withdrawn. Sol disclosed authorship of the earlier review
+  and independently reconstructed the new proof. All old sealed bytes,
+  algebra and valid conclusions are preserved.
+- The earlier promoted MORPHIC rational-forest correction already contains
+  the classical positive-genus obstruction in its proper-block setting.
+  This intrinsic formulation does not revive the retracted rational-
+  domination forest statement. An elliptic valuation with index1 is harmless;
+  ramification with rational residue, as in C(s,t)/C(s^2,t) at s=0, is not
+  covered. No general Keller source is shown to have the required valuation.
+  Target fields not contained in K0, arbitrary other Pinchuk presentations,
+  all-rational ramification and JC2 remain unresolved. No automatic donor
+  family, computation or stronger classification follows.

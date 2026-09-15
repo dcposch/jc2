@@ -73,9 +73,12 @@ exclude their stated donor constructions. Neither places arbitrary Keller maps i
 those classes or resolves the full conjecture.
 
 The reviewed [specific Pinchuk donor exclusion](xmodel/pinchuk-donor-branch-swarmHQ-root-20260915T143100Z.md)
-adds an elliptic branch obstruction, valid for every finite-degree source
-substitution preserving its displayed target pair. It does not exclude other
-Pinchuk-like presentations or target-algebra changes; no candidate pair results.
+has a [reviewed ramification-genus extension](xmodel/ramification-genus-birational-target-swarmHQ-root-20260915T152300Z.md):
+every rational dominant target postcomposition inside its original target field
+is excluded after every finite-degree source substitution. Positive source residue
+genus and genuine ramification suffice; branch-image genus is not needed for this
+new argument. Other target fields, arbitrary Pinchuk-like presentations, and the
+all-rational-ramification case remain outside scope; no candidate pair results.
 
 **Useful next contribution:** a complete source construction, an applicable global
 algebraization theorem, or a genuinely different donor mechanism.
