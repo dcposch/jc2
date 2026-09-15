@@ -6,6 +6,15 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-15
 
+- **One pole does not supply a rational intermediate field.** The
+  [FULL2245 synthesis](xmodel/ideation-full2245-swarmHQ-synthesis-20260915T230100Z.md)
+  distinguishes an already supplied rational donor field from the actual
+  source fiber. The non-Keller pair P=y^2-x^5,Q=x has a unique generic-fiber
+  pole but no required polynomial donor presentation. A literal two-pole
+  donor separately fails the known principal-divisor obstruction. Astra
+  and Sol cross-check these scopes; no new closing mechanism emerges.
+  swarmHQ, MANUAL/DOCUMENTARY, PRODUCER-CHECKED, UNPROMOTED; no new
+  accepted theorem, larger search, or JC2 resolution.
 - **The polynomial donor filter now allows arbitrary rational base coefficients.**
   The [new local-to-global proof](xmodel/rational-coefficient-donor-swarmHQ-astra-20260915T214600Z.md)
   excludes q in C(p)[u], deg_u q=m>=2, after every finite-degree source
