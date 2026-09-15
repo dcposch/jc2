@@ -8,6 +8,15 @@ Its old closure statements must be read with the subsequent audit corrections.
 
 ## 2026-09-15
 
+07:04Z: The [canonical-graph scaling test](notes.md#2026-09-15-0704-utc--smooth-graph-degeneration-does-not-force-normality)
+establishes the literal smooth central fiber, t-saturation and total finite
+normalization for a suitably chosen graph. These still do not force
+generic global normality: one exact non-Keller scaled nodal control has
+singularities escaping to infinity. ROOT/native Astra, MANUAL/UNPROMOTED;
+no JC2 proof advance, promotion, computation or automatic successor.
+GitHub full census/delta07:01:34 UTC:0 issues/0 PRs,0 triaged/pending;
+next13:01:34 UTC or earlier tick. No paid lane or worker launch.
+
 06:45Z: The stronger BGV local boundary-pair condition was attached at
 source-theorem scope and tested. Astra/ROOT found a simple finite free
 degree4 map from the A1 quotient, etale off a boundary whose uniformizing
