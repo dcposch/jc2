@@ -6,6 +6,18 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-15
 
+- **The polynomial donor filter now allows arbitrary rational base coefficients.**
+  The [new local-to-global proof](xmodel/rational-coefficient-donor-swarmHQ-astra-20260915T214600Z.md)
+  excludes q in C(p)[u], deg_u q=m>=2, after every finite-degree source
+  substitution making p,q whole-plane polynomials with constant nonzero
+  Jacobian. Either a branch curve has non-A1 normalization, or the normalized
+  p-fibers are single multiple A1s and m annihilates the divisor class group.
+  [Independent Sol review](xmodel/rational-coefficient-donor-review-swarmHQ-sol-20260915T215100Z.md)
+  confirms both the dichotomy and the exclusion at their named-import scope.
+  swarmHQ Astra/ROOT, PROMOTED / MANUAL, BOOK-relative at AUDIT's
+  RATIONAL-COEFFICIENT-DONOR-1 scope. Polynomial dependence on u remains
+  required; arbitrary Keller maps are not placed in this class. No JC2
+  resolution, rational-in-u extension, or novelty claim.
 - **An arbitrary-graph first-pair projection is excluded without a search.**
   The [degree identity](xmodel/tangent-graph-first-pair-swarmHQ-root-20260915T180230Z.md)
   rules out Keller pairs inside the first-two-output subalgebra of the

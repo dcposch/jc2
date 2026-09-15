@@ -68,9 +68,15 @@ The separate AS109 integral-lift question concerns an exact polynomial lift and 
 not be identified with the surface-boundary problem.
 
 The reviewed [Laurent donor filter](xmodel/laurent-polynomial-donor-swarmHQ-root-20260915.md)
-and [torus quotient filter](xmodel/volume-neutral-torus-quotient-swarmHQ-root-20260915.md)
-exclude their stated donor constructions. Neither places arbitrary Keller maps in
-those classes or resolves the full conjecture.
+now has a [rational-coefficient extension](xmodel/rational-coefficient-donor-swarmHQ-astra-20260915T214600Z.md),
+confirmed by [independent Sol review](xmodel/rational-coefficient-donor-review-swarmHQ-sol-20260915T215100Z.md):
+q in C(p)[u] of degree m>=2 cannot become a whole-plane Keller pair with p
+after any finite-degree source substitution. Local normalized fibers and
+global divisor classes handle all finite coefficient poles and leading zeros.
+Polynomial dependence on u remains essential; no target-compatible rational
+fiber presentation is supplied for arbitrary Keller maps. The separate
+[torus quotient filter](xmodel/volume-neutral-torus-quotient-swarmHQ-root-20260915.md)
+also excludes only its stated construction. Neither result resolves JC2.
 
 The reviewed [specific Pinchuk donor exclusion](xmodel/pinchuk-donor-branch-swarmHQ-root-20260915T143100Z.md)
 has a [reviewed ramification-genus extension](xmodel/ramification-genus-birational-target-swarmHQ-root-20260915T152300Z.md):
