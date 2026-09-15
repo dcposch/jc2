@@ -8,6 +8,13 @@ Its old closure statements must be read with the subsequent audit corrections.
 
 ## 2026-09-15
 
+01:33Z: The [Laurent-donor proof](xmodel/laurent-polynomial-donor-swarmHQ-root-20260915.md)
+is frozen and in different-model Fable FIRST. Source reconciliation retains
+the arbitrary-first-leg argument, with degree1 explicitly treated outside
+the old proper-block statement. PROVISIONAL/MANUAL, not promoted; no
+descendants or enlarged family. Global radial, matrix and collision ideas
+collided with existing stops and received no new lane. No computation.
+
 01:20Z: [Source-line and Laurent-donor checks](notes.md#2026-09-15-0120-utc--source-line-ceiling-stops-laurent-donor-draft)
 find no new discrepancy ceiling. A separate all-degree Laurent-polynomial
 donor dichotomy has a manual proof draft: a bad branch at infinity or a

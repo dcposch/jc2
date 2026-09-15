@@ -49766,3 +49766,121 @@ FIRST packet are the next bounded intake, not permission for descendants.
 - Engineering CLOSED; scalar/preflight/r3 PARKED; systems NO_UPGRADE,
   original48h debt retained. Bank only notes and the daily digest. Preserve
   pilot-local.log, bulk artifacts and excluded nested repositories.
+
+## 2026-09-15 01:33 UTC — Laurent-donor packet frozen; independent FIRST active
+
+Previous goal turn: limited research PROGRESS, not resolution. It completed
+and banked the source-line negative and a donor draft, changing the next
+action to exact premise/history reconciliation and FIRST. Current tick
+began01:21:30; fresh fetch matches8a64397d91654dda8001566c61e1709c9d63bb81.
+Only unrelated pilot-local.log was dirty. No accepted degree or foundation
+was recomputed; no scientific execution or worker was commissioned.
+
+ROOT whole-read the BD-GAL integration, the block-structure integration,
+and the fixed triangular-twist report. The polynomial-Liouville report was
+read at selected proof scope; an aggregate clipped, so no whole-file read
+is claimed for that report. Scoped canonical/report searches reconciled
+Laurent donors, critical-value integrality, polynomial good reduction,
+class groups and prior fixed constructions. No exact general statement
+was located, but no exhaustive novelty claim follows. The elementary
+good-reduction proof is self-contained; the unsuccessful external
+Ekedahl--Lando--Shapiro--Vainshtein PDF open supplied no theorem premise.
+
+The load-bearing existing criteria match the proposed filter. The old
+proper-block statement assumes FIRST-leg degree>=2; the new packet treats
+degree1 by the full-normalization open immersion and spells out why the
+same completion argument needs no larger first-leg degree. This is an
+explicit scope check, not an unqualified citation of a different theorem.
+ROOT also reread Jelonek--Lason1411.5011v2, Theorem1.2,
+Definitions2.1/2.3, Proposition3.1 and Theorem3.2 with the proof on printed
+pages4--5 at https://arxiv.org/pdf/1411.5011v2 . Only polynomial coverage
+of nonproperness components is consumed, not the numerical degree bound.
+No whole-paper or new external-theorem promotion is claimed.
+
+Frozen producer: xmodel/laurent-polynomial-donor-swarmHQ-root-20260915.md,
+LAURENT-POLYNOMIAL-DONOR-1, ROOT/Astra, MANUAL/PROVISIONAL pending FIRST.
+For q=p^(-k)u^m+sum a_j(p)u^j, m>=2, k any integer, all a_j Laurent in p,
+either a critical branch has a forbidden finite-p infinity place, or the
+finite normalization is a mu_m quotient of A2 with m-torsion class group.
+The claimed Keller exclusion allows any dominant rational substitution,
+not only birational ones. It supplies no presentation of an arbitrary
+actual source, no classification of rational donors and no JC2 closure.
+
+Producer finalized by begin->close->finalize->verify; immutable manifest
+retained. Body10007 bytes/SHA7ae66d2451626c31292b45fd264bf6fde9449ed8e8bf06e9d3dd6e70292e9003;
+full10340 bytes/SHA0dbb34f986d8747c7dde8ea74e930de8b9b8e1417653e73ad0749d5075ccca0a;
+manifest SHAfa956a13b022dcbf34794319ca8a76e6db255187dc6444bfc84339ef9c267fbd.
+Mechanical COLLISIONS EMPTY (no raised OPEN); this is not mathematical
+validation. Authoring qualification: ROOT wrote the unsealed full body in
+one larger append, contrary to the preferred bounded-section workflow;
+the final BODY-END was a separate last author write, and transaction
+verification passed. Do not describe the section-write workflow as fully
+compliant or retrofit mutable changes into the charged packet.
+
+Independent Fable FIRST launched01:27:30. Exact unit
+jc2-laurent-donor-first-swarmHQ-fable5-20260915T0127Z.service,
+invocation d0b8decd44ce47748ddc34418a4a4d6e, Main1830005,
+bwrap1830221/actual claude1830222 verified within60seconds. Enforced
+RuntimeMax1080s =>01:45:30; target01:41, prompt hard01:46 (earlier
+supervisor governs). TimeoutStop15s, KillModecontrol-group, MemoryMax4GiB,
+swap0; resolved CLI/node/apply_patch PATH supplied. The six charged inputs
+are runner-owned immutable snapshots, not mutable ledgers. Prompt
+box/laurent-donor-first-20260915T0127Z/PROMPT.md
+SHAa121454a2a1b48b2b2959109b7446c08de0bc4c58036e9bfe9ccea4e96f65d92.
+Sole review xmodel/laurent-donor-first-swarmHQ-fable5-20260915T0127Z.md.
+Launcher0726b842/adapter34070f15/validatora89658bc/seal222e6de4 unchanged.
+Unit independently ACTIVE at01:31:20; no live output/receipt was read.
+ROOT owns terminal/original-PID absence and receipt/hash reconstruction
+before whole-report intake. No new task or retry follows an observation
+timeout. Review has zero descendants; no promotion yet.
+
+Parallel protected global research recovered existing stops rather than
+creating new lanes. The radial-field constant-divergence/sink argument
+is already in September13 15:06/18:21: the infinity index sum is missing.
+Exact gradient-row/elementary SL2 and collision/Bezoutian proposals are
+already in August24 AUDIT and APP320--358; the full-Jacobian elementary
+criterion and secant idempotent do not provide their required universal
+conclusions. The all-source A1-ruling interface still lacks target
+compatibility; the Brieskorn/kappa reformulation supplies no genus-zero
+implication. No new bound, hidden integrality, genus theorem or concrete
+counterexample is claimed. These are duplicate stops, not proof progress.
+
+This isolated donor filter changes one construction screen if confirmed,
+not the global ranking or an actual-source closing hypothesis. Targeted
+micro-round only; no full-round trigger or automatic family extension.
+
+## 2026-09-15 01:33 UTC LIVE STATE — one frozen donor FIRST, no descendants
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved. Basis8a64397d91654dda8001566c61e1709c9d63bb81
+  equals fresh origin/master at tick start. Policy basis
+  team/swarmHQ/README.md SHA50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a;
+  COORD4ce5b29a,APPe004630b,FALLACYe47fd16c unchanged. No global rerank.
+- Active: exactly the Fable FIRST unit above, verified ACTIVE01:31:20;
+  target01:41, enforced stop01:45:30 plus15s shutdown. ROOT collects the
+  same original handle receipt-first; no mutable output intake while live.
+  Native agents terminal; no scientific job, worker or other lane selected.
+- Provisional LAURENT-POLYNOMIAL-DONOR-1, MANUAL, ROOT/Astra producer,
+  frozen hashes above; parents old block normalization/torsion obstruction
+  and accepted nonproperness coverage. Reviewer Fable5.1 active; descendants0.
+  No actual-source presentation theorem; no new branch/degree classification.
+  No overdue FIRST yet. Promotion requires independent terminal review.
+- Immediate queue: collect that review at terminal; compose only its exact
+  surviving statement with existing construction filters. No enlarged donor
+  family or further finite search. Continue genuinely global-gap research;
+  matrix, radial, collision and kappa restatements are not changed tests.
+- FULL lastSep14 21:40:31,nextSep15 09:40:31; original10:17:55 miss and
+  FULL2110 workflow qualification retained. BROAD originalSep12
+  21:53:56.598798932 overdue/access debt unchanged. Prior stopped channels,
+  source failures and Miyanishi legitimate-source gate remain; no clock reset.
+- GitHub sweep blocked, gh not authenticated, fresh01:21 check.0triaged,
+  openUNKNOWN,lastsuccessnone,originalSep14 16:00 miss retained. DC auth
+  still required; no queue-body intake or credential change.
+- Both personal/us-east-1 nonterminal worker selectors[] at01:26. No AWS
+  mutation or scientific computation. One light external model unit only.
+  Fable cumulative102473 completed lane-wall seconds unchanged UNTIL its
+  terminal collection; running time is not booked as completed usage.
+  Native usage/balancesUNKNOWN; retained EBS remains billable.
+- Engineering CLOSED; scalar/preflight/r3 PARKED; systems NO_UPGRADE,
+  original48h debt retained. Bank only ROOT's frozen report/manifest,
+  review prompt and ledgers; never stage the live Fable report/log/receipt.
+  Preserve pilot-local.log, bulk artifacts and excluded nested repositories.
