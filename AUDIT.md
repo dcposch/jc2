@@ -22753,3 +22753,46 @@ request was sent, and the Keller-specific headline itself is not refuted.
   plane quotient. Thus one construction mechanism is excluded, not JC2;
   no descendant, weight/quotient family successor, global rerank or FULL/
   BROAD reset. Full receipt-first intake is in notes03:45.
+
+### DISJOINT-BRANCH-TRANSLATES-1 — 2026-09-15
+
+- PROMOTED / MANUAL, BOOK-relative for the branch-disjointness criterion
+  and empty-branch endpoint only. Producer swarmHQ ROOT (gpt-6-astra),
+  [sealed argument](xmodel/disjoint-branch-translates-swarmHQ-root-20260915T093700Z.md),
+  full SHA256 ec07f8e07830fe297cb79033abe0a37476aa9fa833526a653ad709e775d2b87e;
+  [different-model Sol FIRST](xmodel/disjoint-branch-review-swarmHQ-sol-20260915T094600Z.md),
+  full ba178149d07ca8ac74f01068cc144e67150c71dcb27496d571bd7d3d849b94fd,
+  manifest2dd167737c8af746e7873f7a1efd5ec9aa38ebe57362c12f55f860b8d53a2ff7.
+  ROOT collected the terminal author and verified/read the sealed report
+  and manifest, both0444, with unchanged pre/post hashes.
+- For an actual complex plane Keller map F, let D be the reduced branch
+  divisor of its finite Galois normalization. If D and D+t share no
+  component, X_t={(p,q):F(p)-F(q)=t} is nonempty, smooth and irreducible.
+  The second cover is q -> F(q)+t over the SAME target function field.
+  The common Galois subfield is unramified at every affine target divisor;
+  purity and trivial finite etale covers of complex A2 make it the target
+  field. Galois linear disjointness and flatness of the actual fiber-product
+  ring give integrality, with no omitted vertical component or properness
+  assumption. Empty D gives the standard birational-etale automorphism
+  endpoint. Standard purity, complex covering, Zariski Main and Hartogs
+  imports remain explicit; this is not a new proof of those foundations.
+- Conditional corollary CONFIRMED: if D has r>0 components and none is an
+  affine line, at most r(r-1)+1 translations can share a component. Each
+  ordered distinct pair has at most one translation; all self-pairs give0.
+  ROOT checked the no-line consequence in Chau0710.5212v1 printedp3,
+  and D is contained in the actual nonproper-value curve. Sol did not
+  independently read that primary body: retain its PRIMARY-RELATIVE/GAP
+  qualification for the unqualified source import. This entry does not
+  promote an independently source-audited unconditional finite-count claim.
+- Controls: characteristic-p Artin--Schreier failure, affine-line translation
+  stabilizer, necessity of Galois closures, actual flat injection, and
+  clopen diagonal at0. The possible exceptional set is not asserted exact;
+  no uniform r bound, zero-fiber connectedness, generic-A2 fiber, properness,
+  locally nilpotent action or JC2 resolution follows. Native Astra's earlier
+  agreement alone was not FIRST; the Sol reconstruction is independent.
+- Priority remains UNKNOWN. ROOT's later source comparison found the
+  classical common-subextension mechanism for finite covers of P1 in
+  [Streeter2021, Lemma2.8](https://purehost.bath.ac.uk/ws/files/220934569/MRL_28_01_A11.pdf),
+  printedp275. That curve-base analogy is not an imported theorem for
+  nonproper plane covers; the finite normalization and purity argument
+  above was checked separately. Frozen producer/reviewer bytes unchanged.

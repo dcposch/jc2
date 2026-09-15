@@ -12,8 +12,11 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
   and its translate share no component. Purity and Chau's no-line theorem
   leave finitely many possible exceptional translations. Zero remains a
   possible exception; connectedness there and JC₂ are unresolved.
-  swarmHQ, MANUAL/PRODUCER-CHECKED, UNPROMOTED; same-model attack only,
-  no novelty or uniform branch-count claim.
+  The [independent Sol review](xmodel/disjoint-branch-review-swarmHQ-sol-20260915T094600Z.md)
+  confirms the core criterion at MANUAL/BOOK-relative scope. The finite
+  count is confirmed conditional on Chau's theorem, whose primary proof
+  that reviewer did not audit. No novelty or uniform branch-count claim;
+  see the exact accepted scope in AUDIT.
 - **Rational Weyl automorphisms do not yield proper polynomial endomorphisms.**
   A [birational construction filter](xmodel/birational-weyl-dressing-swarmHQ-root-20260915T082700Z.md)
   shows that a first-Weyl endomorphism inducing a division-ring automorphism
