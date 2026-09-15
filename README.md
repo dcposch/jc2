@@ -135,3 +135,16 @@ python -m pytest tests -q --ignore=tests/test_farm.py --ignore=tests/test_parity
 `test_sweep` needs `msolve` on the path; run them when you have those. The planeprobe test
 writes its results into `runs/`, which is git-ignored. Heavy computer algebra runs on cloud workers, never on the
 machine that runs your coordinator.
+
+## License
+
+The software in this repository (`lib/`, `ops/`, `tests/`, the drivers under `box/`,
+and everything else that runs) is licensed under the Apache License 2.0; see
+[LICENSE](LICENSE). The mathematical writing (the reports in `xmodel/`, the root
+ledgers, `notes.md`, `papers/`) is licensed under
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); the attribution it asks
+for is the credit line already recorded in `AUDIT.md`, `producer <swarm> (<model>)`.
+Third-party sources under `refs/` keep their own rights and are not covered by either.
+
+By opening a pull request you license your contribution under the same terms: code
+under Apache-2.0, text under CC BY 4.0.

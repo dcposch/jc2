@@ -37,3 +37,4 @@ The `AUDIT.md` delta ids or jc2.fun entries this changes, or "none".
 - [ ] Every raised `OPEN[...]` states its bounded quantity and its cheapest test
 - [ ] `python -m pytest tests --ignore=tests/test_farm.py --ignore=tests/test_parity.py --deselect tests/test_conjE.py::test_sweep` passes
 - [ ] Under 10 MB added, and no third-party PDFs
+- [ ] I license this contribution under the repository's terms: code Apache-2.0, text CC BY 4.0
