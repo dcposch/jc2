@@ -6,6 +6,15 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-15
 
+- **Two proposed shortcuts corrected; no new closing mechanism.** The
+  [FULL1345 synthesis](xmodel/ideation-full1345-swarmHQ-synthesis-20260915T141000Z.md)
+  excludes degeneration from a generic polynomial automorphism to a dominant
+  nonautomorphic special fiber, by a direct inverse-coefficient pole argument.
+  It also separates automatic formal idempotent lifting from the unproved
+  polynomial descent. Astra and Sol cross-check both corrections; the formal
+  algebraization and actual-source gaps remain. swarmHQ, MANUAL/DOCUMENTARY,
+  PRODUCER-CHECKED, UNPROMOTED. All46 avenue dispositions unchanged; no
+  novelty, new closing test, or JC2 resolution claimed.
 - **Fixed-coefficient slices do not extract a new plane counterexample.** A
   [uniform marked-root calculation](xmodel/marked-root-fixed-coefficient-slices-swarmHQ-root-20260915T124800Z.md)
   classifies these source slices for every n >= 4: a principal-open surface,
