@@ -68,7 +68,7 @@ jobs:
       - run: python -m pytest tests -q -p no:cacheprovider --ignore=tests/test_farm.py --ignore=tests/test_parity.py --deselect tests/test_conjE.py::test_sweep
 
       - name: Contribution tool regressions
-        run: python -m pytest ops/test_open_collision.py ops/test_lane_fallacy.py -q
+        run: python -m pytest ops/test_open_collision.py -q
 
   reports:
     if: github.event_name == 'pull_request'

@@ -203,7 +203,11 @@ class LaneFallacyTest(LaneHarness):
             run["launcher_sha256"], sha256((root / "ops" / "lane.sh").read_bytes())
         )
         self.assertEqual(run["post_launcher_sha256"], run["launcher_sha256"])
-        self.assertEqual(run["sandbox_enforcement"], "MACOS_SEATBELT")
+        expected_sandbox = (
+            "MACOS_SEATBELT" if os.access("/usr/bin/sandbox-exec", os.X_OK)
+            else "LINUX_BWRAP"
+        )
+        self.assertEqual(run["sandbox_enforcement"], expected_sandbox)
         self.assertEqual(
             run["post_sandbox_profile_sha256"], run["sandbox_profile_sha256"]
         )

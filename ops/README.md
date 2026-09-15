@@ -17,6 +17,8 @@ model adapter or cloud provider. Start with the contribution tools; read a tool'
 
 Read [the replay guide](../docs/REPLAY.md) for mathematical and artifact requirements.
 Run focused tool tests with `python -m pytest ops/test_<tool>.py -q`.
+The lane custody suite additionally requires a working OS sandbox: macOS Seatbelt
+or Linux bubblewrap. Run it on the configured coordinator host; no real model is used.
 
 ## Mathematical replay scripts
 
