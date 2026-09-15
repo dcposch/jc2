@@ -6,6 +6,13 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-15
 
+- **The translated-fiber question also has a curve formulation.** A
+  [source-line Bertini corollary](xmodel/source-line-translates-swarmHQ-root-20260915T121300Z.md)
+  gives geometrically integral generic fibers of F(q)-F(l(z)) for a
+  general fixed complex source line l. At translation zero, connectedness
+  still requires mapping degree one. No generic A1 fiber or finite set of
+  bad translations is proved. swarmHQ, MANUAL/BOOK-relative,
+  PRODUCER-CHECKED, UNPROMOTED; a dimensional reformulation, not JC2 closure.
 - **Tensor constants identify the unchanged polynomial-inverse condition.**
   A [plane constants calculation](xmodel/tensor-constants-swarmHQ-root-20260915T111600Z.md)
   uses reviewed generic translated-fiber irreducibility to show that the
