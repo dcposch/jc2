@@ -8,6 +8,13 @@ Its old closure statements must be read with the subsequent audit corrections.
 
 ## 2026-09-15
 
+05:49Z: GitHub sweep completed05:47:58 UTC:0 open issues,0 open PRs,
+0 triaged or pending; next deadline11:47:58 UTC and every earlier tick.
+Upstream license/site-pointer commits incorporated without conflicts.
+The bounded Astra/ROOT exact two-chart affineness check returned GAP:
+the punctured-quadric control fails exactness, and A-covered implies
+A-image, not affine. MANUAL/UNPROMOTED; no JC2 advance or successor.
+
 05:31Z: Sep15 arXiv AG/AC/CV announcement lists are now fresh; bounded
 Astra/ROOT primary screening found no new closing hypothesis. Anick jet
 approximation still lacks polynomial algebraization; the conductor result

@@ -51312,3 +51312,92 @@ to these source screens is selected. JC2 remains unresolved.
   104688 terminal lane-wall seconds unchanged, not metered billing/credits.
   Native author span271s, not credits; balancesUNKNOWN, retained EBS billable.
   Preserve pilot-local.log, bulk outputs and excluded nested repositories.
+
+## 2026-09-15 05:39 UTC LIVE STATE — bounded exact chart-union discriminator
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved. Fresh HEAD/origin
+  06d9a31bad4242dc8b77ae169d6427b7f34e4179; policy basis remains
+  team/swarmHQ/README.md SHA50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a.
+  Previous turn completed primary-source screening, not a global proof step.
+- GitHub05:32:04 UTC SUCCESS/UNBLOCKED, updated since05:25:10;
+  0issues/0PRs/0triaged/0pending, latest full open census still0/0.
+  Next11:32:04 UTC and every earlier tick. No public item actions.
+- One native Astra message-only task zero_base_constructive invited05:39:
+  target05:48/hard05:50 UTC, no extension. Test whether a smooth quasi-affine
+  surface covered by TWO whole A2 charts with a globally EXACT nowhere-zero
+  regular2-form must be affine. Need one decisive proof/counterexample or
+  explicit GAP, not a classification/control-family series. Charged current
+  APP/policy/FALLACY and whole notes45072--45123. ROOT owns independent
+  primary A-covered source check and terminal intake. No files, computation,
+  extra agents, excluded repositories or stopped/denied channels.
+  This is only a potential input to the existing d1=2 chart-union gap;
+  even affineness would not close its scalar-pair gap, much less all JC2.
+- Preliminary construction variants produced no pair or new implication;
+  existing low-fiber factor-invariance, graph and equivariance stops retained.
+  No proof promotion, paid lane, scientific worker, report lease, FIRST or
+  descendant. Other native agents remain terminal. No AWS mutation.
+- FULL0405 last04:39:01/next16:39:01; original miss/qualification retained.
+  BROAD originalSep12 21:53:56.598798932 overdue/access-degraded; systems
+  NO_CHANGE/NO_UPGRADE/original48h debt unchanged. Engineering CLOSED;
+  scalar/preflight/r3 PARKED. Prior05:23 fleet/process check empty/no science;
+  Fable cumulative104688 terminal lane-wall seconds unchanged, not credits.
+  Preserve pilot-local.log, bulk outputs and excluded nested repositories.
+
+## 2026-09-15 05:49 UTC — exact chart-union check collected
+
+Native Astra zero_base_constructive completed05:39:27--05:43:49 UTC;
+ROOT independently verified COMPLETED before intake. GAP: no proof or
+counterexample retaining the two whole A2 charts and globally exact
+nowhere-vanishing regular2-form. No files, computation or successors.
+MANUAL/UNPROMOTED, not FIRST or a new closing implication.
+
+The punctured-quadric control does not retain exactness. Its transition
+X=1/x, T=-x^2*t-x gives T*dX-t*dx=dx/x; ROOT checks the sign directly.
+The nonzero residue obstructs a global regular primitive, and removing
+a point cannot repair it because regular1-forms extend across codimension2.
+In the recorded actual-source V=Gamma0 minus finite Z, a primitive extends
+to smooth affine Gamma0, but this does not show Z empty. No A1-fibration
+was derived from two-chart coverage. Even affineness would retain the
+recorded scalar-pair gap; the full d1=2 problem remains open.
+
+ROOT's independent primary read of Arzhantsev, On images of affine spaces,
+https://arxiv.org/pdf/2209.08607v2 , included definitions, Proposition2,
+Theorem1 and Section2.2's Example3/Remark3/TheoremB with its short proof,
+not the whole dependency chain. TheoremB says A-covered implies an image
+of some affine space, NOT affine. Remark3's A1-fibration implication goes
+toward A-coveredness, not conversely. The t^2-x^k*Z=1 example is the known
+family, not a new donor. Seventeen ROOT discovery queries were targeted,
+not BROAD coverage; an unrelated guessed arXiv abstract and a logarithmic-
+symplectic search snippet supplied no theorem. No source classification,
+surface-family expansion, accepted-bound recheck or automatic successor.
+All46 avenue ranks and accepted claims are unchanged; JC2 is unresolved.
+
+## 2026-09-15 05:49 UTC LIVE STATE — GitHub sweep and terminal bank
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved. Basis
+  1d56c2fffcb0eac9036faf22fd328eb044bf8c19, fast-forwarded from06d9a31b
+  after checking upstream changes do not overlap the pending research notes.
+  Policy team/swarmHQ/README.md
+  SHA50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a;
+  AGENTS/COORDINATION/FALLACY/current APP pins unchanged.
+- GitHub sweep completed2026-09-15 05:47:58 UTC SUCCESS/UNBLOCKED.
+  Full open census and updated-since05:32:04 metadata queries each returned
+  0 issues and0 PRs. Items triaged0, pending0, still open0. No triage lane,
+  public comment or merge was needed; closed smoke-test PR#1 untouched.
+  Next deadline2026-09-15 11:47:58 UTC, and every earlier coordinator tick.
+- All native lanes terminal/collected; chart-union discriminator closed GAP.
+  No paid lane, science, worker, report lease, provisional root, FIRST debt
+  or descendant. Next research must change an actual-source implication or
+  construction test; no successor to this bounded chart-union screen.
+  Engineering CLOSED; scalar/preflight/r3 PARKED; previous stops retained.
+- Last FULL0405 completed04:39:01/next16:39:01 UTC. Original FULL miss and
+  qualification retained. BROAD Sep12 21:53:56.598798932 remains overdue/
+  access-degraded; stopped channels and source gates unchanged. Systems
+  NO_CHANGE/NO_UPGRADE with original48h debt retained. No cadence reset.
+- Fresh05:48:53 personal/us-east-1 nonterminal worker selectors both[];
+  coordinator3674934 tree has no science; running jc2 services0;
+  pswpin/out0/0. No AWS mutation. Fable cumulative104688 terminal lane-wall
+  seconds unchanged, not billing/credits; native author span262s, not
+  metered usage. BalancesUNKNOWN; retained EBS billable. Bank only owned
+  journal/digest edits; preserve pilot-local.log, bulk outputs and excluded
+  nested repositories. No new global blocker or mathematical promotion.
