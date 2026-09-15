@@ -49136,3 +49136,192 @@ FIRST, model lane, computation or new relaxed curve/surface example.
 - Engineering CLOSED; scalar/preflight/r3 PARKED; systems NO_UPGRADE,
   original48h debt retained. Bank only this completed history/navigation
   delta. Preserve pilot-local.log, bulk artifacts and excluded repositories.
+
+## 2026-09-15 00:04 UTC LIVE STATE — independent source-strategy tranche
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved. Previous turn banked duplicate-stop
+  navigation in87f4bff63911194a8123c360f4396e6fdfd65983, not mathematical
+  progress. Fresh fetch23:57 matched origin/master. Policy basis
+  team/swarmHQ/README.md SHA50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a;
+  governing pins unchanged from ROOT's complete reads.
+- A single Fable5.1 independent actual-source strategy task is ACTIVE,
+  not a FULL round or a repeat construction-family tranche. It must
+  propose/attempt at most one changed all-degree test using an actual
+  Keller source or sufficient construction, or return NO_NEW_CLOSING_TEST.
+  No further weakened-hypothesis control or finite-degree farm is charged.
+  Packet box/source-reset-fable5-20260915T0000Z; sole report
+  xmodel/source-reset-swarmHQ-fable5-20260915T0000Z.md. Prompt
+  SHA241d6a34c207d98212ddfa1fe7177e4c6ee2514cd0952bc539b17ebe2fe7cbdc;
+  STATE SHA095939d1ef012eaccf2a9d2e9d02d936d6d7e284ae3600d83c358f3c120b1472.
+  ROOT whole-read both before launch. Five charged snapshots: current APP
+  SHA6ccccdc25b8e983e9a5de86aabfb4e87db8f872cec5a1acf74ed8af37e41829e,
+  COORD4ce5b29a, team50cf4548, FALLACYe47fd16c, and STATE095939d1.
+  Source files retained unchanged while the lane reads runner-owned snapshots.
+- Exact unit jc2-source-reset-fable5-20260915T0000Z.service launched
+  00:00:14; invocationf8429b08518345bfbc34e641cd94f859, Main1811176,
+  bwrap1811371, actual claude1811372 confirmed within60seconds. RuntimeMax
+  1080s gives enforced stop00:18:14, earlier than prompt hard00:20;
+  target00:16. TimeoutStop15s, KillModecontrol-group, MemoryMax4GiB,
+  swap0. Explicit resolved CLI/node/apply_patch PATH supplied. Original
+  launcher0726b842/adapter34070f15/validatora89658bc/seal222e6de4 unchanged.
+  ROOT owns terminal/original-PID absence, receipt FIRST and all pin
+  reconstruction before whole report intake. No mutable output read.
+- ROOT's independent positivity screen recovered September13 14:27's
+  old Fock/domain and local-integrability threshold, not a new inequality.
+  One native Astra message-only check now tests the exact ACTUAL-source
+  statement S={h in R: integral |h|^(2d)*exp(-|F|^2)dV<infinity}, d the
+  generic degree. The proposed proof uses a monic output equation in one
+  direction, a height-one pole and ramification e<=d in the other. No
+  integrability estimate is supplied; the check must flag equivalence/
+  reformulation rather than call it a proof route. Target00:12/hard00:14,
+  <=8minutes, no files/code/network. Not FIRST; no descendants.
+- Other native lanes terminal; no worker, science, provisional claim or
+  FIRST debt. Fresh00:00 both personal/us-east-1 nonterminal selectors[];
+  pswpin/out0/0. One light external model unit only. Fable cumulative
+  101944 terminal lane-wall seconds unchanged UNTIL collection; running
+  time is not added as completed usage. Tokens/balances/billing UNKNOWN;
+  retained EBS remains billable. No AWS mutation.
+- FULL lastSep14 21:40:31, nextSep15 09:40:31; original10:17:55 miss and
+  FULL2110 qualification retained. BROAD originalSep12 21:53:56.598798932
+  access/coverage debt remains. All previously STOPPED channels/sources
+  remain stopped. This targeted tranche resets neither clock.
+- GitHub sweep blocked, gh not authenticated; freshly checked00:04,
+  no credential action.0triaged/openUNKNOWN/lastsuccessnone, original
+  Sep14 16:00 miss retained. DC authentication needed, not a global block.
+- Engineering CLOSED; scalar/preflight/r3 PARKED; systems NO_UPGRADE,
+  original48h debt retained. Next action is exact terminal collection and
+  mathematical/history intake, not auto-renewal. Preserve unrelated
+  pilot-local.log, all charged sources and excluded nested repositories.
+
+## 2026-09-15 00:18 UTC — source-strategy intake and moment criterion
+
+Previous user turn completed the requested repository check: fresh fetch
+and fast-forward-only pull found HEAD/origin/master at87f4bff63911194a8123c360f4396e6fdfd65983,
+already containing bf1e1ffe and91041f0. No rebase, file replacement or
+mathematical progress occurred. This goal tick began00:13:02; the earlier
+source-strategy task is collected below, not relaunched.
+
+Fable source-reset-swarmHQ-fable5-20260915T0000Z ended00:09:03 according
+to its terminal receipt,529 seconds after00:00:14. At collection the exact
+unit was LoadState=not-found and all three original PIDs1811176/1811371/
+1811372 were absent. This licenses intake; the missing unit is NOT itself
+an exit-success receipt. No running output was read. Receipt FIRST:
+DONE/exit0/CLEAN/BODY_SEALED/ABSENT; all five charged snapshots UNCHANGED.
+ROOT rehashed all retained inputs, prompt, adapter, launcher, validator,
+seal instrument, report and log, and reconstructed the exact composed
+model prompt and bwrap profile from the retained bytes/receipt paths.
+Every hash matched. Temporary snapshots were not claimed still present.
+Whole report then read, with unchanged post-read SHA
+685054d5c8919cead387f7d2a0972a53c67d225c1ff79d6aa9521a82b224fb63.
+Receipt SHA383acfad7f9fef799b79b315862f3a8257ea6f69bd439e0d9b730ca89dc1473e.
+Fresh charge-basis check ABSENT; collision check EMPTY. These mechanical
+checks do not validate the mathematical prose. The1296-byte terminal log
+was subsequently read for small-artifact banking, not used as proof.
+Existing external custody applies; no native transaction was retrofitted.
+
+Fable's verdict is NO_NEW_CLOSING_TEST. ROOT's exact master-table read
+closes its inventory OPEN: history/APPROACHES-before-20260906-cleanup.md
+row14 already names End(A1) disproof; row20 names Tsuchimoto/Belov-Kontsevich.
+Row13 is the DISTINCT DC(2). Neither pointer is new. The report's
+leading-symbol calculation supplies no non-surjective endomorphism.
+
+Native Astra public_literature_delta performed one bounded, message-only
+primary-source check, completed and collected this tick. ROOT independently
+read BKK Theorem1 and the relevant Section4 center/bracket passages,
+and Tsuchimoto Section7's statement/proof passages. This is a scoped
+source check, not a full-paper audit, FIRST or current-literature census.
+The immutable report is preserved with these binding intake corrections:
+
+- The source arrow JC_(2n)=>DC_n gives not-DC1=>not-JC2; the separate
+  DC_n=>JC_n arrow does not give DC1=>JC2. Tsuchimoto's chosen-ultrafilter
+  shadow preserves invertibility in both directions. No explicit finite
+  coefficient-extraction algorithm is supplied by these passages.
+  [BKK Theorem1](https://arxiv.org/pdf/math/0512171v2),
+  [Tsuchimoto Proposition7.1/Corollary7.3](https://ir.library.osaka-u.ac.jp/repo/ouka/all/7472/1700ojm.pdf).
+- Neither source proves a PROPER subclass of plane Keller maps or a
+  comparative search-cost lower bound. Reject the report's strictness/
+  necessary-hardness claims. No current converse census was performed.
+- Reduction must spread coefficients over a finitely generated Z-algebra,
+  not literally tensor A1(C) with F_p. The center bracket is the divided
+  commutator modp, NOT restriction of ad(P_p), which is zero on the center.
+  In fact P_p^p is central, so (ad P_p)^p=0 on the entire characteristic-p
+  Weyl algebra. That growing exponent supplies no uniform characteristic-zero
+  local-nilpotence transfer. The report's operator identification is not
+  licensed by [BKK Section4](https://arxiv.org/pdf/math/0512171v2).
+
+Decision: retain the known sufficient disproof route, but no candidate,
+source-attached discriminator or new Weyl lane follows. Stop this exact
+tranche for absence of a changed test, not because the route was proved
+harder. No global rerank, promotion, descendants or full-round trigger.
+
+ROOT's independent moment check, corroborated by native Astra
+frobenius_source_gate (completed before this goal tick; independently
+COMPLETED observed), is MANUAL/PRODUCER-CHECKED/UNPROMOTED, not FIRST.
+Let R=C[x,y], A=C[f,g], J(f,g)=1, d=[Frac R:Frac A], and S the integral
+closure of A in Frac R. Then the exact criterion is
+
+  S = {h in R : integral_C2 |h|^(2d) exp(-|f|^2-|g|^2) dV < infinity}.
+
+If h is integral, its monic equation bounds |h| polynomially in1+|F|.
+The area formula bounds the Gaussian moment by d times a polynomial
+Gaussian integral on the target. No properness premise is used.
+Conversely, normality and Zariski Main embed Spec R openly in Spec S.
+For h outside S a height-one divisor E has v_E(h)=-m<0. It is omitted
+from Spec R. At a generic smooth point avoiding other boundary/branch
+components, choose analytic coordinates with the finite map (t,s)->(t^e,s),
+1<=e<=d, and h=t^(-m) times a unit. The entire punctured bidisc lies in
+the ACTUAL source. Since JF=1, source volume is comparable to
+|t|^(2e-2)dA(t)dA(s); the Gaussian is bounded below there. The moment
+dominates integral_0^epsilon r^(2e-2dm-1)dr, which diverges for dm>=e.
+This includes omitted unramified e=1 divisors; no D=branch-locus premise.
+
+Scope: no bound proving these moments finite for x or y was obtained.
+Such bounds for BOTH coordinates would already force R=S and automorphy.
+The old Gaussian/Fock/domain stop (September13 14:27, notes39897ff) was
+reread; finite total Gaussian mass and target-subspace identities do not
+supply it. Selected September13 metric/Monge-Ampere stops were also
+recovered; no completeness or real-convexity inference is revived. This
+is an integrality characterization, not a new positive inequality or
+closing bridge. No moment/metric/control-family successor is selected.
+
+Outcome: documentary/source-screening progress and completed pending work,
+NO_NEW_CLOSING_TEST. JC2 remains unresolved; no mathematical promotion,
+new construction, scientific computation, worker, engineering renewal
+or automatic successor. Fable cumulative102473 terminal lane-wall seconds
+(101944+529), not billing, credits, tokens or CPU usage.
+
+## 2026-09-15 00:20 UTC LIVE STATE — source tranche closed, no changed closing test
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved. Basis87f4bff63911194a8123c360f4396e6fdfd65983,
+  fresh fetch/pull matched origin/master and includes both operator commits.
+  Policy basis team/swarmHQ/README.md
+  SHA50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a;
+  COORD4ce5b29a/FALLACYe47fd16c unchanged. Post-intake APP
+  SHAe004630befab86024e977c85ccc897353268e3d1254414a69ed3af5236d2b0c6.
+  Source-report/prompt/STATE remain exact; their pre-edit APP is in the basis.
+- All three native agents independently COMPLETED. Fable source-reset
+  terminal receipt00:09:03, original unit missing and PIDs absent; complete
+  receipt-first collection and source corrections above. No live writer,
+  model unit, worker, provisional root, FIRST debt or descendant. No
+  verified wait or mathematical closure claimed. No automatic successor.
+- FULL lastSep14 21:40:31, nextSep15 09:40:31; originalSep14 10:17:55
+  miss and FULL2110 workflow qualification retained. BROAD originalSep12
+  21:53:56.598798932 overdue/access-coverage debt remains. Mathstodon,
+  Palomar, failed Friedland publisher path and denied Zenodo22143955
+  remain STOPPED; Miyanishi legitimate-source gate unchanged. Targeted
+  primary source checks are not BROAD/FULL completion and reset no clock.
+- GitHub sweep blocked, gh not authenticated; fresh00:13 check.0triaged,
+  openUNKNOWN,lastsuccessnone; originalSep14 16:00 miss retained.
+  DC authentication need surfaced this turn; no credential action,
+  queue-body intake or GitHub messages. Not a global research impasse.
+- Fresh00:13 both personal/us-east-1 nonterminal worker selectors[];
+  coordinator3674934 process tree no science. No jc2 running user unit
+  at00:20; pswpin/out0/0 unchanged. No AWS mutation or scientific compute.
+  Fable cumulative102473 completed lane-wall seconds, not dollars/tokens/
+  credits/CPU. Native usage and balances UNKNOWN; retained EBS billable.
+- Engineering CLOSED; scalar/preflight/r3 PARKED; systems NO_UPGRADE,
+  original48h debt retained. Bank the completed packet/intake and exact
+  criterion at their honest tiers. Next research needs an actual missing
+  hypothesis or genuinely different construction, not another integrality
+  equivalence, repeated leading-form test or relaxed-control family.
+  Preserve pilot-local.log, bulk artifacts and excluded nested repositories.

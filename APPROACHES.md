@@ -295,6 +295,17 @@ The MANUAL/UNREVIEWED [fixed-target attachment](xmodel/pseudoplane-fixed-target-
 
 ## 8. Global geometry and external interfaces
 
+**Dixmier route: known, not ruled out by a difficulty comparison.** The
+September15 [Fable strategy check](xmodel/source-reset-swarmHQ-fable5-20260915T0000Z.md)
+returns NO_NEW_CLOSING_TEST; its [ROOT source corrections](notes.md#2026-09-15-0018-utc--source-strategy-intake-and-moment-criterion)
+govern intake. The master inventory already contains End(A1) disproof
+(row14) and the characteristic-p transfer (row20), distinct from DC(2).
+JC2 implies DC1, so a non-surjective Weyl endomorphism would suffice for
+disproof. The transfer does NOT establish a proper subclass of Keller maps,
+a search-cost lower bound, or a literal identification of the two
+local-nilpotence operators. No candidate or changed test was supplied;
+stop this tranche, not the entire route. No promotion or successor.
+
 Priority warning: arXiv:2407.13795v1's prime-degree proof was ALREADY
 rejected by the August24 dual source audit in AUDIT.md. Its rare-monomial
 property does not imply degree two. The September13 [Sol check](xmodel/prime-rare-property-gate-sol-20260913.md)

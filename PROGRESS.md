@@ -6,6 +6,18 @@ The previous log is preserved byte-for-byte in
 [history/PROGRESS-through-20260903.md](history/PROGRESS-through-20260903.md).
 Its old closure statements must be read with the subsequent audit corrections.
 
+## 2026-09-15
+
+00:18Z: [Source-strategy intake](notes.md#2026-09-15-0018-utc--source-strategy-intake-and-moment-criterion)
+found no new closing test. Fable's Dixmier suggestion was already in the
+inventory; primary checking retains its sufficient disproof implication
+but rejects unsupported claims that the route is strictly narrower or
+necessarily harder. ROOT/native Astra also checked a Gaussian-moment
+characterization of integrality, without the moment estimate needed for
+JC2. MANUAL/UNPROMOTED; no promotion, candidate, computation or successor.
+Fable used529 terminal lane-wall seconds; no fleet workers. GitHub triage
+still requires gh authentication. Both operator commits are already in HEAD.
+
 ## 2026-09-14
 
 23:56Z: [Actual-source trace/history checksum](notes.md#2026-09-14-2356-utc--actual-source-trace-tests-collide-with-existing-stops)
