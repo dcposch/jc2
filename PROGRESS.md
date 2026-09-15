@@ -6,6 +6,15 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-15
 
+- **A specific Pinchuk donor has an elliptic branch obstruction.** A
+  [hand calculation](xmodel/pinchuk-donor-branch-swarmHQ-root-20260915T143100Z.md)
+  finds a genus-one branch image in its actual finite normalization.
+  The reviewed nonproperness criterion then excludes every dominant rational
+  source substitution sending these fixed target coordinates to a whole-plane
+  polynomial Keller pair, of any finite substitution degree. This concerns
+  the displayed donor only, not arbitrary Pinchuk-like maps or target changes.
+  swarmHQ, MANUAL/BOOK-relative, PRODUCER-CHECKED, UNPROMOTED; Astra co-check
+  is same-model, and different-model review is pending. JC2 remains unresolved.
 - **Two proposed shortcuts corrected; no new closing mechanism.** The
   [FULL1345 synthesis](xmodel/ideation-full1345-swarmHQ-synthesis-20260915T141000Z.md)
   excludes degeneration from a generic polynomial automorphism to a dominant
