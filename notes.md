@@ -51401,3 +51401,115 @@ All46 avenue ranks and accepted claims are unchanged; JC2 is unresolved.
   metered usage. BalancesUNKNOWN; retained EBS billable. Bank only owned
   journal/digest edits; preserve pilot-local.log, bulk outputs and excluded
   nested repositories. No new global blocker or mathematical promotion.
+
+## 2026-09-15 05:56 UTC LIVE STATE — auxiliary-line discriminator
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved; basis0b25587215b35fc9c3ead395a80b4eec18113b92
+  freshly matched to origin. Policy team/swarmHQ/README.md remains the basis,
+  SHA50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a.
+  Previous turn banked state and completed a scoped check, not a JC2 proof step.
+- GitHub delta05:50:27 UTC SUCCESS, updated since05:47:58:0issues/0PRs;
+  0triaged/0pending, last full census0/0. Next11:50:27 and every earlier tick.
+- One message-only native Astra task zero_base_constructive: derive the
+  exact log Chern numbers after deleting r general auxiliary target lines
+  and their source preimages, WITHOUT deleting the nonproperness divisor.
+  Target06:05/hard06:08 UTC, no extension, files, computation or descendants.
+  This changed global properness test is distinct from the accepted
+  finite-etale E-BMY-VACUITY; the old theorem is consumed, not reverified.
+  ROOT tests weighted equality-case applicability and owns terminal intake.
+- No new implication emerged from Lie/Gaussian/radial-foliation screens;
+  exact histories were recovered before any repeat lane. No source-family
+  search, mathematical promotion, paid lane, science, worker or report lease.
+  Other native agents terminal; no FIRST debt or provisional descendants.
+- FULL0405 last04:39:01/next16:39:01; BROAD Sep12 21:53:56.598798932
+  still overdue/access-degraded. Original FULL/48h qualifications, source
+  gates and stopped channels retained. Engineering CLOSED; scalar/preflight/
+  r3 PARKED. Last05:48:53 fleet/process check empty/no science/pswpin-out0/0.
+  Fable104688 terminal lane-wall seconds unchanged; balancesUNKNOWN, retained
+  EBS billable. Preserve pilot-local.log, bulk artifacts and excluded repos.
+
+## 2026-09-15 06:07 UTC — auxiliary-line terminal intake
+
+Native Astra zero_base_constructive completed06:02:13 UTC; ROOT independently
+observed COMPLETED before banking. MANUAL/UNPROMOTED, not FIRST: the proposed
+large-r generic-line amplification does not give a Keller exclusion. No files,
+computation, paid lane or successor. This consumes the accepted finite-etale
+E-BMY-VACUITY with its model qualification; it does not reverify that result.
+
+For a smooth projective completion pi:X->P2 of a generically finite source
+map of degree d, put B=(X minus A2)_red SNC, H=pi*O(1), L=K_X+B,
+a=L.H, k=L^2. On this fixed model, choose r sufficiently general target
+lines with smooth reduced pullbacks C_i transverse to B away from its nodes.
+Their pairwise intersections avoid pi(B) and branch/exceptional images, so
+each pair meets in d transverse source-affine points; no triple intersections.
+No r-dependent blowups or deletion of the nonproperness divisor is used.
+Then, for U_r=X minus (B+sum C_i), adjunction and inclusion-exclusion give
+
+    e(C_i intersect A2) = -a-d;
+    e(U_r) = 1+a*r+(d/2)*r*(r+1);
+    (L+rH)^2 = d*r^2+2*a*r+k;
+    3e(U_r)-(L+rH)^2 = (d/2)*r^2+(a+3*d/2)*r+3-k.
+
+Boundary punctures include those over finite nonproperness values. ROOT
+independently derived these formulas and checked the identity-map control:
+d=1, a=-2, k=4 yields (r-2)^2 and 1-r+binom(r,2).
+The fixed SNC square is NOT identified with log-minimal volume. Instead,
+ramification gives L+rH ~ (r-3)H+(R+B), R>=0, big for r>3.
+Choose fixed ample A with A-L effective. Surface Zariski decomposition and
+volume monotonicity give
+
+    (L+rH)^2 <= vol(L+rH) <= (rH+A)^2,
+
+so vol(L+rH)=d*r^2+O(r), while e(U_r)=(d/2)*r^2+O(r).
+The ratio tends to2, below the BMY threshold3; the asymptotic defect is
+positive. The leading terms do not use the Keller determinant condition,
+only generic finiteness, source A2 and the stated general-position premises.
+Finite-r lower terms, weighted/nongeneric arrangements and equality cases
+are NOT decided. No actual-source implication, JC2 proof or counterexample.
+
+ROOT's targeted primary-source check, not a new broad sweep: de Borbon--Panov,
+https://arxiv.org/html/2411.09573v3 , Theorem1.1 assumes a klt/CY hyperplane
+arrangement; Theorem4.24 needs a locally abelian P-stable parabolic bundle
+with par-c1=0. A Keller source pullback is not thereby such an arrangement
+or bundle. Read scope: introduction/Theorem1.1, selected Section1.2,
+Definitions4.17--4.22/Theorem4.24, selected Section4.2--4.4, and Theorem6.29
+statement/beginning of proof, not the entire dependency chain. No weighted
+route is ruled out. Boucksom--Favre--Jonsson,
+https://arxiv.org/pdf/math/0608260v2 , introduction/volume continuity,
+Proposition2.12 and selected Section3.4 support the volume/model distinction;
+not a whole-paper verification. An initial author-site timeout was followed
+by the canonical arXiv read, with no stopped/denied source retried.
+Nine targeted ROOT discovery queries this tranche; no BROAD clock reset.
+Earlier Lie/Gaussian/radial proposals collided with recorded gaps before any
+repeat lane. All46 ranks and accepted claims remain unchanged.
+
+## 2026-09-15 06:07 UTC LIVE STATE — authenticated GitHub sweep and bank
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved. Basis
+  0b25587215b35fc9c3ead395a80b4eec18113b92, freshly fetched and matched to
+  origin/master. Policy basis team/swarmHQ/README.md
+  SHA50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a;
+  AGENTS/COORDINATION/FALLACY/APP pins unchanged. Owned journal/digest bank.
+- GitHub sweep2026-09-15 06:07:04 UTC SUCCESS/UNBLOCKED. gh authentication
+  and repository reads succeeded. Full open issue/PR censuses and open-item
+  delta queries updated since05:50:27 UTC all returned empty arrays.
+  Items triaged0; pending0; still open0 issues/0 PRs. No triage lane needed;
+  no public comment, review or merge. Closed CI smoke-test PR#1 untouched.
+  Next deadline2026-09-15 12:07:04 UTC, and every earlier coordinator tick.
+- All three native agents terminal/collected. Auxiliary-line discriminator
+  closed at its stated scope, no automatic successor or mathematical
+  promotion. No active paid lane, science, worker, report lease, provisional
+  root, FIRST debt or descendant. Next research requires a changed actual-
+  source implication or complete construction, history-checked first.
+  Engineering CLOSED; scalar/preflight/r3 PARKED; existing stops retained.
+- Last FULL0405 completed04:39:01/next16:39:01 UTC; original miss and
+  qualification retained. BROAD Sep12 21:53:56.598798932 remains overdue/
+  access-degraded; source gates and stopped channels unchanged. Systems
+  NO_CHANGE/NO_UPGRADE, original48h debt retained. No cadence reset.
+- Fresh06:07:06 personal/us-east-1 nonterminal worker selectors both[];
+  coordinator3674934 tree has no science, running jc2 services0,
+  pswpin/out0/0. No AWS mutation or external paid-model use. Fable cumulative
+  104688 terminal lane-wall seconds unchanged, not billing/credits. Native
+  task start not reported, so no invented duration; balancesUNKNOWN,
+  retained EBS billable. Preserve pilot-local.log, bulk outputs and excluded
+  nested repositories. No new global blocker or proof/counterexample.
