@@ -8,6 +8,12 @@ Its old closure statements must be read with the subsequent audit corrections.
 
 ## 2026-09-15
 
+02:53Z: An [explicit smooth surjective projective pencil](notes.md#2026-09-15-0253-utc--smooth-projective-pencil-with-no-affine-line-component)
+has every fiber irreducible and rational but NO affine-line component.
+ROOT/native Astra, MANUAL/UNPROMOTED: this refutes a proposed global
+existence shortcut, not JC2. The underlying non-Keller map was already
+recorded; its full pencil-fiber test is the scoped contribution. No compute.
+
 02:40Z: The [selected-integral-coordinate retry](notes.md#2026-09-15-0240-utc--integral-coordinate-retry-stopped-at-existing-gap)
 returned DUPLICATE/GAP: the geometric argument was already in September13's
 journal, and finite freeness does not supply the required normality or

@@ -50293,3 +50293,112 @@ No new closing test, global rerank, promotion, or scientific execution.
   not billing. Retained EBS remains billable. Engineering CLOSED;
   scalar/preflight/r3 PARKED. Bank only notes/PROGRESS/APP and preserve
   pilot-local.log, bulk artifacts and both excluded nested repositories.
+
+## 2026-09-15 02:53 UTC — smooth projective pencil with no affine-line component
+
+Previous turn: NO MATHEMATICAL PROGRESS; its useful bank was the duplicate
+stop/history pointer, not a new JC2 implication. This tick began02:41:18;
+fresh HEAD=origin/master=1df1aca8bd152d57850a8009a6129004c747721b,
+only unrelated pilot-local.log dirty. Initial dynamics, finite-duality and
+stable-image thoughts supplied no new hypothesis and received no lane.
+The old stable-image report and the September13 22:43 / September14 22:57
+events were checked before the following changed test was commissioned.
+
+The exact proposed global shortcut was: EVERY smooth surjective morphism
+A2_C->P1 has at least one fiber component isomorphic to A1. This is
+different from the earlier, already-refuted generic-genus assertion.
+It would close JC2 through an actual-source interface: for any Keller
+F=(f,g), h_K=[f:1+fg] is basepoint-free and smooth, with differential
+numerator df-f^2*dg. The cofinite Keller image meets every infinite target
+fiber, so h_K is surjective. A fiber over[1:t] maps into f(g-t)=-1.
+On an A1 component f would be a polynomial unit, hence constant, and then
+g constant, contradicting quasi-finiteness. An A1 component must therefore
+lie in f=0, the fiber over[0:1]. There dg never vanishes, so g restricts
+to a degree-one polynomial. Rectification and the already-accepted
+injective-line theorem give automorphy. Those imports are not reverified.
+
+The universal pencil assertion is FALSE. Reuse, without any new parameter
+family, the OLD non-Keller map from the September12 iterated-image report:
+
+  P=xy-1, Q=xP+y, h=[P:Q].
+
+Its exact Bezout identity xQ-(x^2+1)P=1 rules out base points. Directly,
+
+  Q*dP-P*dQ=(y^2-P^2)dx+dy,
+
+so the projective morphism is smooth EVERYWHERE. Surjectivity is explicit:
+h(t,0)=[1:t] for every complex t, and h(1,1)=[0:1]. For finite t put
+D_t=x^2-tx+1 and N_t=x-t. The entire closed fiber scheme is
+
+  C[x,y]/(D_t*y-N_t) = C[x,D_t^(-1)],  y=N_t/D_t.
+
+Indeed D_t-xN_t=1 gives D_t*(1-xy)=1 in the quotient; conversely the
+displayed localization supplies inverse maps, and P=-1/D_t. There are
+no hidden components or unreduced fibers. For t!=2,-2, the quadratic has
+two distinct roots, so the fiber is A1 minus two points. At t=2 or-2 it
+is (x-1)^2 or(x+1)^2; localization at the square is the SAME ring as
+localization at its linear factor. Those fibers are reduced G_m, not
+multiple fibers. The remaining fiber P=0 is xy=1, also G_m.
+Every fiber is thus irreducible, smooth and rational but has a nonconstant
+unit, excluding A1. The Euler crosscheck is consistent: three exceptional
+fibers have chi0; the complementary base and generic fiber both have
+chi=-1, giving total chi1.
+
+The underlying map(P,Q) was ALREADY known to be quasi-finite with image
+A2 minus the origin. Its Jacobian x+y-x^2*y is nonconstant. Neither
+quasi-finiteness nor this smooth pencil makes it Keller. Positive control:
+the identity Keller pair gives [x:1+xy], whose [0:1] fiber IS A1 and
+whose other fibers are G_m. No actual Keller source is ruled out by the
+new negative test; it only removes the proposed universal pencil lemma.
+
+ROOT derived the candidate, then native Astra checked all scheme fibers
+and the conditional Keller linkage in a <=6minute message-only task
+launched after02:50. Native COMPLETED was independently observed before
+02:52:42, before any ledger edits. Same model, not different-model FIRST.
+MANUAL/PRODUCER-CHECKED, UNPROMOTED; no AUDIT change or descendants.
+Both whole-read xmodel/iterated-image-source-discriminator-root-20260912.md,
+full SHA89fb7cbf6723bcfb55a3612759abb45ebae2d51aaa01c455788010518f93a6fc,
+with unchanged pins. ROOT's split read included the final seal. Governing
+hashes matched their earlier personal whole reads; native reread them whole.
+Scoped phrase/formula searches found the old map, not this exact fiber
+discriminator; several broader outputs clipped. No exhaustive novelty or
+whole-map-refresh claim. Four targeted web queries yielded no applicable
+theorem; discovery snippets were not imported or counted as a broad sweep.
+
+This is the second changed projective-pencil tranche. Its new closing test
+is now refuted, while the actual-source existence gap stays unchanged.
+STOP this pencil/control family; no generic-genus, extra-fiber, parameter,
+degree or Euler-characteristic successor. Global ranking and FULL clock
+unchanged. The result is a scoped negative test, not evidence against JC2.
+
+## 2026-09-15 02:53 UTC LIVE STATE — no-line pencil shortcut stopped
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved. Basis
+  1df1aca8bd152d57850a8009a6129004c747721b matched fresh origin/master.
+  Policy basis team/swarmHQ/README.md
+  SHA50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a;
+  COORD4ce5b29a,FALLACYe47fd16c unchanged. APP changes only the scoped
+  unpromoted pencil stop; all global gaps/rankings remain.
+- All three native agents independently COMPLETED. No external model unit,
+  scientific worker/job, active provisional root, FIRST debt or descendant.
+  Pencil claim MANUAL/UNPROMOTED; all-fiber check terminal within its cap.
+- Immediate queue: bank this changed discriminator, then protect time for
+  a genuinely different actual-source implication or complete construction.
+  No further projective-pencil, selected-coordinate, abstract-module,
+  Laurent/Long or finite-window family successor. Engineering CLOSED;
+  scalar/preflight/r3 PARKED. No accepted-bound reverification.
+- FULL lastSep14 21:40:31,nextSep15 09:40:31; originalSep14 10:17:55 miss
+  and FULL2110 workflow qualification retained. Routine scoped micro-round,
+  no critical promotion or cadence reset. BROAD originalSep12
+  21:53:56.598798932 remains overdue/access-degraded; stopped channels
+  and legitimate-source gates unchanged. Systems NO_UPGRADE; original48h
+  debt retained. No new human-only research blocker.
+- GitHub sweep blocked, gh not authenticated, fresh02:51 check;0triaged,
+  openUNKNOWN,lastsuccessnone,originalSep14 16:00 miss retained. No queue
+  body, credential or external-message action; auth requirement surfaced.
+- Both personal/us-east-1 nonterminal worker selectors[] at02:52. Fresh
+  coordinator3674934 tree has no science, running jc2 units0, pswpin/out0/0.
+  No AWS mutation/computation or paid external lane. Fable cumulative
+  103186 terminal lane-wall seconds unchanged; native usage/balancesUNKNOWN,
+  not billing. Retained EBS remains billable. Bank only notes/PROGRESS/APP;
+  preserve pilot-local.log, bulk artifacts and both excluded nested repos.

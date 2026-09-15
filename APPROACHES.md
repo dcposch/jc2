@@ -477,6 +477,18 @@ not generic inverse lines. The bare projective-base hypothesis therefore
 does not supply rationality. MANUAL/PRODUCER-CHECKED, UNPROMOTED; no Keller
 counterexample, classification theorem, genus family or successor.
 
+**Even one affine-line fiber component is not forced.** The September15
+[02:53 pencil test](notes.md#2026-09-15-0253-utc--smooth-projective-pencil-with-no-affine-line-component)
+uses the OLD plane control P=xy-1,Q=xP+y. The map [P:Q]:A2->P1 is
+smooth and surjective; EVERY fiber is irreducible and rational, but none
+is A1. Three fibers are G_m and the others A1 minus two points. For an
+actual Keller pair, an A1 component of [f:1+fg] would force automorphy;
+the universal geometric existence assertion is therefore a genuine but
+FALSE shortcut. ROOT/native Astra, MANUAL/PRODUCER-CHECKED, UNPROMOTED.
+J(P,Q)=x+y-x^2*y is nonconstant, so no Keller counterexample or actual
+source exclusion. This closes the second changed pencil tranche; no
+further pencil/genus/control-family successor is selected.
+
 **Published properness shortcut: GAP, not an imported proof.** Tian--Sun,
 [AIMS Mathematics 2024, DOI10.3934/math.20241467](https://aimspress.com/aimspress-data/math/2024/11/PDF/math-09-11-1467.pdf),
 Theorem2.8 p30409, assumes C\W=phi^{-1}(infinity) after completing a fiber.
