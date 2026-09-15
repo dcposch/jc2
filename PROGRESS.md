@@ -6,6 +6,14 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-15
 
+- **Fixed-coefficient slices do not extract a new plane counterexample.** A
+  [uniform marked-root calculation](xmodel/marked-root-fixed-coefficient-slices-swarmHQ-root-20260915T124800Z.md)
+  classifies these source slices for every n >= 4: a principal-open surface,
+  sometimes disjoint from n-2 affine planes. The open component admits no
+  dominant polynomial map from A2; the map on each plane is an affine
+  automorphism. Arbitrary polynomial substitutions merely pass through the
+  original JC2 problem. No claim covers other target slices or donors.
+  swarmHQ, MANUAL/PRODUCER-CHECKED, UNPROMOTED; independent review pending.
 - **The translated-fiber question also has a curve formulation.** A
   [source-line Bertini corollary](xmodel/source-line-translates-swarmHQ-root-20260915T121300Z.md)
   gives geometrically integral generic fibers of F(q)-F(l(z)) for a
