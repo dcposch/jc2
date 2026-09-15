@@ -22843,3 +22843,42 @@ request was sent, and the Keller-specific headline itself is not refuted.
   characteristic extension, arbitrary localization, surjectivity of F,
   properness, completeness, specialization to connectedness at0, source
   generation algorithm, degree bound or JC2 resolution is obtained.
+
+### KELLER-SOURCE-LINE-1 — 2026-09-15
+
+- PROMOTED / MANUAL, BOOK-relative, as a routine Bertini corollary.
+  Producer swarmHQ ROOT (gpt-6-astra),
+  [sealed source-line report](xmodel/source-line-translates-swarmHQ-root-20260915T121300Z.md),
+  full SHA256e2e0ac36a7fe422ac8388486b69c88e6d7da50738d49b4c7665e6534b457f880,
+  manifestdd97ca2940827cedf360f605e71046886117099181a8212508e75ac7fe239f7b;
+  [different-model Sol FIRST](xmodel/source-line-review-swarmHQ-sol-20260915T122100Z.md),
+  full2e7ef259f4f1dd9dda777d8cedfdfc92e6c05089476140b25a0a5359bd76871d,
+  manifest4d7eb7fdfbc6a027b2db8f230510a3fcff965bd555a4aefbf527c500de6ab537.
+  Review consumed publica7dcc425. ROOT collected terminal author, verified
+  expected basis/manifest and0444 modes, and wholly read the review with
+  unchanged pre/post hashes. Frozen producer/reviewer bytes are unchanged;
+  the producer's UNPROMOTED label preserves its publication-time lifecycle.
+- For an actual complex plane Keller map F of generic degree d, a nonempty
+  complex Zariski-open set of FIXED affine source lines L has geometrically
+  integral generic fiber for Psi_L(z,q)=F(q)-F(l(z)):A3->A2, where l is any
+  affine-linear parametrization of L. Direction and offset may both vary.
+  Psi_L is smooth and surjective for EVERY source line. Restrict the good
+  open further to lines meeting the inverse finite-etale locus of F;
+  then its zero fiber is connected if and only if d=1. For d>1 the graph
+  q=l(z) is a nonempty clopen A1 component with nonempty off-graph part.
+- Dependencies: the geometric generic difference surface already accepted
+  in KELLER-TENSOR-CONSTANTS-1; its etale first-source projection; and
+  [Stacks37.32.3](https://stacks.math.columbia.edu/tag/0G4C) applied to the
+  basepoint-free system spanned by1,p1-a,p2-b, with its nonempty
+  codimension-two witness. Finite coefficient expansion descends a good
+  parameter open to fixed complex lines. ROOT and Sol read all of Stacks
+  Section37.32, including its three lemma proofs; cited dependencies and
+  the accepted parent/birational-etale endpoint remain BOOK-relative.
+  No Chau no-line theorem or finite-exception bound is used here.
+- Controls: identity fibers A1; Artin--Schreier p-component fibers in
+  positive characteristic; the actual zero-fiber clopen section. No
+  every-line generic integrality, every-member-of-a-fixed-pencil statement,
+  finite bad-translation set, generic A1 fiber, genus bound, properness,
+  completeness, local nilpotence, zero-fiber connectedness or JC2 follows.
+  Novelty UNKNOWN. This reformulates the special-fiber gap in relative
+  dimension one; it supplies no new mechanism closing that gap.

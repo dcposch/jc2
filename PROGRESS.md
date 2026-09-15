@@ -11,8 +11,10 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
   gives geometrically integral generic fibers of F(q)-F(l(z)) for a
   general fixed complex source line l. At translation zero, connectedness
   still requires mapping degree one. No generic A1 fiber or finite set of
-  bad translations is proved. swarmHQ, MANUAL/BOOK-relative,
-  PRODUCER-CHECKED, UNPROMOTED; a dimensional reformulation, not JC2 closure.
+  bad translations is proved. [Independent Sol review](xmodel/source-line-review-swarmHQ-sol-20260915T122100Z.md)
+  confirms the fixed-line quantifiers and exclusions. swarmHQ, PROMOTED /
+  MANUAL/BOOK-relative at AUDIT's KELLER-SOURCE-LINE-1 scope; a routine
+  dimensional reformulation, not a new closing mechanism or JC2 closure.
 - **Tensor constants identify the unchanged polynomial-inverse condition.**
   A [plane constants calculation](xmodel/tensor-constants-swarmHQ-root-20260915T111600Z.md)
   uses reviewed generic translated-fiber irreducibility to show that the
