@@ -29,7 +29,7 @@ Actual worker state, allocation decisions, and deadlines belong to each swarm.
 **Question:** which global feature of an actual Keller source forces the missing
 normality, integrality, or properness conclusion?
 
-The [canonical-graph scaling test](notes.md#2026-09-15-0704-utc--smooth-graph-degeneration-does-not-force-normality)
+The [canonical-graph scaling test](avenues/notes/smooth-graph-degeneration-20260915.md)
 obtains a smooth central fiber with t-saturation and finite total normalization.
 These do not establish global normality of the nonzero fibers: a non-Keller control
 has singularities escaping to infinity. This is MANUAL/PRODUCER-CHECKED, UNPROMOTED.
@@ -48,7 +48,7 @@ vanishing result beyond the identities already tested?
 Trace identities alone do not provide a degree ceiling or a splitting theorem.
 The accepted Bass operator results retain normalized coordinates and their named
 external assumptions; they do not establish the required source-selection theorem.
-The [cofinite-center cusp control](notes.md#2026-09-15-0210-utc--cofinite-center-euler-tests-do-not-supply-source-structure)
+The [cofinite-center cusp control](avenues/notes/cofinite-center-euler-20260915.md)
 is nonzero and passes the tested operators away from one center, but is not an actual
 Keller source quotient. MANUAL/PRODUCER-CHECKED, UNPROMOTED.
 

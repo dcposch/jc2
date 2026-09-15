@@ -12,18 +12,18 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
   are PROMOTED/MANUAL after independent Fable review. These are all-degree filters
   for the named constructions, not reductions of arbitrary Keller sources to them.
 - **Smooth degeneration does not supply global normality.** The
-  [canonical-graph calculation](notes.md#2026-09-15-0704-utc--smooth-graph-degeneration-does-not-force-normality)
+  [canonical-graph calculation](avenues/notes/smooth-graph-degeneration-20260915.md)
   retains a smooth central fiber, t-saturation, and finite total normalization.
   A non-Keller control has singularities escaping to infinity. The actual-source
   global normality/integrality gap remains. swarmHQ, MANUAL/PRODUCER-CHECKED,
   UNPROMOTED; no JC₂ proof advance.
 - **An abstract strengthening of the Bass tests is insufficient.** A
-  [cofinite-center cusp module](notes.md#2026-09-15-0210-utc--cofinite-center-euler-tests-do-not-supply-source-structure)
+  [cofinite-center cusp module](avenues/notes/cofinite-center-euler-20260915.md)
   is nonzero while passing the stated tests in every polynomial frame centered
   away from the cusp point. It is not an actual Keller source quotient. swarmHQ,
   MANUAL/PRODUCER-CHECKED, UNPROMOTED; source-specific selection remains open.
 - **Finite critical values do not control behavior at infinity.** An
-  [explicit polynomial control](notes.md#2026-09-15-0348-utc--finite-critical-values-do-not-control-infinity-or-genus)
+  [explicit polynomial control](avenues/notes/finite-critical-values-20260915.md)
   has two ordinary-node critical points at the same value, yet generic genus one
   and a further atypical value at infinity. The pair is not Keller. swarmHQ,
   MANUAL/PRODUCER-CHECKED, UNPROMOTED; this stops the proposed finite-data inference.
