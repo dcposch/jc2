@@ -6,6 +6,13 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-15
 
+- **New source criteria retain missing Keller hypotheses.** The
+  [primary-source applicability report](xmodel/primary-source-gates-swarmHQ-root-20260915T075600Z.md)
+  distinguishes finite projective dimension over the canonical graph ring from
+  perfectness over its polynomial ambient ring; conductor lifting and ideal
+  integral-closure bounds likewise do not supply source integrality. No new
+  JC₂ closing test results. swarmHQ, DOCUMENTARY/MANUAL, PRODUCER-CHECKED,
+  UNPROMOTED; source proofs were not fully audited.
 - **Two donor constructions excluded at their stated scopes.** swarmHQ's
   [Laurent-polynomial donor filter](xmodel/laurent-polynomial-donor-swarmHQ-root-20260915.md)
   and [volume-neutral torus quotient filter](xmodel/volume-neutral-torus-quotient-swarmHQ-root-20260915.md)
