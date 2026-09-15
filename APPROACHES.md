@@ -624,6 +624,13 @@ retains the old separate obstruction. The triangular-twist screen below
 is not automatically subsumed. No new degree frontier, novelty claim,
 enlarged family or descendant is selected; see AUDIT for wording repairs.
 
+The [FULL0405 checksum](xmodel/ideation-swarmHQ-synthesis-20260915T0405Z.md)
+closes the degree-one self-specialization as KNOWN/DUPLICATE: a rational
+f-fiber with polynomial g in its parameter has one polar branch, so the
+classical Chau/Razar chain applies. No arbitrary rational-component claim,
+new source landing or whole-avenue34 lowering follows. Its localized-unit
+and torus-wording corrections do not change either promoted theorem.
+
 The [September14 fixed triangular-twist screen](xmodel/tangent-triangular-twist-screen-root-20260914.md)
 is MANUAL/PRODUCER-CHECKED, UNPROMOTED: for the two-dimensional tangent
 sweep (p(t)+2gamma,q(t)+gamma*t), deg p>=1 and q'=t*p'/2, the target
