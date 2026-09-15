@@ -8,6 +8,14 @@ Its old closure statements must be read with the subsequent audit corrections.
 
 ## 2026-09-15
 
+01:20Z: [Source-line and Laurent-donor checks](notes.md#2026-09-15-0120-utc--source-line-ceiling-stops-laurent-donor-draft)
+find no new discrepancy ceiling. A separate all-degree Laurent-polynomial
+donor dichotomy has a manual proof draft: a bad branch at infinity or a
+cyclic-quotient normalization. ROOT/native Astra, DRAFT/UNPROMOTED;
+history/source reconciliation and different-model FIRST remain before any
+campaign closure. No JC2 implication or computation. Operator commits are
+included; pull reports already up to date, with the unrelated log preserved.
+
 00:58Z: [Flow-integration discriminator](notes.md#2026-09-15-0058-utc--almost-everywhere-flow-completeness-does-not-give-commutation)
 gives a nonsingular polynomial Hamiltonian field on all C2 whose real and
 imaginary flows are individually complete almost everywhere but do not

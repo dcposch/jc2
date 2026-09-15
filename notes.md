@@ -49593,3 +49593,176 @@ rerank; this expected scoped negative is a micro-round, not a FULL trigger.
   ACTUAL Keller hypothesis or a genuinely different construction, not repeat
   linearization, a.e. completeness, Gaussian moments or controls without it.
   Preserve pilot-local.log, bulk artifacts and excluded nested repositories.
+
+## 2026-09-15 01:20 UTC — source-line ceiling stops; Laurent-donor draft
+
+Tick began01:00:32 on200a79abedb238487071569692720090c9f90666.
+The operator's latest pull request was checked again after context
+continuation: fetch and pull --ff-only both succeed, already up to date.
+HEAD=origin/master=200a79ab; bf1e1ffe and91041f0b are independently verified
+ancestors. Only unrelated pilot-local.log was dirty; it was not stashed,
+staged or changed. Whole README/protocol/team policy/FALLACY reads were
+completed with the governing pins unchanged; one clipped aggregate was
+repaired with a separate read. No nested repository was inspected.
+
+### Direct source-line discrepancy attempt: NO_NEW_CLOSING_IMPLICATION
+
+Native Astra frobenius_source_gate,01:04:34--01:09:06, completed within
+its01:16:34 cap and was independently observed COMPLETED before reuse.
+This was a message-only manual attempt, not a report or computational job.
+Charged whole normal-log-numerical-gate-astra-20260912.md and the
+September12 0920/September14 2110 synthesis reports, APP522--537 and
+FALLACY, with governing pre/post pins. ROOT also read the whole adjoint
+derivation discriminator and selected source-line/Noether history.
+
+For an actual hypothetical noninvertible Keller pair, let D be maximum
+total degree (NOT field degree), L the original source-infinity strict
+transform on a genuine common resolution W, r_L its coefficient in the
+numerical pullback of ramification, and a_L its numerical discrepancy.
+The effective morphism Jacobian divisor Z=K_W+3*Phi^*L_target gives
+
+  coeff_L(Z)=3D-3=r_L+a_L.
+
+The desired contradiction would require r_L<2D, equivalently a_L>D-3;
+the existing adjoint-section bound instead gives r_L>=2D+deg(h).
+Effectivity of Z bounds neither summand in the required direction.
+A general source line avoids all infinity basepoints and intersects the
+boundary only at L; intersecting the same identity yields exactly the
+same equality, not an independent inequality. All its images meet the
+contracted point q, so coordinate pencils are not basepoint-free there.
+Polynomial source coordinates do not thereby extend regularly at q.
+The known Noether/proximity and adjoint-derivative stops were recovered,
+not reopened. No LC theorem, coefficient ceiling or new source hypothesis
+was obtained. This tranche ends; no LC/tree/control successor is selected.
+
+### Separate Laurent-polynomial donor dichotomy: retained proof DRAFT
+
+ROOT proposed the following algebraic filter during the constructive pass.
+Astra hand-checked it in one bounded message-only task and independently
+observed COMPLETED at intake. Same producing model: NOT different-model
+FIRST. Status MANUAL/DRAFT/UNPROMOTED, not a new accepted campaign closure.
+History/primary-premise reconciliation is incomplete; no novelty claim.
+
+Let p,u be independent and, for m>=2 and any integer k, put
+
+  q=P(p,u)=p^(-k)*u^m + sum_(0<=j<m) a_j(p)*u^j,
+  a_j in C[p,p^(-1)], A=C[p,q], K=C(p,u).
+
+Let S be the normalization of A in K. The second-leg field degree is m.
+Over p!=0, S[p^(-1)]=C[p,p^(-1),u], since the leading coefficient is
+a unit there. This is an actual finite normal cover, ramified on P_u=0.
+The proposed dichotomy is:
+
+1. A critical-value Puiseux branch over p=0 has a pole. Its actual branch
+   image has an infinity place with p tending to0 and q tending to infinity.
+   Its normalization is not A1: the nonconstant p would be a polynomial
+   on A1 and could not remain finite at its unique infinity place.
+2. Every critical-value Puiseux branch over p=0 is integral. Then
+   S=C[t,v]^(mu_m) for the diagonal action described below; in particular
+   m*Cl(S)=0. The quantifier EVERY branch is essential.
+
+Here is the retained manual proof of case2. Center u using
+s(p)=-p^k*a_(m-1)(p)/m, set p=t^m and u=s(t^m)+t^k*v. Then
+
+  H(t,v)=P(t^m,s(t^m)+t^k*v)
+        =v^m + sum_(0<=j<=m-2) c_j(t)*v^j,
+  c_j in C[t,t^(-1)].
+
+This works for negative k as well. Critical values are unchanged by the
+affine source change and are integral by hypothesis. If some c_j has a
+pole, let r=max_j(-ord_t(c_j)/(m-j))>0, omitting zero coefficients.
+After a finite ramified extension, G(w)=t^(mr)*H(t,t^(-r)*w) is integral,
+monic and centered, and its reduction has a nonzero lower coefficient.
+Every critical value of this reduced polynomial is zero: roots of G'
+are integral and lift its reduced roots, counted with multiplicity, and
+their G-values equal t^(mr) times integral critical values of H.
+
+But a monic centered characteristic-zero polynomial all of whose
+critical values vanish is w^m. Indeed if it has s distinct roots, its
+derivative has exactly m-s zeros counted with multiplicity at those roots;
+all m-1 derivative zeros being there forces s=1, and centering puts that
+root at0. This contradicts the retained nonzero lower coefficient.
+Thus each c_j is integral and, being Laurent, belongs to C[t]. Repeated
+critical roots do not require simple-root Hensel lifting; factoring over
+an algebraic closure of the valued field suffices.
+
+Now B=C[t,v] is finite over A by t^m=p and the monic relation H(t,v)=q.
+It is normal with field C(t,v). The action
+
+  (t,v) -> (zeta*t,zeta^(-k)*v), zeta^m=1,
+
+fixes p,u,q. Since t^m-p is irreducible over C(p,u), its fixed field is
+exactly K and S=B^(mu_m). The action is faithful on t even when k and m
+are not coprime. Invariant-ring normality and finiteness identify the
+global normalization, not just a local chart. Weil-divisor pullback to
+the factorial B followed by norm gives m*Cl(S)=0.
+
+Proposed interface with existing campaign criteria, to be source-pinned
+before promotion: a dominant rational substitution into C(x,y) making
+p,q polynomial Keller outputs gives A -> S -> R=C[x,y], because R is
+normal and every element of S is integral over A. This is NOT assumed
+birational and does NOT license an open-immersion argument. The accepted
+arbitrary-first-leg compulsory-branch criterion would exclude case1:
+the branch must be a nonproperness component, whose normalization is A1.
+The accepted torsion-class criterion would exclude case2: effective
+ramification has a principal positive multiple; its pullback cannot
+vanish on the etale quasi-finite source and hence is a constant unit.
+Dominance forces no ramification; purity and finite etale triviality of
+A2 then force m=1, contrary to the donor degree. These interfaces are
+consumed at their recorded scope, not newly promoted by this draft.
+
+Controls and scope attacks retained:
+
+- q=(u^3+u)/p^2 has critical values with poles at p=0, illustrating case1.
+- q=u^m illustrates case2 with an affine-plane normalization, still ramified.
+- q=u^2/p has S=C[p,q,u]/(u^2-pq), the mu_2 quotient of C[t,v]; this is
+  only a closed-degree control, not a new frontier search.
+- m=1 is deliberately excluded and admits polynomial automorphism examples.
+- A pure-power special equation does NOT prove an irreducible normalized
+  special fiber: u^2-p^2-p^3*q=0 normalizes to v^2-1=p*q with u=p*v.
+  The quotient proof does not make that false inference.
+
+The donor class excludes rational dependence with multiple poles in u,
+leading coefficients having additional finite zeros/poles in p, and
+arbitrary rulings not supplied by the target coordinate p. It is not a
+classification of rational donors and does not resolve JC2. No extension
+or family computation is selected. Preliminary scoped history searches
+found no exact formula match, but are not exhaustive. The first250 lines
+of bd-a2-d3-sectioned-two-support-universal-dichotomy-sol56-20260830.md
+concern degree-three elliptic-fiber geometry, not this polynomial
+good-reduction proof; that selected read is not a whole-report audit.
+Canonical source/closure reconciliation and a frozen different-model
+FIRST packet are the next bounded intake, not permission for descendants.
+
+## 2026-09-15 01:20 UTC LIVE STATE — pull confirmed, completed algebra banked
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved. Basis200a79abedb238487071569692720090c9f90666
+  equals fresh origin/master before this bank. Latest operator commits
+  bf1e1ffe and91041f0b included; pull --ff-only reports already up to date.
+  Policy basis team/swarmHQ/README.md
+  SHA50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a;
+  COORD4ce5b29a,APPe004630b,FALLACYe47fd16c unchanged. No global rerank.
+- All three native agents independently COMPLETED; two sequential manual
+  Astra tasks collected above. No writer/model unit/science worker or
+  descendant. Laurent-donor proof remains DRAFT, not a provisional root
+  or accepted closure; no different-model FIRST has yet occurred.
+- Immediate queue: source/history reconciliation of the exact Laurent
+  statement, then one frozen Fable FIRST if its changed donor filter
+  survives; no second scientific tranche or enlarged family. Direct
+  source-line discrepancy attempt terminal with no closing implication.
+  No new global theorem or candidate is claimed.
+- FULL lastSep14 21:40:31,nextSep15 09:40:31; original10:17:55 miss and
+  FULL2110 workflow qualification retained. BROAD originalSep12
+  21:53:56.598798932 overdue/access debt unchanged. Stopped channels,
+  sources and Miyanishi legitimate-source gate retained; no clock reset.
+- GitHub sweep blocked, gh not authenticated; fresh01:18 check,0triaged,
+  openUNKNOWN,lastsuccessnone,originalSep14 16:00 miss retained. DC auth
+  requirement surfaced; no credentials or queue-body intake.
+- Both personal/us-east-1 nonterminal worker selectors[] at01:18.
+  Fresh coordinator3674934 tree has no science, running jc2 user units0,
+  pswpin/out0/0. No AWS mutation or scientific computation. Fable cumulative
+  102473 completed lane-wall seconds unchanged; native usage/balancesUNKNOWN,
+  not a token/dollar estimate. Retained EBS remains billable.
+- Engineering CLOSED; scalar/preflight/r3 PARKED; systems NO_UPGRADE,
+  original48h debt retained. Bank only notes and the daily digest. Preserve
+  pilot-local.log, bulk artifacts and excluded nested repositories.
