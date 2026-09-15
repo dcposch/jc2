@@ -22685,3 +22685,53 @@ request was sent, and the Keller-specific headline itself is not refuted.
   body append is disclosed in notes01:33; reviewer retains a stale
   skeleton-label sentence despite its terminal seal. These are workflow/
   exposition qualifications, not mathematical confirmation substitutes.
+
+### VOLUME-NEUTRAL-TORUS-QUOTIENT-1 — 2026-09-15
+
+- PROMOTED / MANUAL with the already accepted injective-line theorem as
+  named external closing premise. Producer swarmHQ ROOT (Astra),
+  [proof](xmodel/volume-neutral-torus-quotient-swarmHQ-root-20260915.md)
+  SHA181d7ae11675d27a61da977f143abaf5797415d6c64923e11be336281ce6df80,
+  manifest35f86f8c4ba44b5f34b3a4445563567a303133604d75049de74ab4abd5375991;
+  [different-model Fable5.1 FIRST](xmodel/volume-neutral-torus-first-swarmHQ-fable5-20260915T0323Z.md)
+  SHA55ab4dca66e5e30e39f68b3c57c9347a89491ffcbbc51c4e7808c634168d6e7f.
+  All twelve registered proof/control items CONFIRMED and ROOT whole-read.
+- Over C, n>=3: an effective linear torus T of dimension n-2, with trivial
+  determinant character and invariant ring abstractly C[u,v], admits only
+  automorphic polynomial Keller maps equivariant for source and target
+  linear representations of the SAME T. Target translation and derivative
+  normalization reduce to a single action. Smoothness at the monomial
+  vertex gives two semigroup generators; the all-ones invariant forces
+  them to be disjoint squarefree block products. Contraction with the
+  fundamental torus fields gives exactly +/-du wedge dv, so the quotient
+  is Keller with no boundary factor. A nonsingleton block gives an
+  injective quotient line; Gwozdziewicz's accepted criterion makes the
+  quotient invertible, coordinate primality makes all multiplicative
+  lift factors constant, and the possible singleton component is triangular.
+- No new audit of the accepted injective-line import, degree bounds, or
+  Shaska's ambient construction. Positive triangular and non-Keller
+  determinant controls independently reconstructed. No n=2, nonlinear
+  action, singular quotient, arbitrary isogeny or non-volume-neutral
+  extension; arbitrary plane sources are not placed in this class.
+- Binding review qualification: R2's claim that effectiveness and the
+  torus dimension are redundant is NOT accepted. For n=3, the action
+  t.(x,y,z)=(t^2*x,t^(-2)*y,z) has trivial determinant and invariant ring
+  C[xy,z] but kernel mu_2. Adding a trivially acting torus factor also
+  defeats an inference about the dimension of T itself. Image rank and
+  abstract torus dimension/kernel are different data. This non-load-bearing
+  aside does not enter any proof step; all original hypotheses remain.
+  R1 is the normalized form already derived in the producer, not a new
+  extension. Frozen producer/reviewer bytes are unchanged.
+- FIRST03:23:17--03:33:16,599 terminal lane-wall seconds, DONE0/CLEAN/
+  BODY_SEALED/ABSENT. Original processes and cgroup absent before intake;
+  all four current inputs and runner pins matched the receipt. Original
+  model-prompt and sandbox-profile hashes reconstructed. Producer
+  transaction verified; review has its external-runner terminal BODY-END,
+  not a local numeric Seal/transaction. Log HASH_ONLY, no full tool-log
+  audit. The late actual-child launch check remains disclosed in notes03:25.
+- Interface composition: the known three-dimensional weights(1,-1,-2)
+  have determinant character -2 and do not satisfy this theorem. Mere
+  stabilization supplies neither the required action/rank nor smooth
+  plane quotient. Thus one construction mechanism is excluded, not JC2;
+  no descendant, weight/quotient family successor, global rerank or FULL/
+  BROAD reset. Full receipt-first intake is in notes03:45.

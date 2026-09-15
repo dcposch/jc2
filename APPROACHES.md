@@ -489,6 +489,15 @@ J(P,Q)=x+y-x^2*y is nonconstant, so no Keller counterexample or actual
 source exclusion. This closes the second changed pencil tranche; no
 further pencil/genus/control-family successor is selected.
 
+The September15 [03:48 affine-product check](notes.md#2026-09-15-0348-utc--finite-critical-values-do-not-control-infinity-or-genus)
+also refutes genus zero from finite nodal critical points at one value:
+h=xP(y)+x^2*P(y)^2*y^3, P=y(y-1), has exactly two such points at value0,
+but generic genus1 and an infinity exception at -1/4. Smooth transverse
+factor zero fibers do not repair this. MANUAL/PRODUCER-CHECKED, UNPROMOTED;
+NOT Keller and not the simultaneous all-center product hypothesis. This
+additional control still charges the stopped genus bottleneck, not a new
+avenue or budget; no further genus/control-family work is selected.
+
 **Published properness shortcut: GAP, not an imported proof.** Tian--Sun,
 [AIMS Mathematics 2024, DOI10.3934/math.20241467](https://aimspress.com/aimspress-data/math/2024/11/PDF/math-09-11-1467.pdf),
 Theorem2.8 p30409, assumes C\W=phi^{-1}(infinity) after completing a fiber.
@@ -628,14 +637,16 @@ No different-model FIRST, promotion, parameter search or successor selected.
 
 **Volume-neutral torus quotients (September15).** The distinct construction screen
 [VOLUME-NEUTRAL-TORUS-QUOTIENT-1](xmodel/volume-neutral-torus-quotient-swarmHQ-root-20260915.md)
-is MANUAL/PROVISIONAL, with different-model Fable FIRST running. For n>=3,
+is PROMOTED/MANUAL after [different-model Fable FIRST](xmodel/volume-neutral-torus-first-swarmHQ-fable5-20260915T0323Z.md). For n>=3,
 an effective linear torus of rank n-2 with trivial determinant character
 and invariant ring C[u,v] forces every equivariant polynomial Keller map
-to be an automorphism. The candidate proof derives two disjoint squarefree
+to be an automorphism. The proof derives two disjoint squarefree
 product coordinates, descends the volume form, and applies the accepted
 injective-line criterion. No arbitrary plane-source reduction, singular
-quotient, nonlinear action or non-volume-neutral extension. This is not yet
-promoted; no weight/stabilization family successor or global rerank.
+quotient, nonlinear action or non-volume-neutral extension. The review's
+non-load-bearing R2 claim of hypothesis redundancy is NOT accepted: finite
+ineffective kernels already refute that aside. The original theorem retains
+every stated hypothesis; no weight/stabilization family successor or rerank.
 
 [EMBEDDED-PLANE-TRANSFER-1](xmodel/embedded-plane-transfer-gate-sol-20260913.md)
 is PROMOTED/MANUAL: the explicit 3D core has <=3 points in EVERY fiber,

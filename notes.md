@@ -50560,3 +50560,178 @@ has zero descendants. No weight, singular-quotient or control successor.
   103186 TERMINAL lane-wall seconds excludes this LIVE attempt; no billing
   inference. Native usage/balancesUNKNOWN, EBS billable. Bank owned producer,
   manifest, prompt and ledgers only; preserve pilot-local.log and excluded repos.
+
+## 2026-09-15 03:45 UTC — torus FIRST collected; exact theorem promoted
+
+The preceding operator-response turn was a synchronization check, not
+mathematical progress. Fresh fetch again gives HEAD=origin/master=
+9f15682977f2e3139a9995c2851fad2e5e9c4407; both contributor/CI commits
+are already ancestors, and pilot-local.log remains unrelated and dirty.
+This resumed research tick began03:40:16 and completes the pending FIRST.
+
+The exact Fable unit is inactive/dead, MainPID0, with empty cgroup and
+invocation fields after transient-unit collection. All three original
+PIDs1852551/1852723/1852724 and the original cgroup are independently absent.
+Only THEN was xmodel/volume-neutral-torus-first-swarmHQ-fable5-20260915T0323Z.run.v2
+read. It reports03:23:17--03:33:16, adapter/launcher exit0,
+DONE/CLEAN/BODY_SEALED/ABSENT;599 terminal lane-wall seconds. A previous
+03:35:08 supervisor observation had already found it terminal but did not
+collect output. This turn's first terminal/receipt check was03:40:16.
+The original94second actual-child confirmation/34second launch-check miss
+remains recorded, not cured by successful completion.
+
+ROOT reconstructed the original composed prompt hash364ddc337971d48d6f9075e79767f18b0509b1ec3437fc273d7a535c6efb03ce
+using the exact original snapshot-directory string, and the sandbox-profile
+hash e12151ee6b125e0171665219158fd8f0da5ce5fb76897ccc1d9148d62b414d5f
+from its literal arguments/current bwrap version, without inspecting the
+excluded nested directory. All four current input hashes and the prompt,
+launcher, adapter, validator, seal and FALLACY pins match the receipt.
+Temporary snapshot reads returned missing: the unchanged runner's EXIT
+cleanup removes them. Custody relies on its recorded pre/post snapshot
+hashes plus unchanged source bytes and exact reconstruction, NOT on a
+claim to have reread deleted snapshots.
+
+Review full SHA55ab4dca66e5e30e39f68b3c57c9347a89491ffcbbc51c4e7808c634168d6e7f,
+10848bytes/206lines/1594 whitespace words; receipt
+SHA86b18c0c66c5aaa86337e22dc1fee184aee161706a0096b9cd1f99ad3e250c3d,
+3552bytes; log SHAbb5f5db980d0a249fc5957f09b4472af5c10d06629e2b9b453cf43953963b3ff,
+1496bytes, HASH_ONLY (no full tool-log audit). Pre/post intake hashes
+match. ROOT whole-read producer and review. Reviewer supplies twelve
+CONFIRMED items with independent semigroup, contraction, quotient/lift
+proofs and both determinant controls. Existing external receipt custody
+applies: unique standalone BODY-END is exactly the last line, charge_basis
+validator returns ABSENT. A mistaken local numeric-seal verification
+returned INVALID because the external report has no numeric Seal; no pass
+was credited and no frozen bytes were changed. A first producer transaction
+verify omitted --final and exited2; corrected explicit --final verification
+passed with the original basis/body/full/manifest pins.
+
+VOLUME-NEUTRAL-TORUS-QUOTIENT-1 is now PROMOTED/MANUAL at its EXACT
+original hypotheses, with the already accepted injective-line theorem.
+Fable's optional R2 is false and excluded from promotion: the n=3 action
+t.(x,y,z)=(t^2*x,t^(-2)*y,z) has trivial determinant and invariants
+C[xy,z], but finite kernel mu_2. Adding a trivially acting torus factor
+also shows that invariant transcendence degree controls image rank, not
+the abstract acting torus's dimension. The claimed redundancy is neither
+needed nor used in any of the twelve proof steps. R1 merely records the
+normalized form already proved; no separate extension is adopted.
+
+Interface pass: weights(1,-1,-2) fail the determinant-character premise;
+arbitrary stabilization supplies neither the required torus/rank nor its
+smooth plane quotient. No actual-source closure, global rerank, descendant,
+new FIRST, weight/quotient/control-family successor, or FULL/BROAD reset.
+This is a scoped construction stop, not JC2. Cumulative Fable terminal
+  lane-wall usage is103785seconds; this is not tokens, CPU or billing.
+
+## 2026-09-15 03:48 UTC — finite critical values do not control infinity or genus
+
+ROOT tested the necessary fact that, for an actual plane Keller pair
+F=(f,g), h=(f-a)(g-b) has critical locus exactly F^(-1)(a,b):
+dh=(g-b)df+(f-a)dg and df,dg are a coframe. Each such point is an
+ordinary node/nondegenerate critical point at value0. The set can be
+empty when (a,b) is omitted. For generic (a,b) its cardinality is the
+mapping degree. The proposed leap from this FINITE critical data to
+generic genus zero is false; no theorem controlling infinity was supplied.
+
+Exact countercontrol, ROOT/native Astra, MANUAL/PRODUCER-CHECKED,
+UNPROMOTED (not different-model FIRST):
+
+    P=y(y-1), u=xP, h=u+u^2*y^3.
+    h_x=P*(1+2u*y^3),
+    h_y=x*P'*(1+2u*y^3)+3u^2*y^2.
+
+If P!=0 and h_x=0, then u,y!=0 and h_y=3u^2*y^2!=0. If P=0,
+y=0 or1 and h_y=xP', so the only critical points are(0,0),(0,1).
+At(0,a), a=0,1, the quadratic term is P'(a)*x*(y-a); Hessian
+determinant is -P'(a)^2=-1. Both values are0.
+
+For t!=0, h=t forces P!=0. The coordinate change (x,y)->(u,y) is
+an isomorphism on this open set; with w=1+2u*y^3 it gives
+
+    w^2=1+4t*y^3,   x=(w-1)/(2P*y^3).
+
+The smooth projective cubic has genus1 for every t!=0. The original
+fiber is exactly this curve minus infinity and the points over y=0,1.
+There are GENERICALLY five punctures. At t=-1/4 the two points over y=1
+coincide, leaving four. This is an additional atypical value at infinity,
+NOT a finite critical value: every point of that affine fiber is smooth.
+This exception was found by the native check and incorporated here.
+No cancelled genus chart is used at t=0.
+
+The polynomial also factors as f0*g0 with
+f0=x, g0=P*(1+xP*y^3). Both zero fibers are smooth, although g0=0 is
+disconnected: it comprises y=0, y=1, and the disjoint graph
+x=-1/(y^4*(y-1)), y!=0,1. On the first two components (g0)_y=P'=+/-1;
+on the graph (g0)_x=P^2*y^3!=0. They meet f0=0 transversely at exactly
+the two nodes above. The t=0 fiber has three lines with two crossings
+and the disjoint graph; its Euler characteristic is0. Generic fibers
+have Euler characteristic -5 and the -1/4 fiber has -4, giving the
+consistency check (-1)*(-5)+0+(-4)=1 for the total plane.
+
+This pair is NOT Keller:
+J(f0,g0)=P'+x*(2PP'*y^3+3P^2*y^2) vanishes at(0,1/2).
+The control does NOT satisfy the simultaneous translated-product
+hypotheses of an actual Keller pair, nor does genus1 refute an unspecified
+higher genus bound. It refutes only the stated genus-zero inference,
+even with smooth transverse factor zero fibers. It is no JC2 counterexample.
+
+History search before the native task covered APP/AUDIT/PROGRESS/notes/
+REDUCTION/xmodel with one/single/only critical value, nodal critical,
+product-polynomial and product-Morse terms; no exact prior control found,
+not an exhaustive novelty check. Allocation correction: ROOT treated this
+affine-product formulation as a fresh discriminator, but it still spends
+against the already-stopped genus/pencil bottleneck. This extra control
+tranche does NOT reset that budget. No further genus/control-family lane,
+generalized exponent, parameter search or FIRST is selected. The missing
+actual-source infinity implication is unchanged. Native task was message-
+only with a6minute cap and independently observed COMPLETED before intake;
+no exact lane-wall measure, files, descendants or scientific computation.
+
+Selected primary source check: Gwozdziewicz--Ploski, *On the singularities
+at infinity of plane algebraic curves* (2002), introduction and Theorems1,
+3,4 plus the discriminant identity in their proofs,
+https://gasiull.webs.ull.es/Singularities-infinity2002.pdf . Their irregular
+values concern infinity; Theorem1 assumes NO finite critical points and
+exactly one irregular value. Theorem4 retains the discriminant degree
+d-1 hypothesis, and the following statement explicitly makes that degree
+condition JC2-equivalent for Jacobian polynomials. Neither premise follows
+from the nodal-product observation. No new import, foundation re-audit,
+complete literature census or BROAD reset. The earlier discovery queries
+and this selected primary read do not cure overdue broad-channel coverage.
+
+## 2026-09-15 03:49 UTC LIVE STATE — torus FIRST closed; no genus successor
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved. Basis9f15682977f2e3139a9995c2851fad2e5e9c4407
+  matched fresh origin; this bank adds the reviewed torus closure and the
+  explicitly unpromoted finite-critical control. Policy basis
+  team/swarmHQ/README.md SHA50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a;
+  COORD4ce5b29a,FALLACYe47fd16c unchanged. APP60508cf8e1cc93e51ed9d0c75d4111056fee5388e17adb2955cac7be4e96b8ba.
+- Active lanes NONE. Fable FIRST terminal, receipt-first collected and
+  adjudicated above; native agents independently COMPLETED. No worker,
+  science job, provisional root, outstanding FIRST or descendant. Torus
+  claim PROMOTED/MANUAL at original scope, with R2 excluded. Finite-critical
+  control MANUAL/PRODUCER-CHECKED/UNPROMOTED, no further review selected.
+- Immediate queue: return protected research to a missing actual-source
+  global implication or genuine new construction, with exact canonical
+  history checked before commissioning. No automatic torus/weight/quotient
+  or genus/pencil/control-family successor. The extra affine-product
+  tranche did not reset the stopped bottleneck's budget. Scalar/preflight/r3
+  PARKED, engineering CLOSED; accepted bounds/foundations not reverified.
+  Global ranks/gaps unchanged; this is a scoped micro-round, not resolution.
+- FULL lastSep14 21:40:31,nextSep15 09:40:31; originalSep14 10:17:55 miss
+  and FULL2110 workflow qualification retained. BROAD originalSep12
+  21:53:56.598798932 remains overdue/access-degraded; stopped channels and
+  legitimate-source gates unchanged. Systems NO_UPGRADE; original48h debt
+  retained. Intake's wrong-format/CLI checks were corrected, not counted
+  as passes. No new instrument, scheduler or protocol change.
+- GitHub sweep blocked, gh not authenticated, freshly checked03:40 this
+  tick;0triaged,openUNKNOWN,lastsuccessnone,originalSep14 16:00 miss retained.
+  Authentication requirement surfaced to DC; no queue body, credential,
+  external-message or merge action.
+- Both personal/us-east-1 nonterminal worker selectors[] this tick. ROOT
+  process tree contains no science; running jc2 units0; pswpin/out0/0
+  again03:49. No AWS mutation or computation. Fable cumulative103785
+  TERMINAL lane-wall seconds includes this599second FIRST; not billing.
+  Native usage/balancesUNKNOWN, retained EBS billable. Bank only these four
+  ledgers and the exact small review/receipt/log; preserve pilot-local.log,
+  bulk artifacts and both excluded nested repos. No whole-goal blocker.

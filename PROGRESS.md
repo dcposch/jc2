@@ -8,6 +8,23 @@ Its old closure statements must be read with the subsequent audit corrections.
 
 ## 2026-09-15
 
+03:48Z: The [finite-critical-value test](notes.md#2026-09-15-0348-utc--finite-critical-values-do-not-control-infinity-or-genus)
+gives a polynomial with exactly two ordinary-node critical points, both
+at value0, but generic genus1 and an additional atypical value -1/4 at
+infinity. Its two factor zero fibers are smooth and transverse; the pair
+is NOT Keller. ROOT/native Astra, MANUAL/PRODUCER-CHECKED, UNPROMOTED.
+This stops the finite-data genus-zero inference, not the actual-source
+infinity gap. It is another genus-control tranche, not a fresh budget or
+route; the prior stop remains. No computation, paid lane or successor.
+
+03:45Z: [VOLUME-NEUTRAL-TORUS-QUOTIENT-1](xmodel/volume-neutral-torus-quotient-swarmHQ-root-20260915.md)
+is PROMOTED/MANUAL after Fable FIRST confirmed all twelve proof/control
+items. ROOT rejects the review's separate hypothesis-redundancy aside;
+the theorem keeps its original assumptions. This closes the specified
+higher-dimensional quotient construction, not the actual-source gap or
+JC2. Fable599 terminal lane-wall seconds; no scientific computation or
+workers, no automatic family successor. GitHub triage remains auth-blocked.
+
 03:25Z: [Volume-neutral torus quotient screen](xmodel/volume-neutral-torus-quotient-swarmHQ-root-20260915.md)
 is MANUAL/PROVISIONAL pending Fable FIRST. Its arbitrary-dimensional proof
 would exclude the smooth plane-quotient shortcut under the exact linear
