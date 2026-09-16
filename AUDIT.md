@@ -23908,3 +23908,44 @@ request was sent, and the Keller-specific headline itself is not refuted.
   factor degrees, arbitrary parametrizations, or general JC2 follows.
   The proof imports no unverified external construction or invariant-ring
   classification. No literature priority or automatic family successor.
+
+## TANGENT-GRAPH-LINEAR-1 — 2026-09-16
+
+- **PROMOTED / MANUAL**, self-contained characteristic-zero polynomial
+  calculation. Producer swarmHQ ROOT/Astra; different-model native Sol
+  FIRST CONFIRMED, terminal status observed before sealed-report intake.
+  [Producer](xmodel/tangent-graph-linear-projections-swarmHQ-root-20260916T182800Z.md)
+  banked at1ad910a81993a4f95fc717bd3d2100860e718b35, full SHA256
+  bc688cbf61e6e9b4adb1c93054bac5feb54d8b85feb867c4464849969824d317,
+  manifest613d224a6ce3a68e7feb6b0f3b074a8997401d8d24fde00552e309d479a2280b;
+  [Sol-authored FIRST](xmodel/tangent-graph-linear-review-swarmHQ-sol-20260916T183500Z.md),
+  full SHA2568f912cdb5dc6c9f2b9b2b2d29932aaefedbfa3fd07dbc6473dea49da6e686bd3,
+  manifest00b809d0271328e1bf916106e863cf8776e450081935d0039ba568aac208a732.
+- Let gamma!=0, w=gamma(1+xy), d=deg p>=2, q'=wp'/2, and assume
+  C=x*gamma, D=(p(w)+2*gamma)/(x*gamma), and
+  E=(q(w)+gamma*w)/(x^2*gamma^2) are ALL whole-plane polynomials.
+  With n=deg_y gamma, a=x*lc_y(gamma), M=(d-1)n+d, alpha=lc p,
+  beta=d*alpha/(2(d+1)), the minors J(C,D), J(C,E), J(D,E) have
+  respective exact y-degrees d(n+1)-1, d(n+1), 2M and coefficients
+  d*alpha*a^(d-1)*a', (d+1)*beta*a^(d-1)*a',
+  (d-1)*alpha*beta*a^(2d-3)*a'. Characteristic zero gives a'!=0;
+  all three degrees are positive and distinct, including n=0.
+- Cauchy--Binet therefore excludes every constant rank-two affine-linear
+  projection to a Keller pair; smaller rank gives zero Jacobian. The
+  polynomial-ring unit argument excludes every polynomial postcomposition
+  of one such projected pair. Polynomial source automorphism changes
+  retain the obstruction. No localization of the source is used.
+- In the literal whole tangent triple, gamma=gamma0+b1xy+b2x^2z with
+  gamma0!=0,b2!=0. Every polynomial graph z=Z(x,y) preserves nonzero
+  gamma and whole polynomiality. This extends the all-seed first-pair
+  result to all linear output pairs in that setting, and the fixed-core
+  all-graph linear result to all seeds. The fixed-core one-sided graph
+  theorem for arbitrary nonlinear outputs has a distinct scope.
+- The n=0 and fixed-core controls agree with all coefficients. The d=1
+  whole-plane control is Keller; the other source orientation x=0 also
+  admits an automorphic projection. These prevent stronger conclusions.
+  Arbitrary nonlinear maps of all three outputs, rational target changes,
+  other source orientations, and general JC2 remain outside scope.
+  No scientific computation, external theorem import, literature-priority
+  claim or automatic family successor. Both new artifacts pass custody
+  verification; this is not by itself mathematical verification.

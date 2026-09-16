@@ -246,11 +246,14 @@ p'(0)!=0 clean stratum. Common nonzero roots and other descent mechanisms
 remain outside scope; no reduction places arbitrary Keller sources here.
 
 For arbitrary polynomial graphs z=Z(x,y) of the literal tangent triple,
-the reviewed [first-pair degree identity](xmodel/tangent-graph-first-pair-swarmHQ-root-20260915T180230Z.md)
-excludes all polynomial target pairs inside C[C,D], with no degree or
-coprimality restriction beyond the stated full admissibility. This is a
-different fixed-projection scope; pairs involving E, other source planes,
-and rational target changes are not covered. No graph-degree search follows.
+the reviewed [three-minor degree identity](xmodel/tangent-graph-linear-projections-swarmHQ-root-20260916T182800Z.md),
+confirmed by [independent Sol review](xmodel/tangent-graph-linear-review-swarmHQ-sol-20260916T183500Z.md),
+excludes every constant linear plane projection of (C,D,E), and every
+polynomial postcomposition of such a projected pair, for all admissible
+seed degrees. It extends the [first-pair exclusion](xmodel/tangent-graph-first-pair-swarmHQ-root-20260915T180230Z.md)
+in this literal whole-triple setting. Arbitrary nonlinear maps of all three
+outputs, other source-plane orientations and rational target changes remain
+outside scope. No graph-degree or output-family search follows.
 
 **Useful next contribution:** a complete source construction, an applicable global
 algebraization theorem, or a genuinely different donor mechanism.

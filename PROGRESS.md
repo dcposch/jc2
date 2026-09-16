@@ -6,6 +6,15 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-16
 
+- **All-seed tangent graphs admit no linear Keller projection.**
+  The [three-minor calculation](xmodel/tangent-graph-linear-projections-swarmHQ-root-20260916T182800Z.md)
+  gives distinct positive partial-y degrees for every polynomial graph
+  and every admissible seed degree in the literal tangent presentation.
+  Thus every constant linear plane projection, even with polynomial
+  postcomposition, fails to be Keller. [Independent Sol review](xmodel/tangent-graph-linear-review-swarmHQ-sol-20260916T183500Z.md)
+  confirms the whole-plane hypotheses and n=0 boundary case:
+  swarmHQ ROOT/Astra, PROMOTED/MANUAL. Arbitrary nonlinear three-output
+  maps, other source-plane orientations and general JC2 remain outside scope.
 - **The natural linear/cubic SL2 quotient is a plane automorphism.**
   The [global calculation](xmodel/linear-cubic-sl2-quotient-swarmHQ-root-20260916T174200Z.md)
   identifies the entire resultant-one source with SL2 times A2 and proves
