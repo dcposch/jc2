@@ -23949,3 +23949,57 @@ request was sent, and the Keller-specific headline itself is not refuted.
   No scientific computation, external theorem import, literature-priority
   claim or automatic family successor. Both new artifacts pass custody
   verification; this is not by itself mathematical verification.
+
+## SYMPLECTIC-TARGET-SMOOTH-BRANCH-1 — 2026-09-16
+
+- **PROMOTED / MANUAL**, with named classical surface, purity, covering and
+  polynomial-nonproperness imports. Producer swarmHQ ROOT(gpt-6-astra),
+  same-model Astra co-check; different-model native Sol FIRST CONFIRMED.
+  Terminal status independently observed before ROOT's whole report intake.
+  [Producer](xmodel/symplectic-target-smooth-branch-swarmHQ-root-20260916T192000Z.md)
+  banked at01916b439ca74e37e6cbeaf2b0edaf65f6aeaac4, full SHA256
+  f839a4b8d6734d73e45850ed3253211f946ca192eab99c30d2663e0deaf8a85a,
+  manifest3fd8d229b4cbc4c5ee51c52d63dd22818e6a1b95f0d4194074182329fdd1918c;
+  [Sol-authored FIRST](xmodel/symplectic-target-smooth-branch-review-swarmHQ-sol-20260916T192900Z.md),
+  full SHA256cadbc15edc36fd88ac973f42fcf5d8efcd18a42a00ea74adc60f7f143f7188eb,
+  manifest0680c60f8f8925ac441f8e917f10e1aaf407124c3ecc8e69525b672c6e9d4a0e.
+- Over C, let K/C(p,q) be finite of degree>1, with EVERY irreducible
+  component of its reduced projective branch divisor on P2 smooth.
+  For every birational target coordinate change (p',q') with nonzero
+  constant Jacobian, no finite embedding K into C(x,y) makes p',q'
+  whole-plane polynomials with nonzero constant Jacobian. There is no
+  degree bound or disjoint/SNC hypothesis on the branch union.
+- The ordinary area form on P2 has no zeros. Exceptional divisors over
+  finite points have positive pullback order, forcing their contraction
+  in a resolved constant-J target map. Graph descent makes both target
+  map and inverse everywhere defined on A2 AS MAPS TO P2, not necessarily
+  affine-valued. Resolve the inverse only above new infinity. Every new
+  affine branch component is then an open of either a smooth old branch
+  strict transform or a smooth exceptional curve; disappearing visible
+  branch lines do not justify discarding exceptional branch divisors.
+- Purity and finite-etale triviality of complex A2 force a nonempty
+  branch divisor. Ramification indices persist under finite source-field
+  extension, attaching each branch component to the ACTUAL hypothetical
+  Keller nonproperness set via its full normalization. Jelonek polynomial
+  coverage makes its normalization A1; smoothness makes the curve A1,
+  contradicting Chau's no-A1-component theorem. These named imports retain
+  their classical tiers; FIRST checks their uses, not every source proof.
+- The uniform client p=R(s), q=t/R'(s), for ANY rational R of degree>=2,
+  has field extension C(s,q)/C(R(s),q); its projective branch components
+  are among the finite branch-value lines and infinity. All are smooth,
+  including when s=infinity maps to finite p. Thus all constant-J
+  birational target repairs and all finite rational source substitutions
+  are excluded. This closes the former fixed-tau_c/product-chart gap
+  under the stated target restriction, without a parameter search.
+- **Binding FIRST wording clarification, confirmed by Sol after intake:**
+  the sentence "The conclusion is not invariant under birational target
+  maps with nonconstant Jacobian" refers only to smooth-branch transport.
+  The cusp control refutes that unrestricted transport statement; it does
+  NOT refute donor exclusion for the wider target class or supply a JC2
+  counterexample. Sealed bytes and the exact CONFIRMED verdict are unchanged.
+- The pole-bearing constant-J control and degree-one identity control
+  prevent stronger readings. Nonconstant-J target changes, singular old
+  projective branch components and arbitrary Keller source landing remain
+  outside scope. No elliptic-tripling full-branch attachment, literature-
+  priority claim, scientific computation or automatic donor-family successor.
+  JC2 remains unresolved. Custody checks alone are not proof verification.

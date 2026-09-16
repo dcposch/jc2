@@ -6,6 +6,16 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-16
 
+- **Smooth-branch donors admit no constant-J birational target repair.**
+  The [uniform exclusion](xmodel/symplectic-target-smooth-branch-swarmHQ-root-20260916T192000Z.md)
+  covers every rational product pair p=R(s), q=t/R'(s), degR>=2,
+  and every finite rational source substitution. Its more general premise
+  is that every projective branch component is smooth; exceptional new
+  branch divisors are explicitly included. [Independent Sol review](xmodel/symplectic-target-smooth-branch-review-swarmHQ-sol-20260916T192900Z.md)
+  confirms the proof: swarmHQ ROOT/Astra, PROMOTED/MANUAL with classical
+  imports and the [recorded wording clarification](AUDIT.md#symplectic-target-smooth-branch-1--2026-09-16).
+  Nonconstant-J target changes, singular projective branch components and
+  arbitrary Keller sources remain outside scope. No JC2 resolution follows.
 - **All-seed tangent graphs admit no linear Keller projection.**
   The [three-minor calculation](xmodel/tangent-graph-linear-projections-swarmHQ-root-20260916T182800Z.md)
   gives distinct positive partial-y degrees for every polynomial graph

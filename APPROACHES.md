@@ -96,6 +96,17 @@ hypothesis, rather than strengthening the same abstract control family.
 **Question:** can one produce a complete polynomial Keller source in characteristic
 zero, rather than a necessary chart, modular point, or formal family?
 
+The [smooth-branch target-repair exclusion](xmodel/symplectic-target-smooth-branch-swarmHQ-root-20260916T192000Z.md)
+rules out every constant-Jacobian birational target change followed by
+any finite rational source substitution for a donor whose EVERY projective
+branch component is smooth. In particular it excludes all rational product
+pairs p=R(s), q=t/R'(s), degR>=2, uniformly in R. The proof tracks exceptional
+branch divisors as well as visible branch lines. [Independent Sol review](xmodel/symplectic-target-smooth-branch-review-swarmHQ-sol-20260916T192900Z.md)
+confirms the result, PROMOTED/MANUAL with named classical imports and the
+[binding scope clarification](AUDIT.md#symplectic-target-smooth-branch-1--2026-09-16).
+Nonconstant-J target maps and singular projective branch components remain
+outside scope; no general source-landing theorem or new candidate follows.
+
 Exact properness of a complete eligible source ideal remains a sufficient endpoint;
 no such properness is known. Formal boundary pairs still need global algebraization.
 The separate AS109 integral-lift question concerns an exact polynomial lift and must
