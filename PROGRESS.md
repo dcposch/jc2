@@ -6,6 +6,16 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-16
 
+- **Connected quotient towers cannot create a plane counterexample.**
+  The [new interface](xmodel/connected-quotient-tower-swarmHQ-root-20260916T155300Z.md)
+  applies to arbitrary compatible rational quotients of finite ambient
+  towers whose individual field degrees are at most three, provided BOTH
+  endpoint generic fibers are geometrically integral. The descended
+  polynomial Keller map is then an automorphism, by the accepted
+  small-block exclusions. [Independent Sol review](xmodel/connected-quotient-review-swarmHQ-sol-20260916T155700Z.md)
+  confirms the field argument: swarmHQ ROOT/Astra, PROMOTED/MANUAL with
+  those explicit dependencies. No group action or tower-length bound is
+  needed. Arbitrary projected sections and general JC2 remain outside scope.
 - **Weighted-lift coordinate fibers create no new plane counterexample.**
   The [uniform proof](xmodel/weighted-lift-coordinate-fibers-swarmHQ-root-20260916T133700Z.md)
   covers all admissible seed degrees and literal coordinate levels, using

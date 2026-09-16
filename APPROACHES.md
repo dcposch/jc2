@@ -143,6 +143,20 @@ Arbitrary output projections do not provide the full factorization and
 remain outside these results, as do actual restricted steps of degree at
 least four. No general JC2 reduction or new construction follows.
 
+The separate [connected-quotient tower theorem](xmodel/connected-quotient-tower-swarmHQ-root-20260916T155300Z.md)
+covers arbitrary dominant rational endpoint quotients, not just group actions:
+if BOTH generic fibers are geometrically integral, a compatible plane
+polynomial Keller map descended through any finite ambient tower of
+function-field degrees at most three must be an automorphism. Relative
+algebraic closures construct an actual small-step surface-field tower;
+the first strict step is excluded by the accepted whole-degree/second-leg
+2/3 results. [Different-model Sol review](xmodel/connected-quotient-review-swarmHQ-sol-20260916T155700Z.md)
+confirms this interface: PROMOTED/MANUAL, conditional on those existing
+premises. Check the two endpoint fields before searching for compatible
+quotient actions. Arbitrary projected plane sections, geometrically
+nonintegral generic fibers and ambient steps of degree at least four
+are not covered; no alternative construction or general JC2 reduction follows.
+
 For the separately normalized weighted-lift family, the
 [coordinate-fiber obstruction](xmodel/weighted-lift-coordinate-fibers-swarmHQ-root-20260916T133700Z.md)
 covers EVERY admissible seed degree, every literal coordinate level and

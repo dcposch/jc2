@@ -23785,3 +23785,47 @@ request was sent, and the Keller-specific headline itself is not refuted.
   target-coordinate change, arbitrary projection, non-coordinate target
   surface or stabilization/tower extension follows. External surjectivity
   and generic-degree claims are not imported; no mathematical code ran.
+
+## CONNECTED-QUOTIENT-TOWER-1 — 2026-09-16
+
+- **PROMOTED / MANUAL, conditional on the accepted whole mapping-degree
+  2/3 exclusion, strict proper second-leg degree2/3 exclusion and birational
+  Keller automorphy.** Producer swarmHQ ROOT(gpt-6-astra), same-model native
+  Astra check, different-model Sol FIRST collected terminal16:01:46 UTC.
+  [Producer](xmodel/connected-quotient-tower-swarmHQ-root-20260916T155300Z.md)
+  banked at4c0416feb6ed5974c368c10f9df71ac86b8ebe74, full SHA256
+  24611d38c316c0a4f65d7a7911222a9cd421d23c3dcb17c8e29f5d0f2d5efd6f,
+  manifest477b2ba0e9d2aefd8e698fe9e6ad9c64a12d99093bdaee754bceb6885ce7f0cf;
+  [Sol-authored FIRST](xmodel/connected-quotient-review-swarmHQ-sol-20260916T155700Z.md),
+  full SHA256ccff06bc859cd4b0c6a069b1a237e9a83218dd285d210c7701a2c23df4b6c94a,
+  manifest249394bf5c961b270c1a41ccc9b4872472b04bda158f99503343f86ab2d97f60.
+- Let X_m-->...-->X_0 be a finite tower of dominant generically finite
+  rational maps of integral complex varieties, each ambient field degree
+  at most3. Suppose dominant rational endpoint maps to two affine planes
+  have GEOMETRICALLY INTEGRAL generic fibers, and the whole tower descends
+  compatibly to a polynomial plane Keller map h. Then h is an automorphism.
+  No intermediate quotients, group action, properness, special-fiber bound,
+  fixed ambient dimension or tower-length bound is assumed.
+- In the common ambient field, K subset L is the ACTUAL Keller inclusion
+  and E_0 subset...subset E_m is the ambient tower. Endpoint hypotheses
+  give relative algebraic closure at both ends. C_i=E_i intersect L has
+  C_0=K, C_m=L and is relatively algebraically closed in E_i. A primitive
+  minimal polynomial retains irreducibility after extending to E_(i-1),
+  giving [C_i:C_(i-1)]=[E_(i-1)C_i:E_(i-1)]<=3. The first strict step is
+  an excluded proper SECOND leg or the excluded whole mapping degree.
+  This constructs the tower needed by the old field argument; it is not
+  a new small-degree theorem or a numerical 2^a3^b-degree exclusion.
+- Vertical cubic maps can descend to identity; two horizontal cubic steps
+  can descend to a non-Keller degree9 map. Thus equality with ambient
+  degree and a total-degree<=3 inference are not used. The nonnormal
+  u^2=t*v^2 control has geometrically connected but nonintegral generic
+  fiber and a nontrivial algebraic constant, preserving the literal
+  integrality hypothesis. No endpoint quotient is automatically supplied
+  for an arbitrary ambient map; arbitrary projected plane sections,
+  geometrically nonintegral generic fibers and degree>=4 steps remain
+  outside scope. No counterexample, block-existence theorem or JC2 closure.
+- Whole old premise reads retain the cubic addendum's already documented
+  mode0664/recorded0444 qualification: matching historical bytes and valid
+  body/basis seal, not a successful current artifact transaction. No old
+  report/mode or accepted foundational tier changed. Both new reports
+  pass current artifact verification; no scientific computation ran.
