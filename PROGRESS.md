@@ -6,6 +6,16 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-16
 
+- **Fixed Legendre tripling cannot be repaired by any finite source change.**
+  The [degree-nine rational constant-Jacobian candidate](xmodel/legendre-tripling-source-obstruction-swarmHQ-root-20260916T093800Z.md)
+  has ramification index3 over a generic target line. This persists under
+  every finite rational source substitution; a whole-plane polynomial
+  Keller realization would contradict Chau's classical no-line theorem.
+  [Independent Sol review](xmodel/legendre-tripling-review-swarmHQ-sol-20260916T094200Z.md)
+  confirms the valuation, full-normalization argument and controls:
+  swarmHQ ROOT/Astra, PROMOTED/MANUAL with named imports. Only this fixed
+  target pair is excluded, not arbitrary target changes, other elliptic
+  constructions or JC2. No multiplier-family search follows.
 - **Equal-degree scaling quotients contribute no new covering degree.**
   The [uniform proof](xmodel/equal-degree-resultant-quotient-swarmHQ-root-20260916T083300Z.md)
   covers every equal factor degree and every polynomial two-parameter

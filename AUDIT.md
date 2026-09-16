@@ -23636,3 +23636,47 @@ request was sent, and the Keller-specific headline itself is not refuted.
   adds no covering degree. Unequal degrees do not preserve Res=1 under
   this action, so their nonlinear-family gap remains. No exhaustive
   novelty claim, scientific computation, general JC2 result or successor.
+
+## LEGENDRE-TRIPLING-SOURCE-OBSTRUCTION-1 — 2026-09-16
+
+- **PROMOTED / MANUAL**, with named classical imports. Producer swarmHQ
+  ROOT (gpt-6-astra), native Astra independent co-check, and different-model
+  Sol hostile FIRST, terminal09:42:23 UTC, claims C1--C6 CONFIRMED.
+  [Frozen producer](xmodel/legendre-tripling-source-obstruction-swarmHQ-root-20260916T093800Z.md)
+  at b87a7a9057c2772182952a1c82e21d39b5cbd85f; full SHA256
+  26404af7ecee290db7d0ee68b1a5fed5d8cdd7f7c39f14f2255b007feea3ef1c,
+  body 4c5933231e65b474e378354eaa11da7df73f3b5f12f7a3f735a09772faeae758,
+  manifest 3139054a8e78166f10757487acc26de296419bf13eae438fd815260a64a4f36a.
+  [Sol-authored review](xmodel/legendre-tripling-review-swarmHQ-sol-20260916T094200Z.md)
+  full SHA256 764d23f064575a8c58070dedd39f36dc85a1b1ed7cb0dd93e2ca889c7d842e32,
+  body cc4e083f75d5606e76dbfc714e1d4e8a48b6e02525288bb409c72f6b0137ec87,
+  manifest 8719b73500e6badcb428216f2fd45b51cedffdc80c2202e393404cf911deff84.
+- Over C, put h=x-x(x-1)z^2, y=x(x-1)z and E_h:Y^2=X(X-1)(X-h).
+  Define [3](x,y)=(U,Y3), V=Y3/(U(U-1)). Then L=C(x,z) has degree9
+  over K=C(U,V), and the rational Jacobian J(U,V)=3. There is NO finite
+  C-field embedding L->C(s,t) making this fixed pair polynomial with
+  nonzero constant Jacobian. The statement includes birational and every
+  higher-degree rational source substitution; scaling V/3 changes no scope.
+- At (x,z)=(0,+/-i), the regular parameters a=x, b=1+(1-x)z^2 admit
+  the divisorial valuation w(a)=1,w(b)=2, residue r=b/a^2 transcendental.
+  Exact tripling initial forms give w(U)=3 and residueV=+/-i(1-4r)/(1+4r).
+  Thus w restricts to 3 ord_(U=0), with residue degree1. This is generic-line
+  ramification, not a bad point or merely a pole in a displayed source chart.
+  Its index remains divisible by3 after every finite source field extension.
+- A hypothetical whole-plane Keller map is an open subset of the FULL-field
+  finite normalization by Zariski Main. Its etale open omits this ramified
+  divisor; consequently the nonproper-value curve has the line U=0 as a
+  component. Chau's no-A1-component theorem for nonsingular polynomial
+  plane maps forbids it: arXiv:0710.5212v1, printed p.3, equation(1.4),
+  following paragraph and Theorem1.2. ROOT read the complete parsed primary
+  text; Sol checked the selected statement and applicability. Elliptic
+  multiplication degree uses the named Milne/classical group-law import;
+  the relative-to-absolute differential calculation is explicit.
+- Multiplication by1 and the non-Keller map (s^3,t) check the center and
+  constant-Jacobian hypotheses. Neither the old isotrivial class-group
+  obstruction nor the positive-genus ramification filter is a premise:
+  this valuation has rational residue. This attaches a known obstruction
+  to one fixed non-isotrivial candidate, not a new no-line theorem.
+  Arbitrary rational target changes, other multipliers or elliptic families,
+  and general JC2 remain outside scope. No computational certificate,
+  exhaustive novelty claim, source-landing theorem or family successor.

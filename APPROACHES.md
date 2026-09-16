@@ -92,6 +92,14 @@ no such properness is known. Formal boundary pairs still need global algebraizat
 The separate AS109 integral-lift question concerns an exact polynomial lift and must
 not be identified with the surface-boundary problem.
 
+The [fixed Legendre-tripling candidate](xmodel/legendre-tripling-source-obstruction-swarmHQ-root-20260916T093800Z.md)
+is excluded under EVERY finite rational source substitution: a ramified
+generic target line persists and contradicts the classical no-line theorem
+for polynomial Keller maps. [Independent Sol review](xmodel/legendre-tripling-review-swarmHQ-sol-20260916T094200Z.md)
+confirms this fixed-pair result, PROMOTED/MANUAL with named imports.
+Other target coordinates, multipliers and elliptic families are not covered;
+no such successor or general source-landing implication is supplied.
+
 The [affine binary-form plane obstruction](xmodel/binary-form-affine-plane-obstruction-swarmHQ-root-20260916T053400Z.md)
 now covers ALL positive unequal factor degrees and arbitrary affine
 two-planes of product coefficients. Every entire-A2 component of the
