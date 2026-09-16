@@ -23505,3 +23505,26 @@ request was sent, and the Keller-specific headline itself is not refuted.
   other resultant constructions or JC2. It imports none of the earlier
   unpromoted chart reports as a theorem, supplies no general Keller-source
   representation and authorizes no successor degree/affine-plane scan.
+
+## PSEUDOPLANE-GENUS-ONE-NO-MATE-1 — 2026-09-16
+
+- **PROMOTED / MANUAL**, producer swarmHQ (gpt-6-astra, ROOT), with
+  native Astra corroboration of submersion/genus and independent hostile
+  FIRST by swarmHQ (gpt-5.6-sol). [Frozen producer](xmodel/pseudoplane-genus-one-no-mate-swarmHQ-root-20260916T063400Z.md)
+  at c231708c7e62a0102501a64f3bd273e2743f266b; [review intake](xmodel/pseudoplane-genus-one-review-swarmHQ-sol-20260916T063700Z.md).
+- On literal S:U^2=A+A^2 Z, take the accepted etale selfmap
+  eta=(4U^2,2U(1+2AZ),Z). The fixed h=(A+U) eta^2 is nonsingular
+  on all S, with geometrically integral generic fiber of genus one.
+  B=1+2AZ, w=4UB are actual birational coordinates; the generic curve
+  is 2wB^2=c+w-w^2, not its rational B^2 quotient. No generic
+  component is removed by the displayed localization.
+- There is no g in O(S) with dh wedge dg=c0 Omega, c0!=0,
+  without a degree bound. Rational q=1/(8w^2) satisfies dh wedge dq=Omega;
+  geometric integrality forces every rational mate to be c0(q+r(h)).
+  The actual h=0 divisor B=0 carries a double pole of q, whereas the
+  component through (1/16,-1/4,0) carries none. A single r(h) cannot
+  cancel both. This attaches the existing polar-fiber mechanism.
+- Nonsingularity does not imply rational fibers on S, but this h gives
+  no regular scalar pair. No arbitrary-S pair exclusion, other iterate,
+  plane Keller construction, JC2 proof or counterexample. Existing
+  invariantization dependencies are retained, not re-promoted here.

@@ -6,6 +6,14 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-16
 
+- **A nonsingular pseudo-plane function can have genus-one generic fiber.**
+  The [fixed example and proof](xmodel/pseudoplane-genus-one-no-mate-swarmHQ-root-20260916T063400Z.md)
+  h=(A+U) composed with eta^2 on U^2=A+A^2 Z refutes the proposed
+  rational-fiber shortcut. An incompatible-poles argument also excludes
+  every regular scalar mate of this h. [Independent Sol review](xmodel/pseudoplane-genus-one-review-swarmHQ-sol-20260916T063700Z.md)
+  confirms both scopes: swarmHQ ROOT/Astra, PROMOTED/MANUAL. This applies
+  the known polar-fiber mechanism, not a new global theorem. General
+  scalar pairs on the surface and JC2 remain unresolved.
 - **Affine binary-form coefficient planes yield no nontrivial entire-plane source.**
   The [uniform proof](xmodel/binary-form-affine-plane-obstruction-swarmHQ-root-20260916T053400Z.md)
   covers arbitrary affine two-planes and all positive unequal factor degrees:

@@ -110,7 +110,16 @@ Arbitrary output projections do not provide the full factorization and
 remain outside these results, as do actual restricted steps of degree at
 least four. No general JC2 reduction or new construction follows.
 
-The retained fixed-direction formal recursion on U^2=A+A^2 Z is now
+Nonsingular functions on U^2=A+A^2 Z need not have rational generic
+fibers. The reviewed
+[fixed two-iterate example](xmodel/pseudoplane-genus-one-no-mate-swarmHQ-root-20260916T063400Z.md)
+h=(A+U) composed with eta^2 has geometrically integral genus-one generic
+fiber, yet has no regular scalar mate of any degree. The known rational-mate
+pole mechanism excludes this particular seed. [Independent review](xmodel/pseudoplane-genus-one-review-swarmHQ-sol-20260916T063700Z.md)
+confirms the fixed-function claim, PROMOTED/MANUAL; arbitrary scalar pairs
+on S are still unresolved. No further-iterate search follows.
+
+The retained fixed-direction formal recursion on U^2=A+A^2 Z is
 [ruled out by a logarithmic-residue obstruction](xmodel/formal-fixed-recursion-nonalgebraicity-swarmHQ-root-20260916T004300Z.md),
 confirmed by [independent Sol review](xmodel/formal-fixed-recursion-review-swarmHQ-sol-20260916T004600Z.md).
 Its exact completed pair is transcendental over the surface function field,
