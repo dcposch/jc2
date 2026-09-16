@@ -23325,3 +23325,54 @@ request was sent, and the Keller-specific headline itself is not refuted.
   novelty. Selected sections were read, not the entire audit or its programs.
   No external theorem is newly imported, no sealed report changes, and the
   exact-image/rational-target conclusion retains the review and scope above.
+
+### RUNNING-CORE-ADDITIVE-RIGIDITY-1 — 2026-09-16
+
+- PROMOTED / MANUAL. Producer swarmHQ ROOT (gpt-6-astra), with independent
+  native Astra reconstruction. [Sealed proof](xmodel/running-core-additive-rigidity-swarmHQ-root-20260916T023000Z.md),
+  full018b92535b7bd51313b2c005d85ab6dd9043b873c8b8276a35b9ccc386925f47,
+  manifest7403c0c4437bf851d45071fa4e4bc3b8099f945cb945838e871a8d76cfbea9a5.
+  [Different-model Sol hostile review](xmodel/running-core-additive-review-swarmHQ-sol-20260916T023700Z.md)
+  CONFIRMED A-E on contribution05ec9c9151b6c55e4904ed741252a2b68d6aa275;
+  full0c2378561a221bcb7b34a11a91c35efd1ded04fc9a8967e130ede62a45f65b53,
+  manifest87061a2b0f871c939792342f840bc73884dd205f65ed20be04c674ed8189104f.
+  Terminal mathematical message and final verdict collected, authoritative
+  COMPLETED observed; whole final/manifest read back, pins and0444 modes
+  verified. Producer-time lifecycle stays frozen; promotion is recorded here.
+- Over C, for the literal P=(1+xy)^3*z+y^2*(1+xy)*(4+3xy),
+  Q=y+3x*(1+xy)^2*z+3xy^2*(4+3xy), R=2x-3x^2*y-x^3*z,
+  F=(R,Q,P), any algebraic Ga actions rho,tau satisfying F rho_a=tau_a F
+  are BOTH trivial. They need not be linear, equal, primitive, free, or
+  have full polynomial quotient kernels. Separate polynomial source/target
+  coordinate automorphisms transport the result.
+- The exact nonproper-value locus is the irreducible surface
+  B=V(s^2-rs^3-16t-27r^2t^2+18rst), using the complete cubic fibers and
+  det DF=2. At r=0 the quadratic fibers have the extra unique source
+  point(0,s,t-4s^2); r=0 adds no component. The finite birational
+  normalization is(r,v)->(r,4v-3rv^2,v^2-rv^3), via v^2-sv+3t=0
+  and(3rs-4)v=9rt-s. The reduced singular locus rs=4/3,r^2t=4/27
+  has reduced inverse image rv=2/3.
+- Every Ga action on B lifts algebraically to the normalization preserving
+  that hyperbola. LND-degree forces its generator rv-2/3 into the kernel;
+  factorial closure then kills both r and v. Thus B is Ga-rigid. An ambient
+  LND E preserving B kills its equation b; division by the maximal common
+  coefficient factor b^m leaves an LND E0, since E^n(a)=b^(mn)*E0^n(a).
+  Its reduction modulo b is nonzero, contradicting rigidity. Equivariance
+  preserves actual nonproperness, forcing tau trivial; connected source
+  orbits in finite fibers then force rho trivial.
+- The cusp cylinder with a singular-preimage line admits an additive
+  action, and r*partial_s fixes V(r) pointwise without being zero. These
+  controls prevent weakening the hyperbola/rigid-quotient hypotheses.
+  The multiplicative action(r,s,t)->(lambda*r,s/lambda,t/lambda^2)
+  survives, and F x id admits added-coordinate translation. Stabilizations,
+  other groups, other triples, arbitrary output projections, nonalgebraic
+  flows and general JC2 are not covered. No low-degree plane Keller theorem
+  is used. The earlier conditional additive-quotient bridge remains valid
+  at its existing tier; this closes only its use on the fixed running core.
+- The [shadybrook audit, Sections4--5](https://github.com/shadybrook/jacobian-counterexample-audit/blob/main/paper/main.md)
+  already supplies the nonproperness geometry, normalization and triple-root
+  hyperbola; its Theorem6.2 excludes complete constant target directions.
+  ROOT read selected sections, not the whole paper/programs. Its stated
+  July21,2026 revision date was not Git-history-verified. No novelty claim
+  is made for that geometry or from the limited all-action literature search.
+  No action-coefficient, symmetry, projection or stabilization family successor.

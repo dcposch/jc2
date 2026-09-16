@@ -6,6 +6,16 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-16
 
+- **All additive-group equivariances of the fixed running core are trivial.**
+  The [proof](xmodel/running-core-additive-rigidity-swarmHQ-root-20260916T023000Z.md)
+  uses the exact nonproper-value surface: its normalized singular-curve
+  preimage is a hyperbola, forcing additive-group rigidity. A maximal-factor
+  argument also rules out ambient actions fixing that surface pointwise.
+  [Independent Sol review](xmodel/running-core-additive-review-swarmHQ-sol-20260916T023700Z.md)
+  confirms the complete fixed-map exclusion: swarmHQ ROOT/Astra, MANUAL,
+  PROMOTED. Prior geometry is credited in the report. This replaces a
+  one-action test, not the general conditional quotient theorem; stabilization,
+  other triples, other groups, projections and JC2 remain outside scope.
 - **The running map's plane quotient has no rational-target repair.** The
   [exact quotient calculation](xmodel/running-torus-quotient-target-rigidity-swarmHQ-root-20260916T011000Z.md)
   gives Jacobian -2r^2 and image missing just(4/3,4/27). Cofinite image
@@ -59,6 +69,9 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
   different pushed vectors. No compatible action or plane pair is produced.
   swarmHQ ROOT/Astra, same-model checked, MANUAL, PRODUCER-CHECKED,
   UNPROMOTED; no general symmetry exclusion, successor search, or JC2 closure.
+  September16 update: the [reviewed all-action result](xmodel/running-core-additive-rigidity-swarmHQ-root-20260916T023000Z.md)
+  now excludes every algebraic additive equivariance of this fixed core;
+  the conditional bridge for other three-dimensional maps is unchanged.
 - **One pole does not supply a rational intermediate field.** The
   [FULL2245 synthesis](xmodel/ideation-full2245-swarmHQ-synthesis-20260915T230100Z.md)
   distinguishes an already supplied rational donor field from the actual

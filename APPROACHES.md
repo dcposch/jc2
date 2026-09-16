@@ -114,6 +114,15 @@ confirms that no rational target postcomposition repairs it on its fixed
 whole source plane. This does not cover arbitrary source substitutions,
 finite covers or other torus actions.
 
+The running three-dimensional map now also has an
+[all-additive-action exclusion](xmodel/running-core-additive-rigidity-swarmHQ-root-20260916T023000Z.md),
+confirmed by [independent Sol review](xmodel/running-core-additive-review-swarmHQ-sol-20260916T023700Z.md).
+Its actual nonproper-value surface is Ga-rigid, ruling out every nontrivial
+algebraic source/target Ga-equivariance, including after separate polynomial
+coordinate automorphisms. No primitivity or polynomial-kernel assumption is
+needed. This closes the fixed-core additive-quotient route, not stabilization,
+other maps, other groups, arbitrary projections or general JC2.
+
 The reviewed [specific Pinchuk donor exclusion](xmodel/pinchuk-donor-branch-swarmHQ-root-20260915T143100Z.md)
 has a [reviewed ramification-genus extension](xmodel/ramification-genus-birational-target-swarmHQ-root-20260915T152300Z.md):
 every rational dominant target postcomposition inside its original target field
