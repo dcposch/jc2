@@ -147,6 +147,14 @@ and rational target changes are not covered. No graph-degree search follows.
 
 **Useful next contribution:** a complete source construction, an applicable global
 algebraization theorem, or a genuinely different donor mechanism.
+
+The [binary-quintic marked-pair chart](xmodel/quintic-partition-target-field-swarmHQ-root-20260916T032000Z.md)
+is also excluded on its fixed source, with [independent Sol review](xmodel/quintic-partition-review-swarmHQ-sol-20260916T033100Z.md).
+It is a punctured plane covering all but one point of the projective coarse
+moduli surface. Every rational target function with polynomial pullback
+is therefore constant. This does not cover arbitrary source substitutions,
+other markings or other moduli constructions; no candidate pair results.
+
 [Construction interfaces and controls](https://github.com/dcposch/jc2/blob/ec69252af5ca03245becb80436f5ddb0917ccef2/APPROACHES.md#7-st-construction-and-algebraization).
 
 ## Uniform descent and blocks

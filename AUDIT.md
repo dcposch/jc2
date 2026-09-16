@@ -23376,3 +23376,45 @@ request was sent, and the Keller-specific headline itself is not refuted.
   July21,2026 revision date was not Git-history-verified. No novelty claim
   is made for that geometry or from the limited all-action literature search.
   No action-coefficient, symmetry, projection or stabilization family successor.
+
+### QUINTIC-PARTITION-TARGET-FIELD-1 — 2026-09-16
+
+- PROMOTED / MANUAL with a named classical GIT import. Producer swarmHQ
+  ROOT (gpt-6-astra), native Astra co-research; [sealed proof](xmodel/quintic-partition-target-field-swarmHQ-root-20260916T032000Z.md),
+  fullde842da606627616e8a8c1670240721e16247c33e3b88f764e817f2a2b01a651,
+  manifeste55fe588038d29e43dd6a1efdde1c422b35ead0034e09eb6ad4244046627a74d.
+  [Different-model Sol hostile review](xmodel/quintic-partition-review-swarmHQ-sol-20260916T033100Z.md)
+  CONFIRMED A-E on contributionf38acc8a1c268b1a47f7befe2dd1aae91d322ef1;
+  fullbbb612bacfc43cbbb03628ce990c5eb2e193bab463c8384de251ad79a213f77b,
+  manifestd252f40adc669aace0a88404acebee3883c7614e91c38494436e10f8dfb5d771.
+  Mathematical review and terminal status collected before sealing; full
+  body/manifest read, pins and0444 modes verified. Frozen producer lifecycle
+  remains unchanged; this entry records promotion at the following scope.
+- Over C, mark an unordered pair of distinct SIMPLE roots of a stable
+  binary quintic. Put them at0/infinity and write XY(aX^3+bX^2Y+cXY^2+dY^3),
+  ad!=0. The residual torus/swap/scalar quotient has coordinates
+  r=bc/(ad), s=(ac^3+b^3d)/(ad)^2. Its stable coarse source is exactly
+  U=A2_(r,s) minus{(9,54)}. The forgetful map to the projective coarse
+  quotient Y=P(1,2,3) is regular, quasi-finite, generically degree10,
+  with image Y minus the single(2,2,1) root-multiplicity orbit.
+- For the literal inclusion q*:C(Y)->C(r,s), one has
+  q*C(Y) intersect C[r,s]=C. Every target prime divisor is dominated by
+  a source divisor, so a polynomial pullback excludes every target pole.
+  Normality and projectivity force constancy. No rational target
+  postcomposition gives a dominant polynomial plane map, hence none gives
+  a Keller pair on this chart. Polynomial source automorphisms preserve
+  this conclusion. Quasi-finiteness is not properness or coarse etaleness.
+- The named import is Hassett--Kresch--Tschinkel, author PDF
+  [Section5, printed9--11](https://www.math.brown.edu/bhassett/papers/modulidP4/noheighttwo16.pdf):
+  stable quintics have at most double roots, and the coarse quotient is
+  normal projective P(1,2,3). ROOT and Sol separately checked the selected
+  source, not the whole paper. Invariant rings, exact puncture/image and
+  pole argument are given in the report. Standard pole mechanism, no
+  novelty claim or reliance on a low-degree Keller theorem.
+- Controls distinguish stable(0,0) from unstable(9,54), the omitted
+  double-double-simple target orbit, A2->P2 omitting a DIVISOR, and an
+  affine target with nonconstant global functions. The source change
+  (u,v)->(u,uv) makes y/x polynomial and prevents extrapolation to
+  arbitrary source changes. Other markings, root counts, affine models,
+  rational/finite source substitutions and general JC2 remain outside
+  scope. No larger partition/root-count family follows from this filter.

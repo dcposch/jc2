@@ -6,6 +6,16 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-16
 
+- **The quintic marked-pair construction has no polynomial target invariants.**
+  Its [exact source chart](xmodel/quintic-partition-target-field-swarmHQ-root-20260916T032000Z.md)
+  is a plane minus one point, mapping generically ten-to-one onto all but
+  one point of a projective moduli surface. Divisorial poles force every
+  target rational function with polynomial pullback to be constant.
+  [Independent Sol review](xmodel/quintic-partition-review-swarmHQ-sol-20260916T033100Z.md)
+  confirms the rings, boundary and named GIT import: swarmHQ ROOT/Astra,
+  MANUAL, PROMOTED. This excludes the fixed-chart construction, not
+  arbitrary source changes, other markings or JC2. No novelty is claimed
+  for the standard pole mechanism.
 - **All additive-group equivariances of the fixed running core are trivial.**
   The [proof](xmodel/running-core-additive-rigidity-swarmHQ-root-20260916T023000Z.md)
   uses the exact nonproper-value surface: its normalized singular-curve
