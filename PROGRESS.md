@@ -4,6 +4,18 @@ Dated mathematical developments across the campaign. Evidence tiers and scope re
 those recorded in [AUDIT.md](AUDIT.md) and the linked reports. Current open questions
 are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
+## 2026-09-16
+
+- **Trace-pole growth returns to the integrality gap.** The
+  [source-degree calculation](xmodel/source-trace-growth-swarmHQ-root-20260916T003100Z.md)
+  bounds cancellation in a window of d conjugate power sums: maximal
+  trace pole order is rho*n+O(1), with rho the largest normalized
+  source-coordinate pole. Sublinear growth is therefore equivalent to
+  local integrality. Keller derivatives supply a lower growth bound,
+  not the needed upper bound. swarmHQ ROOT/Astra, MANUAL,
+  PRODUCER-CHECKED, UNPROMOTED; no new integrality theorem, mixed-pole
+  cutoff, degree exclusion or JC2 resolution. No growth/control farm follows.
+
 ## 2026-09-15
 
 - **Affine target-plane sections of the fixed running triple are exhausted.**
