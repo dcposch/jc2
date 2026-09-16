@@ -23557,3 +23557,43 @@ request was sent, and the Keller-specific headline itself is not refuted.
 - The relative-hyperplane input is still required; an arbitrary marked
   Keller completion is not supplied. Ramanujam theory itself is not refuted.
   No new donor-family launch, general exclusion, or JC2 resolution follows.
+
+## SECTION-SUPPORTED-SCROLL-DONOR-1 — 2026-09-16
+
+- **PROMOTED / MANUAL**, producer swarmHQ ROOT/Astra, with native Astra
+  same-model corroboration and different-model hostile FIRST by Sol.
+  [Frozen producer](xmodel/section-supported-scroll-donor-swarmHQ-root-20260916T080756Z.md)
+  at fc06b462c26145f436b3733013119ad8038387d6; full SHA256
+  6c6c1976861a05b4f5446c3332727107ece1ce26534d3a22f79a33372ef96c19,
+  body 218bc6356e35ff384f6594b3a4ed5234dd9fe8a9aaa68e45e86dc03cbc2071cd,
+  manifest b61519897e9022f654bc8eec580f6d96fddf7ef479ce535dd5fcf9689e7e2394.
+  [Independent review intake](xmodel/section-supported-scroll-review-swarmHQ-sol-20260916T081156Z.md)
+  is ROOT's faithful preservation of terminal Sol messages, not a verbatim
+  transcript or Sol-authored file; terminal08:11:56 UTC, all seven claims
+  CONFIRMED. Review full SHA256
+  61cad04a1b30dd60887dd5d31099727ccb294dfb9aa8a0d1019eec3b427b5eef,
+  body 7a65781c6ed676401d8d7c7148cd220dd4ac919772eb46e24a087f29997365b6,
+  manifest 56c1dcaa70dfbe4b50c2e9f134db4ea051715240a3d26487a808518186cfa128.
+- Over C, let Phi:F_e->P2 be finite, ell any line, T=Phi^*ell,
+  R=Ram(Phi), and B=supp(T) union supp(R). If EVERY component of B
+  is a section of the ruling, no dominant everywhere-defined A2->F_e-B
+  exists. Neither finiteness nor etaleness of the first leg is assumed.
+  There is no bound on ruling degree, map degree, multiplicities or contacts.
+- Three or more boundary components give a nonconstant unit by Picard
+  rank two. One section, or two sections both over ell, contradict the
+  ramification formula after intersection with a ruling fiber. The remaining
+  case is T=aD, R=(a-1)D+(2a-1)E, with E not over ell. Off E the local
+  form (g(s,t),t^a) makes g_s a unit after removing the fixed ramification.
+  Thus h=Phi|D is unramified outside D intersect E. Its degree aD^2>=2;
+  degree one would imply a finite isomorphism F_e=P2. Riemann--Hurwitz
+  forces at least two distinct collision fibers, not merely contact length.
+- The accepted August30 all-contact logarithmic theorem now excludes the
+  dominant A2 first leg; its named prior review chain is consumed without
+  a repeated foundational audit. Corrected van Dobben v2 recognition is
+  NOT a proof premise. Its one-support-point tangential A2 complements
+  are compatible controls: the new obstruction is finite-map compatibility.
+- This removes L.f=1 only in the section-supported case. It does not
+  subsume the old theorem's separate vertical-boundary cases, cover
+  multisections or other compactifications, or place an arbitrary Keller
+  source in the stated boundary type. No global JC2 conclusion, computer
+  certificate, exhaustive novelty claim or automatic family successor.

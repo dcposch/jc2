@@ -6,6 +6,16 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-16
 
+- **Section-supported scroll donors are excluded in every ruling degree.**
+  The [uniform proof](xmodel/section-supported-scroll-donor-swarmHQ-root-20260916T080756Z.md)
+  excludes any dominant regular A2 first leg when a finite Hirzebruch-to-P2
+  map's entire inverse-line-plus-ramification boundary consists of sections.
+  Removing fixed normal ramification forces two distinct section collisions;
+  the accepted all-contact logarithmic theorem then applies. There is no
+  degree, multiplicity or contact-order bound. [Independent Sol review](xmodel/section-supported-scroll-review-swarmHQ-sol-20260916T081156Z.md)
+  confirms the exact scope: swarmHQ ROOT/Astra, PROMOTED/MANUAL with the
+  named logarithmic import. Vertical components, multisections and arbitrary
+  Keller-source landing remain outside scope; JC2 is not resolved.
 - **A source correction withdraws an old boundary obstruction.**
   [The correction](xmodel/projective-bundle-v2-correction-swarmHQ-root-20260916T072000Z.md)
   records a missed September 14 revision: one support point, not contact

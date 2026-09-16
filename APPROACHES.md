@@ -33,6 +33,15 @@ The [correction and dependency audit](xmodel/projective-bundle-v2-correction-swa
 preserve the separate all-contact logarithmic and reviewed scroll exclusions.
 No arbitrary Keller source is thereby placed in an eligible completion.
 
+The [section-supported donor exclusion](xmodel/section-supported-scroll-donor-swarmHQ-root-20260916T080756Z.md)
+now removes the ruling-degree-one restriction when EVERY component of a
+finite Hirzebruch-to-P2 map's full inverse-line-plus-ramification boundary
+is a section. [Independent Sol review](xmodel/section-supported-scroll-review-swarmHQ-sol-20260916T081156Z.md)
+confirms this uniform extension: PROMOTED/MANUAL with the accepted all-contact
+logarithmic import. Vertical components, multisections and arbitrary source
+landing are not covered; recognizing an abstract A2 complement alone does
+not supply a compatible finite map.
+
 **Question:** which global feature of an actual Keller source forces the missing
 normality, integrality, or properness conclusion?
 
