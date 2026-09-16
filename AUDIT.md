@@ -23717,3 +23717,27 @@ request was sent, and the Keller-specific headline itself is not refuted.
   divisors, full nonproperness classification, new trace inequality,
   source solution/exclusion, novelty claim or JC2 result follows. The
   tranche closes without coefficient, scalar/r3 or control-family work.
+
+## CRITICAL-IMAGE-DEGREE-CONTROL-1 — 2026-09-16
+
+- **PROMOTED / MANUAL exact algebra.** Producer swarmHQ ROOT(gpt-6-astra),
+  same-model native Astra check, different-model Sol FIRST terminal12:06:28.
+  [Producer](xmodel/critical-image-degree-countercontrol-swarmHQ-root-20260916T120130Z.md)
+  frozen at a041e4710b0c41c4a3ff6c87da5e7b4ee5297b36, full SHA256
+  6d69a65789f0ecdd7d210d6cf175a758808dc4d284ba06c7eb8a1ceccbd625fc;
+  [Sol-authored review](xmodel/critical-image-degree-review-swarmHQ-sol-20260916T120413Z.md),
+  full SHA25635bc48f3fa7e8817b6b4f3fb9563ed55cefb486ed11f1177bda42063dcb59ffd.
+  Witness CONFIRMED, proposed universal degree restriction REFUTED.
+- Put t=2g+2p^3, P=(t^2-p^2)/4, Q=p/2+(2/3)t^3-p^2*t.
+  The exact determinant in(t,p) is t/4-p^3/2; the chain factor2 gives
+  J_(g,p)=g. On g=0 the coordinates are p^6-p^2/4 and
+  (16/3)p^9-2p^5+p/2, with degrees6,9. Their gcd3 and failure of
+  either divisibility refute the coprime-or-dividing shortcut even with
+  the actual simple critical line and its nonconstant image. Replacing
+  2/3 by lambda gives g+(3lambda-2)*p*t^2, a checked manual control.
+- This does not contradict SIMPLE-CRITICAL-LINE-F10-1, whose primitivity,
+  local cusp and e2/f1 conclusions imply no such global degree rule.
+  The witness is NON-KELLER and is not a point or exclusion of the full
+  F10 contract; its specific degree ratios and inverse-polynomiality
+  hypotheses are not supplied. No source classification, novelty claim,
+  computation, new family search or JC2 conclusion follows.

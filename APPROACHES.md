@@ -258,6 +258,11 @@ receiver's g=0 boundary divisor. PROMOTED/MANUAL with standard curve
 imports. This supplies two hypotheses for that divisor, not uniqueness
 of the dicritical, a new trace inequality or an all-r exclusion test.
 
+The [reviewed degree countercontrol](xmodel/critical-image-degree-countercontrol-swarmHQ-root-20260916T120130Z.md)
+has the same simple critical line but critical-image degrees6 and9:
+primitivity does not force coprime degrees or degree divisibility.
+It refutes that proposed shortcut, not the F10 source contract.
+
 **Useful next contribution:** an exact full-source implication or certificate that
 changes the unresolved test. Prior timeouts and term limits are nondecisions.
 [Complete source](https://github.com/dcposch/jc2/blob/ec69252af5ca03245becb80436f5ddb0917ccef2/APPROACHES.md#2-complete-f10-source-the-remaining-r3-problem) ·

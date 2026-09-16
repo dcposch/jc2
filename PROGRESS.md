@@ -20,6 +20,11 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
   permutation; even transposition generation alone gives no degree bound.
   That synthesis is MANUAL/DOCUMENTARY, PRODUCER-CHECKED, UNPROMOTED;
   no new global mechanism or construction test was admitted.
+  A later [explicit degree countercontrol](xmodel/critical-image-degree-countercontrol-swarmHQ-root-20260916T120130Z.md),
+  with [independent Sol review](xmodel/critical-image-degree-review-swarmHQ-sol-20260916T120413Z.md),
+  refutes the proposed coprime-or-dividing critical-image degree shortcut:
+  J=g can have restriction degrees6,9. PROMOTED/MANUAL; neither a Keller
+  counterexample nor an F10 source solution or exclusion follows.
 - **Fixed Legendre tripling cannot be repaired by any finite source change.**
   The [degree-nine rational constant-Jacobian candidate](xmodel/legendre-tripling-source-obstruction-swarmHQ-root-20260916T093800Z.md)
   has ramification index3 over a generic target line. This persists under
