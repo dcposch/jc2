@@ -271,6 +271,12 @@ source strata. In particular, the recorded maximum-degree >= 125 bound is condit
 on named imports and retained external certificates; individual family closures do
 not establish a blanket higher-degree bound. Check the exact ledger before a search.
 
+The historical Dixmier inventory's deferred T2 arithmetic check was subsequently
+completed in the [August 23 audit](xmodel/sol-dixmier.md#26-t2-verdict-and-remaining-proof-obligations):
+T2-local PASS under its stated contract. The theorem-chain interfaces remain
+unverified; this is not certification of the claimed DC(1) proof. A gap in that
+proof alone would not refute JC2. The old T2 queue entry is not a new experiment.
+
 [Evidence ledger](AUDIT.md) · [Recent progress](PROGRESS.md) ·
 [Historical avenue inventory](history/APPROACHES-before-20260906-cleanup.md#1-master-union-table) ·
 [Replay and scope checks](docs/REPLAY.md)
