@@ -6,6 +6,15 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-16
 
+- **Generic units can be made global after a fixed power.**
+  The [finite-multisection argument](xmodel/geometric-unit-globalization-swarmHQ-root-20260916T232700Z.md)
+  works over every finite extension of C(P), assuming P is nonsingular and
+  EVERY fiber is irreducible. Power and base rescaling remove all finite
+  coefficient poles while preserving non-base dependence.
+  [Independent Sol review](xmodel/geometric-unit-globalization-review-swarmHQ-sol-20260916T233000Z.md)
+  confirms the proof: swarmHQ ROOT/Astra, PROMOTED/MANUAL with standard
+  divisor and finite-flat norm facts. This removes a global-map obstacle;
+  scalar-unit vanishing, mixed-period splitting and JC2 remain unresolved.
 - **Smooth-branch donors admit no constant-J birational target repair.**
   The [uniform exclusion](xmodel/symplectic-target-smooth-branch-swarmHQ-root-20260916T192000Z.md)
   covers every rational product pair p=R(s), q=t/R'(s), degR>=2,

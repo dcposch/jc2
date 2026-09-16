@@ -24003,3 +24003,46 @@ request was sent, and the Keller-specific headline itself is not refuted.
   outside scope. No elliptic-tripling full-branch attachment, literature-
   priority claim, scientific computation or automatic donor-family successor.
   JC2 remains unresolved. Custody checks alone are not proof verification.
+
+## GEOMETRIC-UNIT-GLOBALIZATION-1 — 2026-09-16
+
+- **PROMOTED / MANUAL**, using standard normal-divisor extension and the
+  explicitly described finite-flat determinant norm. Producer swarmHQ
+  ROOT/Astra, with an independently obtained native Astra argument;
+  different-model native Sol FIRST CONFIRMED. Exact hosted peer IDs were
+  not independently exposed. Terminal status was observed before ROOT's
+  custody/pin checks and whole review intake.
+  [Producer](xmodel/geometric-unit-globalization-swarmHQ-root-20260916T232700Z.md)
+  banked at ad289210c98147f85b7faa9fd76a3c12502ef130, full SHA256
+  87dc47e2ff7ae6caab9e5b0d434b1cdc596b5b958ce83ccbf6ad60aded89cf21,
+  manifest077115f10e3a73987b57f01cb8d333f571081b5192c4912b5265d41fa89f0bd1;
+  [Sol-authored FIRST](xmodel/geometric-unit-globalization-review-swarmHQ-sol-20260916T233000Z.md),
+  full SHA256e096a4f20a29f75245d0f29e873358006a3b2ea57b9813194909df45018517b8,
+  manifestc5b336f3e65a03a5791295782861e139a94122c2280fc81293adea2aae3ac8d6.
+- Let P in C[x,y] have no critical points and EVERY closed fiber
+  irreducible. Choose an affine source line with nonconstant P-restriction
+  of degree e>0. For ANY finite E/C(P), normalize A1 in E to C_E and put
+  X=A2 x_A1 C_E. Every unit u on the E-generic fiber admits f in E* with
+  u^e/(pi^*f) in O(X)*. If u is not a base scalar, neither is this global
+  unit. The same e works for all E and u; it is not a mapping-degree claim.
+- Smoothness and all-fiber irreducibility make X normal and integral with
+  reduced irreducible fibers. Thus div(u)=pi*Delta. The base-changed source
+  line is a finite-flat degree-e multisection; its determinant norm proves
+  eDelta principal. Local normality makes restriction of u/g a unit even
+  on a nonnormal or reducible multisection. Relative algebraic closure of
+  E in the generic-fiber function field preserves non-base dependence.
+  No Pic(C_E)=0, factoriality after base change, section, or injective
+  unit specialization is assumed.
+- For a nontrivial quadratic E, a squarefree representative D(t) gives
+  O(X)=C[x,y,z]/(z^2-D(P)). A global non-base unit has polynomial
+  coefficients A+Bz and constant nonzero norm. Scalar normalization yields
+  A^2-D(P)B^2=1 and a dominant REGULAR whole-plane map (P,A,B) to the
+  Pell surface. This is a conditional consequence, NOT an exclusion of
+  that map or a reduction of arbitrary finite extensions to quadratic ones.
+- P=x and the excluded reducible-fiber control P=xy check the source
+  hypotheses. All-fiber irreducibility is explicit, not asserted for every
+  Keller component. The old geometric-unit, norm-kernel and mixed-period
+  gaps are not closed; no higher-dimensional norm-torus dominance or
+  logarithmic Kodaira theorem is imported. No literature-priority claim,
+  scientific computation, automatic degree ladder or JC2 conclusion.
+  Sealed producer/review bytes remain unchanged; custody is not proof.

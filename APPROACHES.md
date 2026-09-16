@@ -86,6 +86,17 @@ The [cofinite-center cusp control](avenues/notes/cofinite-center-euler-20260915.
 is nonzero and passes the tested operators away from one center, but is not an actual
 Keller source quotient. MANUAL/PRODUCER-CHECKED, UNPROMOTED.
 
+The [finite-multisection bridge](xmodel/geometric-unit-globalization-swarmHQ-root-20260916T232700Z.md)
+removes one coefficient-pole obstacle: for a nonsingular polynomial P with
+EVERY fiber irreducible, a generic unit after ANY finite extension of C(P)
+becomes a global unit on the whole base-changed source after a fixed power
+and rescaling by a base function. Non-base dependence is preserved.
+[Independent Sol review](xmodel/geometric-unit-globalization-review-swarmHQ-sol-20260916T233000Z.md)
+confirms this result, PROMOTED/MANUAL. Excluding these global units remains
+open; neither geometric-unit vanishing nor mixed-period splitting follows.
+The all-fiber hypothesis is not asserted for every Keller component. The
+quadratic case yields a whole-plane map to a Pell surface, not its exclusion.
+
 **Useful next contribution:** identify and exploit an additional actual-source
 hypothesis, rather than strengthening the same abstract control family.
 [Trace interfaces](https://github.com/dcposch/jc2/blob/ec69252af5ca03245becb80436f5ddb0917ccef2/APPROACHES.md#5-trace-accepted-image-no-manufactured-splitting) ·
