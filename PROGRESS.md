@@ -6,6 +6,14 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-16
 
+- **The natural linear/cubic SL2 quotient is a plane automorphism.**
+  The [global calculation](xmodel/linear-cubic-sl2-quotient-swarmHQ-root-20260916T174200Z.md)
+  identifies the entire resultant-one source with SL2 times A2 and proves
+  that multiplication induces (u,v)->(-3u,-27v) on the full affine
+  invariant quotients. [Independent Sol review](xmodel/linear-cubic-sl2-review-swarmHQ-sol-20260916T174500Z.md)
+  confirms the polynomial inverse and degenerate cases: swarmHQ ROOT/Astra,
+  PROMOTED/MANUAL. This exact quotient yields no counterexample; other
+  constructions and general JC2 remain outside scope.
 - **Connected quotient towers cannot create a plane counterexample.**
   The [new interface](xmodel/connected-quotient-tower-swarmHQ-root-20260916T155300Z.md)
   applies to arbitrary compatible rational quotients of finite ambient

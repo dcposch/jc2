@@ -23872,3 +23872,39 @@ request was sent, and the Keller-specific headline itself is not refuted.
   or to JC2. No parameter/degree/coordinate farm or automatic successor.
   Proof, corroboration and FIRST were manual; current artifact checks
   establish custody only, not mathematical correctness by themselves.
+
+## LINEAR-CUBIC-SL2-QUOTIENT-1 — 2026-09-16
+
+- **PROMOTED / MANUAL**, with elementary SL2 generation. Producer swarmHQ
+  ROOT(gpt-6-astra), different-model native Sol FIRST, CONFIRMED; terminal
+  status observed before ROOT's sealed-report intake. No scientific code.
+  [Producer](xmodel/linear-cubic-sl2-quotient-swarmHQ-root-20260916T174200Z.md)
+  banked at97a752da7c5a86691a690d80dac32e7d981b9eb1, full SHA256
+  f5781c10bbc848ef39b140312b8f0d8e3871a6df0cd1f4208f661566fc4fa593,
+  manifest78156edf7faadef10a97310cca77d6895361630816fd2dfaa52dba5b4336d8ac;
+  [Sol-authored FIRST](xmodel/linear-cubic-sl2-review-swarmHQ-sol-20260916T174500Z.md),
+  full SHA25663d08b15fc3fee4a9a5e5f23a7c2f7739c41e0bb6cd2d8d20083903b3b70bb0c,
+  manifest7df4d2665116c9d8135fde034bfc19b538a3d8c57b11f664d0517eae08311340.
+- Over C let L=aX+bY and Q be a binary cubic, with the exact convention
+  Res(L,Q)=Q(-b,a)=1. Set e=(-b,a) and M=(Q_X(e)X+Q_Y(e)Y)/3. Euler's
+  identity gives det(L,M)=1; in this global polynomial frame the unique
+  expansion is Q=M^3+uL^2M+vL^3. The inverse frame is polynomial, and
+  this construction is a two-sided equivariant isomorphism Z=SL2 times A2.
+  Hence C[Z]^SL2=C[u,v], without restricting to a coefficient chart or
+  discriminant open. The source Z itself is not asserted to be affine A5.
+- For H=AX^4+BX^3Y+CX^2Y^2+DXY^3+EY^4, the invariant polynomials
+  I=12AE-3BD+C^2 and J=72ACE+9BCD-27AD^2-27B^2E-2C^3 pull back to
+  -3u and -27v under multiplication. Shear/swap checks establish invariance;
+  multiplication is dominant by squarefree factorization and the exact
+  resultant scaling Res(lambda L,lambda^-1 Q)=lambda^2 Res(L,Q).
+  Dominance and the source invariant ring then prove the FULL target ring
+  C[H]^SL2=C[I,J], not merely an invariant subring or a generic quotient.
+  Thus the induced plane map is (u,v)->(-3u,-27v), inverse(-I/3,-J/27),
+  Jacobian81. Ambient multiplication degree is not assigned to the quotient.
+- The a=0 chart and repeated-root cubic/quartic controls are included.
+  Dropping resultant one invalidates the frame, as L=X,Q=X^3 shows.
+  This excludes a counterexample from this exact natural quotient only:
+  no claim about other groups, additional cuts, target surfaces, different
+  factor degrees, arbitrary parametrizations, or general JC2 follows.
+  The proof imports no unverified external construction or invariant-ring
+  classification. No literature priority or automatic family successor.

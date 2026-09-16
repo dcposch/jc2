@@ -131,6 +131,14 @@ confirms this exact construction exclusion, PROMOTED/MANUAL. An arbitrary
 initial source parametrization can still carry the whole Keller problem;
 unequal-degree nonlinear families are not covered by this quotient argument.
 
+The distinct [natural SL2 quotient of linear/cubic multiplication](xmodel/linear-cubic-sl2-quotient-swarmHQ-root-20260916T174200Z.md)
+is also trivial as a plane construction: on the WHOLE resultant-one
+source, a canonical polynomial frame gives SL2 times A2; the full quartic
+invariant quotient map is (u,v)->(-3u,-27v), an automorphism.
+[Independent Sol review](xmodel/linear-cubic-sl2-review-swarmHQ-sol-20260916T174500Z.md)
+confirms this exact scope, PROMOTED/MANUAL. No other group, cut, target
+surface or factor degree is excluded; no automatic family search follows.
+
 For the fixed cubic-fiber core (the running triple up to an invertible linear
 target change), the September 13 [embedded-plane transfer](xmodel/embedded-plane-transfer-root-20260913.md)
 and [low-fiber tower transfer](xmodel/low-fiber-tower-transfer-root-20260913.md)
