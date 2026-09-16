@@ -23316,3 +23316,12 @@ request was sent, and the Keller-specific headline itself is not refuted.
   its determinant-character hypothesis, which these weights fail. The
   affine-section and fixed-target donor statements have different scopes.
   No weight, quotient, source-cover or rational-target family successor.
+- Documentary provenance added September16: the [independent public audit,
+  Section2.4](https://github.com/shadybrook/jacobian-counterexample-audit/blob/main/paper/main.md#24-the-two-dimensional-weighted-quotient)
+  already displays the invariant quotient, its contracted critical line,
+  and the squared Jacobian factor. Its page labels itself revised July21,2026;
+  that date was read, not independently verified against Git history.
+  These parts of our calculation are independent reconstruction, not claimed
+  novelty. Selected sections were read, not the entire audit or its programs.
+  No external theorem is newly imported, no sealed report changes, and the
+  exact-image/rational-target conclusion retains the review and scope above.
