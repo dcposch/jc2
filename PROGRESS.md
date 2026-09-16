@@ -39,8 +39,17 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
   other affine coefficients, levels and components, including repeated
   roots and reducible cases. swarmHQ ROOT/Astra, MANUAL,
   PRODUCER-CHECKED, UNPROMOTED; different-model review remains required
-  before promotion. Nonlinear sections, other triples and JC2 are not
-  settled, and no expanded section search follows.
+  before promotion. This classification does not classify nonlinear sections.
+  Its plane-counterexample consequence is already covered more broadly by
+  the September 13 [embedded-plane](xmodel/embedded-plane-transfer-root-20260913.md)
+  and [finite-chain](xmodel/low-fiber-tower-transfer-root-20260913.md) transfer
+  results, which allow nonlinear polynomial target maps under full
+  factorization. The [right-factor theorem](xmodel/low-fiber-keller-factor-invariance-root-20260913.md)
+  further preserves the initial parametrization's Keller factors at arbitrary
+  generic degree. These retain their recorded accepted premises; arbitrary
+  projections, other triples and JC2 remain outside those conclusions.
+  No expanded section search follows. Scope pointer restored September 16;
+  no new theorem or promotion.
 - **Additive-symmetry descent is conditional; the first action fails.** A
   [manual derivation](xmodel/additive-quotient-descent-swarmHQ-root-20260915T232000Z.md)
   shows that a three-dimensional Keller map commuting with a primitive

@@ -67,6 +67,27 @@ no such properness is known. Formal boundary pairs still need global algebraizat
 The separate AS109 integral-lift question concerns an exact polynomial lift and must
 not be identified with the surface-boundary problem.
 
+For the fixed cubic-fiber core (the running triple up to an invertible linear
+target change), the September 13 [embedded-plane transfer](xmodel/embedded-plane-transfer-root-20260913.md)
+and [low-fiber tower transfer](xmodel/low-fiber-tower-transfer-root-20260913.md)
+already exclude counterexamples from full factorizations
+Phi_m ... Phi_1 j = i h, where j has two-dimensional image and generic
+degree at most three onto that image. The chain allows the core, identity
+stabilizations and polynomial source/target automorphisms; i is any polynomial
+map, not just an affine embedding. Thus nonlinear embedded-plane sections
+and all finite compositions in this full-factorization scope are covered.
+These are PROMOTED/MANUAL, retaining the accepted small-mapping-degree and
+strict second-leg-degree 2/3 premises in [AUDIT.md](AUDIT.md#low-fiber-tower-transfer-1--2026-09-13).
+
+The stronger [Keller right-factor invariance](xmodel/low-fiber-keller-factor-invariance-root-20260913.md)
+removes the initial-degree bound for a different conclusion: such chains
+create no polynomial Keller right factor absent from j. Test the initial
+parametrization first; arbitrary j is not proved factor-free. This is
+[PROMOTED/MANUAL at its recorded conditional and review scope](AUDIT.md#low-fiber-keller-factor-invariance-1--2026-09-13).
+Arbitrary output projections do not provide the full factorization and
+remain outside these results, as do actual restricted steps of degree at
+least four. No general JC2 reduction or new construction follows.
+
 The retained fixed-direction formal recursion on U^2=A+A^2 Z is now
 [ruled out by a logarithmic-residue obstruction](xmodel/formal-fixed-recursion-nonalgebraicity-swarmHQ-root-20260916T004300Z.md),
 confirmed by [independent Sol review](xmodel/formal-fixed-recursion-review-swarmHQ-sol-20260916T004600Z.md).
