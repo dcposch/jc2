@@ -23418,3 +23418,44 @@ request was sent, and the Keller-specific headline itself is not refuted.
   arbitrary source changes. Other markings, root counts, affine models,
   rational/finite source substitutions and general JC2 remain outside
   scope. No larger partition/root-count family follows from this filter.
+
+### QUASIFINITE-DYNAMICAL-MINIMUM-1 — 2026-09-16
+
+- PROMOTED / MANUAL with classical Jung generation as a named import.
+  Producer swarmHQ ROOT (gpt-6-astra), independent native Astra co-research.
+  [Sealed proof](xmodel/quasifinite-dynamical-minimum-swarmHQ-root-20260916T043600Z.md),
+  full0005828cec9ecf9800754beccd2d39825841afb51f3b6def019f286155e1cd9b,
+  manifest211b30d60d5647931cba0724fcb134c9c5554cff098b37522cc76a07bb9e9d60.
+  [Different-model Sol hostile review](xmodel/quasifinite-dynamical-review-swarmHQ-sol-20260916T044500Z.md)
+  CONFIRMED A-E on contribution3fbf3ba0b43fa3ca153a7466d099d6cf96ea5d3b;
+  full2af1daa69a2a70d8156871deee06b4c3d774db3239111817936347ef50e88092,
+  manifestbf33f2d08f2133b9a3171de56f756778b656a6f588bd6d334fb7c24815f744e6.
+  The review record is ROOT's faithful intake of Sol's terminal messages,
+  not a verbatim log or Sol-authored file. Full reports/manifests, pins and
+  0444 modes verified; producer-time lifecycle remains frozen.
+- Over C, F=(x+x^2*y,y+x*y) is quasi-finite of generic mapping degree2.
+  Every fiber has at most two points: off x=-1, eliminate y to obtain
+  (1+t)x^2+(1-s)x-s; at t=0 account separately for the unique x=-1
+  point. Generic discriminant(s+1)^2+4st gives two distinct points.
+  The value(1,-1) is omitted, so the map is not finite. Its Jacobian
+  1+x+(2x+x^2)y vanishes at(-1,0); it is explicitly NON-KELLER.
+- The exact minimum of lambda1(alpha F beta) over ALL polynomial source
+  and target automorphisms is1+sqrt(2)>2. The same minimum holds with
+  both determinants1. Conjugacy reduces both-sided changes to left ones.
+  Under arbitrary positive source weights, F's leaders x^2*y,xy give
+  q<p<2q. Jung generation and Bruhat reduction show that every nonaffine
+  left automorphism has leaders powers of one common variable on this
+  entire cone. Its substituted positive corner matrix has rank1 and
+  spectral radius at least3. All affine cases have radii(3+sqrt(5))/2,
+  1+sqrt(2), or3; the determinant-one signed swap attains the minimum.
+  Unique corner substitution proves the iterate degrees exactly, including
+  absence of cancellation; no numerical or finite-degree search is used.
+- This defeats quasi-finiteness alone as a sufficient lowering hypothesis,
+  improving the earlier contracted-curve control's exact scope. It does
+  NOT defeat a Keller-specific bound or supply Keller integrality,
+  constant Jacobian, a JC2 counterexample or a JC2 proof. ROOT checked
+  the classical generation/reduced-word statement in selected pages1,4
+  of Furter's2013 author manuscript linked in the proof; no full-paper
+  or original-Jung-proof audit is claimed. Sol reviewed the supplied
+  reduction with that named import. No literature-novelty claim and no
+  automatic automorphism/control-family successor.

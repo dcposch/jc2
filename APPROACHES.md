@@ -36,6 +36,15 @@ has singularities escaping to infinity. This is MANUAL/PRODUCER-CHECKED, UNPROMO
 Likewise, local cyclic-quotient boundary restrictions do not supply the global source
 hypothesis. Repeating the local smoothness argument leaves the same gap.
 
+Finite fibers alone also fail to supply dynamical-degree lowering. The
+[reviewed quasi-finite example](xmodel/quasifinite-dynamical-minimum-swarmHQ-root-20260916T043600Z.md)
+F=(x+x^2*y,y+x*y) has generic degree2 but minimum dynamical degree
+1+sqrt(2) over ALL independent polynomial source/target automorphisms.
+[Independent Sol review](xmodel/quasifinite-dynamical-review-swarmHQ-sol-20260916T044500Z.md)
+confirms the uniform calculation, including determinant-one changes.
+PROMOTED/MANUAL with the classical Jung import. The example is NON-KELLER;
+Keller-specific minimization and its missing lowering step remain open.
+
 **Useful next contribution:** a source-specific implication with exact hypotheses,
 or an orthogonal global invariant that the recorded controls do not already defeat.
 [Detailed geometry and prior tests](https://github.com/dcposch/jc2/blob/ec69252af5ca03245becb80436f5ddb0917ccef2/APPROACHES.md#8-global-geometry-and-external-interfaces).

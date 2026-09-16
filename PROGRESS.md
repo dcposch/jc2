@@ -6,6 +6,15 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-16
 
+- **Finite fibers do not suffice for dynamical-degree lowering.** The
+  [explicit map](xmodel/quasifinite-dynamical-minimum-swarmHQ-root-20260916T043600Z.md)
+  F=(x+x^2*y,y+x*y) is quasi-finite of generic degree2, yet its minimum
+  dynamical degree over all polynomial source/target coordinate changes
+  is1+sqrt(2). The proof uses Jung normal forms and exact corner iteration,
+  not a bounded coordinate search. [Independent Sol review](xmodel/quasifinite-dynamical-review-swarmHQ-sol-20260916T044500Z.md)
+  confirms the exact minimum, also for determinant-one changes: swarmHQ
+  ROOT/Astra, PROMOTED/MANUAL with a classical import. NON-KELLER example;
+  no refutation of the Keller-specific bound, novelty claim or JC2 closure.
 - **The quintic marked-pair construction has no polynomial target invariants.**
   Its [exact source chart](xmodel/quintic-partition-target-field-swarmHQ-root-20260916T032000Z.md)
   is a plane minus one point, mapping generically ten-to-one onto all but
