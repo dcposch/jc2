@@ -105,6 +105,15 @@ this obstruction. Nonlinear target surfaces, arbitrary source maps into
 the factorization space and other constructions are outside this theorem;
 no such alternative is supplied, and JC2 is not resolved.
 
+For equal factor degrees, the distinct
+[opposite-scaling quotient](xmodel/equal-degree-resultant-quotient-swarmHQ-root-20260916T083300Z.md)
+is finite over the product coefficients. Every reduced dominating component
+over ANY polynomial two-parameter family therefore maps isomorphically to
+its parameter plane, including nonlinear families. [Independent Sol review](xmodel/equal-degree-quotient-review-swarmHQ-sol-20260916T083553Z.md)
+confirms this exact construction exclusion, PROMOTED/MANUAL. An arbitrary
+initial source parametrization can still carry the whole Keller problem;
+unequal-degree nonlinear families are not covered by this quotient argument.
+
 For the fixed cubic-fiber core (the running triple up to an invertible linear
 target change), the September 13 [embedded-plane transfer](xmodel/embedded-plane-transfer-root-20260913.md)
 and [low-fiber tower transfer](xmodel/low-fiber-tower-transfer-root-20260913.md)

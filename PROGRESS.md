@@ -6,6 +6,16 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-16
 
+- **Equal-degree scaling quotients contribute no new covering degree.**
+  The [uniform proof](xmodel/equal-degree-resultant-quotient-swarmHQ-root-20260916T083300Z.md)
+  covers every equal factor degree and every polynomial two-parameter
+  product family, including nonlinear ones. Multiplication on the exact
+  scaling quotient is finite; every reduced dominating component of its
+  resultant-one base change maps isomorphically to the parameter plane.
+  [Independent Sol review](xmodel/equal-degree-quotient-review-swarmHQ-sol-20260916T083553Z.md)
+  confirms the component and nilpotent controls: swarmHQ ROOT/Astra,
+  PROMOTED/MANUAL with standard inputs. Unequal-degree nonlinear families,
+  arbitrary initial source parametrizations and JC2 remain outside scope.
 - **Section-supported scroll donors are excluded in every ruling degree.**
   The [uniform proof](xmodel/section-supported-scroll-donor-swarmHQ-root-20260916T080756Z.md)
   excludes any dominant regular A2 first leg when a finite Hirzebruch-to-P2

@@ -23597,3 +23597,42 @@ request was sent, and the Keller-specific headline itself is not refuted.
   multisections or other compactifications, or place an arbitrary Keller
   source in the stated boundary type. No global JC2 conclusion, computer
   certificate, exhaustive novelty claim or automatic family successor.
+
+## EQUAL-DEGREE-RESULTANT-QUOTIENT-1 — 2026-09-16
+
+- **PROMOTED / MANUAL**, swarmHQ ROOT/Astra, with native Astra co-check
+  and different-model Sol hostile FIRST, terminal08:35:53 UTC, all six
+  items CONFIRMED. [Frozen producer](xmodel/equal-degree-resultant-quotient-swarmHQ-root-20260916T083300Z.md)
+  at050db81662286a42d035316f99bf06f76c0936ff; full SHA256
+  f72578b0e82099062f40f564a5b399b433f95195e55b35b82628520fb836a860,
+  body90030a3152c4089ec38184d1981b0f2ffe80bd118f07f709c3db8d05f676d269,
+  manifest4d734bf50138e1ddefa399c5109e316c079803818708379e3bca6d119ad8bf0c.
+  [Review intake](xmodel/equal-degree-quotient-review-swarmHQ-sol-20260916T083553Z.md)
+  is ROOT's faithful record of terminal Sol messages, not a verbatim
+  transcript or Sol-authored file. Review full SHA256
+  59ca8d00d89c0597dc53a82f60c9d4dbe5514f01460b98fa8010f4eb7de0bccf,
+  body42c257c930e68c0166ebf6cba8205ff118aae83d12d9537984c7aaadec61336e,
+  manifestf25749246f4a517eddeb2ae0bf12f6cb2e90662194469c3d96a3aee2c0ff7ef1.
+- For every k>=1 over C, let Y_k={Res(L,Q)=1}//Gm for degree-k binary
+  forms, with opposite scaling. For ANY polynomial H:A2->V_(2k), every
+  reduced irreducible component of Y_k x_(V_(2k)) A2 dominating the
+  parameter plane maps isomorphically onto it. No linearity, immersion,
+  injectivity or nonvanishing hypothesis on H, nor degree bound, is used.
+- The exact invariant ring is B/(r-1), B=C[l_i q_j]. The product
+  coefficients vanish together on the Segre cone only at its vertex;
+  Nullstellensatz and graded induction prove affine finiteness. Ambient
+  multiplication is etale where r!=0 because its only prequotient
+  differential kernel is opposite scaling. A dominant reduced component
+  of the resultant-one base change is a whole regular component of the
+  etale ambient open, closed in the finite full base change. Hence it is
+  finite etale over complex A2 and has degree one.
+- The resultant-one slice itself is NOT etale to the full coefficient
+  space, and arbitrary whole base changes can be nonreduced: k=1 and
+  H=(p^2,1,-1/4) give C[p,q]/(p^2). A nonlinear degree-one positive
+  control prevents a false nonexistence claim. The old unequal-degree
+  affine-plane theorem is context only, not a mathematical dependency.
+- No arbitrary-source Keller exclusion follows. An initial parametrization
+  into the component may carry all unresolved difficulty; the quotient
+  adds no covering degree. Unequal degrees do not preserve Res=1 under
+  this action, so their nonlinear-family gap remains. No exhaustive
+  novelty claim, scientific computation, general JC2 result or successor.
