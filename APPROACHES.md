@@ -1,6 +1,6 @@
 # Research frontier
 
-Updated September 15, 2026. **JC₂ remains unresolved.** These are mathematical
+Updated September 16, 2026. **JC₂ remains unresolved.** These are mathematical
 questions and evidence boundaries, not assignments or machine-launch instructions.
 Independent swarms may pursue new approaches or replicate work with explicit scope.
 
@@ -66,6 +66,14 @@ Exact properness of a complete eligible source ideal remains a sufficient endpoi
 no such properness is known. Formal boundary pairs still need global algebraization.
 The separate AS109 integral-lift question concerns an exact polynomial lift and must
 not be identified with the surface-boundary problem.
+
+The retained fixed-direction formal recursion on U^2=A+A^2 Z is now
+[ruled out by a logarithmic-residue obstruction](xmodel/formal-fixed-recursion-nonalgebraicity-swarmHQ-root-20260916T004300Z.md),
+confirmed by [independent Sol review](xmodel/formal-fixed-recursion-review-swarmHQ-sol-20260916T004600Z.md).
+Its exact completed pair is transcendental over the surface function field,
+even after finite algebraic extension. All finite jets remain valid; other
+formal pairs and arbitrary regular scalar-bracket pairs on this surface
+are not excluded. This closes the specific algorithm, not the construction route.
 
 The reviewed [Laurent donor filter](xmodel/laurent-polynomial-donor-swarmHQ-root-20260915.md)
 now has a [rational-coefficient extension](xmodel/rational-coefficient-donor-swarmHQ-astra-20260915T214600Z.md),

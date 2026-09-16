@@ -23233,3 +23233,44 @@ request was sent, and the Keller-specific headline itself is not refuted.
   changed target fields and general JC2 remain outside scope. No literature
   novelty claim, automatic donor-family successor, degree ladder or global
   closing implication follows. All46 avenue dispositions remain unchanged.
+
+### FORMAL-FIXED-DIRECTION-NONALGEBRAIC-1 — 2026-09-16
+
+- PROMOTED / MANUAL. Producer swarmHQ ROOT (gpt-6-astra), with independent
+  same-model Astra reconstruction; [sealed proof](xmodel/formal-fixed-recursion-nonalgebraicity-swarmHQ-root-20260916T004300Z.md),
+  full73c182f4531e635b5da3e9238df042afbb745b98d8e03fb37f30b997101d7488,
+  manifest29869b9fcc7ebeb131054215722655173c717e0a7ea72256d5f4046756f0a409.
+  [Different-model Sol hostile review](xmodel/formal-fixed-recursion-review-swarmHQ-sol-20260916T004600Z.md)
+  CONFIRMED items A-E on frozen contribution commit
+  4dec780b0656c6d62ee7298b1bed55626c356b64;
+  fullfeb5627c8307693a6017b6568c769350f459997b7fb7c5d9d0ebc5e9467ea124,
+  manifestdcb0f8967633010f05dcfe7f351ef59d02d3a840387462bb7f716fe58b443843.
+  Complete terminal review collected; whole report/manifest read back,
+  unchanged input pins and0444 charged modes verified. The producer-time
+  UNPROMOTED header remains immutable; this entry records promotion.
+- Scope is the EXACT September11 retained recursion on S:U^2=A+A^2 Z,
+  completed along L=(A,U), with u=U,z=Z, boundary values(z^2,z^3-z)
+  and fixed correction direction(-1,-3z/2). Its formal pair necessarily has
+  H=z^2-F and G=z^3-z-(3z/2)F, where F=u+O(u^2). For the surface bracket
+  {u,z}=2(1+2zA), the full z-dependent determinant gives
+  (1+3F/2)F_u=(1+4zu^2)^(-1/2). Hence I=F+3F^2/4 is the unique
+  zero-constant-term primitive of du/sqrt(1+4zu^2). The original error
+  correction cancels exactly the next coefficient and converges to this
+  solution; this is not an unrelated formal solution with similar jets.
+- Over C(z), adjoin s with s^2=z and parametrize the conic by
+  u=t/(s(1-t^2)), D=(1+t^2)/(1-t^2). Then du/D=dt/(s(1-t^2)) has
+  residues -1/(2s),+1/(2s) at t=1,-1. Pullback through any finite cover
+  multiplies these residues by positive ramification indices. An exact
+  differential of a rational function has zero residues, by its Laurent
+  expansion. Thus I, F, H and G are transcendental over C(u,z), and
+  cannot belong to C(S) or any finite algebraic extension of C(S).
+  This rules out algebraizing these specified completed series, not merely
+  their being polynomial in u. No G3 theorem or inaccessible source is used.
+- All finite u-jets remain polynomial representatives in the surface ring.
+  At z=0, I=u and F=(2/3)(sqrt(1+3u)-1) is algebraic, consistently with
+  generic transcendence. These distinctions are part of the reviewed claim.
+  The original finite-jet construction is not refuted. Algebraization of
+  other formal pairs, other correction directions, arbitrary regular
+  scalar-bracket pairs on S, and general JC2 are outside scope. The global
+  regular-pair construction endpoint remains open. No automatic coefficient,
+  correction-direction, support or control-family successor is selected.

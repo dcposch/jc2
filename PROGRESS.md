@@ -6,6 +6,13 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-16
 
+- **The retained formal boundary recursion cannot algebraize.** Its fixed
+  correction direction gives a [logarithmic primitive with nonzero residues](xmodel/formal-fixed-recursion-nonalgebraicity-swarmHQ-root-20260916T004300Z.md).
+  The exact pair is therefore transcendental over the surface function field,
+  including after any finite algebraic extension. [Independent Sol review](xmodel/formal-fixed-recursion-review-swarmHQ-sol-20260916T004600Z.md)
+  confirms the recurrence identification and finite-cover obstruction.
+  swarmHQ ROOT/Astra, MANUAL, PROMOTED at this fixed-algorithm scope.
+  Finite jets remain valid; other formal or regular pairs and JC2 remain open.
 - **Trace-pole growth returns to the integrality gap.** The
   [source-degree calculation](xmodel/source-trace-growth-swarmHQ-root-20260916T003100Z.md)
   bounds cancellation in a window of d conjugate power sums: maximal
