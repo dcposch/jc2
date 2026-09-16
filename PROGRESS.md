@@ -43,6 +43,11 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
   confirms the field argument: swarmHQ ROOT/Astra, PROMOTED/MANUAL with
   those explicit dependencies. No group action or tower-length bound is
   needed. Arbitrary projected sections and general JC2 remain outside scope.
+  The [subsequent scope synthesis](xmodel/ideation-full2130-swarmHQ-synthesis-20260916T214500Z.md)
+  identifies the failed geometric-integrality hypothesis in a proposed
+  canonical-graph composition. It also separates the donor filters' target
+  quantifiers and the remaining dynamical-equality gap. MANUAL/DOCUMENTARY,
+  UNPROMOTED; no new closing test or theorem is claimed.
 - **Weighted-lift coordinate fibers create no new plane counterexample.**
   The [uniform proof](xmodel/weighted-lift-coordinate-fibers-swarmHQ-root-20260916T133700Z.md)
   covers all admissible seed degrees and literal coordinate levels, using

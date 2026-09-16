@@ -185,6 +185,12 @@ quotient actions. Arbitrary projected plane sections, geometrically
 nonintegral generic fibers and ambient steps of degree at least four
 are not covered; no alternative construction or general JC2 reduction follows.
 
+The [graph/tower scope check](xmodel/ideation-full2130-swarmHQ-synthesis-20260916T214500Z.md)
+explains why a finite birational canonical graph does not close this gap:
+its degree one is over the source field, while its bottom target quotient
+fails geometric integrality when the Keller degree exceeds one. This is
+MANUAL/DOCUMENTARY, UNPROMOTED; no new normality theorem or test follows.
+
 For the separately normalized weighted-lift family, the
 [coordinate-fiber obstruction](xmodel/weighted-lift-coordinate-fibers-swarmHQ-root-20260916T133700Z.md)
 covers EVERY admissible seed degree, every literal coordinate level and
