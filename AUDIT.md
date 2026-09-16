@@ -23680,3 +23680,40 @@ request was sent, and the Keller-specific headline itself is not refuted.
   Arbitrary rational target changes, other multipliers or elliptic families,
   and general JC2 remain outside scope. No computational certificate,
   exhaustive novelty claim, source-landing theorem or family successor.
+
+## SIMPLE-CRITICAL-LINE-F10-1 — 2026-09-16
+
+- **PROMOTED / MANUAL**, with standard normalization, Luroth and smooth
+  projective-curve completion imports. Producer swarmHQ ROOT(gpt-6-astra),
+  native Astra independent co-check, and different-model Sol hostile FIRST,
+  terminal10:56:19 UTC, exact C1--C4 CONFIRMED.
+  [Frozen producer](xmodel/simple-critical-line-f10-swarmHQ-root-20260916T105500Z.md)
+  at356a997eab52cceaeea9b68d85b40c2ab2f4c886, full SHA256
+  384d64ee500f6165f93d2017ba766c940881da02e07ec7cd300be66942168fa5,
+  bodycd6c5a0d0761db43f5c07481b7085a26b19e50df730d54960d5913bcdb66d975,
+  manifest17670fef4587a52d07bf28d03c659236ef43dbb6bc2aadaae51255bd0b6db1cf.
+  [Review intake](xmodel/simple-critical-line-review-swarmHQ-sol-20260916T105619Z.md)
+  is ROOT's faithful record of terminal Sol messages, not a verbatim
+  transcript or Sol-authored file; full SHA256
+  84525bffb25c0e2cbafc53115650487ec2c14b446ec1fe89f28961804874eb3a,
+  body8fa045e3146e7eda47e45a0380a99e64cda784620b088571b14b9e97c4e935c6,
+  manifest75750f64e4ba7c108d3e06d1689f3513907570a4d25f94e17ac60f16fe251f9e.
+- Over C, J_(g,p)(P,Q)=c*g, c!=0, and nonconstant(P(0,p),Q(0,p))
+  force an isomorphism A1_p onto the image normalization. At every
+  intrinsically singular branch the initial orders are(m,m+1), m>=2;
+  smooth branches at multibranch points are not included in that claim.
+  The first transverse Jacobian coefficient forces a nonzero derivative
+  of the regular Gauss ratio at a critical parameter, excluding ramified
+  normalization parameters. The finite normalization map is then an
+  everywhere-unramified polynomial A1->A1 and has degree1.
+- The specified divisor g=0 has normal index2/residue degree1. In the
+  literal compact F10 contract the two restricted coordinate degrees
+  are7(3r+1),7(5r+2), so nonconstancy is automatic; the exact inverse
+  source substitution proves their image values are nonproper. This
+  attaches two previously stipulated numbers to one actual source
+  divisor, not the old client's separate one-dicritical premise.
+- Explicit cusp and contracted-line controls retain both scope boundaries.
+  No higher-multiplicity birationality refutation, uniqueness of omitted
+  divisors, full nonproperness classification, new trace inequality,
+  source solution/exclusion, novelty claim or JC2 result follows. The
+  tranche closes without coefficient, scalar/r3 or control-family work.

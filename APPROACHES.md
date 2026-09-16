@@ -251,6 +251,13 @@ still do not establish complete source zero for higher r. A finite number of pos
 exceptional scalar parameters is not an effective cutoff or an all-r certificate.
 The scalar, regularity, source-comparison, and full-source conclusions are distinct.
 
+The [simple-critical-line lemma](xmodel/simple-critical-line-f10-swarmHQ-root-20260916T105500Z.md),
+with [independent Sol review](xmodel/simple-critical-line-review-swarmHQ-sol-20260916T105619Z.md),
+now derives residue degree1 and transverse index2 for the literal F10
+receiver's g=0 boundary divisor. PROMOTED/MANUAL with standard curve
+imports. This supplies two hypotheses for that divisor, not uniqueness
+of the dicritical, a new trace inequality or an all-r exclusion test.
+
 **Useful next contribution:** an exact full-source implication or certificate that
 changes the unresolved test. Prior timeouts and term limits are nondecisions.
 [Complete source](https://github.com/dcposch/jc2/blob/ec69252af5ca03245becb80436f5ddb0917ccef2/APPROACHES.md#2-complete-f10-source-the-remaining-r3-problem) ·

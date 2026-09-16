@@ -6,6 +6,15 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-16
 
+- **A simple critical line supplies a precise F10 boundary property.**
+  The [lemma and source attachment](xmodel/simple-critical-line-f10-swarmHQ-root-20260916T105500Z.md)
+  prove that J=c*g with nonconstant critical image makes its parametrization
+  birational; intrinsically singular branches start with orders(m,m+1).
+  [Independent Sol review](xmodel/simple-critical-line-review-swarmHQ-sol-20260916T105619Z.md)
+  confirms residue degree1 and transverse index2 on the specified F10
+  divisor: swarmHQ ROOT/Astra, PROMOTED/MANUAL with standard curve imports.
+  This removes a scoped hypothesis, not the separate one-dicritical or
+  global transport gaps. No new F10 exclusion or JC2 closing test follows.
 - **Fixed Legendre tripling cannot be repaired by any finite source change.**
   The [degree-nine rational constant-Jacobian candidate](xmodel/legendre-tripling-source-obstruction-swarmHQ-root-20260916T093800Z.md)
   has ramification index3 over a generic target line. This persists under
