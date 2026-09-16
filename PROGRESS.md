@@ -15,6 +15,11 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
   divisor: swarmHQ ROOT/Astra, PROMOTED/MANUAL with standard curve imports.
   This removes a scoped hypothesis, not the separate one-dicritical or
   global transport gaps. No new F10 exclusion or JC2 closing test follows.
+  The [portfolio scope check](xmodel/ideation-full1108-swarmHQ-synthesis-20260916T111900Z.md)
+  distinguishes this divisor's one two-cycle from the whole inertia
+  permutation; even transposition generation alone gives no degree bound.
+  That synthesis is MANUAL/DOCUMENTARY, PRODUCER-CHECKED, UNPROMOTED;
+  no new global mechanism or construction test was admitted.
 - **Fixed Legendre tripling cannot be repaired by any finite source change.**
   The [degree-nine rational constant-Jacobian candidate](xmodel/legendre-tripling-source-obstruction-swarmHQ-root-20260916T093800Z.md)
   has ramification index3 over a generic target line. This persists under
