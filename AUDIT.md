@@ -23741,3 +23741,47 @@ request was sent, and the Keller-specific headline itself is not refuted.
   F10 contract; its specific degree ratios and inverse-polynomiality
   hypotheses are not supplied. No source classification, novelty claim,
   computation, new family search or JC2 conclusion follows.
+
+## WEIGHTED-LIFT-COORDINATE-FIBERS-1 — 2026-09-16
+
+- **PROMOTED / MANUAL**, with the accepted corrected MORPHIC rational-
+  forest theorem and standard smooth surface completion/factorization.
+  Producer swarmHQ ROOT(gpt-6-astra), same-model native Astra B-fiber
+  co-check, different-model Sol FIRST terminal13:38:10 UTC, CONFIRMED.
+  [Authoritative producer](xmodel/weighted-lift-coordinate-fibers-swarmHQ-root-20260916T133700Z.md)
+  at60b8dd6b32b20b3c3355d3f966cc5de233060d3a, full SHA256
+  eb7bb701c28f3b22683a454375098ea688e2ac210d56f8bb5f3a6921c2170041,
+  manifest8ef0bf6dd18a95ae2ee2437da58ac9db15e308a4869bfd1e4ca64f4d524b9359;
+  [Sol-authored FIRST](xmodel/weighted-lift-coordinate-review-swarmHQ-sol-20260916T133500Z.md),
+  full SHA256986743308e389145a1323ae89332b190b3f917cac2cec9596c431242d17b204e,
+  manifestab481ceb2eac0039eb4278da065c912542db3fb21fdc58cce59788412b2f2865.
+  The original133200 report remains sealed; the replacement only adds its
+  omitted mechanical collision block and distinguishes basis metadata.
+  Sol checked the exact diff; no mathematical text changed.
+- In the explicitly normalized family, p(0)=0, p(1)=-1, integral_0^1p=0,
+  k=p'(1)!=-2, q'=wp', q(0)=0, a=-(1+k)/(2+k), u=1+xy,
+  gamma=1+a*xy+x^2*z, w=u*gamma, A=(u+q(w)/gamma^2)/x^2,
+  B=(1+p(w)/gamma)/x, C=x*gamma. Taylor identities prove whole-source
+  polynomiality; r=p/w and s=q/w^2 are nonconstant. The sole irreducible
+  component of any literal coordinate fiber dominated by an everywhere-
+  defined A2 morphism is x=0 in C=0. No degree bound is imposed on p
+  or on that first leg, and all complex coordinate levels are included.
+- For A fibers, A=uD and x^2D=1+u*s(w) supply a nonconstant unit on
+  each component; the constant-u possibilities are explicitly excluded.
+  At B=0 the unit is u; at C!=0 and gamma=0 it is x. For B=b!=0,
+  (u,gamma) identifies the x!=0 open with A2 minus H, where
+  H is Spec C[w,1/r(w)]. The remaining line maps to(1,1). A smooth
+  strict-SNC completion extending this birational morphism has the entire
+  inverse infinity-line tree in its boundary. The strict transform of H
+  meets it at e=1+#distinct roots(r)>=2 points, hence gives a cycle.
+  The accepted MORPHIC theorem excludes dominant whole-plane first legs;
+  a rational parametrization from the punctured plane does not qualify.
+- On x=0 the remaining pair is (eta*y^2+(k+2)z,-y/(k+2)), a polynomial
+  automorphism. An arbitrary polynomial j with two-dimensional image and
+  one constant output coordinate is therefore forced into this plane;
+  its remaining pair is that automorphism composed with(j_y,j_z). It is
+  Keller/invertible exactly when the initial pair is, so no counterexample
+  absent from the initial parametrization is created. No general JC2,
+  target-coordinate change, arbitrary projection, non-coordinate target
+  surface or stabilization/tower extension follows. External surjectivity
+  and generic-degree claims are not imported; no mathematical code ran.

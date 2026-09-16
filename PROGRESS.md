@@ -6,6 +6,15 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-16
 
+- **Weighted-lift coordinate fibers create no new plane counterexample.**
+  The [uniform proof](xmodel/weighted-lift-coordinate-fibers-swarmHQ-root-20260916T133700Z.md)
+  covers all admissible seed degrees and literal coordinate levels, using
+  nonconstant units and a boundary cycle. The only entire-plane-dominated
+  component has a triangular automorphism as its remaining pair.
+  [Independent Sol review](xmodel/weighted-lift-coordinate-review-swarmHQ-sol-20260916T133500Z.md)
+  confirms the exact arbitrary-first-leg scope: swarmHQ ROOT/Astra,
+  PROMOTED/MANUAL with the accepted morphic boundary theorem. Arbitrary
+  projections, target changes and general JC2 remain outside scope.
 - **A simple critical line supplies a precise F10 boundary property.**
   The [lemma and source attachment](xmodel/simple-critical-line-f10-swarmHQ-root-20260916T105500Z.md)
   prove that J=c*g with nonconstant critical image makes its parametrization

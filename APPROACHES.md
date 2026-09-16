@@ -143,6 +143,18 @@ Arbitrary output projections do not provide the full factorization and
 remain outside these results, as do actual restricted steps of degree at
 least four. No general JC2 reduction or new construction follows.
 
+For the separately normalized weighted-lift family, the
+[coordinate-fiber obstruction](xmodel/weighted-lift-coordinate-fibers-swarmHQ-root-20260916T133700Z.md)
+covers EVERY admissible seed degree, every literal coordinate level and
+arbitrary regular A2 first legs. Units exclude most fibers; a boundary
+cycle excludes the remaining nonzero B-fibers. The only A2-dominated
+component is x=0 over C=0, whose remaining pair is a triangular
+automorphism, so it creates no Keller counterexample absent from the
+initial parametrization. [Different-model Sol review](xmodel/weighted-lift-coordinate-review-swarmHQ-sol-20260916T133500Z.md)
+confirms this exact scope: PROMOTED/MANUAL with the accepted MORPHIC
+rational-forest theorem. Non-coordinate target surfaces, arbitrary
+projections and target changes remain outside scope; no successor is supplied.
+
 Nonsingular functions on U^2=A+A^2 Z need not have rational generic
 fibers. The reviewed
 [fixed two-iterate example](xmodel/pseudoplane-genus-one-no-mate-swarmHQ-root-20260916T063400Z.md)
