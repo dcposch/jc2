@@ -61,6 +61,15 @@ confirms the uniform calculation, including determinant-one changes.
 PROMOTED/MANUAL with the classical Jung import. The example is NON-KELLER;
 Keller-specific minimization and its missing lowering step remain open.
 
+Adding integrality does not repair that surrogate. The [new control](xmodel/integral-dynamical-minimum-swarmHQ-root-20260916T162700Z.md),
+h=x^2*y^2+y and F=(h^2+x,h^3+x), has finite fibers and generic degree6,
+but EVERY polynomial source/target frame has integral dynamical degree
+and the attained minimum is10. [Independent Sol review](xmodel/integral-dynamical-review-swarmHQ-sol-20260916T163000Z.md),
+with the [binding wording correction](AUDIT.md#integral-dynamical-minimum-control-1--2026-09-16),
+confirms this uniform non-Keller counterexample: PROMOTED/MANUAL with
+Jung generation. The remaining argument needs an additional actual-source
+constraint; no coordinate search or further countercontrol family follows.
+
 **Useful next contribution:** a source-specific implication with exact hypotheses,
 or an orthogonal global invariant that the recorded controls do not already defeat.
 [Detailed geometry and prior tests](https://github.com/dcposch/jc2/blob/ec69252af5ca03245becb80436f5ddb0917ccef2/APPROACHES.md#8-global-geometry-and-external-interfaces).

@@ -23829,3 +23829,46 @@ request was sent, and the Keller-specific headline itself is not refuted.
   body/basis seal, not a successful current artifact transaction. No old
   report/mode or accepted foundational tier changed. Both new reports
   pass current artifact verification; no scientific computation ran.
+
+## INTEGRAL-DYNAMICAL-MINIMUM-CONTROL-1 — 2026-09-16
+
+- **PROMOTED / MANUAL**, with classical Jung generation. Producer swarmHQ
+  ROOT(gpt-6-astra), same-model native Astra check, different-model Sol FIRST
+  collected terminal16:35:23 UTC, CONFIRMED with the wording correction below.
+  [Producer](xmodel/integral-dynamical-minimum-swarmHQ-root-20260916T162700Z.md)
+  banked at2afc6b695f71a6fcc2b4c41d7e4e0347dc240afe, full SHA256
+  4746c4167831ee30be3527ed32a1d9eb981ebb07ea49d1ffde6af8137d84d2d7,
+  manifest07d35fbd70b905937efd312c67c60cc1a3a9d8eaa31a3880f223998800bdae47;
+  [Sol-authored FIRST](xmodel/integral-dynamical-review-swarmHQ-sol-20260916T163000Z.md),
+  full SHA2564c74e13c9d130304b60a1788f7e65c558250036d0dfcf2e39f5cdc5323660d7e,
+  manifest86b75a901d16a208caf09e1a4ffef7ad13f7995274dd15c14459c2565315c2a6.
+- Set h=x^2*y^2+y, F=(h^2+x,h^3+x) over C. Every fiber has at most six
+  points: solve z^3-z^2=q-p, x=p-z^2, then x^2*y^2+y-z=0. The last
+  equation's linear coefficient is always1, including x=0. The actual
+  field tower has degrees2 and3, so generic degree is6. The Jacobian
+  h*(3h-2)*(2x^2*y+1) is nonconstant and vanishes at(0,0): NON-KELLER.
+- Over ALL independent polynomial source/target automorphisms, every
+  first dynamical degree is integral and the attained minimum is10.
+  The statement remains true for determinant-one changes. A reduced
+  Jung/Bruhat word at weights2:3 has unique pure-variable leaders for
+  every nonaffine automorphism; after substitution the corner rows are
+  (4a,4a),(4b,4b) or (6a,6a),(6b,6b), with a,b>=1,max(a,b)>=2.
+  Exact corner iteration gives rates4(a+b)>=12 or6(a+b)>=18. Affine
+  frames have rates10 or12; identity attains10. Two-sided changes reduce
+  to left changes by genuine conjugacy, not independent-change invariance.
+- **Binding FIRST wording correction, confirmed by Sol after ROOT intake:**
+  section C's phrase "corner row sums/eigenvalue 10" conflates two different
+  quantities. For the (P,Q)/(Q,P) affine cases the row sums are (8,12)
+  and (12,8), respectively; both matrices have Perron eigenvalue10.
+  Thus deg(F)=12 and deg(F^n)=12*10^(n-1), while lambda1(F)=10.
+  The sealed report is preserved unchanged; this separately recorded
+  correction controls its reading. No hypothesis, proof conclusion or
+  verdict changes, and no new scientific premise is introduced.
+- The earlier degree2 control had irrational minimum1+sqrt2, so it did
+  not decide this strengthened surrogate. Finite fibers, attainment and
+  even integrality in every frame still do not force minimum<=mapping
+  degree. An additional actual-Keller constraint remains necessary for
+  that route; this is not a counterexample to a Keller-specific theorem
+  or to JC2. No parameter/degree/coordinate farm or automatic successor.
+  Proof, corroboration and FIRST were manual; current artifact checks
+  establish custody only, not mathematical correctness by themselves.

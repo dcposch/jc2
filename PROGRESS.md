@@ -110,6 +110,12 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
   confirms the exact minimum, also for determinant-one changes: swarmHQ
   ROOT/Astra, PROMOTED/MANUAL with a classical import. NON-KELLER example;
   no refutation of the Keller-specific bound, novelty claim or JC2 closure.
+  The later [integral-spectrum control](xmodel/integral-dynamical-minimum-swarmHQ-root-20260916T162700Z.md)
+  strengthens this negative result: h=x^2*y^2+y, F=(h^2+x,h^3+x) has
+  generic degree6, integral dynamical degree in EVERY polynomial frame,
+  and attained minimum10. [Sol FIRST](xmodel/integral-dynamical-review-swarmHQ-sol-20260916T163000Z.md)
+  confirms it with the [recorded wording correction](AUDIT.md#integral-dynamical-minimum-control-1--2026-09-16).
+  PROMOTED/MANUAL; adding integrality still does not supply Keller-specific lowering.
 - **The quintic marked-pair construction has no polynomial target invariants.**
   Its [exact source chart](xmodel/quintic-partition-target-field-swarmHQ-root-20260916T032000Z.md)
   is a plane minus one point, mapping generically ten-to-one onto all but
