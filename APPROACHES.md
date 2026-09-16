@@ -86,6 +86,13 @@ fiber presentation is supplied for arbitrary Keller maps. The separate
 [torus quotient filter](xmodel/volume-neutral-torus-quotient-swarmHQ-root-20260915.md)
 also excludes only its stated construction. Neither result resolves JC2.
 
+For the running map's non-volume-neutral weights(1,-1,-2), the
+[actual plane quotient](xmodel/running-torus-quotient-target-rigidity-swarmHQ-root-20260916T011000Z.md)
+has cofinite image and nonconstant Jacobian. [Independent Sol review](xmodel/running-torus-quotient-review-swarmHQ-sol-20260916T011400Z.md)
+confirms that no rational target postcomposition repairs it on its fixed
+whole source plane. This does not cover arbitrary source substitutions,
+finite covers or other torus actions.
+
 The reviewed [specific Pinchuk donor exclusion](xmodel/pinchuk-donor-branch-swarmHQ-root-20260915T143100Z.md)
 has a [reviewed ramification-genus extension](xmodel/ramification-genus-birational-target-swarmHQ-root-20260915T152300Z.md):
 every rational dominant target postcomposition inside its original target field

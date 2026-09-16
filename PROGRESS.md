@@ -6,6 +6,13 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-16
 
+- **The running map's plane quotient has no rational-target repair.** The
+  [exact quotient calculation](xmodel/running-torus-quotient-target-rigidity-swarmHQ-root-20260916T011000Z.md)
+  gives Jacobian -2r^2 and image missing just(4/3,4/27). Cofinite image
+  forces rational target functions with polynomial pullbacks to be polynomial,
+  so they cannot remove the Jacobian zero. [Independent Sol review](xmodel/running-torus-quotient-review-swarmHQ-sol-20260916T011400Z.md)
+  confirms this fixed-source exclusion: swarmHQ ROOT/Astra, MANUAL, PROMOTED.
+  Arbitrary source substitutions, other quotients and JC2 remain outside scope.
 - **The retained formal boundary recursion cannot algebraize.** Its fixed
   correction direction gives a [logarithmic primitive with nonzero residues](xmodel/formal-fixed-recursion-nonalgebraicity-swarmHQ-root-20260916T004300Z.md).
   The exact pair is therefore transcendental over the surface function field,

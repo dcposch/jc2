@@ -23274,3 +23274,45 @@ request was sent, and the Keller-specific headline itself is not refuted.
   scalar-bracket pairs on S, and general JC2 are outside scope. The global
   regular-pair construction endpoint remains open. No automatic coefficient,
   correction-direction, support or control-family successor is selected.
+
+### RUNNING-TORUS-QUOTIENT-TARGET-1 — 2026-09-16
+
+- PROMOTED / MANUAL. Producer swarmHQ ROOT (gpt-6-astra), with independent
+  native Astra reconstruction. [Sealed proof](xmodel/running-torus-quotient-target-rigidity-swarmHQ-root-20260916T011000Z.md),
+  fullc2fb1886735a0e9070aa65b06d94dd91c9ae02223e976d9b203fd6efa9f26107,
+  manifest5d353f8b7f4acbf3acd78a16bd8ccbd3aad390c923296757bfd3457debf4ae22.
+  [Different-model Sol hostile review](xmodel/running-torus-quotient-review-swarmHQ-sol-20260916T011400Z.md)
+  CONFIRMED A-E on contribution5d9f995186d4814480cba2af0f1b1a9a18f45b82;
+  full2a3417b9ef7232cf0d8556d73de5ef86307adafadb29bed81ef42deb1116574c,
+  manifest9d5e013e656184958dca57f6f3777d2721108de9d86396c62278ed4c10fbe611.
+  Terminal mathematical review and final verdict collected, authoritative
+  COMPLETED observed; whole report/manifest read back, pins and0444 modes
+  verified. Sealed producer lifecycle remains unchanged; promotion is here.
+- For the literal running P,Q,R and source weights(1,-1,-2), the source
+  invariant ring is C[xy,x^2z]=C[u,r], with u=1+xy,r=2-3xy-x^2z.
+  Target invariants are s=RQ,t=R^2P. Writing w=ur gives exactly
+  s=2r+4w-3w^2 and t=w^2+wr-w^3, with Jacobian -2r^2.
+  The generic degree is3, proved by the irreducible cubic
+  w^3-2w^2+s*w-2t=0 and r=(s-4w+3w^2)/2. This is NON-KELLER,
+  not a counterexample to any accepted low-mapping-degree theorem.
+- The set-theoretic image is A2 minus(4/3,4/27). Every simple cubic root
+  yields r!=0,u=w/r; no simple root occurs only at the unique triple-root
+  target, whose w=2/3,r=0 cannot satisfy w=ur. The source line r=0
+  contracts to(0,0), which also has preimage(u,r)=(1,2). The map is
+  not quasi-finite, and no such assumption enters the proof.
+- The elementary cofinite-image lemma gives
+  C[u,r] intersect C(s,t)=C[s,t] in the literal source field. A pole
+  denominator of a reduced rational function cannot disappear: choose an
+  attained point on its target zero curve away from the numerator's zeros,
+  and evaluate the cleared polynomial identity. Therefore every rational
+  target pair with polynomial pullbacks is already polynomial in s,t.
+  The chain-rule Jacobian retains the factor -2r^2 and cannot be a
+  nonzero constant. This includes nonbirational rational target pairs.
+  The noncofinite control(a,b)->(a,ab), t/s->b shows the image hypothesis
+  is necessary for the lemma. No literature-novelty claim is made.
+- Fixed whole source only: arbitrary further source substitutions, finite
+  covers, target functions outside C(s,t), other actions/quotients/triples
+  and general JC2 are not covered. The volume-neutral theorem retains
+  its determinant-character hypothesis, which these weights fail. The
+  affine-section and fixed-target donor statements have different scopes.
+  No weight, quotient, source-cover or rational-target family successor.
