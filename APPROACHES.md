@@ -76,6 +76,19 @@ no such properness is known. Formal boundary pairs still need global algebraizat
 The separate AS109 integral-lift question concerns an exact polynomial lift and must
 not be identified with the surface-boundary problem.
 
+The [affine binary-form plane obstruction](xmodel/binary-form-affine-plane-obstruction-swarmHQ-root-20260916T053400Z.md)
+now covers ALL positive unequal factor degrees and arbitrary affine
+two-planes of product coefficients. Every entire-A2 component of the
+original resultant-one factorization source maps isomorphically to the
+parameter plane. A dual-discriminant/monodromy argument handles each
+component separately; units and integrality handle degenerate directions.
+[Independent Sol review](xmodel/binary-form-affine-plane-review-swarmHQ-sol-20260916T053900Z.md)
+confirms the claim: PROMOTED/MANUAL with the named polynomial-nonproperness
+theorem. Increasing degrees or changing the affine plane cannot evade
+this obstruction. Nonlinear target surfaces, arbitrary source maps into
+the factorization space and other constructions are outside this theorem;
+no such alternative is supplied, and JC2 is not resolved.
+
 For the fixed cubic-fiber core (the running triple up to an invertible linear
 target change), the September 13 [embedded-plane transfer](xmodel/embedded-plane-transfer-root-20260913.md)
 and [low-fiber tower transfer](xmodel/low-fiber-tower-transfer-root-20260913.md)

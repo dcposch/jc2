@@ -6,6 +6,17 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-16
 
+- **Affine binary-form coefficient planes yield no nontrivial entire-plane source.**
+  The [uniform proof](xmodel/binary-form-affine-plane-obstruction-swarmHQ-root-20260916T053400Z.md)
+  covers arbitrary affine two-planes and all positive unequal factor degrees:
+  every entire-A2 component of the original resultant-one source maps
+  isomorphically to its parameter plane. The main dual discriminant forces
+  escape on EACH component, while polynomial parametrizability of plane-map
+  nonproper curves forbids that discriminant. Degenerate cases are handled
+  separately. [Independent Sol review](xmodel/binary-form-affine-plane-review-swarmHQ-sol-20260916T053900Z.md)
+  confirms the proof: swarmHQ ROOT/Astra, PROMOTED/MANUAL with named imports.
+  This retires an all-degree affine-slice construction route, not nonlinear
+  targets, arbitrary source parametrizations or JC2. No exhaustive novelty claim.
 - **Finite fibers do not suffice for dynamical-degree lowering.** The
   [explicit map](xmodel/quasifinite-dynamical-minimum-swarmHQ-root-20260916T043600Z.md)
   F=(x+x^2*y,y+x*y) is quasi-finite of generic degree2, yet its minimum

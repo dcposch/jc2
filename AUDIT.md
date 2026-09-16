@@ -23459,3 +23459,49 @@ request was sent, and the Keller-specific headline itself is not refuted.
   or original-Jung-proof audit is claimed. Sol reviewed the supplied
   reduction with that named import. No literature-novelty claim and no
   automatic automorphism/control-family successor.
+
+### BINARY-FORM-AFFINE-PLANE-1 — 2026-09-16
+
+- PROMOTED / MANUAL, with the named polynomial-parametrizability theorem
+  for nonproper curves of a generically finite polynomial A2 map, plus
+  standard finite-cover topology and characteristic-zero plane duality.
+  Producer swarmHQ ROOT (gpt-6-astra), native Astra independent co-research.
+  [Frozen proof](xmodel/binary-form-affine-plane-obstruction-swarmHQ-root-20260916T053400Z.md)
+  at contribution a431916d036f2aeab6e12502725258ea466fcec1;
+  body f5f7b9413aa62ce5fe74d1e11ed0a9b9f0df32fec93effe1382fd65717978613,
+  full 862d220b14eaff712e7c5e92a98d02231dd86ce013d4c1208a0df80666f216e6,
+  manifest f8b692619d6f2ba81ef0826681f4235b64a3c1ebaa8c82f92ec9fece144a9ba9.
+  [Different-model Sol hostile review](xmodel/binary-form-affine-plane-review-swarmHQ-sol-20260916T053900Z.md)
+  confirms A--G. The review record is ROOT's faithful intake of Sol's
+  terminal messages, not a verbatim transcript or Sol-authored file.
+- Over C, take any positive j!=k and any affine two-plane of degree-(j+k)
+  binary forms H=F0+pU+qV, U,V independent. For the ORIGINAL affine source
+  LQ=H, Res(L,Q)=1, every irreducible component isomorphic to the ENTIRE
+  A2 maps isomorphically to the parameter plane. In particular none yields
+  a generic-degree>1 Keller map. The differential proof of etaleness uses
+  original j!=k, not possibly equal reduced degrees after fixed-gcd removal.
+- Planes through zero admit a free finite cyclic action incompatible with
+  chi_c(A2)=1. Fixed-root allocations are constant on components. Reduced
+  degree0 gives only an isomorphism. A common zero of reduced directions
+  forces constant leading coefficients on an A2 component, hence monic
+  integrality, finite etaleness and degree1. For basepoint-free directions,
+  C=[u:v:f0] avoids O=[0:0:1]. Polynomial parametrizability of its main
+  dual discriminant would put O on C, a contradiction. Irreducible
+  off-block ordered-root incidence makes the normal closure of generic
+  tangency inertia transitive; EVERY partition orbit has a split collision,
+  hence every component has that discriminant as a nonproper curve.
+  Residual scaling, composite phi and extra branch-image lines are retained.
+- ROOT checked the selected primary statements Theorem1.2 and Definitions
+  2.1/2.3 in [Jelonek--Lason1411.5011v2](https://arxiv.org/pdf/1411.5011v2),
+  not a whole-paper audit. Sol reviewed the proof with that named import.
+  Sol's initial affine-coordinate editorial flag was withdrawn after the
+  explicit contragredient map showed dual affine changes fix primal O;
+  the frozen producer report stands unchanged. The degree-one component
+  and separate-discriminant controls prevent stronger false readings.
+- Prior fixed-chart/degree-difference work is credited in the report;
+  no exhaustive novelty claim. This retires the stated ALL-degree affine
+  coefficient-plane/component construction, not arbitrary polynomial source
+  maps into its components, nonlinear parameter surfaces, equal degrees,
+  other resultant constructions or JC2. It imports none of the earlier
+  unpromoted chart reports as a theorem, supplies no general Keller-source
+  representation and authorizes no successor degree/affine-plane scan.
