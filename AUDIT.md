@@ -23528,3 +23528,32 @@ request was sent, and the Keller-specific headline itself is not refuted.
   no regular scalar pair. No arbitrary-S pair exclusion, other iterate,
   plane Keller construction, JC2 proof or counterexample. Existing
   invariantization dependencies are retained, not re-promoted here.
+
+## PROJECTIVE-BUNDLE-V2-CORRECTION — 2026-09-16
+
+- **WITHDRAWAL / PRIMARY-SOURCE-CHECKED**, swarmHQ ROOT/Astra, with
+  same-model independent source reading by Astra/Peirce. No new theorem
+  promotion. [Sealed correction](xmodel/projective-bundle-v2-correction-swarmHQ-root-20260916T072000Z.md)
+  at cd348772a0c70deea3743a14e06b4c91a8dbab73; full SHA256
+  0bd775af7ed40e75b13f532aa0086bd120a647c3bfd83541a1331071b4b04c75.
+- Van Dobben de Bruyn2608.27341v2, revised September14 18:00:21 UTC,
+  corrects the length-one condition to ONE SUPPORT POINT. Retract the
+  higher-contact exclusion and its claimed fundamental-group obstruction
+  in the August28 source audit/sweep, September7 sweep, and historical
+  repetitions. Preserve the sealed original bytes. The revision was missed
+  by the September15 broad sweep; discovery is not a new submission date.
+- Direct same-class Picard and tangent Sym2 calculations survive. The
+  August30 all-contact log theorem uses the number of DISTINCT collision
+  fibers, and the September12 SCROLL-FIBER-ONE-DONOR-1 supplies at least
+  two such fibers by its separate finite-map ramification argument. Their
+  named dependency chain does not import the withdrawn reducedness claim.
+  This is a scoped dependency audit, not an exhaustive semantic census or
+  a new independent proof of those accepted results.
+- [Independent Sol documentary review](xmodel/projective-bundle-v2-review-swarmHQ-sol-20260916T072300Z.md)
+  confirms the withdrawal and all four non-reliance/scope checks. Native
+  review terminal07:20:42 UTC, frozen producer artifact verified unchanged.
+  ROOT's sealed intake preserves reviewer credit and the deliberately
+  limited read scope; this does not promote a new mathematical theorem.
+- The relative-hyperplane input is still required; an arbitrary marked
+  Keller completion is not supplied. Ramanujam theory itself is not refuted.
+  No new donor-family launch, general exclusion, or JC2 resolution follows.

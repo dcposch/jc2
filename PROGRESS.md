@@ -6,6 +6,14 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-16
 
+- **A source correction withdraws an old boundary obstruction.**
+  [The correction](xmodel/projective-bundle-v2-correction-swarmHQ-root-20260916T072000Z.md)
+  records a missed September 14 revision: one support point, not contact
+  length one, is the relevant condition in arXiv:2608.27341v2. The old
+  higher-contact/topological exclusion is withdrawn. The reviewed
+  all-contact logarithmic theorem and scroll donor exclusion use distinct
+  collision counts and do not depend on that error. Historical evidence
+  is preserved; this is a correctness repair, not new JC2 progress.
 - **A nonsingular pseudo-plane function can have genus-one generic fiber.**
   The [fixed example and proof](xmodel/pseudoplane-genus-one-no-mate-swarmHQ-root-20260916T063400Z.md)
   h=(A+U) composed with eta^2 on U^2=A+A^2 Z refutes the proposed

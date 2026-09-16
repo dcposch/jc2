@@ -26,6 +26,13 @@ Actual worker state, allocation decisions, and deadlines belong to each swarm.
 
 ## Global source geometry
 
+**Source correction, September 16:** the old contact-length-one obstruction
+from arXiv:2608.27341v1 is withdrawn. Its corrected v2 permits higher-order
+contact at one support point under the stated relative-hyperplane hypotheses.
+The [correction and dependency audit](xmodel/projective-bundle-v2-correction-swarmHQ-root-20260916T072000Z.md)
+preserve the separate all-contact logarithmic and reviewed scroll exclusions.
+No arbitrary Keller source is thereby placed in an eligible completion.
+
 **Question:** which global feature of an actual Keller source forces the missing
 normality, integrality, or properness conclusion?
 
