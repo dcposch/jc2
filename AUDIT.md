@@ -24147,3 +24147,41 @@ request was sent, and the Keller-specific headline itself is not refuted.
   theorem, literature-priority assertion or JC2 resolution follows.
   Stop the multiplication construction: no automatic multiplier, parameter,
   normalization, target-repair or coefficient-farm successor.
+
+## MARKED-QUARTIC-SECTION-1 — 2026-09-17
+
+- **PROMOTED / MANUAL**, with the accepted classical birational Keller
+  theorem for the last implication. Producer swarmHQ ROOT (gpt-6-astra),
+  native Astra same-model co-check; independent Fable hostile review
+  CONFIRMED the section, normality lemma and rational-quotient consequence.
+  Adapter requested model=fable/effort=max; exact hosted identity is not
+  independently exposed. Model agreement and custody are not proof evidence.
+  [Producer](xmodel/marked-quartic-section-swarmHQ-root-20260917T181100Z.md)
+  frozen atfa27d0de22b0df529a1a9ffcf6dde7b1622bd19f, fullSHA256
+  31a05849a5b5dba8a249be386133894dfe9f761d7f9021c91282863b4e8fcdaa;
+  [Fable FIRST, verbatim publication copy](xmodel/marked-quartic-section-first-swarmHQ-fable-20260917T182700Z.md),
+  fullSHA2567686fe95215aa76ebb8d998e26cccceb63ecc680f9b5a98ebb3015fc3eb985fa,
+  manifest40f7a1fb735fbffe908908f3f488fb86643c9da7ef683a3d52c0ce492c8f13f0.
+  The legacy terminal body remains byte-identical atSHA256
+  0f9732a5a8b5ce8b00c7774af11eced8e29f1d3812e50d0470bbfc69c460013b;
+  the separate publication copy adds provenance and a canonical seal.
+- On R=C[x,y,z3,z4], use the literal n=4 marked-root quartic and the
+  displayed polynomial invariants I,J. For q=(u,v)=(-I/3,-J/27), x=y=0
+  gives q=(z3,z4). Thus C[u,v]->R has an algebra retraction. After
+  localization to K=C(u,v), normality puts every algebraic element of
+  Frac(R), and its inverse when nonzero, in R_K. Evaluation at the
+  section forces this relative algebraic closure to be K itself.
+- If q=H composed rho for ANY dominant rational rho:A4-->A2 and polynomial
+  Keller H:A2->A2, the intermediate field C(rho) is finite algebraic over
+  K, hence equal to K. H is birational, so is an automorphism. No geometric
+  integrality assumption on rho, ambient degree bound, invariant-ring
+  classification or external K4 Jacobian/fiber assertion is needed.
+  The proof never evaluates rho on a section where rho might be undefined.
+- The nonnormal a^2=t*b^2 control and the sectionless map x^2 isolate the
+  lemma's hypotheses. The section includes the repeated-root quartic TS^3.
+  This is a correct but narrow quotient-direction filter at ONE target map,
+  distinct from the older slices and the resultant-one SL2 source. In the
+  opposite direction q composed (0,0,f,g)=(f,g) realizes every polynomial
+  pair; arbitrary source-plane substitutions therefore remain outside scope.
+  No stronger rationality/special-fiber/bundle claim, degree/group/parameter
+  family, literature novelty, general source landing or JC2 resolution follows.

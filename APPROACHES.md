@@ -192,6 +192,19 @@ invariant quotient map is (u,v)->(-3u,-27v), an automorphism.
 confirms this exact scope, PROMOTED/MANUAL. No other group, cut, target
 surface or factor degree is excluded; no automatic family search follows.
 
+For the ORIGINAL four-variable marked-root source, the
+[explicit section calculation](xmodel/marked-quartic-section-swarmHQ-root-20260917T181100Z.md)
+now gives a separate whole-source exclusion. Its fixed quartic-invariant map
+q=(-I/3,-J/27) has section (a,b)->(0,0,a,b). Normality makes C(q) relatively
+algebraically closed in the source field, so ANY factorization q=H composed rho
+with rho a dominant rational plane quotient and H polynomial Keller forces H
+to be an automorphism. [Independent Fable review](xmodel/marked-quartic-section-first-swarmHQ-fable-20260917T182700Z.md)
+confirms the exact statement: PROMOTED/MANUAL with the classical birational
+Keller theorem. No assumption on rho's generic fibers is needed. This is only
+the quotient direction for this fixed q: q composed (0,0,f,g) realizes any
+polynomial pair (f,g), so arbitrary A2->A4 substitutions are NOT excluded.
+No other target field or new family follows.
+
 For the fixed cubic-fiber core (the running triple up to an invertible linear
 target change), the September 13 [embedded-plane transfer](xmodel/embedded-plane-transfer-root-20260913.md)
 and [low-fiber tower transfer](xmodel/low-fiber-tower-transfer-root-20260913.md)

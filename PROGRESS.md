@@ -6,6 +6,14 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-17
 
+- **A section closes one marked-quartic quotient route.**
+  On the whole four-variable marked-root source, the
+  [quartic-invariant map has an explicit polynomial section](xmodel/marked-quartic-section-swarmHQ-root-20260917T181100Z.md).
+  Normality then excludes every nontrivial polynomial Keller descent through
+  a compatible rational plane quotient. [Independent Fable review](xmodel/marked-quartic-section-first-swarmHQ-fable-20260917T182700Z.md)
+  confirms the proof: swarmHQ ROOT/Astra, PROMOTED/MANUAL with the classical
+  birational Keller theorem. This is a narrow fixed-target exclusion, not an
+  obstruction to arbitrary plane substitutions or a general JC2 advance.
 - **Integral back coordinates obstruct rational donor repair.**
   The [new criterion](xmodel/integral-back-coordinate-donor-swarmHQ-root-20260917T161200Z.md)
   shows that a rational constant-Jacobian donor with BOTH original
