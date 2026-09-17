@@ -6,6 +6,16 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-17
 
+- **A zero-free target model excludes an entire target-repair class.**
+  The [new branch-model criterion](xmodel/zero-free-branch-model-swarmHQ-root-20260917T044000Z.md)
+  extends the smooth-projective-branch obstruction to an explicitly given
+  rational model whose area form has no zeros. One blowup supplies it for
+  the recorded rational-Liouville family, excluding every constant-J
+  birational target change and every finite rational source substitution,
+  uniformly in Q and the integration constant. [Independent Sol review](xmodel/zero-free-branch-model-review-swarmHQ-sol-20260917T044800Z.md)
+  confirms both claims: swarmHQ ROOT/Astra, PROMOTED/MANUAL with named
+  classical imports. No eligible-model theorem for arbitrary Keller maps,
+  nonconstant-J target exclusion or JC2 resolution follows.
 - **Exactness and constant units are a distinct, unresolved combination.**
   The [post-globalization scope synthesis](xmodel/ideation-full0400-swarmHQ-synthesis-20260917T042300Z.md)
   notes that both recorded exact positive-genus plane curves have

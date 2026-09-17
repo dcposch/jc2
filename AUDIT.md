@@ -24046,3 +24046,56 @@ request was sent, and the Keller-specific headline itself is not refuted.
   logarithmic Kodaira theorem is imported. No literature-priority claim,
   scientific computation, automatic degree ladder or JC2 conclusion.
   Sealed producer/review bytes remain unchanged; custody is not proof.
+
+## ZERO-FREE-BRANCH-MODEL-1 — 2026-09-17
+
+- **PROMOTED / MANUAL**, with the same named classical surface, purity,
+  covering and polynomial-nonproperness imports as the accepted smooth-
+  branch theorem. Producer swarmHQ ROOT/Astra; native Astra co-check;
+  different-model native Sol hostile FIRST CONFIRMED. Peer seats were
+  requested as Astra/Sol; exact hosted model IDs were not independently
+  exposed. Terminal status was independently observed before ROOT's
+  manifest-first custody verification and whole review intake.
+  [Producer](xmodel/zero-free-branch-model-swarmHQ-root-20260917T044000Z.md)
+  banked at65c6bebcf082cae28e433290b6ffde7999fb12d6, full SHA256
+  d52eee9548049a52fe3cca997423837d1da2aecff3e0780a54b5da4ece07dd54,
+  manifest53e47e3a353a1c88fa863911f8d586b16cb0229f6733820e35d5e51c63be613c;
+  [Sol-authored FIRST](xmodel/zero-free-branch-model-review-swarmHQ-sol-20260917T044800Z.md),
+  full SHA2566d710eeaa9a0414cfa91eb00918920ede22c7b5cae331b0630145f962e33dca9,
+  manifest230a19d660b4349a09a870601f6645f5cec920b3d0ce566ed847f4d7f9faa092.
+- Let K/C(p,q) be finite of degree>1. Suppose an identified smooth
+  projective rational target model Z has div_Z(dp wedge dq)<=0 and EVERY
+  component of its reduced branch divisor in K smooth. Then no rational
+  generating pair p',q' with dp' wedge dq'=c dp wedge dq, c in C*, and
+  no finite embedding K into C(u,v), makes the pair polynomial Keller
+  on the whole source plane. The branch union need not be SNC/disjoint;
+  the finite normalization need not be smooth.
+- The resolved map is P2_new-->Z. Positive area orders above finite new
+  points force contraction of all exceptional fibers; graph descent makes
+  the map regular on the entire A2_new TO Z, not necessarily affine-valued.
+  A resolution outside that plane makes every new affine branch curve
+  either a smooth old strict transform or a smooth exceptional curve.
+  Purity forces nonempty branch; ramification persists in finite source
+  extensions and reaches the ACTUAL full-normalization/nonproperness set.
+  Jelonek polynomial coverage plus smoothness gives A1, contradicting
+  Chau. These imports retain their existing tiers; FIRST checks their
+  exact uses, not every underlying source proof.
+- Uniform client: t=x^3*y, p=x^2*Q(t), q=I(t)/(2*p^2), I'=Q!=0, for
+  ALL polynomial Q and ALL additive constants. Field degree is2(degQ+1),
+  including the genuine quadratic x-extension. Away from p=0 and the
+  critical-value curves2p^2q=I(a), the full normalization is finite etale.
+  Nonzero-value projective cubics have a unique cusp at[0:1:0]; ONE blowup
+  smooths all components and gives area divisor-3L_strict-2E. Zero/repeated
+  critical values and constantQ are covered. This excludes the entire
+  constant-J birational target class, including arbitrary interleavings,
+  followed by every finite rational source substitution; not merely a
+  third monomial-target tranche or bounded word/degree check.
+- A finite ordinary-area blowup creates coefficient+1. Thus resolving
+  arbitrary branch curves need not supply an eligible zero-free model;
+  no theorem supplies one for every Keller extension. Nonconstant-J
+  birational targets, nonbirational postcompositions, other target fields
+  and arbitrary donors remain outside scope. The old cusp control refutes
+  unrestricted smooth transport only, NOT wider donor exclusion or JC2.
+  No automatic donor, blowup-depth or degree-family successor, scientific
+  computation, literature-priority assertion or JC2 resolution follows.
+  Sealed evidence and the prior theorem's binding scope remain unchanged.

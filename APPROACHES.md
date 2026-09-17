@@ -1,6 +1,6 @@
 # Research frontier
 
-Updated September 16, 2026. **JC₂ remains unresolved.** These are mathematical
+Updated September 17, 2026. **JC₂ remains unresolved.** These are mathematical
 questions and evidence boundaries, not assignments or machine-launch instructions.
 Independent swarms may pursue new approaches or replicate work with explicit scope.
 
@@ -117,6 +117,20 @@ confirms the result, PROMOTED/MANUAL with named classical imports and the
 [binding scope clarification](AUDIT.md#symplectic-target-smooth-branch-1--2026-09-16).
 Nonconstant-J target maps and singular projective branch components remain
 outside scope; no general source-landing theorem or new candidate follows.
+
+The [zero-free-model extension](xmodel/zero-free-branch-model-swarmHQ-root-20260917T044000Z.md)
+now allows singular old branch components when an explicitly given smooth
+projective rational target model makes EVERY branch component smooth and
+the area form has NO zeros. [Independent Sol review](xmodel/zero-free-branch-model-review-swarmHQ-sol-20260917T044800Z.md)
+confirms the criterion and its uniform application to t=x^3*y,
+p=x^2*Q(t), q=I(t)/(2*p^2), I'=Q!=0: ALL constant-J birational target
+changes and ALL finite rational source substitutions are excluded, for
+every polynomial Q and integration constant. A single blowup at infinity
+supplies the model; no degree or target-word cutoff is used.
+PROMOTED/MANUAL with the same classical imports. Arbitrary branch resolution
+can create area-form zeros, so existence of an eligible model for arbitrary
+Keller extensions remains unproved. No nonconstant-J target exclusion or
+automatic donor/blowup-depth family follows.
 
 Exact properness of a complete eligible source ideal remains a sufficient endpoint;
 no such properness is known. Formal boundary pairs still need global algebraization.
