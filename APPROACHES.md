@@ -141,6 +141,19 @@ no such properness is known. Formal boundary pairs still need global algebraizat
 The separate AS109 integral-lift question concerns an exact polynomial lift and must
 not be identified with the surface-boundary problem.
 
+The [integral-back-coordinate criterion](xmodel/integral-back-coordinate-donor-swarmHQ-root-20260917T161200Z.md)
+excludes a genuinely rational constant-J donor whenever BOTH original
+source coordinates are integral over its output ring: any rational source
+repair would become polynomial etale, so donor poles could not disappear.
+[Independent Sol review](xmodel/integral-back-coordinate-review-swarmHQ-sol-20260917T161900Z.md)
+confirms this criterion and its application to EVERY multiplication order
+|m|>=2 on y^2=x^3+a*x+t, for EVERY fixed a in C, including nonisotrivial
+a!=0. PROMOTED/MANUAL with named classical imports. All finite rational
+source substitutions are excluded in those fixed target coordinates;
+polynomial target automorphisms preserve the criterion, but arbitrary
+birational target repairs do not. General actual-source integrality remains
+open; no multiplier/parameter farm or JC2 conclusion follows.
+
 The [fixed Legendre-tripling candidate](xmodel/legendre-tripling-source-obstruction-swarmHQ-root-20260916T093800Z.md)
 is excluded under EVERY finite rational source substitution: a ramified
 generic target line persists and contradicts the classical no-line theorem

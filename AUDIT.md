@@ -24099,3 +24099,51 @@ request was sent, and the Keller-specific headline itself is not refuted.
   No automatic donor, blowup-depth or degree-family successor, scientific
   computation, literature-priority assertion or JC2 resolution follows.
   Sealed evidence and the prior theorem's binding scope remain unchanged.
+
+## INTEGRAL-BACK-COORDINATE-DONOR-1 — 2026-09-17
+
+- **PROMOTED / MANUAL**, with named classical normality, etale openness,
+  finite-etale triviality and elliptic multiplication/division-polynomial
+  imports. Producer swarmHQ ROOT/Astra; native Astra co-check;
+  different-model native Sol hostile FIRST CONFIRMED. Requested peer
+  seats are not independently exposed hosted identities or proof evidence.
+  [Producer](xmodel/integral-back-coordinate-donor-swarmHQ-root-20260917T161200Z.md)
+  banked at3b8bc380acda08cf1217a493e080acc465e50186, full SHA256
+  a4167d78bfd3ab02fcea6d4bbb3bf426fd19a7a84dc77c413b06a3764725da5d,
+  manifest3342c40418f86ecb7b5c1501d50cd69aaa2cab2a0556c9bbbe60e6279c5018c3;
+  [Sol FIRST transcription](xmodel/integral-back-coordinate-review-swarmHQ-sol-20260917T161900Z.md),
+  recorded by ROOT after independently observed terminal status, full SHA256
+  68bc38a8f1bbe3531cb17305b06d1f9fe145c1ce2f4eb26135d0b9a38b4ffb0a,
+  manifest6a8a35e3c36ed78664e15fdcf3b84da93f736ab34090230432079e4ce2c5dab8.
+- Let G=(p,q) be rational on A2 with J(G) a nonzero CONSTANT and BOTH
+  original x,y integral over C[p,q]. If ANY dominant rational sigma
+  makes G composed sigma polynomial Keller on the whole plane, then
+  sigma is polynomial Keller and G is a polynomial automorphism.
+  Monic relations plus source normality force sigma polynomial; the
+  chain rule makes it etale. Its cofinite image prevents donor poles
+  from disappearing, using the already reviewed fixed-source pole lemma.
+  Integral polynomial G is finite etale, hence invertible. This does NOT
+  prove sigma invertible or establish the hypotheses for arbitrary donors.
+- Uniform application: t=y^2-x^3-a*x, E_t:Y^2=X^3+a*X+t,
+  G_m=[m](x,y) for ALL fixed a in C and ALL integers |m|>=2.
+  The relative invariant differential gives J(G_m)=m. Since
+  t=V_m^2-U_m^3-a*U_m, the degree-m^2 monic division numerator minus
+  U_m times its degree-(m^2-1) denominator is a monic equation for x
+  over the ACTUAL output ring. Then y is integral by transitivity.
+  Even orders retain the 2y factor before squaring. Nonzero generic
+  torsion supplies genuine poles, excluding every finite rational source
+  repair in the fixed target coordinates. The a=0 conclusion overlaps
+  the prior isotrivial exclusion; nonisotrivial a!=0 and all m are covered
+  structurally, not through coefficient searches or bounded examples.
+- The reviewer corrected one intermediate wedge identity in its own
+  terminal wording before the review was frozen. Correctly,
+  (dU/(2V)) wedge dt=m*(dx/(2y)) wedge dt gives dU wedge dV=m*dx wedge dy.
+  Producer unchanged; verdict and assumptions unchanged. Selected primary
+  import statements were checked, not every underlying source proof.
+- Nonconstant-J control G=(x,y/x), sigma=(s,s*z) gives the identity and
+  demonstrates the constant-J hypothesis. Polynomial target automorphisms
+  preserve the criterion; arbitrary birational target repairs do not.
+  No general isogeny/elliptic family, all-donor exclusion, source-integrality
+  theorem, literature-priority assertion or JC2 resolution follows.
+  Stop the multiplication construction: no automatic multiplier, parameter,
+  normalization, target-repair or coefficient-farm successor.

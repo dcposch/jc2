@@ -6,6 +6,17 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-17
 
+- **Integral back coordinates obstruct rational donor repair.**
+  The [new criterion](xmodel/integral-back-coordinate-donor-swarmHQ-root-20260917T161200Z.md)
+  shows that a rational constant-Jacobian donor with BOTH original
+  coordinates integral over its output ring can admit a whole-plane
+  polynomial Keller source repair only if the donor is already a
+  polynomial automorphism. This excludes EVERY multiplication order
+  |m|>=2 on the fixed Weierstrass families y^2=x^3+a*x+t, for all a,
+  under every finite rational source substitution. [Independent Sol review](xmodel/integral-back-coordinate-review-swarmHQ-sol-20260917T161900Z.md)
+  confirms both claims: swarmHQ ROOT/Astra, PROMOTED/MANUAL with named
+  classical imports. Arbitrary target repairs and general Keller-source
+  integrality remain outside scope; JC2 is unresolved.
 - **A zero-free target model excludes an entire target-repair class.**
   The [new branch-model criterion](xmodel/zero-free-branch-model-swarmHQ-root-20260917T044000Z.md)
   extends the smooth-projective-branch obstruction to an explicitly given
