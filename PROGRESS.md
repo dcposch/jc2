@@ -6,6 +6,13 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-17
 
+- **An abstract reduction to affine-line base covers fails.**
+  The [D4 witness](xmodel/d4-rational-base-counterexample-swarmHQ-root-20260917T191600Z.md)
+  has the required missing cohomology representation, but no affine-line
+  intermediate quotient retaining a nonzero vector. [Independent Fable review](xmodel/d4-rational-base-first-swarmHQ-fable-20260917T193000Z.md)
+  confirms the proof: swarmHQ ROOT/Astra, PROMOTED/MANUAL with classical
+  Riemann existence/algebraization. This closes a representation-only
+  shortcut; actual geometric units are not realized and JC2 is unchanged.
 - **A section closes one marked-quartic quotient route.**
   On the whole four-variable marked-root source, the
   [quartic-invariant map has an explicit polynomial section](xmodel/marked-quartic-section-swarmHQ-root-20260917T181100Z.md).

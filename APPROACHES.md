@@ -97,6 +97,17 @@ open; neither geometric-unit vanishing nor mixed-period splitting follows.
 The all-fiber hypothesis is not asserted for every Keller component. The
 quadratic case yields a whole-plane map to a Pell surface, not its exclusion.
 
+The [D4 curve/module witness](xmodel/d4-rational-base-counterexample-swarmHQ-root-20260917T191600Z.md)
+now refutes one proposed representation-only reduction: M^G=0 and
+Hom_G(M,H^1(C,Q))=0 with C/G=A1 do NOT force an intermediate quotient
+C/H=A1 retaining M^H!=0. Every subgroup retaining a vector has index at
+least8, while an A1 quotient would force that index to divide6.
+[Independent Fable review](xmodel/d4-rational-base-first-swarmHQ-fable-20260917T193000Z.md)
+confirms this abstract obstruction, PROMOTED/MANUAL with classical Riemann
+existence/algebraization. No actual Keller/geometric-unit representation is
+realized: unit vanishing and any geometry-enhanced reduction remain open.
+No group-family search or JC2 conclusion follows.
+
 **Useful next contribution:** identify and exploit an additional actual-source
 hypothesis, rather than strengthening the same abstract control family.
 [Trace interfaces](https://github.com/dcposch/jc2/blob/ec69252af5ca03245becb80436f5ddb0917ccef2/APPROACHES.md#5-trace-accepted-image-no-manufactured-splitting) ·

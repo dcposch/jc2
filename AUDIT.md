@@ -24185,3 +24185,42 @@ request was sent, and the Keller-specific headline itself is not refuted.
   pair; arbitrary source-plane substitutions therefore remain outside scope.
   No stronger rationality/special-fiber/bundle claim, degree/group/parameter
   family, literature novelty, general source landing or JC2 resolution follows.
+
+## D4-RATIONAL-BASE-COUNTEREXAMPLE-1 — 2026-09-17
+
+- **PROMOTED / MANUAL**, with classical Riemann existence/algebraization
+  and standard equivariant curve cohomology. Producer swarmHQ ROOT/Astra,
+  native Astra same-model co-check; independent Fable hostile review
+  CONFIRMED group/curve existence, rational cohomology, quotient obstruction
+  and scope. Requested adapter model=fable/effort=max; exact hosted identity
+  is not independently exposed. Custody and agreement do not replace proof.
+  [Producer](xmodel/d4-rational-base-counterexample-swarmHQ-root-20260917T191600Z.md)
+  frozen at1cd8e47f7e28cb6311a3100e9c7644e9f5503239, fullSHA256
+  65906bbadc41f8107df0a2d76f7c8966b77b07e52289c689a2a5867f86d4a29a;
+  [Fable FIRST, verbatim publication copy](xmodel/d4-rational-base-first-swarmHQ-fable-20260917T193000Z.md),
+  fullSHA2560d58a75705dd418241cb7172e7e68adfdf09f054a4d9e419b9ffc4b2cf006088,
+  manifest737a83ca8e57e0de5bb68cfcb319bdccfb0e9849b280b613a16eeeaef19a6293.
+  Original terminal body remains unchanged atSHA256
+  62cb3dbc8b1d4ab0bbe9bbc1ada1bff9e075c5821114dc3d5b80af1bd29c7e7e.
+- There is a smooth connected affine complex G-curve C, C/G=A1, and
+  nonzero rational G-module M with M^G=0 and Hom_G(M,H^1(C,Q))=0, yet
+  NO subgroup H<=G has both C/H=A1 and M^H!=0. Use G=W(D4), |G|=192,
+  M=Q^4, the four displayed generating reflections and their product c
+  of order6. The generating tuple (s1,s2,s3,s4,c^-1) gives the cover;
+  removing exactly all infinity points gives C. Riemann existence is
+  explicitly imported, not freshly primary-proof-audited.
+- The equivariant identity [H^1(C,Q)]=[Q]+3[Q[G]]-sum_i[Q[G/<si>]]
+  yields Hom dimension0+3*4-4*3=0. Every nonzero vector orbit has size
+  at least8; thus M^H!=0 forces [G:H]>=8. An A1 quotient would have
+  one infinity point, so cyclic inertia of order6 must act transitively
+  on G/H, forcing [G:H]|6. Nonnormal H is covered by double cosets.
+  Independent checks give genus81,32 punctures,b1=193; C2 on A1 with
+  its sign module is a positive control where the proposed reduction works.
+- This refutes ONLY the representation-only criterion, not geometric-unit
+  vanishing or GEOMETRIC-UNIT-GLOBALIZATION-1. No actual Keller source or
+  geometric-unit realization of M is supplied; a reduction using additional
+  geometry remains outside the counterexample's scope. The proof does not
+  depend on the unproved logarithmic trace pairing. The reviewer's optional
+  Chevalley--Weil cross-check and other Weyl-type comments are not separate
+  theorem/family promotions; no minimality or literature-priority claim.
+  No group census, source realization, descendant or JC2 resolution follows.
