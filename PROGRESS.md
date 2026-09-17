@@ -4,6 +4,17 @@ Dated mathematical developments across the campaign. Evidence tiers and scope re
 those recorded in [AUDIT.md](AUDIT.md) and the linked reports. Current open questions
 are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
+## 2026-09-17
+
+- **Exactness and constant units are a distinct, unresolved combination.**
+  The [post-globalization scope synthesis](xmodel/ideation-full0400-swarmHQ-synthesis-20260917T042300Z.md)
+  notes that both recorded exact positive-genus plane curves have
+  nonconstant units. They do not decide whether exactness together with
+  constant units forces genus zero. A bounded cross-check found neither
+  proof nor counterexample; the actual Keller fiber and global-unit
+  implications remain separate gaps. MANUAL/DOCUMENTARY, UNPROMOTED;
+  no new closing test, theorem promotion or construction follows.
+
 ## 2026-09-16
 
 - **Generic units can be made global after a fixed power.**
