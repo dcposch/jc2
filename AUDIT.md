@@ -24224,3 +24224,53 @@ request was sent, and the Keller-specific headline itself is not refuted.
   Chevalley--Weil cross-check and other Weyl-type comments are not separate
   theorem/family promotions; no minimality or literature-priority claim.
   No group census, source realization, descendant or JC2 resolution follows.
+
+## CHARACTER-CUBIC-NONEXACTNESS-1 — 2026-09-17
+
+- **PROMOTED / MANUAL**, using standard regular-local completion,
+  characteristic-zero separability and trace on differentials. Producer
+  swarmHQ ROOT (Astra), native Astra same-model co-check; independent
+  Fable hostile review CONFIRMED all five exact items. Requested adapter
+  model=fable/effort=max; hosted identity remains harness-reported, not
+  independently attested. Agreement and custody are not the mathematical proof.
+  [Producer](xmodel/character-cubic-nonexactness-swarmHQ-root-20260917T200800Z.md)
+  recorded at846870e462d1e7bef517852a8a1dbec5e4a25700, fullSHA256
+  55ca0574e83b51ef84113d65ea93d1d306a0330d8d0dada99d33ef40f15c0548;
+  [Fable FIRST, verbatim publication copy](xmodel/character-cubic-first-swarmHQ-fable-20260917T202600Z.md),
+  fullSHA256f584b798f69336b0243db841abaf0616f5fee231fda6b3bee215f7254b023248,
+  manifest6bab9dc166c208bacea24ed71f9c9b6b79d57f850edf1834fec562a62565f144.
+  The original terminal review is preserved unchanged atSHA256
+  bd15ddce8c7cb92597fa436a4aab871b480526b63df0e06e5c1ae33e8dccbcf2.
+- For EVERY A,B,C,D in C, S:x^2+y^2+z^2+xyz-Ax-By-Cz-D=0 is integral.
+  Its quadratic-in-z discriminant cannot be a square: a rational square
+  root must be polynomial, its leading part is +/-xy, absent cubic terms
+  remove its linear part, and its square then lacks the required -4x^2.
+  The nonzero rational form omega=dx wedge dy/(2z+xy-C) is nonexact in
+  Omega^2_(C(S)/C), and remains nonexact over EVERY finite field extension.
+- At the uniformly smooth projective vertex[1:0:0:0], coordinates r,s,w
+  give F_w(0)=1 and wU=-rs with U(0)=1. Direct calculation yields
+  omega=(U/F_w) dr/r wedge ds/s, with double residue1. Map algebraic
+  differentials of C(S) to CONTINUOUS coordinate differentials of
+  C((r))((s)); all exact two-forms have residue0 even for arbitrary poles.
+  No identification with all abstract Kahler forms of the series field
+  is used. Finite separable coefficient trace commutes with exterior d,
+  and its composite with pullback multiplies by the nonzero field degree.
+  This covers ramified and non-Galois extensions, not just unramified covers.
+- Hence no dominant rational phi:A2-->S satisfies phi^*omega=c du wedge dv
+  with c a nonzero CONSTANT, including degree1. Nor can rational f,g on S
+  satisfy df wedge dg=c omega, equivalently have nonzero constant bracket
+  for the fixed Poisson form. Affine singularities, including the Cayley
+  member, cause no exception. The degree2 rational map(u,v)->(u^2,v/(2u))
+  preserves Euclidean area and shows finite degree alone is not the obstruction;
+  it has poles and is not a polynomial Keller counterexample.
+- Mazzocco--Vidunas1011.6036v2 supplies the concrete family/form context,
+  not an imported classification theorem. The reviewer did not retrieve
+  that paper or audit its equation-number mapping; the algebraic proof is
+  self-contained. Its optional whole-boundary smoothness observation is
+  not a separate promoted theorem. No literature-priority claim is made.
+  This is function-field nonexactness, distinct from the earlier Wright
+  chart's obstruction to a globally REGULAR primitive of an exact rational
+  form. Arbitrary rational maps, nonconstant rescalings, analytic Darboux
+  charts and character-to-character maps preserving nonexact forms are
+  untouched. No arbitrary Painleve phase-space exclusion, source-landing
+  theorem, general properness statement, descendant family or JC2 resolution.

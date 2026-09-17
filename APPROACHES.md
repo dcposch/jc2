@@ -118,6 +118,19 @@ hypothesis, rather than strengthening the same abstract control family.
 **Question:** can one produce a complete polynomial Keller source in characteristic
 zero, rather than a necessary chart, modular point, or formal family?
 
+The [character-cubic exactness obstruction](xmodel/character-cubic-nonexactness-swarmHQ-root-20260917T200800Z.md)
+excludes rational symplectic plane parametrizations of
+x^2+y^2+z^2+xyz-Ax-By-Cz-D=0 for ALL complex parameters, including affine
+singularities. Its fixed form dx wedge dy/(2z+xy-C) has a nonzero double
+residue at one smooth infinity vertex and stays nonexact under EVERY finite
+field extension. Thus no dominant rational A2 map pulls it back to a nonzero
+constant area form, and no rational pair on the surface has constant nonzero
+Poisson bracket. [Independent Fable review](xmodel/character-cubic-first-swarmHQ-fable-20260917T202600Z.md)
+confirms the self-contained argument: PROMOTED/MANUAL with standard
+characteristic-zero differential/trace facts. Arbitrary rational maps,
+nonconstant form rescalings, other Painleve phase spaces and actual Keller
+sources remain outside scope; no automatic character-surface family follows.
+
 The [smooth-branch target-repair exclusion](xmodel/symplectic-target-smooth-branch-swarmHQ-root-20260916T192000Z.md)
 rules out every constant-Jacobian birational target change followed by
 any finite rational source substitution for a donor whose EVERY projective

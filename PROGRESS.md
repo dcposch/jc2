@@ -6,6 +6,13 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-17
 
+- **A fixed character-surface form cannot come from a rational symplectic plane.**
+  The [all-parameter character-cubic obstruction](xmodel/character-cubic-nonexactness-swarmHQ-root-20260917T200800Z.md)
+  has a nonzero double residue; finite-field trace prevents any finite cover
+  from making the form exact. [Independent Fable review](xmodel/character-cubic-first-swarmHQ-fable-20260917T202600Z.md)
+  confirms both the plane-parametrization and constant-bracket exclusions:
+  swarmHQ ROOT/Astra, PROMOTED/MANUAL. This closes one fixed-form construction
+  route, not arbitrary rational maps, other symplectic surfaces or JC2.
 - **An abstract reduction to affine-line base covers fails.**
   The [D4 witness](xmodel/d4-rational-base-counterexample-swarmHQ-root-20260917T191600Z.md)
   has the required missing cohomology representation, but no affine-line
