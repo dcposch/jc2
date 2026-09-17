@@ -108,6 +108,20 @@ existence/algebraization. No actual Keller/geometric-unit representation is
 realized: unit vanishing and any geometry-enhanced reduction remain open.
 No group-family search or JC2 conclusion follows.
 
+The [horizontal-puncture reduction](xmodel/horizontal-unit-polynomial-base-swarmHQ-root-20260917T211700Z.md)
+now supplies an additional ACTUAL-source implication: any geometric-generic
+unit of a geometrically integral polynomial fiber is detected over one
+polynomial base t=h(s) carried by a horizontal boundary component. A
+puncture-stabilizer norm preserves a nonzero valuation. With nonsingularity
+and EVERY closed fiber irreducible, base rescaling makes that replacement
+unit global on P(x,y)=h(s), with no power. [Independent Fable review](xmodel/horizontal-unit-first-swarmHQ-fable-20260917T213900Z.md)
+confirms the result, PROMOTED/MANUAL. The new field need not lie in the
+original defining extension; the D4 fixed-cover objection remains intact.
+The remaining test is unit vanishing on these selected polynomial-cover
+surfaces. No generic-to-special topological theorem is supplied, and the
+all-fiber hypothesis is still not established for every Keller component.
+The finite list is for a FIXED P/resolution, not a finite global JC2 search.
+
 **Useful next contribution:** identify and exploit an additional actual-source
 hypothesis, rather than strengthening the same abstract control family.
 [Trace interfaces](https://github.com/dcposch/jc2/blob/ec69252af5ca03245becb80436f5ddb0917ccef2/APPROACHES.md#5-trace-accepted-image-no-manufactured-splitting) ·

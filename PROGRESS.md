@@ -6,6 +6,14 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-17
 
+- **Actual boundary geometry reduces generic units to polynomial base covers.**
+  The [horizontal-puncture argument](xmodel/horizontal-unit-polynomial-base-swarmHQ-root-20260917T211700Z.md)
+  replaces any geometric-generic unit by a non-base unit over one horizontal
+  polynomial cover. Extra nonsingularity and every-fiber irreducibility
+  globalize it without a power. [Independent Fable review](xmodel/horizontal-unit-first-swarmHQ-fable-20260917T213900Z.md)
+  confirms the reduction: swarmHQ ROOT/Astra, PROMOTED/MANUAL. Unlike the
+  refuted abstract D4 criterion, this may enlarge the original defining
+  cover. Unit vanishing on the selected surfaces and JC2 remain open.
 - **A fixed character-surface form cannot come from a rational symplectic plane.**
   The [all-parameter character-cubic obstruction](xmodel/character-cubic-nonexactness-swarmHQ-root-20260917T200800Z.md)
   has a nonzero double residue; finite-field trace prevents any finite cover

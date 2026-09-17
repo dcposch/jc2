@@ -24274,3 +24274,55 @@ request was sent, and the Keller-specific headline itself is not refuted.
   charts and character-to-character maps preserving nonexact forms are
   untouched. No arbitrary Painleve phase-space exclusion, source-landing
   theorem, general properness statement, descendant family or JC2 resolution.
+
+## HORIZONTAL-UNIT-POLYNOMIAL-BASE-1 — 2026-09-17
+
+- **PROMOTED / MANUAL**, using resolution of a polynomial pencil, Stein
+  factorization, generic smoothness, Galois descent and the normal affine
+  codimension-one criterion. Producer swarmHQ ROOT (Astra), native Astra
+  same-model co-check; independent Fable hostile review CONFIRMED all five
+  exact items. Requested adapter model=fable/effort=max; hosted identity
+  remains harness-reported, not independently attested. The written proof,
+  not agreement or artifact custody, supports the claim.
+  [Producer](xmodel/horizontal-unit-polynomial-base-swarmHQ-root-20260917T211700Z.md)
+  frozen at02e7afb14825679e5c4703c907a9da090b6d6d83, fullSHA256
+  a9a9c3818c065b8cecbb844ca0a847d9500a753abc1b64496cdd5cb90a0ba3a5;
+  [Fable FIRST, verbatim publication copy and clarification](xmodel/horizontal-unit-first-swarmHQ-fable-20260917T213900Z.md),
+  fullSHA2567515c89da2382be9c3bb8af96ada85126ccf075aa41cf1796a22b37fa0698f15,
+  manifestc3881cde232927531182da0d9e7a4f5fa075e8f46ad9bc4fe78d3f1ad0824478.
+  Original terminal review remains unchanged atSHA256
+  16a982f66a1907b62d6686e412a8eac47852e1fa2a50ca2d0de5834112e365c5.
+- Let P in C[x,y] have geometrically integral generic fiber over K=C(t),
+  t=P. Any non-base unit over Kbar yields a non-base generic unit after
+  ONE polynomial cover t=h(s), selected from the finitely many horizontal
+  components of a fixed infinity resolution. The boundary is a rational
+  SNC tree; Stein factorization makes the infinity fiber connected.
+  Each horizontal component meets that fiber exactly once, hence carries
+  a polynomial map P1->P1. The tree ingredient is known and reproved here;
+  selected Parameswaran--Tibar OWP2013-03 passages corroborate it, not novelty.
+- Choose a puncture xi with nonzero unit valuation, enlarge to finite
+  Galois L/K defining the unit and splitting the punctures, and take the
+  product over H=Stab(xi). The fixed field L^H is the corresponding
+  horizontal puncture field C(s). Semilinear descent gives a unit over
+  C(s), whose valuation at xi is |H| times the original nonzero valuation.
+  This is existential replacement by a conjugate product: C(s) need NOT
+  lie in the original defining extension, and the original unit need
+  not descend. The D4 fixed-cover counterexample remains accepted.
+- If additionally P is nonsingular and EVERY closed fiber is irreducible,
+  X_h={P(x,y)=h(s)} is smooth integral. The generic unit's divisor is a
+  finite sum of reduced whole fibers, each div(s-a). Dividing by the
+  corresponding rational function of s gives a global non-base unit,
+  with no additional power. Necessarily deg h>=2, since degree1 gives A2.
+  P=x and P=xy check vacuity and the extra globalization hypotheses.
+- Binding review clarification: h is surjective on C, so the reviewer's
+  remark about needing irreducibility only over h(a) is NOT a weakening
+  of the every-closed-fiber hypothesis. Its optional multiplicity and D4
+  realization observations are not separate promoted results. The reviewer
+  reconstructed the proof without retrieving the cited primary preprint.
+  No exhaustive literature-priority or fresh primary-proof audit is claimed.
+- The reduction changes arbitrary finite-base unit detection into detection
+  on these polynomial covers, finite in number for a FIXED P/resolution,
+  not uniformly finite over all Keller maps. Unit vanishing on the selected
+  surfaces, every-fiber irreducibility for arbitrary Keller components,
+  generic-to-special topology and mixed-period splitting remain unproved.
+  No general source-landing/properness theorem or JC2 resolution follows.
