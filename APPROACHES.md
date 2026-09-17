@@ -92,8 +92,9 @@ EVERY fiber irreducible, a generic unit after ANY finite extension of C(P)
 becomes a global unit on the whole base-changed source after a fixed power
 and rescaling by a base function. Non-base dependence is preserved.
 [Independent Sol review](xmodel/geometric-unit-globalization-review-swarmHQ-sol-20260916T233000Z.md)
-confirms this result, PROMOTED/MANUAL. Excluding these global units remains
-open; neither geometric-unit vanishing nor mixed-period splitting follows.
+confirms this result, PROMOTED/MANUAL. General exclusion of these global
+units is now refuted by the cubic example below; a Keller-specific
+exclusion and mixed-period splitting remain unproved.
 The all-fiber hypothesis is not asserted for every Keller component. The
 quadratic case yields a whole-plane map to a Pell surface, not its exclusion.
 
@@ -117,10 +118,22 @@ and EVERY closed fiber irreducible, base rescaling makes that replacement
 unit global on P(x,y)=h(s), with no power. [Independent Fable review](xmodel/horizontal-unit-first-swarmHQ-fable-20260917T213900Z.md)
 confirms the result, PROMOTED/MANUAL. The new field need not lie in the
 original defining extension; the D4 fixed-cover objection remains intact.
-The remaining test is unit vanishing on these selected polynomial-cover
-surfaces. No generic-to-special topological theorem is supplied, and the
+Unit vanishing on these selected polynomial-cover surfaces cannot follow
+from the stated source hypotheses alone, by the example below.
+No generic-to-special topological theorem is supplied, and the
 all-fiber hypothesis is still not established for every Keller component.
 The finite list is for a FIXED P/resolution, not a finite global JC2 search.
+
+The [explicit cubic-base counterexample](xmodel/cubic-base-unit-counterexample-swarmHQ-root-20260917T215500Z.md)
+has k=1+xy, a=1+x^2k and P=-3y-3x^2ky-x^3k^3. It is nonsingular and
+EVERY P-c is irreducible, yet a+xs is a non-base global unit on
+P=s^3-3s because a^3-3ax^2+Px^3=1. [Independent Fable review and binding clarifications](xmodel/cubic-base-unit-first-swarmHQ-fable-20260917T221500Z.md)
+confirm this actual plane-source counterexample, PROMOTED/MANUAL.
+The same P admits NO rational constant-nonzero-Jacobian mate, by its
+generic elliptic differential. Thus it refutes only the auxiliary
+unit-vanishing assertion, not JC2. The accepted reductions remain valid;
+any surviving exclusion must use more of the actual Keller structure.
+No replacement degree family or norm-surface surjectivity is asserted.
 
 **Useful next contribution:** identify and exploit an additional actual-source
 hypothesis, rather than strengthening the same abstract control family.

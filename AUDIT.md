@@ -24326,3 +24326,63 @@ request was sent, and the Keller-specific headline itself is not refuted.
   surfaces, every-fiber irreducibility for arbitrary Keller components,
   generic-to-special topology and mixed-period splitting remain unproved.
   No general source-landing/properness theorem or JC2 resolution follows.
+
+## CUBIC-BASE-UNIT-COUNTEREXAMPLE-1 — 2026-09-17
+
+- **PROMOTED / MANUAL**, using elementary polynomial factorization,
+  Gauss's lemma, smooth projective curves and characteristic-zero pole
+  differentiation. Producer swarmHQ ROOT (Astra), native Astra same-model
+  co-check; independent Fable hostile FIRST CONFIRMED all six exact items.
+  Requested model=fable/effort=max; hosted identity is harness-reported,
+  not independently attested. ROOT reconstructed the argument and applies
+  the binding clarifications below; agreement and custody are not proof.
+  [Producer](xmodel/cubic-base-unit-counterexample-swarmHQ-root-20260917T215500Z.md)
+  frozen at1f8ae3c9857abfe3908975bc21e8aa702d7f0067, fullSHA256
+  7b62f7c13256fac9a045308cd99577bae7dbb68e7a28a7d070c6e8c6469ff33d;
+  [Fable FIRST, verbatim copy plus binding clarifications](xmodel/cubic-base-unit-first-swarmHQ-fable-20260917T221500Z.md),
+  fullSHA2563fbb8e0e724423ba38b746393680a4f4e8f05093ecf14c7b5c46e16ee60fe785,
+  manifest5fb738df051eaef7451632f79b3198b90ca93a09bedf59589a2326e9ecd43661.
+  Original terminal review remains unchanged atSHA256
+  3e948216dc4f212ca60c32e9b0d0962af0c3191afca325fae8b8072fa67d7d08.
+- Put k=1+xy, a=1+x^2k, P=-3y-3x^2ky-x^3k^3 and h(s)=s^3-3s.
+  The exact identity a^3-3ax^2+Px^3=1 proves that w=a+xs is a unit
+  of T=C[x,y,s]/(h(s)-P), with inverse a^2-axs+x^2s^2-3x^2 and
+  determinant norm1. Actual total degree(P)=9, partial-y degree3;
+  these are not degrees of a JC2 candidate pair or a search cutoff.
+- The isomorphism x!=0 <-> z!=0, z=1/x,v=a/x, has inverse
+  x=1/z,y=z^2v-z-z^3 and Jacobian-1. It gives P=z^3-v^3+3v,
+  so P_z=3z^2!=0 there, while P_y(0,y)=-3. For every c over any
+  characteristic-zero extension of C, v^3-3v+c is not a cube in F(v):
+  an integral rational cube root would be linear polynomial, whose
+  coefficients cannot match both the zero quadratic and -3 linear term.
+  Thus z^3-(v^3-3v+c) is irreducible. No x-factor is lost because
+  (P-c)(0,y)=-3y-c. EVERY closed fiber is irreducible and reduced,
+  including c=+/-2, and the geometric generic fiber is integral.
+- X_h is smooth integral. The section(0,-h(s)/3,s) has w=1 and
+  clearing rational denominators shows w cannot be in C(s), since
+  w-1 has nonzero s-coefficient x in T's free rank-three normal form.
+  Binding clarification: surface integrality uses primitivity over C[s]
+  (coefficient of y is -3), not monicity in s alone. Over Kbar, choose
+  h(s0)=t: w-1=x^2+x^3y+s0*x has y-degree1, while a nonzero multiple
+  of P-t has y-degree>=3. This proves geometric nonconstancy without
+  transferring the rank-three normal form across specialization.
+- This P admits NO rational Q with J(P,Q)=c in C*. Its generic
+  projective cubic z^3=v^3-3v+t is smooth; eta=dv/(3z^2) is nonzero
+  holomorphic, with expressions dz/(3v^2-3) at z=0 and
+  -du/(3Z0^2) at infinity. The Jacobian chain rule forces
+  d_K Q=-c eta. A pole differentiates to a pole in characteristic zero,
+  so Q would be regular on the proper geometric curve and constant,
+  contradicting eta!=0. This explicitly prevents a JC2-counterexample reading.
+- The review's incidental “onto the cubic norm-one surface” is NOT
+  promoted: the regular map(T,U,V)=(P,a,x) misses V=0,U=omega for
+  the two cube roots omega!=1. It is dominant, not surjective; no
+  surjectivity is needed. Optional alternative arguments are not separate
+  promotions. No novelty/Briancon identification or unread theorem import.
+- This refutes only nonsingularity plus EVERY-fiber irreducibility as a
+  sufficient hypothesis for scalar geometric units or scalar global units
+  on all polynomial-base surfaces. GEOMETRIC-UNIT-GLOBALIZATION-1 and
+  HORIZONTAL-UNIT-POLYNOMIAL-BASE-1 remain intact: neither asserted vanishing.
+  The frontier/digest now close the unconditional auxiliary target and
+  preserve the Keller-specific gap. Exactness-plus-constant-units genus
+  implication and every-fiber irreducibility for arbitrary Keller components
+  remain unresolved. No new countercontrol family or JC2 resolution follows.

@@ -6,6 +6,15 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-17
 
+- **Nonsingularity and irreducible fibers do not force geometric-unit vanishing.**
+  The [explicit degree9 polynomial](xmodel/cubic-base-unit-counterexample-swarmHQ-root-20260917T215500Z.md)
+  has every closed fiber irreducible and no critical point, but a cubic
+  polynomial base change carries an explicit non-base unit of norm1.
+  [Independent Fable review and binding clarifications](xmodel/cubic-base-unit-first-swarmHQ-fable-20260917T221500Z.md)
+  confirm the counterexample: swarmHQ ROOT/Astra, PROMOTED/MANUAL.
+  The same polynomial has no rational constant-Jacobian mate, so this
+  closes an auxiliary shortcut, not JC2. The earlier reduction theorems
+  remain valid; a unit exclusion must use additional Keller structure.
 - **Actual boundary geometry reduces generic units to polynomial base covers.**
   The [horizontal-puncture argument](xmodel/horizontal-unit-polynomial-base-swarmHQ-root-20260917T211700Z.md)
   replaces any geometric-generic unit by a non-base unit over one horizontal
@@ -13,7 +22,8 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
   globalize it without a power. [Independent Fable review](xmodel/horizontal-unit-first-swarmHQ-fable-20260917T213900Z.md)
   confirms the reduction: swarmHQ ROOT/Astra, PROMOTED/MANUAL. Unlike the
   refuted abstract D4 criterion, this may enlarge the original defining
-  cover. Unit vanishing on the selected surfaces and JC2 remain open.
+  cover. The subsequent cubic example above refutes unconditional unit
+  vanishing on these surfaces; the Keller-specific target and JC2 remain open.
 - **A fixed character-surface form cannot come from a rational symplectic plane.**
   The [all-parameter character-cubic obstruction](xmodel/character-cubic-nonexactness-swarmHQ-root-20260917T200800Z.md)
   has a nonzero double residue; finite-field trace prevents any finite cover
