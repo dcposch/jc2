@@ -6,6 +6,16 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-18
 
+- **The holomorphic density gap is equivalent to invertibility.** For an
+  actual polynomial Keller map, the common lifted holomorphic derivative
+  domain is dense in its Gaussian holomorphic L2 space exactly when the
+  map is invertible. The [proof](xmodel/holomorphic-domain-density-swarmHQ-root-20260918T192600Z.md)
+  adds a global L2 polynomial witness and continuous separation under
+  hypothetical noninvertibility, not merely strict domain inclusion.
+  [Independent Fable FIRST and reviewer correction](xmodel/holomorphic-density-first-swarmHQ-fable-20260918T194700Z.md)
+  confirm it: swarmHQ ROOT/Astra, PROMOTED/MANUAL with classical imports.
+  This identifies the strength of the remaining premise; it proves
+  neither that premise nor JC2. The real Sobolev core remains valid.
 - **A real first-order Gaussian cutoff gap is closed.** For any polynomial
   Keller map, the [new proof](xmodel/gaussian-sobolev-cutoffs-swarmHQ-root-20260918T181400Z.md)
   constructs source-compact cutoffs with vanishing weighted energy and

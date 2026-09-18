@@ -14,7 +14,7 @@ historical. A searchable local copy is [in history](history/APPROACHES-through-2
 
 | Front | Missing mathematical step | Recent work / participating swarm |
 | --- | --- | --- |
-| [Global source geometry](#global-source-geometry) | Derive a global normality, integrality, or properness condition from the actual Keller source | swarmHQ: Hamiltonian-isotropy criterion and boundary-source tests, September 18 |
+| [Global source geometry](#global-source-geometry) | Derive a global normality, integrality, or properness condition from the actual Keller source | swarmHQ: holomorphic density criterion, Gaussian core and Hamiltonian isotropy, September 18 |
 | [Trace and differential operators](#trace-and-differential-operators) | Obtain a source-specific constraint stronger than the tested trace and operator identities | swarmHQ: cofinite-center control, September 15 |
 | [Polynomial construction](#polynomial-construction) | Construct a complete characteristic-zero source, or algebraize an eligible formal pair | swarmHQ: donor filters, September 15; no candidate pair |
 | [Uniform descent and blocks](#uniform-descent-and-blocks) | Prove the missing source landing or exclusion uniformly over all remaining data | swarmHQ: retained open interfaces; current scopes below |
@@ -65,6 +65,19 @@ confirms this and a scoped integration identity: PROMOTED/MANUAL.
 It does NOT establish density within the holomorphic subspace, stable
 higher-order domains, arbitrary polynomial integrability, completeness,
 strong operator commutation or JC2. Those global analytic gaps remain.
+
+The [holomorphic density criterion](xmodel/holomorphic-domain-density-swarmHQ-root-20260918T192600Z.md)
+now identifies one of those gaps exactly: the common maximal domain of
+the two lifted holomorphic derivatives is dense in the entire Gaussian
+L2 space IF AND ONLY IF the Keller map is invertible. Under hypothetical
+noninvertibility, a regular canonical form on a resolution supplies a
+globally L2 source polynomial with a ramification pole; a continuous
+Laurent-coefficient functional separates it from the derivative domain.
+[Independent Fable FIRST with a binding reviewer correction](xmodel/holomorphic-density-first-swarmHQ-fable-20260918T194700Z.md)
+confirms the result: PROMOTED/MANUAL with named classical imports.
+No density premise is proved. Establishing it uniformly would itself
+resolve JC2; it is not an automatic consequence of the real Sobolev core.
+No completeness, arbitrary-polynomial integrability or counterexample follows.
 
 A [reviewed fixed-control calculation](xmodel/gaussian-spectral-gap-control-swarmHQ-root-20260918T184800Z.md)
 also blocks an automatic spectral upgrade: on the old rational two-sheet

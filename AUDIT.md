@@ -24773,3 +24773,55 @@ request was sent, and the Keller-specific headline itself is not refuted.
   actual polynomial-C2 cutoff theorem remains valid; no actual-source
   spectral conclusion, incompleteness claim or JC2 counterexample follows.
   No new family, source import, novelty assertion or automatic successor.
+
+## HOLOMORPHIC-DOMAIN-DENSITY-1 — 2026-09-18
+
+- **PROMOTED / MANUAL**, with the named classical imports. Producer
+  swarmHQ ROOT (gpt-6-astra), native Astra co-check; independent Fable5.1
+  hostile FIRST confirms all seven charged groups. [Producer](xmodel/holomorphic-domain-density-swarmHQ-root-20260918T192600Z.md)
+  reviewed at cc870925bc0b057fcc77a352f6909a50a943c25d, full SHA256
+  3611b6fa35d7abf15273973d42b3592101b0279d7542bd25b3b354b24f5e8450;
+  [FIRST with binding ROOT correction](xmodel/holomorphic-density-first-swarmHQ-fable-20260918T194700Z.md),
+  full SHA25630c01a216327b0c292081ccc4bf2ad8580293b9cba69723a37439d73eea39cb5,
+  manifestae8587cb33d88af549b8746f76cde9d14ac319651f2fc7d1ac78ab0580bc5dbf.
+- For ANY polynomial Keller F:C2->C2, let H_F be entire functions in
+  L2(exp(-|F|^2)dvol_g), g=F*Euclidean. Let E_F consist of h in H_F
+  for which BOTH lifted target holomorphic derivatives D_1h,D_2h belong
+  to H_F. Then closure(E_F) in the H_F norm equals H_F IFF F is a
+  polynomial automorphism. This is not a graph-norm statement or a
+  conclusion from strict inclusion of domains.
+- Under hypothetical noninvertibility, finite normalization and purity
+  give an omitted ramification divisor E of index e>1. On a resolution,
+  a globally generated proper pushforward of the canonical sheaf supplies
+  a regular form nonzero at a general E point. Dividing by F*(dw1 wedge dw2)
+  gives an ACTUAL source polynomial h_0 with v_E(h_0)=1-e.
+- This particular h_0 is globally Gaussian-L2: its form is regular on
+  the resolved preimage of the entire affine target. Clearing its finitely
+  many infinity poles on a projective compactification gives a polynomial
+  target-growth bound in a smooth metric, dominated by the Gaussian.
+  No rational-singularity/GR-vanishing premise or integrability of all
+  source polynomials is assumed.
+- In the local chart(t,s)->(t^e,s), local L2 derivative control removes
+  every negative Laurent coefficient for every element of E_F. One such
+  coefficient, evaluated by a FIXED INTERIOR Cauchy circle, is continuous
+  in H_F norm by local submean. It vanishes on E_F but not h_0, proving
+  genuine conditional nondensity. For automorphisms the target Fock
+  polynomial basis proves density.
+- Binding correction to the REVIEWER'S explanatory aside, not to the
+  producer: h*Omega has an E-pole iff v_E(h)<1-e, not whenever v_E(h)<0.
+  The witness sits at equality and its form is regular. This correction
+  leaves all seven core verdicts and the proof intact.
+- Review sections1--5 are preserved verbatim in the integration. The
+  reviewer disclosed a custody-hash repair after its initial completion
+  marker; terminal receipt and all final pins/hashes were independently
+  checked only after termination, and the protocol qualification is
+  explicit in the integration. No earlier live version or retrospective
+  first-marker closure is relied upon. Frozen producer metadata is not
+  rewritten; promotion is this ledger entry.
+- Classical imports include normalization, ZMT, surface resolution,
+  proper coherence/affine generation and purity; the producer identifies
+  primary checks and inherited scopes. This supplies no density premise,
+  actual noninvertible map, completeness/spectral theorem, all-polynomial
+  moment bound, symmetry or quotient existence, novelty claim or JC2 proof.
+  It makes one global analytic premise equivalent to the target; it does
+  not reduce that target to the reviewed real Sobolev cutoff lemma.
