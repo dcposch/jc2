@@ -24635,3 +24635,42 @@ request was sent, and the Keller-specific headline itself is not refuted.
   different source, and retains its conditional scope. The archive's
   indirect link repeats only the local negative argument. This is not an
   exhaustive semantic audit, a new JC2 advance, or authority for a successor.
+
+## HAMILTONIAN-ISOTROPY-1 — 2026-09-18
+
+- **PROMOTED / MANUAL**, with named classical imports. Producer swarmHQ
+  ROOT (gpt-6-astra), native Astra co-check; independent hostile reviewer
+  Fable5.1 confirmed all six claims. Same-model agreement is not the FIRST.
+  [Producer](xmodel/hamiltonian-isotropy-swarmHQ-root-20260918T155000Z.md)
+  reviewed at920c17420a290e0ccd58c06a3e77693081619171, full SHA256
+  6b084bfd9381971ee9f484cb3430b10741f257f864fc46d1e8509a77b8f20c65;
+  [independent FIRST with ROOT integration](xmodel/hamiltonian-isotropy-first-swarmHQ-fable-20260918T160600Z.md),
+  full SHA25695afc322180dd794e29ba7ce534bf5ed4159c5371ae00948d884c22370da195b,
+  manifest4c8231d1af8846e4310fe8a3808762a44efa9b946ff2a2dc084d408419516faa.
+- Over C, J(P,Q)=1 and D={P,-}. If ONE actual infinite-order
+  sigma in Aut_C(C[x,y]) commutes with D, then (P,Q) is a polynomial
+  automorphism. Conversely, invertibility supplies such a sigma by
+  translating Q. The criterion is uniform in degree, but does NOT supply
+  a symmetry for an arbitrary Keller pair.
+- The kernel proof uses curve normalization and Luroth, then the mate
+  forces a primitive polynomial generator: ker D=C[P]. Sigma descends
+  to tau(u,v)=(au+b,v+h(u)); the finite field-automorphism kernel makes
+  tau infinite order. No finite-plane-map or Galois premise is used.
+- Every periodic irreducible curve of this SPECIAL triangular tau becomes
+  a coordinate line under one common polynomial triangular change. All
+  base identity/translation, root-of-unity resonance and non-root-of-unity
+  cases are treated. Tau permutes the nonproper curve components, so the
+  accepted no-line-component theorem forces properness and invertibility.
+- Imports: standard normalization/Luroth and finite-etale facts; Jelonek's
+  nonproper-set curve property; Chau0710.5212v1 p.3/Section5 no-A1-component
+  theorem, already used in LEGENDRE-TRIPLING-SOURCE-OBSTRUCTION-1. ROOT
+  checked its primary statement/proof scope. Fable checked the application,
+  NOT that exact primary text. Its ancillary uncharged reading of an older
+  Chau text is non-load-bearing and not authenticated by the three-input
+  receipt. No new foundational theorem or replacement source is promoted.
+- Identity/translation is the positive control. The non-Keller pair
+  (x^2,y) defeats dropping the Keller hypothesis. The invariant cusp of
+  (4u,8v) shows why the descended second-coordinate multiplier ONE matters.
+  Formal flows, rational source maps and shears only of C[P,Q] do not
+  establish the actual source symmetry. No all-fiber irreducibility,
+  infinite torsion-group statement, novelty claim or JC2 solution follows.

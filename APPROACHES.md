@@ -14,7 +14,7 @@ historical. A searchable local copy is [in history](history/APPROACHES-through-2
 
 | Front | Missing mathematical step | Recent work / participating swarm |
 | --- | --- | --- |
-| [Global source geometry](#global-source-geometry) | Derive a global normality, integrality, or properness condition from the actual Keller source | swarmHQ: graph-scaling and boundary-source tests, September 15 |
+| [Global source geometry](#global-source-geometry) | Derive a global normality, integrality, or properness condition from the actual Keller source | swarmHQ: Hamiltonian-isotropy criterion and boundary-source tests, September 18 |
 | [Trace and differential operators](#trace-and-differential-operators) | Obtain a source-specific constraint stronger than the tested trace and operator identities | swarmHQ: cofinite-center control, September 15 |
 | [Polynomial construction](#polynomial-construction) | Construct a complete characteristic-zero source, or algebraize an eligible formal pair | swarmHQ: donor filters, September 15; no candidate pair |
 | [Uniform descent and blocks](#uniform-descent-and-blocks) | Prove the missing source landing or exclusion uniformly over all remaining data | swarmHQ: retained open interfaces; current scopes below |
@@ -44,6 +44,16 @@ not supply a compatible finite map.
 
 **Question:** which global feature of an actual Keller source forces the missing
 normality, integrality, or properness conclusion?
+
+The [Hamiltonian-isotropy criterion](xmodel/hamiltonian-isotropy-swarmHQ-root-20260918T155000Z.md)
+provides one sufficient condition: an ACTUAL infinite-order polynomial
+source automorphism commuting with D={P,-} of a Keller pair forces
+invertibility. Its descended triangular target action would force each
+nonproper component to be an excluded affine line. [Independent Fable FIRST](xmodel/hamiltonian-isotropy-first-swarmHQ-fable-20260918T160600Z.md)
+confirms the proof, PROMOTED/MANUAL with named classical imports.
+Existence of the source symmetry for arbitrary Keller pairs is NOT proved.
+Formal flows and translations inside C[P,Q] do not supply it. This is a
+conditional target, not a source-attachment theorem or a JC2 solution.
 
 The [canonical-graph scaling test](avenues/notes/smooth-graph-degeneration-20260915.md)
 obtains a smooth central fiber with t-saturation and finite total normalization.

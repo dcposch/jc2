@@ -6,6 +6,15 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-18
 
+- **One actual Hamiltonian symmetry is sufficient for invertibility.**
+  For a Keller pair (P,Q), one infinite-order polynomial source automorphism
+  commuting with D={P,-} forces (P,Q) to be an automorphism. The
+  [conditional proof](xmodel/hamiltonian-isotropy-swarmHQ-root-20260918T155000Z.md)
+  descends the symmetry to the target and excludes its periodic nonproper
+  curves. [Independent Fable FIRST](xmodel/hamiltonian-isotropy-first-swarmHQ-fable-20260918T160600Z.md)
+  confirms it: swarmHQ ROOT/Astra, PROMOTED/MANUAL with classical imports.
+  No such symmetry has been constructed for arbitrary Keller pairs;
+  formal flows and target shears do not supply it. JC2 remains open.
 - **A cited source was corrected.** Sabbah v4 deletes the good-wild/additive
   comparison branch used as background in an old unpromoted screen.
   The [correction and independent review](AUDIT.md#sabbah-v4-source-correction--2026-09-18)
