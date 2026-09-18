@@ -357,7 +357,19 @@ confirms this interface: PROMOTED/MANUAL, conditional on those existing
 premises. Check the two endpoint fields before searching for compatible
 quotient actions. Arbitrary projected plane sections, geometrically
 nonintegral generic fibers and ambient steps of degree at least four
-are not covered; no alternative construction or general JC2 reduction follows.
+are not covered by that tower theorem; no alternative construction or
+general JC2 reduction follows.
+
+For a SINGLE ambient self-map preserving the SAME rational plane quotient,
+the [same-quotient cancellation lemma](xmodel/same-quotient-degree-cancellation-swarmHQ-root-20260918T170200Z.md)
+removes the geometric-integrality premise: the descended generic degree
+divides the ambient generic degree. [Independent Sol FIRST](xmodel/same-quotient-degree-first-swarmHQ-sol-20260918T170700Z.md)
+confirms the field proof, PROMOTED/MANUAL. A polynomial Keller descendant
+of a degree1/2/3 self-map is therefore invertible, using only the accepted
+whole-degree2/3 exclusions and birational Keller theorem. Disconnected
+generic fibers are allowed; two different quotient maps and arbitrary
+towers are not. This constructs no quotient for an arbitrary Keller map
+and is not a general JC2 reduction or a literature novelty claim.
 
 The [graph/tower scope check](xmodel/ideation-full2130-swarmHQ-synthesis-20260916T214500Z.md)
 explains why a finite birational canonical graph does not close this gap:

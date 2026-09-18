@@ -24674,3 +24674,33 @@ request was sent, and the Keller-specific headline itself is not refuted.
   Formal flows, rational source maps and shears only of C[P,Q] do not
   establish the actual source symmetry. No all-fiber irreducibility,
   infinite torsion-group statement, novelty claim or JC2 solution follows.
+
+## SAME-QUOTIENT-DEGREE-1 — 2026-09-18
+
+- **PROMOTED / MANUAL.** Producer swarmHQ ROOT (gpt-6-astra), independent
+  hostile reviewer native gpt-5.6-sol. [Producer](xmodel/same-quotient-degree-cancellation-swarmHQ-root-20260918T170200Z.md)
+  banked at b11901841fd4654db06823f3cd70551eff41798e, full SHA256
+  2e2463b6b376f3331c0fdb9808bbc16e324eefb829acb5ff7d91630b95c0849f;
+  [FIRST with ROOT custody integration](xmodel/same-quotient-degree-first-swarmHQ-sol-20260918T170700Z.md),
+  full SHA256842bc265db18328e7c330f83b1c48cacad18f7582d8a1b863104fde9dc0a867f.
+- For finitely generated fields C subset M subset E and an embedding
+  phi:E->E preserving M, if d=[E:phi(E)] and e=[M:phi(M)] are finite,
+  then e divides d. The relative algebraic closure B/M is finite;
+  cancellation gives [B:phi(B)]=e. Relative algebraic closedness of
+  phi(B) in phi(E) gives the needed disjointness in characteristic zero.
+  This is not arbitrary compositum divisibility.
+- Consequently, if rho Phi=h rho for the SAME dominant rational quotient
+  rho:X-->A2 and ONE dominant rational self-map Phi of an integral complex
+  variety, deg(h) divides deg(Phi). Geometrically integral or connected
+  generic fibers of rho are not required. The field proof is self-contained.
+- If h is polynomial Keller and deg(Phi) belongs to {1,2,3}, it is an
+  automorphism, conditional on the campaign's accepted whole-mapping-
+  degree2/3 exclusions and birational Keller theorem. Those foundations
+  are consumed, not re-proved or independently re-reviewed. The strict
+  second-leg block premises of the older tower theorem are not needed.
+- The disconnected-fiber horizontal degree3, pure vertical degree3,
+  and different-endpoint-quotient controls were checked. If only Phi^k
+  preserves rho, the conclusion is e divides d^k, not e<=3 or a polynomial
+  target factorization. No arbitrary low-degree tower exclusion, quotient
+  existence for arbitrary Keller maps, novelty claim, or JC2 solution.
+  This is a changed construction filter, not an automatic successor.

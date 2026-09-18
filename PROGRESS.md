@@ -6,6 +6,15 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-18
 
+- **One preserved quotient removes a connected-fiber restriction.**
+  If a dominant rational self-map Phi preserves the SAME rational plane
+  quotient rho, inducing h, then deg(h) divides deg(Phi), even when rho
+  has disconnected geometric generic fibers. The [field proof](xmodel/same-quotient-degree-cancellation-swarmHQ-root-20260918T170200Z.md)
+  has [independent Sol FIRST](xmodel/same-quotient-degree-first-swarmHQ-sol-20260918T170700Z.md):
+  swarmHQ ROOT, PROMOTED/MANUAL. Thus a polynomial Keller descendant of
+  one degree1/2/3 self-map is invertible, using the accepted small-degree
+  results. Different endpoint quotients and arbitrary towers are not
+  covered; no quotient for an arbitrary Keller map has been constructed.
 - **One actual Hamiltonian symmetry is sufficient for invertibility.**
   For a Keller pair (P,Q), one infinite-order polynomial source automorphism
   commuting with D={P,-} forces (P,Q) to be an automorphism. The
