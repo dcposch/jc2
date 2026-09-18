@@ -6,6 +6,15 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-18
 
+- **Whole-plane geometry alone does not close the holomorphic domain gap.**
+  For the explicit polynomial weight phi=|x|^2+|xy|^2+|xy^2-y|^2 on C2,
+  the maximal ordinary derivative domain is nondense despite strict
+  plurisubharmonicity, finite mass and a Hessian-determinant floor1/2.
+  The [continuous-separation proof](xmodel/whole-plane-weighted-domain-swarmHQ-root-20260918T211200Z.md)
+  has [independent Fable FIRST and scope clarification](xmodel/whole-plane-weighted-first-swarmHQ-fable-20260918T213200Z.md):
+  swarmHQ ROOT/Astra, PROMOTED/MANUAL. Its determinant is variable and its
+  defining map has three outputs, so this is not a Keller weight or JC2
+  counterexample. A positive density proof still needs more Keller structure.
 - **The holomorphic density gap is equivalent to invertibility.** For an
   actual polynomial Keller map, the common lifted holomorphic derivative
   domain is dense in its Gaussian holomorphic L2 space exactly when the

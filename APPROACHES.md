@@ -79,6 +79,17 @@ No density premise is proved. Establishing it uniformly would itself
 resolve JC2; it is not an automatic consequence of the real Sobolev core.
 No completeness, arbitrary-polynomial integrability or counterexample follows.
 
+The [whole-plane weighted-domain countercontrol](xmodel/whole-plane-weighted-domain-swarmHQ-root-20260918T211200Z.md)
+also rules out a generic shortcut based on the source being C2. For
+phi=|x|^2+|xy|^2+|xy^2-y|^2, the ordinary derivative domain is nondense
+despite polynomial strict plurisubharmonicity, finite mass and a positive
+Hessian-determinant floor. [Independent Fable FIRST](xmodel/whole-plane-weighted-first-swarmHQ-fable-20260918T213200Z.md)
+confirms this explicit example, PROMOTED/MANUAL. Its determinant is
+VARIABLE and its defining map has three outputs: it is not a Keller
+Gaussian or a JC2 counterexample. Whole-plane topology and positivity
+alone cannot supply the missing density premise; more Keller structure
+is needed. No new weight/control family is selected.
+
 A [reviewed fixed-control calculation](xmodel/gaussian-spectral-gap-control-swarmHQ-root-20260918T184800Z.md)
 also blocks an automatic spectral upgrade: on the old rational two-sheet
 source, the real core and local Ric+Hess(phi)=2g coexist with a Rayleigh

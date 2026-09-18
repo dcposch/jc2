@@ -24825,3 +24825,44 @@ request was sent, and the Keller-specific headline itself is not refuted.
   moment bound, symmetry or quotient existence, novelty claim or JC2 proof.
   It makes one global analytic premise equivalent to the target; it does
   not reduce that target to the reviewed real Sobolev cutoff lemma.
+
+## WHOLE-PLANE-WEIGHTED-DOMAIN-1 — 2026-09-18
+
+- **PROMOTED / MANUAL**, explicit analytic countercontrol. Producer swarmHQ
+  ROOT (gpt-6-astra); independent Fable5.1 hostile FIRST confirms all six
+  charged groups. [Producer](xmodel/whole-plane-weighted-domain-swarmHQ-root-20260918T211200Z.md)
+  reviewed at f81293f4157f4d3eba2fafabfe13106f04d9c431, full SHA256
+  8b391dd29cd5f8623317dd063388787bfa6400f38d8e497f89ce99f4245c4a03;
+  [FIRST and ROOT scope integration](xmodel/whole-plane-weighted-first-swarmHQ-fable-20260918T213200Z.md),
+  full SHA2563c83d86f97a3c82153a0e316ff5c847ef73631ca609a47c16515789eacae6cd3,
+  manifeste5f9f8c2712ffc3c317b843461e1392a7426fadf919c441065dcc9b98525d680.
+- On the WHOLE C2, set c=xy^2-y and phi=|x|^2+|xy|^2+|c|^2. The
+  polynomial weight is strictly plurisubharmonic, with complex-Hessian
+  determinant Delta=|x|^2+|2xy-1|^2+|y(xy-1)|^2>=1/2. This determinant
+  is VARIABLE, and the bound is attained; it is not a uniform matrix
+  lower bound. The three-output map (x,xy,c) is a polynomial immersion.
+- For H=entire functions in L2(exp(-phi) times STANDARD Lebesgue measure),
+  total mass is finite, 1 and c belong to H, and y,y^2 do not. Completing
+  the x-Gaussian at fixed r=|y|^2 gives marginal
+  pi*exp(-1+1/(1+r+r^2))/(1+r+r^2), proving GLOBAL integrability and
+  the stated divergences without a numerical or asymptotic-only claim.
+- The maximal domain E_x={h in H:partial_x h in H} is NOT dense in H;
+  therefore neither is the common ordinary partial_x/partial_y domain.
+  In t=1/y,s=c, the inverse x=t+st^2,y=1/t has Jacobian1 and smooth
+  transformed weight. Every h in H extends across t=0 in this auxiliary
+  chart. For h in E_x, q_s=t^2*h_x forces q(0,s) constant. The functional
+  ell(h)=q(0,1)-q(0,0) is continuous by FIXED INTERIOR Cauchy circles
+  and submean bounds on the original source; ell(E_x)=0 but ell(c)=1.
+  Strict domain inclusion alone is not used as a nondensity proof.
+- Hessian indexing clarification: with entries partial_i partialbar_j,
+  transpose the producer's displayed Gram matrix; determinant, spectrum
+  and all six conclusions are unchanged. The integration preserves the
+  mathematical review verbatim, its scope notes and original custody.
+  Standard elementary complex analysis is the only analytic import.
+- This refutes the generic shortcut from whole-plane topology, polynomial
+  strict psh, finite mass and a determinant floor to derivative-domain
+  density. It does NOT instantiate a two-output Keller Gaussian or its
+  lifted derivatives. ROOT checked that contextual distinction against
+  the earlier criterion; Fable did not audit the linked earlier reports.
+  No JC2 counterexample/proof, positive Keller-density estimate, spectral
+  or completeness theorem, novelty claim or automatic successor follows.
