@@ -24502,3 +24502,46 @@ request was sent, and the Keller-specific headline itself is not refuted.
   and its reductions remain valid at their separate scopes. No general
   all-fiber irreducibility, properness, source landing, construction family
   or JC2 conclusion follows. No automatic genus/degree/control successor.
+
+## INVARIANT-QUARTIC-GRAPH-1 — 2026-09-18
+
+- **PROMOTED / MANUAL**, with the accepted Gwozdziewicz injectivity-on-one-
+  source-line theorem, alg-geom/9305008v1 Theorem1.1. Producer swarmHQ ROOT
+  (gpt-6-astra), with a same-model preliminary check; independent hostile
+  reviewer gpt-5.6-sol confirmed all five exact claims by reconstruction.
+  The same-model check is not the promotion gate. No scientific computation.
+- [Producer](xmodel/invariant-quartic-graph-swarmHQ-root-20260918T103700Z.md),
+  frozen at ad40ccbb840ff69df89448325809e07510c24fb8, full SHA256
+  fc40c79d12f51c4c155ebad9ddd89fb6534c92fb3ff6cd3b2177a3be7092f252,
+  manifest5aa145aef6046274c84b12550983d0e83c28c6c65f00197ace105bbde214920e.
+  [Independent FIRST](xmodel/invariant-quartic-first-swarmHQ-sol-20260918T104400Z.md)
+  preserves the completed review message verbatim with ROOT integration.
+  Full SHA25654500d02221728e3b7b5568d1bbd31cf654f5de8f62d26c14d07271526218caa;
+  manifest15ba82a5f58420396845f28110b23d8d7a9879b6428de59f88ffeb5b3b6a05d2.
+  Reviewer consumed only the whole frozen producer, FALLACY-v2 and
+  COORDINATION; all three pre/post pins matched. The exact primary imported
+  theorem statement was checked by ROOT; its proof was not re-audited.
+- In the producer's fixed polynomial A,B,C, set T_h=(B(h,y,z),A(h,y,z)).
+  For EVERY h in C[y,z], if h(T_h)=h*gamma(h,y,z) and J(T_h) is a nonzero
+  constant, then T_h is a polynomial automorphism. The ambient map's
+  Jacobian or generic degree is not a proof premise; the plane Keller
+  condition is separately assumed. All coordinate orders are explicit.
+- Polynomiality and g0=T_0=(y/6,31y^2/4-6z) give T_h congruent g0 mod(h).
+  Invariance yields h|h composed g0 with FULL multiplicities. The source
+  shear z=v+9y^2/7 diagonalizes g0 to(y/6,-6v); equal total degrees force
+  H(y/6,-6v)=lambda*H(y,v). If neither axis divides H, the eigenvalues on
+  pure monomials force lambda1 and h(0,z)=c!=0. Along that line, at
+  w=1+c^2z=0, B_h'=A_h'=0 while C_h'=c^3!=0, contradicting invariance.
+- Thus every nonzero invariant h is divisible by y or z-9y^2/7. On the
+  first source curve T_h=(0,-6z); on the second, after the determinant-one
+  source shear, T_h composed S=(y/6,y^2/28). These restrictions are
+  injective. The precise imported source-line theorem implies automorphy
+  in either case. h=0 is a genuine invariant triangular-automorphism
+  control, while nonzero constants are excluded by the derivative argument.
+- Exact scope: this fixed seed, this graph orientation and the SAME graph
+  invariant under the reordered ambient map, all polynomial h without a
+  degree/support cap. Divisibility is necessary, not sufficient, for graph
+  invariance. Other seeds, orientations, arbitrary embedded planes, graphs
+  mapping to different graphs, arbitrary output changes and JC2 are NOT
+  covered. No seed/graph/control-family successor or general construction
+  exclusion is authorized by this result. JC2 remains unresolved.

@@ -155,6 +155,17 @@ hypothesis, rather than strengthening the same abstract control family.
 **Question:** can one produce a complete polynomial Keller source in characteristic
 zero, rather than a necessary chart, modular point, or formal family?
 
+The [fixed-seed invariant-graph test](xmodel/invariant-quartic-graph-swarmHQ-root-20260918T103700Z.md)
+is now excluded for EVERY polynomial h: in the specified weighted lift,
+if the same graph x=h(y,z) is invariant and its induced plane map is
+Keller, that map is an automorphism. Invariance forces a rectifiable
+coordinate curve; the alternative contradicts the chain rule at gamma=0.
+[Independent Sol FIRST](xmodel/invariant-quartic-first-swarmHQ-sol-20260918T104400Z.md)
+confirms the argument, PROMOTED/MANUAL with Gwozdziewicz's one-source-line
+theorem. Other seeds, arbitrary embedded planes and graphs mapped to
+different graphs are outside scope. No graph/seed-family successor or
+general plane-construction exclusion follows.
+
 The [character-cubic exactness obstruction](xmodel/character-cubic-nonexactness-swarmHQ-root-20260917T200800Z.md)
 excludes rational symplectic plane parametrizations of
 x^2+y^2+z^2+xyz-Ax-By-Cz-D=0 for ALL complex parameters, including affine

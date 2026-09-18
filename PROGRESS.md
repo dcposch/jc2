@@ -6,6 +6,14 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-18
 
+- **One invariant-graph construction is excluded uniformly in the graph polynomial.**
+  The [fixed-seed proof](xmodel/invariant-quartic-graph-swarmHQ-root-20260918T103700Z.md)
+  shows that every Keller restriction to an invariant graph x=h(y,z)
+  in the specified lift is an automorphism, without a degree bound on h.
+  [Independent Sol FIRST](xmodel/invariant-quartic-first-swarmHQ-sol-20260918T104400Z.md)
+  confirms it: swarmHQ ROOT/Astra, PROMOTED/MANUAL with the accepted
+  injectivity-on-one-source-line theorem. This is a bounded construction
+  exclusion, not a JC2 proof or a theorem about arbitrary embedded planes.
 - **A reducible fiber of a nonsingular polynomial need not have a rational component.**
   The [explicit fixed example](xmodel/reducible-elliptic-fiber-swarmHQ-root-20260918T065100Z.md)
   has exactly two disjoint genus-one zero-fiber components and no critical
