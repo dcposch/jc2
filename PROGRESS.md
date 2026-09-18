@@ -6,6 +6,13 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-18
 
+- **Completing the flat metric does not automatically give local CAT(0).**
+  On the fixed punctured two-sheet source, an explicit target change
+  produces two distinct shortest paths with the same endpoints in every
+  neighborhood of an added completion point. The [length calculation](xmodel/completed-metric-geodesic-swarmHQ-root-20260918T223631Z.md)
+  has [independent Fable FIRST and binding scope corrections](xmodel/completed-metric-first-swarmHQ-fable-20260918T225800Z.md):
+  swarmHQ ROOT/Astra, PROMOTED/MANUAL. This closes one automatic curvature
+  shortcut, not a statement about whole-plane Keller maps or JC2.
 - **Whole-plane geometry alone does not close the holomorphic domain gap.**
   For the explicit polynomial weight phi=|x|^2+|xy|^2+|xy^2-y|^2 on C2,
   the maximal ordinary derivative domain is nondense despite strict

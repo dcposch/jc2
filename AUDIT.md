@@ -24866,3 +24866,46 @@ request was sent, and the Keller-specific headline itself is not refuted.
   the earlier criterion; Fable did not audit the linked earlier reports.
   No JC2 counterexample/proof, positive Keller-density estimate, spectral
   or completeness theorem, novelty claim or automatic successor follows.
+
+## COMPLETED-METRIC-GEODESIC-1 — 2026-09-18
+
+- **PROMOTED / MANUAL**, fixed geometric countercontrol. Producer swarmHQ
+  ROOT (gpt-6-astra); independent Fable5.1 hostile FIRST confirms all six
+  charged groups with the comparison-convention clarification below.
+  [Producer](xmodel/completed-metric-geodesic-swarmHQ-root-20260918T223631Z.md),
+  reviewed at1b9fa5f66ed30afef9db45e7dd62e7ad4572712d, full SHA256
+  a7b34f1bce50114f83d1a0d1b1e0afb909efef65dee1a2d6297c9dfdc8fca617;
+  [FIRST and binding corrections](xmodel/completed-metric-first-swarmHQ-fable-20260918T225800Z.md),
+  full SHA25643d8e8e19b7e960422d98033d25b15e08e20c8a495d9f3458624364fda36134a,
+  manifest3e4be1e3eff0f2698570544756a63d2c3cc658a53e0762ed4ab2452333f03003.
+- On M={(s,t) in C2:t!=0}, pi(s,t)=(s,t^2+s^2) gives a flat
+  pullback Riemannian metric. Its metric completion is NOT locally
+  CAT(0) at the added point o=p(0). Radial tails and vanishing phase
+  lengths define p(s), with pi(p(s))=(s,s^2), and a coordinate estimate
+  proves actual completion endpoints without inferring them from images.
+- For every real a>0, gamma_±(r)=(r,±sqrt(a^2-r^2)) extend to distinct
+  isometric arcs from p(-a) to p(a), both length2a. The projection bound
+  and explicit paths prove attainment; their midpoints retain positive
+  distance. Further explicit paths put both arcs within distance
+  sqrt(a^2+a^4) of o. Thus every neighborhood contains both arcs.
+- Fable's binding clarification avoids a convention about degenerate
+  comparison triangles. Perturb z=(0,-a) to z_eps=(0,-(1+eps)*a).
+  A short radial path stays inside the neighborhood; all triangle
+  inequalities become strict. Midpoint comparison forces its distance
+  to (0,a) to tend to0, contradicting positive midpoint separation.
+  The argument covers restricted and intrinsic neighborhood metrics.
+- Binding ROOT correction to an added reviewer sentence: unramifiedness
+  on the ORIGINAL Keller source does not exclude ramification at an
+  ADDED completion/normalization boundary. No such boundary exclusion is
+  promoted. The actual scope distinction is the punctured source versus
+  whole C2; neither report identifies an arbitrary Keller completion.
+- The map comes from the old rational two-sheet control by one target
+  automorphism that is NOT an isometry. Original-coordinate Jacobian-1
+  and normalization-coordinate Jacobian2t are distinct statements; no
+  previous spectral/operator assertion is transported to this metric.
+- This refutes automatic local CAT(0) completion from the flat pullback
+  premises, not an actual polynomial Keller estimate or JC2. Only
+  elementary metric/completion facts and Euclidean comparison are used;
+  the failed book-body request remains UNREAD. No novelty, general
+  curvature classification or automatic control-family successor.
+  Frozen producer metadata and terminal reviewer bytes are unchanged.

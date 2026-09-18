@@ -98,6 +98,17 @@ quotient1 and a weak eigenfunction whose Hessian is not square-integrable.
 confirms this, PROMOTED/MANUAL. A global second-order or actual-C2 argument
 is still needed; the example gives no spectral conclusion for Keller maps.
 
+The [completed-metric countercontrol](xmodel/completed-metric-geodesic-swarmHQ-root-20260918T223631Z.md)
+also excludes an automatic local CAT(0) upgrade: after one fixed target
+change, the old rational two-sheet source has two distinct minimizing
+geodesics in every neighborhood of an added completion point.
+[Independent Fable FIRST with binding corrections](xmodel/completed-metric-first-swarmHQ-fable-20260918T225800Z.md)
+confirms it, PROMOTED/MANUAL. The source is punctured, not whole C2;
+unramifiedness on an original source does not itself rule out ramification
+at an added boundary. No arbitrary Keller completion is identified, no
+old spectral result transfers across the nonisometric target change,
+and no curvature/control-family extension follows.
+
 The [canonical-graph scaling test](avenues/notes/smooth-graph-degeneration-20260915.md)
 obtains a smooth central fiber with t-saturation and finite total normalization.
 These do not establish global normality of the nonzero fibers: a non-Keller control
