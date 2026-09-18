@@ -6,6 +6,11 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-18
 
+- **A cited source was corrected.** Sabbah v4 deletes the good-wild/additive
+  comparison branch used as background in an old unpromoted screen.
+  The [correction and independent review](AUDIT.md#sabbah-v4-source-correction--2026-09-18)
+  preserve its separate local obstruction; no promoted dependency was
+  found in the scoped search. This is source maintenance, not a JC2 advance.
 - **A fixed-source target-field filter rules out arbitrary rational target repairs.**
   For deg(p)>1 and nonzero rational r, every polynomial in C(p(x),r(x)y)
   loses the x tangent at (a,0) when p'(a)=0. Hence no two such polynomials

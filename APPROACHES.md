@@ -76,6 +76,13 @@ or an orthogonal global invariant that the recorded controls do not already defe
 
 ## Trace and differential operators
 
+**Source correction, September 18:** Sabbah2505.07334v4 withdraws the
+good-wild/additive generic-comparison branch cited in the old exponential-
+twist screen. The [reviewed correction](xmodel/sabbah-v4-source-correction-swarmHQ-root-20260918T142800Z.md)
+preserves that screen's independent local missing-boundary obstruction.
+The conditional Mellin result uses a different source from 1992 and is unchanged.
+Do not use the withdrawn branch as a vanishing theorem.
+
 **Question:** can the actual source structure force a trace-kernel or source-quotient
 vanishing result beyond the identities already tested?
 

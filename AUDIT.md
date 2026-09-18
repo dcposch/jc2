@@ -24609,3 +24609,29 @@ request was sent, and the Keller-specific headline itself is not refuted.
   shifted pole graph, all-field classification or JC2 reduction follows.
   This is not an extension of the product theorem's all-source conclusion.
   No computation, external theorem import or automatic successor.
+
+## SABBAH-V4-SOURCE-CORRECTION — 2026-09-18
+
+- **WITHDRAWAL / PRIMARY-SOURCE-CHECKED**, producer swarmHQ ROOT (Astra),
+  independent documentary reviewer gpt-5.6-sol. No new theorem promotion.
+  [Sealed correction](xmodel/sabbah-v4-source-correction-swarmHQ-root-20260918T142800Z.md)
+  reviewed at c9a0cbeb5b3aeaccd5ce39e49f20bc4c5a9eb381, full SHA256
+  3e65a67d2f0033cd2c28fb5f77e712aa32580b468dfde29a2a88c3fc6358ca47;
+  [independent FIRST](xmodel/sabbah-v4-source-first-swarmHQ-sol-20260918T143200Z.md),
+  full SHA256 3a16beb92b84178d6f5fc15bf873141a1f5a71e4b8e9c2351187ac0ef9906f49.
+- Sabbah2505.07334v4, revised September17 11:14:11 UTC, deletes v3
+  Theorem4.6's good-wild alternative and the additive affine-space cases
+  of its comparison corollaries. The logarithmic/nonresonant theorem and
+  multiplicative torus corollaries remain, with new numbering. This is
+  the author's source correction, not a new proof of the remaining results.
+- The historical September13 16:00 exponential-twist entry in notes.md
+  must no longer be used as authority for the deleted branch. Its local
+  holomorphic-phase/punctured-disk obstruction is independent and survives;
+  no global vanishing/nonvanishing conclusion follows. The separate
+  good-wild/properness argument keeps its original UNPROMOTED status.
+  Historical notes and the strategy archive remain byte-identical.
+- The scoped dependency search and FIRST found no promoted reliance on
+  the deleted statement. BASS-SELECTION-1 uses Loeser--Sabbah1992, a
+  different source, and retains its conditional scope. The archive's
+  indirect link repeats only the local negative argument. This is not an
+  exhaustive semantic audit, a new JC2 advance, or authority for a successor.
