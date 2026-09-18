@@ -155,6 +155,17 @@ hypothesis, rather than strengthening the same abstract control family.
 **Question:** can one produce a complete polynomial Keller source in characteristic
 zero, rather than a necessary chart, modular point, or formal family?
 
+The [all-seed complementary-graph degree identity](xmodel/weighted-xgraph-degree-swarmHQ-root-20260918T115800Z.md)
+now excludes (B,A) on EVERY nonzero polynomial graph x=h(y,z) in the
+specified normalized weighted-lift family, WITHOUT graph invariance.
+For seed degree n>=2 and ordinary total graph degree d,
+deg J(B_h,A_h)=6(n-1)d+4n-3>0. The zero graph is triangular.
+[Independent Sol FIRST](xmodel/weighted-xgraph-first-swarmHQ-sol-20260918T121133Z.md)
+confirms the self-contained calculation, PROMOTED/MANUAL. Polynomial
+postcomposition and polynomial source parametrization cannot repair a
+nonzero graph. Arbitrary nonlinear combinations of all three outputs
+and other embedded surfaces remain outside scope; no successor follows.
+
 The [fixed-seed invariant-graph test](xmodel/invariant-quartic-graph-swarmHQ-root-20260918T103700Z.md)
 is now excluded for EVERY polynomial h: in the specified weighted lift,
 if the same graph x=h(y,z) is invariant and its induced plane map is

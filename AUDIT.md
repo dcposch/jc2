@@ -24545,3 +24545,46 @@ request was sent, and the Keller-specific headline itself is not refuted.
   mapping to different graphs, arbitrary output changes and JC2 are NOT
   covered. No seed/graph/control-family successor or general construction
   exclusion is authorized by this result. JC2 remains unresolved.
+
+## WEIGHTED-XGRAPH-DEGREE-1 — 2026-09-18
+
+- **PROMOTED / MANUAL**, self-contained characteristic-zero polynomial
+  proof. Producer swarmHQ ROOT (Astra), with a same-model co-check;
+  independent hostile reviewer gpt-5.6-sol confirmed all six claims.
+  No geometric theorem import or scientific computation is required.
+- [Producer](xmodel/weighted-xgraph-degree-swarmHQ-root-20260918T115800Z.md),
+  reviewed at5fbc058c80baeda8a799db6d8896a51860a315e5, full SHA256
+  7ca0fe367ebf68d35c8b2c3a91b4c3b7ad9995575c2813c377fd33760b1687da,
+  manifest810da5988bed3d4d43329862f4d69fcc612d0ae1a3d4cb334ce9227404b9104a.
+  [Independent FIRST](xmodel/weighted-xgraph-first-swarmHQ-sol-20260918T121133Z.md)
+  preserves the completed reviewer messages with ROOT integration;
+  full SHA2564686aea117b5cb642beeb4caff729ba11d0bb91e5c9cd144b8dd7ff8fddf1784,
+  manifest0a14a8e1c674d8e4b9703aa1d2f12fc18b7e3063f9663d76cb45258c8bc309df.
+  All three charged input hashes matched before/after whole reads.
+  FIRST's compressed derivative/Taylor notation is explicitly clarified
+  in its integration: r'(1),s'(1), and coefficient of xy versus x.
+- For every seed with p(0)=0,p(1)=-1, integral_0^1 p=0,
+  k=p'(1)!=-2 and q(0)=0,q'=w*p', use the producer's normalized
+  u,gamma,w,A,B, with a=-(1+k)/(2+k). These are whole polynomials
+  before graph substitution. Put n=deg p>=2 and T_h=(B(h,y,z),A(h,y,z)).
+  For EVERY nonzero h in C[y,z] of ordinary total degree d,
+  deg J_yz(T_h)=6(n-1)d+4n-3>0. For h=0, T_h is triangular with
+  determinant -1. Thus T_h is Keller exactly when h=0.
+- If d>=1, with top homogeneous H, write
+  M=H^(3n-3)*y^n*z^(n-1), alpha=lc p and beta=n*alpha/(n+1).
+  The exact leaders are alpha*M and beta*y*M. Their Jacobian is
+  -alpha*beta*M*M_z, nonzero because H+3zH_z has coefficient
+  multipliers1+3j. All lower contributions have smaller total degree.
+  For constant h=c!=0, the separate leader uses a*y+c*z; it remains
+  nonzero even a=0. No division deletes the graph's h=0 locus.
+- Polynomial Psi composed T_h composed sigma cannot be Keller for
+  nonzero h: a constant Jacobian product would make J(sigma) a unit,
+  hence sigma dominant and its pullback injective, contradicting the
+  nonconstant middle factor. This assumes no JC2 conclusion for sigma.
+  For h=0, an initial sigma can still carry the unresolved Keller problem.
+- This removes graph invariance for this complementary output pair and
+  all normalized seeds; it does not erase the earlier invariance-only
+  divisor statement. Arbitrary nonlinear combinations of all three
+  outputs, rational repairs, other embedded surfaces and arbitrary plane
+  Keller maps are outside scope. No all-output/seed/orientation census
+  or automatic successor follows. JC2 remains unresolved.

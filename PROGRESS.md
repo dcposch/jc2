@@ -6,6 +6,15 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-18
 
+- **The complementary graph pair is excluded for every normalized weighted-lift seed.**
+  The [degree identity](xmodel/weighted-xgraph-degree-swarmHQ-root-20260918T115800Z.md)
+  removes the earlier graph-invariance premise: on every nonzero x=h(y,z),
+  the pair (B,A) has Jacobian degree 6(n-1)deg(h)+4n-3>0, for every
+  seed degree n>=2. The zero graph is triangular. Polynomial pre- and
+  postcomposition cannot repair a nonzero graph. [Independent Sol FIRST](xmodel/weighted-xgraph-first-swarmHQ-sol-20260918T121133Z.md)
+  confirms the self-contained proof: swarmHQ ROOT/Astra, PROMOTED/MANUAL.
+  Arbitrary nonlinear three-output maps and other embedded planes are
+  not excluded. This is a uniform construction exclusion, not a JC2 proof.
 - **One invariant-graph construction is excluded uniformly in the graph polynomial.**
   The [fixed-seed proof](xmodel/invariant-quartic-graph-swarmHQ-root-20260918T103700Z.md)
   shows that every Keller restriction to an invariant graph x=h(y,z)
