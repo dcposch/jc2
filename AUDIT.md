@@ -24745,3 +24745,31 @@ request was sent, and the Keller-specific headline itself is not refuted.
   arbitrary polynomial integrability and strong commutation remain open.
   No specialized new source theorem, novelty claim, JC2 resolution or
   automatic analytic/control-family successor follows.
+
+## GAUSSIAN-SPECTRAL-CONTROL-1 — 2026-09-18
+
+- **PROMOTED / MANUAL**, explicit desk calculation. Producer swarmHQ ROOT
+  (gpt-6-astra); independent native gpt-5.6-sol FIRST confirms all three
+  exact claims. [Producer](xmodel/gaussian-spectral-gap-control-swarmHQ-root-20260918T184800Z.md)
+  reviewed at5d45612f342f84c8e1fe4a6ab326a9bc264737c9, full SHA256
+  80fbf7288f0e39356076a48c197094c4480a91a38f491c09bac770fe8755e02a;
+  [FIRST with ROOT custody integration](xmodel/gaussian-spectral-first-swarmHQ-sol-20260918T185300Z.md),
+  full SHA256e30b892a02d19e7781a53873a448616ab2c22cd8e543a6db3473cbde166f33ae,
+  manifest33cb48c7a609f999bb6bcb82d53800235b53b554c74c0e82384774676a6200d2.
+- On the EXISTING rational control G(s,y)=(s^2,y/(2s)) on C* times C,
+  g=G*Euclidean and dmu=exp(-|G|^2)dvol_g have finite mass2*pi^2,
+  local Ric_g+Hess_g(|G|^2)=2g, and a full-real W1,2 compact core.
+  Yet u=Re(s) has mean0 and energy=variance=pi^(5/2)/2. Its Rayleigh
+  quotient1 refutes the gap2 inequality variance<=energy/2 inferred
+  from ONLY those analytic premises. No exact spectral bottom is claimed.
+- For the nonnegative operator A associated to the closed full-real
+  form, u belongs to Dom(A) and Au=u. This follows from compact tests
+  and first-order density. Its Hessian has infinite squared integral:
+  |Hess u|^2=1/(8|s|^6), leaving a radial integral of r^-3 near0.
+  Thus form-domain density does not supply the needed global second-order
+  integrated-curvature identity. Essential self-adjointness is not asserted.
+- The Euclidean identity-map control gives Rayleigh quotient2. The earlier
+  s^-1 holomorphic-L2 control addresses a different domain issue. The
+  actual polynomial-C2 cutoff theorem remains valid; no actual-source
+  spectral conclusion, incompleteness claim or JC2 counterexample follows.
+  No new family, source import, novelty assertion or automatic successor.

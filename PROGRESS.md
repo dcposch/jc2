@@ -14,6 +14,13 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
   confirm it: swarmHQ ROOT/Astra, PROMOTED/MANUAL. Holomorphic-subspace
   density, higher-order domains and polynomial integrability are not
   established. No completeness or JC2 conclusion follows.
+- **That core does not automatically give a Gaussian spectral gap.** On
+  the existing rational two-sheet control, Re(s) has Rayleigh quotient1
+  despite local curvature2 and the real first-order core; its Hessian
+  norm diverges. The [explicit test](xmodel/gaussian-spectral-gap-control-swarmHQ-root-20260918T184800Z.md)
+  has [independent Sol FIRST](xmodel/gaussian-spectral-first-swarmHQ-sol-20260918T185300Z.md):
+  swarmHQ ROOT, PROMOTED/MANUAL. This refutes one analytic inference,
+  not an actual-source estimate or JC2.
 - **One preserved quotient removes a connected-fiber restriction.**
   If a dominant rational self-map Phi preserves the SAME rational plane
   quotient rho, inducing h, then deg(h) divides deg(Phi), even when rho

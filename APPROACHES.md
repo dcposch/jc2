@@ -66,6 +66,14 @@ It does NOT establish density within the holomorphic subspace, stable
 higher-order domains, arbitrary polynomial integrability, completeness,
 strong operator commutation or JC2. Those global analytic gaps remain.
 
+A [reviewed fixed-control calculation](xmodel/gaussian-spectral-gap-control-swarmHQ-root-20260918T184800Z.md)
+also blocks an automatic spectral upgrade: on the old rational two-sheet
+source, the real core and local Ric+Hess(phi)=2g coexist with a Rayleigh
+quotient1 and a weak eigenfunction whose Hessian is not square-integrable.
+[Independent Sol FIRST](xmodel/gaussian-spectral-first-swarmHQ-sol-20260918T185300Z.md)
+confirms this, PROMOTED/MANUAL. A global second-order or actual-C2 argument
+is still needed; the example gives no spectral conclusion for Keller maps.
+
 The [canonical-graph scaling test](avenues/notes/smooth-graph-degeneration-20260915.md)
 obtains a smooth central fiber with t-saturation and finite total normalization.
 These do not establish global normality of the nonzero fibers: a non-Keller control
