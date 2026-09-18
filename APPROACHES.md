@@ -135,6 +135,16 @@ unit-vanishing assertion, not JC2. The accepted reductions remain valid;
 any surviving exclusion must use more of the actual Keller structure.
 No replacement degree family or norm-surface surjectivity is asserted.
 
+The distinct [reducible-fiber counterexample](xmodel/reducible-elliptic-fiber-swarmHQ-root-20260918T065100Z.md)
+is nonsingular on the whole plane yet has exactly TWO disjoint genus-one
+components in its zero fiber. [Independent Fable FIRST](xmodel/reducible-elliptic-first-swarmHQ-fable-20260918T070300Z.md)
+confirms the fixed example and its no-polynomial-mate proof:
+PROMOTED/MANUAL. Reducibility alone, even with nonsingularity, therefore
+does not force a rational component. This does NOT refute a statement
+using an actual polynomial Jacobian mate; this P has none. No theorem
+about all Keller fibers, rational mates, or JC2 follows, and no further
+genus/degree/control family is selected.
+
 **Useful next contribution:** identify and exploit an additional actual-source
 hypothesis, rather than strengthening the same abstract control family.
 [Trace interfaces](https://github.com/dcposch/jc2/blob/ec69252af5ca03245becb80436f5ddb0917ccef2/APPROACHES.md#5-trace-accepted-image-no-manufactured-splitting) ·

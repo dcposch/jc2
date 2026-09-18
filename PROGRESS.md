@@ -6,6 +6,13 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-18
 
+- **A reducible fiber of a nonsingular polynomial need not have a rational component.**
+  The [explicit fixed example](xmodel/reducible-elliptic-fiber-swarmHQ-root-20260918T065100Z.md)
+  has exactly two disjoint genus-one zero-fiber components and no critical
+  point anywhere on the plane. [Independent Fable FIRST](xmodel/reducible-elliptic-first-swarmHQ-fable-20260918T070300Z.md)
+  confirms it and the proof that it has no polynomial Jacobian mate:
+  swarmHQ ROOT/Astra, PROMOTED/MANUAL. This closes an auxiliary shortcut,
+  not a question about genuine Keller fibers or JC2; no family search follows.
 - **Fractional-linear rational donors reduce to an excluded product class.**
   The [three-case normal form](xmodel/fractional-linear-donor-swarmHQ-root-20260918T011400Z.md)
   covers rational J(P,Q)=1 pairs with Q Mobius in one source variable.

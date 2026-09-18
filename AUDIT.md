@@ -24444,3 +24444,61 @@ request was sent, and the Keller-specific headline itself is not refuted.
   nonconstant-J target changes, other target subfields and a general Keller
   source reduction remain outside scope. No automatic degree/control family
   or new global closing mechanism is selected. JC2 remains unresolved.
+
+## REDUCIBLE-ELLIPTIC-FIBER-CONTROL-1 — 2026-09-18
+
+- **PROMOTED / MANUAL**. Producer swarmHQ ROOT (Astra); independent Fable
+  hostile FIRST CONFIRMED all four exact items by manual reconstruction.
+  ROOT independently checked the proof; the same-model preliminary check
+  is not the promotion gate. No computation, unread source theorem or
+  unreviewed campaign claim is a premise. Standard imports are localization
+  of a polynomial UFD, projective plane intersection, the genus formula
+  for smooth plane cubics and characteristic-zero differential pole orders.
+- [Producer](xmodel/reducible-elliptic-fiber-swarmHQ-root-20260918T065100Z.md)
+  frozen at db26943e39cfdada4ee17889d362928aaff5512a, full SHA-256
+  ac6ce54b1de8bdfb1f36bc41b9b9d68313fafb12fe1e622976e1ad5976fe33ff,
+  manifest6d266ddff1a823ca1af0cc8fe5d0b2bc731592774db1977043f9a55d98b75106.
+  [Fable FIRST, verbatim mathematical extract with ROOT integration](xmodel/reducible-elliptic-first-swarmHQ-fable-20260918T070300Z.md),
+  full SHA-2565e5f50eeae699c30f8bd244ac4a1243add7e2560f7a98db19c8c9c600cda5453,
+  manifest49eed50733cba6fb2645a42314919839f4608a619e9ad5ceb1a64fb0ac118815.
+  Original terminal review remains unchanged at SHA-256
+  1b27429a67f93850b35e6022dfef56edf6a7dd79908108b84639854eea86de6a.
+  Published mathematical extract was compared equal to the original
+  contiguous text; operational headers and duplicate pin tables are omitted.
+  All four charged input pins were unchanged; supervisor and descendants
+  were independently terminal before receipt-first collection. Requested
+  model=fable/effort=max, hosted identity self-reported, not independently
+  attested. Integrity and model agreement do not substitute for proof.
+- Set a=1+x^2+x^6*y and
+  C=1+3*y+3*x^2*y+3*x^4*y+3*x^6*y^2+3*x^8*y^2+x^12*y^3.
+  The fixed polynomial P=-C*(2+x^6*C) has actual total degree36.
+  Expansion gives a^3-3ax^2=1+x^6*C. On x!=0 the chart
+  z=1/x,v=a/x has inverse y=z^5*v-z^6-z^4 and NONCONSTANT
+  Jacobian -x^3. It yields P=z^6-(v^3-3v)^2 and P_z=6z^5!=0.
+  On the missing source line P(0,y)=-2-6y, so P_y=-6.
+  Thus P has no critical point on the WHOLE plane.
+- K=2+x^6*C satisfies K-x^6*C=2, so C=0 and K=0 are disjoint.
+  Their localizations are the irreducible cubics v^3-3v=+/-z^3,
+  up to units. Their projective models have partials with no common
+  projective zero, hence are smooth irreducible genus-one cubics.
+  Repeated factors are excluded by the same smoothness argument, as
+  made explicit in FIRST. Neither C nor K has an x-factor, so no
+  hidden component is lost in localization. Exactly two reduced
+  irreducible components occur, each geometric genus one.
+- NO polynomial Q has J(P,Q)=c in C*. The chart chain rule gives
+  J_zv(P,Q)=-c*z^3, so restriction to either elliptic component gives
+  dQ=-c*dv/(6z^2). The form dv/z^2 is nonzero holomorphic on its
+  smooth projective cubic: at z=0 use 3dz/(epsilon*g'(v)), and at
+  infinity use -du/s^2 with s^3=epsilon!=0. A rational function with
+  a pole differentiates to a pole, so this differential cannot be exact.
+  Polynomial Q restricts to the component; an arbitrary rational Q
+  with denominator vanishing on it need not. NO rational-mate exclusion
+  is claimed or promoted from this special-fiber proof.
+- This refutes ONLY the implication that a nonsingular plane polynomial
+  with a reducible fiber must have a rational component in that fiber.
+  It does not refute a statement using an actual polynomial Jacobian
+  mate, does not produce a Keller pair, and changes no accepted JC2
+  degree bound. The earlier all-fibers-irreducible cubic-unit example
+  and its reductions remain valid at their separate scopes. No general
+  all-fiber irreducibility, properness, source landing, construction family
+  or JC2 conclusion follows. No automatic genus/degree/control successor.
