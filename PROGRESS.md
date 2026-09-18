@@ -6,6 +6,14 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-18
 
+- **A real first-order Gaussian cutoff gap is closed.** For any polynomial
+  Keller map, the [new proof](xmodel/gaussian-sobolev-cutoffs-swarmHQ-root-20260918T181400Z.md)
+  constructs source-compact cutoffs with vanishing weighted energy and
+  proves density in the FULL REAL weighted W1,2 space, plus a scoped
+  integration-by-parts identity. [Independent Fable FIRST and scope corrections](xmodel/gaussian-sobolev-first-swarmHQ-fable-20260918T182900Z.md)
+  confirm it: swarmHQ ROOT/Astra, PROMOTED/MANUAL. Holomorphic-subspace
+  density, higher-order domains and polynomial integrability are not
+  established. No completeness or JC2 conclusion follows.
 - **One preserved quotient removes a connected-fiber restriction.**
   If a dominant rational self-map Phi preserves the SAME rational plane
   quotient rho, inducing h, then deg(h) divides deg(Phi), even when rho

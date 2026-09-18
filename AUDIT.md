@@ -24704,3 +24704,44 @@ request was sent, and the Keller-specific headline itself is not refuted.
   target factorization. No arbitrary low-degree tower exclusion, quotient
   existence for arbitrary Keller maps, novelty claim, or JC2 solution.
   This is a changed construction filter, not an automatic successor.
+
+## GAUSSIAN-SOBOLEV-CUTOFF-1 — 2026-09-18
+
+- **PROMOTED / MANUAL**, with elementary algebraic and Sobolev facts as
+  stated in the proof. Producer swarmHQ ROOT (gpt-6-astra), native Astra
+  co-check; independent hostile reviewer Fable5.1 confirms the three
+  producer claims and controls. [Producer](xmodel/gaussian-sobolev-cutoffs-swarmHQ-root-20260918T181400Z.md)
+  reviewed at0ad11f45906b4647ea3d4b2b054b20f3de90639d, full SHA256
+  ebc99617025da3f63305d27e629fbb36edebab98beb4ba5b4d421235464df5fb;
+  [FIRST and binding ROOT scope corrections](xmodel/gaussian-sobolev-first-swarmHQ-fable-20260918T182900Z.md),
+  full SHA2562070a4acc384301d8d60a75a7ac0969a6b5088d90082351dcee82cdeacfc6dc7,
+  manifest1ad5838f50deb162dd4b69e184ee608401b34ac3ba77c434b8fe0ab9b4de7192.
+- For ANY polynomial Keller F:C2->C2, put g=F*Euclidean and
+  dmu=exp(-|F|^2)dvol_g. There are source-compact smooth chi_n in[0,1],
+  tending to1 almost everywhere, with integral|dchi_n|_g^2 dmu->0.
+  Consequently C_c^infty is dense in the FULL REAL weighted W1,2 space.
+  The Gaussian mass is N*pi^2, with N the generic mapping degree.
+- Clear monic-equation denominators to make F finite over {h!=0}.
+  Logarithmic normal2D cutoffs remove the reduced target curve {h=0};
+  small4D balls handle its finite singular set. Finite-cover energy
+  transfer then gives genuinely source-compact cutoffs. Bounded truncation
+  followed by compact local smoothing proves density. No global
+  properness or completeness is assumed.
+- If a,b belong to that real W1,2 and F_i b is in L2(mu), then
+  <D_i a,b>=<a,-bar D_i b+F_i b>, with the inner product linear in its
+  first argument. For holomorphic b, bar D_i b=0. This is a paired
+  integration identity, NOT a maximal complex-operator domain equality.
+- The old rational e=2 donor on C* times C satisfies the cutoff mechanism
+  but has s^-1 in holomorphic L2 and its lifted derivative outside L2.
+  It is not a whole-plane polynomial Keller counterexample. This proves
+  strict domain inclusion, not by itself nondensity.
+- Binding review corrections: the review's parenthetical assertion of
+  generic incompleteness is NOT accepted for actual Keller maps; neither
+  completeness nor incompleteness is established. Its stronger density
+  inference from strict inclusion is likewise NOT promoted. The original
+  reviewer wording is preserved with these explicit corrections.
+- This narrows the September13 Gaussian entry's real first-order cutoff
+  gap. Holomorphic-subspace density, stable repeated-derivative domains,
+  arbitrary polynomial integrability and strong commutation remain open.
+  No specialized new source theorem, novelty claim, JC2 resolution or
+  automatic analytic/control-family successor follows.

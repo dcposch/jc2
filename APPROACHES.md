@@ -55,6 +55,17 @@ Existence of the source symmetry for arbitrary Keller pairs is NOT proved.
 Formal flows and translations inside C[P,Q] do not supply it. This is a
 conditional target, not a source-attachment theorem or a JC2 solution.
 
+The [Gaussian cutoff lemma](xmodel/gaussian-sobolev-cutoffs-swarmHQ-root-20260918T181400Z.md)
+now settles a different ACTUAL-source analytic issue: compactly supported
+smooth functions are dense in the FULL REAL first-order Sobolev space for
+g=F*Euclidean and exp(-|F|^2)dvol_g. Removing a small-energy neighborhood
+of an exceptional target curve makes the pulled-back cutoffs source-compact.
+[Independent Fable FIRST with binding scope corrections](xmodel/gaussian-sobolev-first-swarmHQ-fable-20260918T182900Z.md)
+confirms this and a scoped integration identity: PROMOTED/MANUAL.
+It does NOT establish density within the holomorphic subspace, stable
+higher-order domains, arbitrary polynomial integrability, completeness,
+strong operator commutation or JC2. Those global analytic gaps remain.
+
 The [canonical-graph scaling test](avenues/notes/smooth-graph-degeneration-20260915.md)
 obtains a smooth central fiber with t-saturation and finite total normalization.
 These do not establish global normality of the nonzero fibers: a non-Keller control
