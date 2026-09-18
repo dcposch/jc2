@@ -4,6 +4,19 @@ Dated mathematical developments across the campaign. Evidence tiers and scope re
 those recorded in [AUDIT.md](AUDIT.md) and the linked reports. Current open questions
 are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
+## 2026-09-18
+
+- **Fractional-linear rational donors reduce to an excluded product class.**
+  The [three-case normal form](xmodel/fractional-linear-donor-swarmHQ-root-20260918T011400Z.md)
+  covers rational J(P,Q)=1 pairs with Q Mobius in one source variable.
+  For mapping degree greater than one, it excludes every constant-J
+  birational target repair and every finite rational source substitution
+  yielding a whole-plane polynomial Keller pair, by the accepted product
+  theorem. [Independent Fable FIRST](xmodel/fractional-linear-first-swarmHQ-fable-20260918T013000Z.md)
+  confirms the proof: swarmHQ ROOT/Astra, PROMOTED/MANUAL with inherited
+  classical imports. There is no degree cap within this class; degree-one
+  donors, arbitrary rational pairs and general JC2 remain outside scope.
+
 ## 2026-09-17
 
 - **Nonsingularity and irreducible fibers do not force geometric-unit vanishing.**

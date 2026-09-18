@@ -24386,3 +24386,61 @@ request was sent, and the Keller-specific headline itself is not refuted.
   preserve the Keller-specific gap. Exactness-plus-constant-units genus
   implication and every-fiber irreducibility for arbitrary Keller components
   remain unresolved. No new countercontrol family or JC2 resolution follows.
+
+## FRACTIONAL-LINEAR-DONOR-1 — 2026-09-18
+
+- **PROMOTED / MANUAL**. Producer swarmHQ ROOT (Astra); independent Fable
+  hostile FIRST CONFIRMED all six exact items. The normal form uses
+  elementary characteristic-zero rational differentiation and residues;
+  the construction exclusion consumes SYMPLECTIC-TARGET-SMOOTH-BRANCH-1's
+  accepted all-rational-R product client at its named classical import tier.
+  No fresh proof audit of those imports or literature-novelty claim.
+- [Producer](xmodel/fractional-linear-donor-swarmHQ-root-20260918T011400Z.md)
+  frozen at abcc42be27cc68562e2561988338252d784d5f02, full SHA-256
+  053e0f962aa6558a894ba408de19e18c05ae868342199feb31cd15e49e626809,
+  manifest dfeede3ef335c60cb42cf126ce141f88d3915ef5a436d7d62ce16a05c2240bfa.
+  [Fable FIRST, verbatim mathematical extract plus ROOT clarification](xmodel/fractional-linear-first-swarmHQ-fable-20260918T013000Z.md),
+  full SHA-256 5be082297e6d06bc0d995e9e748b3aaf133618892e86cea0e4296465cf3c0cc1,
+  manifest f8c5a15905ae673cf17bba6347133d2e63a79c490e8ea3e628ade8ad8cda4d35.
+  Original terminal submission preserved unchanged at SHA-256
+  5c79aa7599ca875de485aa9853109a1e2d20b39187b1025e0e37447eaaeb1469.
+  The publication omits operational headers and duplicate custody tables;
+  its mathematical extract was checked equal to the original contiguous text.
+  Requested model=fable/effort=max; hosted identity self-reported, not
+  independently attested. Receipt and descendants terminal before intake;
+  all six charged input pins unchanged. Custody is not mathematical proof.
+- For rational P,Q in C(x,y) with J(P,Q)=1 and Q degree1 in y over C(x),
+  there are a birational target tau with Jacobian1 and source translation
+  sigma=(x,y-B0(x)) such that
+  tau composed(P,Q)=(R(x),(y-B0(x))/R'(x)), with rational nonconstant R.
+  The mapping degree n=[C(x,y):C(P,Q)] equals deg(R:P1->P1).
+- Mobius inversion gives C(x,y)=C(x,Q) and p_x=y_Q. An affine inverse
+  y=AQ+B gives p=T+H(Q), T'=A. A constant pole y=A+B/(Q-c) gives
+  p=-T/(Q-c)^2+H(Q), T'=B. The indicated shear/inversion normalizes each.
+  For a moving pole y=A+B/(Q-r(x)), set C=-B/r'. Then
+  (p-C/(Q-r))_x=-C'/(Q-r). A generic root a of Q-r(x) is simple and
+  transcendental over C; the residue C'(a)/r'(a) of this exact rational
+  differential vanishes, forcing C'=0. Thus C=lambda!=0, and after the
+  H(Q) shear the target change(p',Q)->(Q-lambda/p',-p') gives the stated
+  product pair. All displayed maps/inverses and Jacobian signs were checked.
+- If n>1, EVERY constant-J birational target repair alpha and EVERY
+  finite rational source substitution phi would give
+  (alpha composed tau^-1) composed D_R composed(sigma composed phi).
+  The target remains constant-J birational; the source remains finite
+  rational. This is exactly the accepted product theorem's excluded
+  whole-plane Keller scope. No intermediate polynomiality is presumed.
+- Binding review wording correction: the optional final note's claim that
+  x,Q independence follows from J(P,Q)!=0 alone is false, as P=-y,Q=x
+  shows. It follows here from the Mobius hypothesis. Review reconstruction
+  R1 and verdict1 use that correct field equality, so the proof/confirmation
+  survives unchanged. The constant-pole specialization's explicit rescaling
+  is T=-(q0-c)^2 p(x,q0), as noted by the reviewer; no gap is filled by an
+  unsupported primitive. The inherited nonconstant-J cusp control remains
+  a control of branch transport only, not a wider donor exclusion.
+- No bound is placed on degR, rational coefficient degrees or the source
+  substitution degree. Degree-one donors are explicitly NOT excluded:
+  the identity would leave the whole Keller problem in the initial source
+  substitution. Arbitrary rational donors, higher-degree dependence on y,
+  nonconstant-J target changes, other target subfields and a general Keller
+  source reduction remain outside scope. No automatic degree/control family
+  or new global closing mechanism is selected. JC2 remains unresolved.

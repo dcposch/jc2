@@ -1,6 +1,6 @@
 # Research frontier
 
-Updated September 17, 2026. **JC₂ remains unresolved.** These are mathematical
+Updated September 18, 2026. **JC₂ remains unresolved.** These are mathematical
 questions and evidence boundaries, not assignments or machine-launch instructions.
 Independent swarms may pursue new approaches or replicate work with explicit scope.
 
@@ -168,6 +168,18 @@ confirms the result, PROMOTED/MANUAL with named classical imports and the
 [binding scope clarification](AUDIT.md#symplectic-target-smooth-branch-1--2026-09-16).
 Nonconstant-J target maps and singular projective branch components remain
 outside scope; no general source-landing theorem or new candidate follows.
+
+The [fractional-linear normal form](xmodel/fractional-linear-donor-swarmHQ-root-20260918T011400Z.md)
+now reduces EVERY rational J(P,Q)=1 pair with Q Mobius in y over C(x)
+to a rational product pair by constant-J birational target changes and a
+rational source translation. Its mapping degree is degR. Consequently,
+when that degree is greater than one, the accepted product theorem excludes
+ALL constant-J birational target repairs and ALL finite rational source
+substitutions, with no degree cap. [Independent Fable FIRST and wording clarification](xmodel/fractional-linear-first-swarmHQ-fable-20260918T013000Z.md)
+confirm the reduction and composition: PROMOTED/MANUAL, retaining the
+product theorem's named imports. Degree-one donors and arbitrary higher-
+degree dependence on y are not excluded. No general generation theorem,
+higher-degree family search or JC2 conclusion follows.
 
 The [zero-free-model extension](xmodel/zero-free-branch-model-swarmHQ-root-20260917T044000Z.md)
 can accommodate old projective branch singularities at infinity when an
