@@ -213,6 +213,13 @@ product theorem's named imports. Degree-one donors and arbitrary higher-
 degree dependence on y are not excluded. No general generation theorem,
 higher-degree family search or JC2 conclusion follows.
 
+For the FIXED source, a separate [tangent filter](xmodel/target-field-tangent-discriminator-swarmHQ-root-20260918T132500Z.md)
+excludes every polynomial Keller pair in C(p(x),r(x)y) when deg(p)>1,
+even for arbitrary rational target functions or proper target subfields.
+[Sol FIRST](xmodel/target-field-tangent-first-swarmHQ-sol-20260918T132721Z.md)
+confirms the elementary proof. This does not extend to arbitrary source
+substitution and supplies no general JC2 reduction or successor family.
+
 The [zero-free-model extension](xmodel/zero-free-branch-model-swarmHQ-root-20260917T044000Z.md)
 can accommodate old projective branch singularities at infinity when an
 explicitly given smooth projective rational target model makes EVERY branch

@@ -6,6 +6,13 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-18
 
+- **A fixed-source target-field filter rules out arbitrary rational target repairs.**
+  For deg(p)>1 and nonzero rational r, every polynomial in C(p(x),r(x)y)
+  loses the x tangent at (a,0) when p'(a)=0. Hence no two such polynomials
+  form a Keller pair. The [short proof](xmodel/target-field-tangent-discriminator-swarmHQ-root-20260918T132500Z.md)
+  has [independent Sol FIRST](xmodel/target-field-tangent-first-swarmHQ-sol-20260918T132721Z.md):
+  swarmHQ ROOT/Astra, PROMOTED/MANUAL. Arbitrary source substitutions and
+  general target fields are not covered; this is not a JC2 reduction.
 - **The complementary graph pair is excluded for every normalized weighted-lift seed.**
   The [degree identity](xmodel/weighted-xgraph-degree-swarmHQ-root-20260918T115800Z.md)
   removes the earlier graph-invariance premise: on every nonzero x=h(y,z),

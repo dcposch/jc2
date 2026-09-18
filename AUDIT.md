@@ -24588,3 +24588,24 @@ request was sent, and the Keller-specific headline itself is not refuted.
   outputs, rational repairs, other embedded surfaces and arbitrary plane
   Keller maps are outside scope. No all-output/seed/orientation census
   or automatic successor follows. JC2 remains unresolved.
+
+## TARGET-FIELD-TANGENT-1 — 2026-09-18
+
+- **PROMOTED / MANUAL**, self-contained. Producer swarmHQ ROOT (Astra);
+  independent reviewer gpt-5.6-sol confirmed the valuation, intersection,
+  tangent, controls and exact target scope, then the whole frozen report.
+  [Producer](xmodel/target-field-tangent-discriminator-swarmHQ-root-20260918T132500Z.md)
+  at a7e21287057e00738eaac26f3de8a7bbf0685f38, full SHA256
+  172f5c27ecc1dd504de5ef49319066bd189e26f847d4ef102c0b5f8e2fa8fc5f;
+  [FIRST](xmodel/target-field-tangent-first-swarmHQ-sol-20260918T132721Z.md),
+  full SHA256 a2d8ca7e6ebacfdafe3555a5f1befe07a41f52d083e988a6ff8d28c4b072c8fb.
+- For p in C[x] of degree>1, r in C(x)*, K=C(p(x),r(x)y), every
+  h in K intersect C[x,y] has h(x,0) in C[p(x)]. At any p'(a)=0,
+  all h_x(a,0)=0. Thus no polynomial Keller pair lies in K, even in
+  a proper target subfield or after a non-birational rational target map.
+  The residue calculation precedes specialization, so poles of r at a
+  do not invalidate it. Degree1 is excluded from the theorem.
+- FIXED whole-plane source only. No arbitrary source substitution,
+  shifted pole graph, all-field classification or JC2 reduction follows.
+  This is not an extension of the product theorem's all-source conclusion.
+  No computation, external theorem import or automatic successor.
