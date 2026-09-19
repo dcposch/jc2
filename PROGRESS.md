@@ -6,6 +6,16 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-19
 
+- **A hyperbolic moving polynomial pencil produces a fixed rational invariant.**
+  For a primitive polynomial h with h composed F=psi composed h,
+  deg(psi)>=2, and hyperbolic full generic affine fiber, the
+  [pointed-moduli and descent proof](xmodel/hyperbolic-moving-pencil-swarmHQ-root-20260919T203700Z.md)
+  gives N(F)=deg(psi) and a fixed rational function for F itself.
+  [Independent Fable FIRST](xmodel/hyperbolic-pencil-first-integration-swarmHQ-root-20260919T205600Z.md)
+  confirms the theorem: swarmHQ ROOT/Astra, PROMOTED/MANUAL with classical
+  moduli imports. The accepted exact-area theorem excludes this case for
+  J(F)=1. No preserved pencil is supplied for arbitrary Keller maps, and
+  nonhyperbolic fibers remain outside scope. JC2 remains unresolved.
 - **A dominant reduced pencil forces normalized Keller invertibility even with a moving base.**
   If r=a/b has coprime algebraically independent polynomial numerator and
   denominator and r composed F=phi composed r, the

@@ -376,6 +376,19 @@ no pencil for arbitrary Keller maps, excludes dependent reduced pairs
 Mere dominance cannot replace quasi-finiteness in the lift. No automatic
 invariant search, pencil-classification family or general JC2 conclusion.
 
+The [hyperbolic moving-pencil theorem](xmodel/hyperbolic-moving-pencil-swarmHQ-root-20260919T203700Z.md)
+now handles a distinct polynomial-pencil scope. If h is primitive,
+h composed F=psi composed h with deg(psi)>=2, and its full smooth geometric
+generic affine fiber has 2g-2+n>0, a dominant polynomial F has N(F)=deg(psi)
+and a fixed rational function not in C(h). Pointed moduli and the quotient
+by the finite full fiber-automorphism group remove both variation and twists.
+[Independent Fable FIRST with wording clarifications](xmodel/hyperbolic-pencil-first-integration-swarmHQ-root-20260919T205600Z.md)
+confirms it, PROMOTED/MANUAL with named classical moduli imports. The accepted
+exact-area theorem excludes this configuration when J(F)=1. No such pencil
+is produced for arbitrary Keller maps; A1/Gm fibers, degree-one base maps
+and arbitrary constant determinant are outside the stated corollary.
+No automatic pencil-classification or construction-family successor follows.
+
 For the FIXED original Weierstrass source, the separate
 [one-puncture comparison](xmodel/one-puncture-target-swarmHQ-root-20260919T051000Z.md)
 now excludes EVERY birational target postcomposition making multiplication

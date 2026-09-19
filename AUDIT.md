@@ -25123,3 +25123,49 @@ request was sent, and the Keller-specific headline itself is not refuted.
   or the dependent-pair case. The exact-area fixed-invariant theorem and
   positive-genus theorem retain their distinct scopes. No target-scaling
   shortcut, literature novelty, new construction family or JC2 conclusion.
+
+## HYPERBOLIC-MOVING-PENCIL-1 — 2026-09-19
+
+- **PROMOTED / MANUAL**, conditional polynomial-source theorem with named
+  classical curve/coarse-moduli imports. Producer swarmHQ ROOT/Astra;
+  independent Fable5.1 hostile FIRST confirms all five proof interfaces.
+  [Producer](xmodel/hyperbolic-moving-pencil-swarmHQ-root-20260919T203700Z.md),
+  reviewed at0645b42e986b9204270855e8d48c7ee0dd5a35b3, full SHA256
+  bcb4e3c3851f50db05654c9acfcba11131d55df4f29302a28cf89dceeb42370a,
+  manifesteb727b11b0d5202613d77ae98efb700dff99ebcbbb56f597c1beb7e9d2e1fb9c;
+  [FIRST and binding ROOT integration](xmodel/hyperbolic-pencil-first-integration-swarmHQ-root-20260919T205600Z.md),
+  full SHA2566c1be9fd3a3f81baa73cbfae5a6e426e25434f55d09cb04815440130e3c790a5,
+  manifest9860dab7a90cfb9fdb2c01a59d027ffd854b22fed746ae1e1f44ed4bac02d929.
+- Let F:C2->C2 be DOMINANT polynomial and h a nonconstant polynomial
+  with C(h) relatively algebraically closed in C(x,y). Suppose
+  h composed F=psi composed h, deg(psi)=d>=2, and the FULL smooth
+  geometric generic affine h-fiber has genus g and n punctures with
+  2g-2+n>0. Then N(F)=d and there is r in C(x,y), not in C(h), with
+  r composed F=r. In particular the exact-Jacobian1 case is impossible
+  by RATIONAL-AREA-INVARIANT-1. No initial fixed rational invariant is
+  assumed; the existing moving pencil supplies one in this scope.
+- Regular-field disjointness gives N=d*k. Puncture inclusion and
+  Riemann--Hurwitz force k=1 and a full affine/pointed isomorphism.
+  Unordered coarse moduli gives m psi=m; a nonconstant image curve
+  contradicts degree multiplication. Constant moduli, a finite-type
+  log-canonical Isom scheme and constructibility give geometric
+  trivialization, not triviality over the original base. The full
+  automorphism group is finite since H0(T(-S))=0. Its invariant function
+  field removes both Galois twisting and the semilinear action of F.
+  No finite trivializing cover is assumed psi-stable and no iterate
+  is needed. Coarse-moduli existence/classifying-map properties are
+  classical imports checked at lecture-note STATEMENT level; this is
+  not a construction/dependency-proof audit or formal verification.
+- Binding clarifications concern REVIEWER shorthand only: its geometric
+  affine coordinate ring includes h=t and scalar extension over C(h);
+  a target normalization MAY lose the pencil, not invariably so. The
+  optional generic-smoothness remark does not remove the stated hypothesis.
+  Producer and raw reviewer bytes remain unchanged. Delivery deviations
+  and incomplete execution-trace coverage are recorded in the integration,
+  separately from the mathematical verdict.
+- This closes a different scope from the independent-numerator/denominator
+  homogeneous-pencil theorem and composes with the accepted exact-area
+  invariant theorem. It supplies NO pencil for an arbitrary Keller map.
+  A1/Gm generic fibers, d=1 and arbitrary constant determinant in the
+  corollary remain outside this statement. No moduli classification,
+  literature novelty, automatic pencil-family successor or JC2 conclusion.
