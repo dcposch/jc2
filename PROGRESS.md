@@ -4,6 +4,18 @@ Dated mathematical developments across the campaign. Evidence tiers and scope re
 those recorded in [AUDIT.md](AUDIT.md) and the linked reports. Current open questions
 are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
+## 2026-09-19
+
+- **The first global commutator-lifting step already has the force of invertibility.**
+  For a plane Keller pair, polynomial free-algebra lifts preserving
+  [X,Y] modulo the square of its two-sided ideal exist exactly when
+  the actual collision ideal is diagonal, hence exactly when the map
+  is invertible. The [relation-module proof](xmodel/commutator-layer-collision-swarmHQ-root-20260919T005000Z.md)
+  has [independent Fable FIRST with scope clarifications](xmodel/commutator-layer-first-swarmHQ-fable-20260919T011000Z.md):
+  swarmHQ ROOT/Astra, PROMOTED/MANUAL. The secant algebra is inherited;
+  its explicit first-layer connection identifies the global lifting gap.
+  Neither universal lift existence nor JC2 is proved or refuted.
+
 ## 2026-09-18
 
 - **Completing the flat metric does not automatically give local CAT(0).**
