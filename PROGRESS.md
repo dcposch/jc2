@@ -6,6 +6,13 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-19
 
+- **Whitney-sphere loops do not universally detect monodromy.** The
+  conditional sphere-lifting obstruction is valid, but a fixed cusp
+  complement is aspherical and nonabelian while all its one-double-point
+  Lagrangian-sphere loops are trivial. The [covering and cusp calculation](xmodel/whitney-loop-asphericity-swarmHQ-root-20260919T025800Z.md)
+  defeats the proposed universal loop-generation step: swarmHQ ROOT/Astra,
+  MANUAL/PRODUCER-CHECKED, UNPROMOTED. A same-model co-check is not FIRST.
+  This does not realize the cusp as a Keller nonproper locus or resolve JC2.
 - **The first global commutator-lifting step already has the force of invertibility.**
   For a plane Keller pair, polynomial free-algebra lifts preserving
   [X,Y] modulo the square of its two-sided ideal exist exactly when
