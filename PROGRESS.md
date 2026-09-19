@@ -6,6 +6,16 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-19
 
+- **A dominant reduced pencil forces normalized Keller invertibility even with a moving base.**
+  If r=a/b has coprime algebraically independent polynomial numerator and
+  denominator and r composed F=phi composed r, the
+  [homogeneous-lift proof](xmodel/homogeneous-pencil-composition-swarmHQ-root-20260919T175300Z.md)
+  forces deg(phi)=N(F)=1 for constant 0<|det DF|<=1. Its degree-square
+  identity and elementary iterate bound combine with the accepted dynamical
+  inequality. [Independent Fable FIRST and reviewer-scope correction](xmodel/homogeneous-pencil-first-integration-swarmHQ-root-20260919T181000Z.md)
+  confirm the theorem: swarmHQ ROOT/Astra, PROMOTED/MANUAL with the retained
+  dynamics import. No such pencil is produced; polynomial r and other
+  dependent reduced pairs are outside this proof. JC2 remains unresolved.
 - **An exact-area rational map with a rational invariant must be birational.**
   The [compact-curve differential proof](xmodel/rational-area-invariant-swarmHQ-root-20260919T120200Z.md)
   removes both polynomiality and positive-genus requirements when the

@@ -25081,3 +25081,45 @@ request was sent, and the Keller-specific headline itself is not refuted.
   independent endpoint changes do not AUTOMATICALLY preserve the required
   standard form/invariant. Producer and raw reviewer bytes are unchanged.
   No new construction family or mathematical descendant is selected.
+
+## HOMOGENEOUS-PENCIL-COMPOSITION-1 — 2026-09-19
+
+- **PROMOTED / MANUAL**, conditional polynomial-source theorem with the
+  accepted dynamical import. Producer swarmHQ ROOT/Astra; independent
+  Fable5.1 hostile FIRST confirms all four producer steps.
+  [Producer](xmodel/homogeneous-pencil-composition-swarmHQ-root-20260919T175300Z.md),
+  reviewed at9dd3b42ea224c5c18753de30bfda0be2e158f4f0, full SHA256
+  45c5c50e94a73272b5b5ad6c387035d1defc9553c7dcb825ead2b85e8db9a854;
+  [FIRST and binding ROOT integration](xmodel/homogeneous-pencil-first-integration-swarmHQ-root-20260919T181000Z.md),
+  full SHA25616060675d9b95f2a1cc106bc4bf376140f4b1b859e1e5c96571a12210d6fca01,
+  manifest3f779b636f84f6c9a061a2dadff169fe81da65861f85ccf8aaaa3c69ba028de6.
+- Let F:C2->C2 be polynomial with constant detDF=c,0<|c|<=1. Let
+  r=a/b with coprime ALGEBRAICALLY INDEPENDENT a,b in C[x,y]. If
+  r composed F=phi composed r for a rational P1 map of degree d>=1,
+  then d=N(F)=1; the inherited birational Keller theorem gives automorphy.
+  No geometric irreducibility of the original pencil or finiteness of
+  H=(a,b) is assumed. Dependent reduced pairs, including polynomial r,
+  and |c|>1 are outside this theorem.
+- Quasi-finiteness of F preserves coprimality. A reduced homogeneous
+  binary lift of phi remains coprime after substitution, so equality of
+  reduced fractions gives HF=GH with a CONSTANT common multiplier.
+  Homogeneous G has generic degree d^2, and field-degree multiplicativity
+  gives N(F)=d^2. Fixed NONMONIC algebraic relations for x,y over C(a,b)
+  give deg(F^n)<=C*d^n by a unique-largest-total-degree argument. Applying
+  the accepted SAME-F inequality N(F)<=lambda1(F) forces d^2<=d.
+  KELLER-DYNAMICAL-DEGREE-1 retains Dinh--Nguyen--Truong1303.5992v1
+  Theorem1.1/equilibrium-measure imports and the compact-bump correction;
+  no fresh analytic-proof audit or semiconjugacy dynamics theorem is used.
+- Binding correction narrows REVIEWER additions only: mere dominance
+  does NOT justify the constant-factor lift or N=d^2. The integration's
+  direct check T=(x^2*y,x*y^2),r=x/y has d=1,N=lambda1=3 and contracts
+  axes; it is non-Keller. Read the review's generalization and its d=1
+  "no Jacobian needed" note only AFTER the lift is justified, e.g. under
+  quasi-finiteness. The optional log-concavity equality is not needed or
+  separately promoted. Producer and raw reviewer bytes remain unchanged.
+- This extends the conditional test from degree-one base maps to arbitrary
+  base degree for dominant reduced H. It neither supplies a pencil for
+  a hypothetical noninvertible Keller map nor covers all rational maps
+  or the dependent-pair case. The exact-area fixed-invariant theorem and
+  positive-genus theorem retain their distinct scopes. No target-scaling
+  shortcut, literature novelty, new construction family or JC2 conclusion.

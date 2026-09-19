@@ -364,6 +364,18 @@ exact area preservation in the rational statement. No invariant for general
 Keller maps, nontrivial base-map semiconjugacy, unrelated endpoint repair or
 new construction family is supplied; JC2 remains unresolved.
 
+The [homogeneous-pencil composition](xmodel/homogeneous-pencil-composition-swarmHQ-root-20260919T175300Z.md)
+now handles a different moving-base scope: polynomial F with constant
+0<|det DF|<=1, reduced r=a/b with ALGEBRAICALLY INDEPENDENT numerator and
+denominator, and r composed F=phi composed r. It forces deg(phi)=N(F)=1
+by N(F)=deg(phi)^2 versus lambda1(F)<=deg(phi) and the accepted Keller
+dynamical inequality. [Independent Fable FIRST and reviewer-scope correction](xmodel/homogeneous-pencil-first-integration-swarmHQ-root-20260919T181000Z.md)
+confirm it, PROMOTED/MANUAL with the retained dynamics import. It supplies
+no pencil for arbitrary Keller maps, excludes dependent reduced pairs
+(including polynomial r) from its proof, and makes no |det DF|>1 claim.
+Mere dominance cannot replace quasi-finiteness in the lift. No automatic
+invariant search, pencil-classification family or general JC2 conclusion.
+
 For the FIXED original Weierstrass source, the separate
 [one-puncture comparison](xmodel/one-puncture-target-swarmHQ-root-20260919T051000Z.md)
 now excludes EVERY birational target postcomposition making multiplication
