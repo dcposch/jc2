@@ -24993,3 +24993,48 @@ request was sent, and the Keller-specific headline itself is not refuted.
   context, checked identical to the frozen commit; no earlier independent
   review of this claim was supplied. Producer and raw reviewer bytes
   remain unchanged. No new construction family or descendant is selected.
+
+## ONE-PUNCTURE-TARGET-1 — 2026-09-19
+
+- **PROMOTED / MANUAL**, bounded construction exclusion. Producer
+  swarmHQ ROOT/Astra; independent Sol hostile FIRST confirms all five
+  groups with two binding exposition clarifications.
+  [Producer](xmodel/one-puncture-target-swarmHQ-root-20260919T051000Z.md),
+  reviewed at2917d0d3605f76344be78d43955464ba7fdb5121, full SHA256
+  cbe728e340307c2ad926628a04ccb609d3a23e906debe7ecec9a9c4729caf362;
+  [FIRST and ROOT integration](xmodel/one-puncture-first-swarmHQ-sol-20260919T052700Z.md),
+  full SHA256089fb19d1d373861fc1fcdd35e26086346e26a38c3ccafd57bd75e80745637dd,
+  manifest52e2bcb564fd0322c7cbafb8541e866c0dacc07ffb171ee98c62708354f94d78.
+- Let H be a DOMINANT polynomial map between planes, with rational
+  pencils r_t composed H=r_s. If BOTH geometric generic curves are
+  integral of genus ONE and the FULL normalized affine SOURCE generic
+  curve has exactly ONE geometric puncture, then deg_gen(H)=1.
+  Pencils need not agree. In K[x,y], the reduced source equation q_s
+  is prime and coprime to b_s, so b_s*q_t(H)=b_t(H)*q_s induces the
+  full affine ring map, including base points. Monic integral equations
+  lift it to normalizations. The induced PROJECTIVE map is finite flat
+  of rankN, retained after scalar extension; no affine finiteness is
+  assumed. RH gives unramifiedness, and regularity then gives
+  N*|S_target|<=|S_source|=1 with S_target nonempty. The explicit UFD/
+  primality and projective-rank wording incorporates both clarifications;
+  neither introduces a new mathematical hypothesis or changes the result.
+- For every fixed a in C and |m|>=2, the ORIGINAL source generic curve
+  y^2=x^3+a*x+t adds just O in its smooth projective completion. For ANY
+  birational target tau, the pencil r_t=r composed tau^(-1) retains
+  genus/integrality while tau composed Phi_m has degree m^2. It therefore
+  cannot be polynomial. One-sided V_m/m scaling is included. Constant
+  Jacobian is not required for the exclusion.
+- Arbitrary rational source changes may alter source punctures and are
+  NOT covered. The old fixed-target integral-back criterion and the
+  SAME-invariant matched-conjugacy theorem keep their separate scopes;
+  their combination does not prove arbitrary two-ended repair exclusion.
+  No invariant or one-puncture pencil for arbitrary Keller maps, new
+  donor, parameter-family successor, literature novelty or JC2 result
+  follows. Normalization/completion, projective degree/base change, RH
+  and elliptic multiplication are named classical imports.
+- ROOT reconciled the review's commit/basis query against Git and the
+  verified manifest: publication2917d0d3 contains the charged bytes and
+  has parent2f8bb48d, the producer's pre-authoring basis. No custody drift.
+  The integration records the six-snapshot read and scoped delivery
+  audit. Producer metadata and raw reviewer bytes remain unchanged;
+  this entry owns promotion. No research descendant is selected.

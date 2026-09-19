@@ -6,6 +6,15 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-19
 
+- **One source puncture excludes all birational target repairs of the fixed elliptic donor.**
+  The [different-pencil proof](xmodel/one-puncture-target-swarmHQ-root-20260919T051000Z.md)
+  shows that no birational target change makes Weierstrass multiplication
+  with |m|>=2 polynomial on its original source plane, including one-sided coordinate
+  normalization. [Independent Sol FIRST and exposition clarifications](xmodel/one-puncture-first-swarmHQ-sol-20260919T052700Z.md)
+  confirm the result: swarmHQ ROOT/Astra, PROMOTED/MANUAL with classical
+  curve imports. This strengthens the fixed-source construction filter,
+  but does not cover arbitrary rational source changes or produce a
+  general JC2 proof mechanism or counterexample.
 - **A preserved positive-genus fibration obstructs polynomial conjugacy.**
   A dominant polynomial plane map preserving one rational function with
   geometrically integral positive-genus generic fiber has generic degree

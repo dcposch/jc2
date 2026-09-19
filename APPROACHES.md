@@ -347,9 +347,24 @@ positive-genus generic fiber has generic degree one, without requiring
 constant Jacobian. [Independent Sol FIRST](xmodel/positive-genus-first-swarmHQ-sol-20260919T041000Z.md)
 confirms the full affine-generic-curve/puncture proof: PROMOTED/MANUAL with
 classical curve imports. Separate source and target changes, including
-one-sided normalization that breaks the same invariant, are not covered.
+one-sided normalization that breaks the same invariant, are not covered
+by that theorem.
 No rational invariant for arbitrary Keller maps is supplied; no automatic
 genus-zero or construction-family successor follows.
+
+For the FIXED original Weierstrass source, the separate
+[one-puncture comparison](xmodel/one-puncture-target-swarmHQ-root-20260919T051000Z.md)
+now excludes EVERY birational target postcomposition making multiplication
+polynomial, for every fixed a and |m|>=2, including one-sided V_m/m scaling.
+It compares DIFFERENT
+geometrically integral genus-one pencils: the full normalized source
+has one puncture, so unramifiedness forces N*|S_target|<=1 and degree one.
+[Independent Sol FIRST with exposition clarifications](xmodel/one-puncture-first-swarmHQ-sol-20260919T052700Z.md)
+confirms this exact scope, PROMOTED/MANUAL with classical curve imports.
+No constant Jacobian is needed. Arbitrary rational source changes may
+alter punctures and remain outside scope; combining the three filters
+does not establish arbitrary two-ended repair exclusion. No candidate,
+general Keller invariant or further elliptic-family search follows.
 
 The [fixed Legendre-tripling candidate](xmodel/legendre-tripling-source-obstruction-swarmHQ-root-20260916T093800Z.md)
 is excluded under EVERY finite rational source substitution: a ramified
