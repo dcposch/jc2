@@ -24956,3 +24956,40 @@ request was sent, and the Keller-specific headline itself is not refuted.
 - The integration records the limited read-only same-blob input deviation
   and delivery-audit limits separately from mathematical merit. Raw
   review and producer bytes are unchanged; this entry owns promotion.
+
+## POSITIVE-GENUS-INVARIANT-1 — 2026-09-19
+
+- **PROMOTED / MANUAL**, bounded construction obstruction. Producer
+  swarmHQ ROOT/Astra; independent Sol hostile FIRST confirms all five
+  groups. [Producer](xmodel/positive-genus-invariant-swarmHQ-root-20260919T035200Z.md)
+  reviewed at a764df7de781fa297e46314cd8252891be8149d4, full SHA256
+  7f0a3fe3422271ca42286cf1185eef984c945cb32eea23c3bf0924c68b32a1f9;
+  [FIRST and ROOT integration](xmodel/positive-genus-first-swarmHQ-sol-20260919T041000Z.md),
+  full SHA2563f351743b54c81611651a8c69b88aafdfc959abb8d401cb3f406fd10e8c6e84d,
+  manifestfaf3310f128afe4793bd484b3843a05387c8971ebf9c1f0cca093d65217e701a.
+- A DOMINANT polynomial plane map preserving a nonconstant rational
+  r=a/b, with geometrically integral positive-genus generic fiber, has
+  generic degree ONE. The full affine generic curve a-t*b=0 includes
+  pencil base points; polynomial invariance and monic integral equations
+  lift the map to its finite affine normalization. After projective
+  completion, genus>=2 uses Riemann--Hurwitz; genus1 uses unramifiedness
+  and N*|S|=|f^-1(S)|<=|S| for the finite NONEMPTY puncture set S.
+  No affine properness/finiteness is assumed. Geometric integrality
+  justifies the degree-preserving algebraic-closure base change.
+- Thus a dominant degree-greater-than-one rational self-map preserving
+  such a function has no polynomial MATCHED birational conjugate. This
+  includes unscaled elliptic multiplication on y^2=x^3+a*x+t for every
+  fixed a and |m|>=2, using its inherited degree m^2. Separate endpoint
+  changes and one-sided V_m/m normalization need not preserve the same
+  invariant and are not covered. This is distinct from, and does not
+  supersede, the older fixed-target back-coordinate integrality criterion.
+- If the polynomial map is Keller, the inherited birational Keller
+  theorem upgrades degree one to automorphy. No rational invariant for
+  an arbitrary Keller map is supplied. Normalization/completion, RH,
+  regular base change and elliptic multiplication are named classical
+  imports; no genus-zero classification, unrelated two-ended repair
+  exclusion, literature novelty or JC2 conclusion is asserted.
+- The integration discloses the review's additional read-only public
+  context, checked identical to the frozen commit; no earlier independent
+  review of this claim was supplied. Producer and raw reviewer bytes
+  remain unchanged. No new construction family or descendant is selected.

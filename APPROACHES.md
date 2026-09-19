@@ -339,6 +339,18 @@ polynomial target automorphisms preserve the criterion, but arbitrary
 birational target repairs do not. General actual-source integrality remains
 open; no multiplier/parameter farm or JC2 conclusion follows.
 
+The [positive-genus invariant obstruction](xmodel/positive-genus-invariant-swarmHQ-root-20260919T035200Z.md)
+now excludes arbitrary MATCHED polynomial birational conjugates of the
+UNSCALED elliptic multiplication maps. More generally, a dominant polynomial
+plane map preserving one rational function with geometrically integral
+positive-genus generic fiber has generic degree one, without requiring
+constant Jacobian. [Independent Sol FIRST](xmodel/positive-genus-first-swarmHQ-sol-20260919T041000Z.md)
+confirms the full affine-generic-curve/puncture proof: PROMOTED/MANUAL with
+classical curve imports. Separate source and target changes, including
+one-sided normalization that breaks the same invariant, are not covered.
+No rational invariant for arbitrary Keller maps is supplied; no automatic
+genus-zero or construction-family successor follows.
+
 The [fixed Legendre-tripling candidate](xmodel/legendre-tripling-source-obstruction-swarmHQ-root-20260916T093800Z.md)
 is excluded under EVERY finite rational source substitution: a ramified
 generic target line persists and contradicts the classical no-line theorem
