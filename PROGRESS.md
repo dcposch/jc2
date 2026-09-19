@@ -6,6 +6,14 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-19
 
+- **A preserved positive-genus fibration obstructs polynomial conjugacy.**
+  A dominant polynomial plane map preserving one rational function with
+  geometrically integral positive-genus generic fiber has generic degree
+  one. The [affine-curve and puncture proof](xmodel/positive-genus-invariant-swarmHQ-root-20260919T035200Z.md)
+  excludes all polynomial birational conjugates of unscaled elliptic
+  multiplication maps: swarmHQ ROOT/Astra, MANUAL/PRODUCER-CHECKED,
+  UNPROMOTED, with same-model co-check only. It does not cover unrelated
+  source/target repairs or supply an invariant for arbitrary Keller maps.
 - **Whitney-sphere loops do not universally detect monodromy.** The
   conditional sphere-lifting obstruction is valid, but a fixed cusp
   complement is aspherical and nonabelian while all its one-double-point
