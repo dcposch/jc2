@@ -352,6 +352,18 @@ by that theorem.
 No rational invariant for arbitrary Keller maps is supplied; no automatic
 genus-zero or construction-family successor follows.
 
+The separate [exact-area invariant theorem](xmodel/rational-area-invariant-swarmHQ-root-20260919T120200Z.md)
+now shows that ANY dominant RATIONAL plane self-map preserving dx wedge dy
+EXACTLY and a nonconstant rational function is birational. Every genus and
+disconnected original pencils are allowed: a finite iterate fixes the relative
+constant field, and an invariant meromorphic differential on the compact generic
+curve forces degree one. [Independent Fable FIRST with binding reviewer-scope corrections](xmodel/rational-area-first-integration-swarmHQ-root-20260919T121900Z.md)
+confirms it, PROMOTED/MANUAL. If polynomial, the inherited birational Keller
+theorem gives automorphy. Arbitrary constant Jacobian is not a substitute for
+exact area preservation in the rational statement. No invariant for general
+Keller maps, nontrivial base-map semiconjugacy, unrelated endpoint repair or
+new construction family is supplied; JC2 remains unresolved.
+
 For the FIXED original Weierstrass source, the separate
 [one-puncture comparison](xmodel/one-puncture-target-swarmHQ-root-20260919T051000Z.md)
 now excludes EVERY birational target postcomposition making multiplication

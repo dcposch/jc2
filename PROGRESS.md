@@ -6,6 +6,14 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-19
 
+- **An exact-area rational map with a rational invariant must be birational.**
+  The [compact-curve differential proof](xmodel/rational-area-invariant-swarmHQ-root-20260919T120200Z.md)
+  removes both polynomiality and positive-genus requirements when the
+  standard area form is preserved exactly; disconnected original pencils
+  are also allowed. [Independent Fable FIRST and scoped integration](xmodel/rational-area-first-integration-swarmHQ-root-20260919T121900Z.md)
+  confirm the result: swarmHQ ROOT/Astra, PROMOTED/MANUAL. It excludes a
+  broad class of rational constructions, but supplies no invariant for
+  arbitrary Keller maps and does not resolve JC2.
 - **One source puncture excludes all birational target repairs of the fixed elliptic donor.**
   The [different-pencil proof](xmodel/one-puncture-target-swarmHQ-root-20260919T051000Z.md)
   shows that no birational target change makes Weierstrass multiplication

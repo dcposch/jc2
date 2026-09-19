@@ -25038,3 +25038,46 @@ request was sent, and the Keller-specific headline itself is not refuted.
   The integration records the six-snapshot read and scoped delivery
   audit. Producer metadata and raw reviewer bytes remain unchanged;
   this entry owns promotion. No research descendant is selected.
+
+## RATIONAL-AREA-INVARIANT-1 — 2026-09-19
+
+- **PROMOTED / MANUAL**, exact rational-map construction obstruction.
+  Producer swarmHQ ROOT/Astra; independent Fable5.1 hostile FIRST confirms
+  all six charged proof interfaces. [Producer](xmodel/rational-area-invariant-swarmHQ-root-20260919T120200Z.md),
+  reviewed at e19163aba8a1b84d4f84813b5bed7cb39cbc277c, full SHA256
+  95d8795106dda6cb0e6dbcd670d168b8791f0bcc16d1f5784bc29373de17f537;
+  [FIRST and binding ROOT integration](xmodel/rational-area-first-integration-swarmHQ-root-20260919T121900Z.md),
+  full SHA2564679c3d7235a584c3d06fc85463f1599fd2f5504b0f4417ada7d9444439047f3,
+  manifeste801b0df9e0a3b33faddf926f415a7885e10dfe005134a1cbf118f51d0160c7b.
+- A DOMINANT RATIONAL plane self-map H satisfying H*(dx wedge dy)=dx
+  wedge dy and preserving a nonconstant rational function r has generic
+  degree ONE. No polynomiality, positive genus or geometric connectedness
+  of the original pencil is assumed. The relative algebraic closure K
+  of C(r) in C(x,y) is finite; an iterate fixes K and has degree N^e.
+  The nonzero RELATIVE differential class eta with dr wedge eta=dx wedge dy
+  is invariant. No invariant absolute representative is needed.
+- On a smooth projective curve in characteristic zero, a nonzero invariant
+  meromorphic one-form forces degree1. Its finite pole set, if nonempty,
+  is backward invariant and permuted; each pole is totally ramified.
+  An iterate fixes a pole, forces order-1, then contradicts the nonzero
+  residue multiplier d^m. If no poles, finite defining data descend to a
+  field finitely generated OVER Q and embed in C; a positive finite area
+  integral gives I=dI. There is no embedding required to fix all complex
+  constants. Classical curve/function-field, separability, scalar-extension
+  and differential facts, plus complex finite-map integration, are named
+  imports. The inherited birational Keller theorem supplies automorphy
+  only in the polynomial corollary.
+- The fixed rational map (x^2,y/x) has Jacobian2, degree2 and invariant xy:
+  arbitrary nonzero constant Jacobian cannot replace exact preservation
+  in this rational theorem. One-sided normalization can lose the invariant.
+  The prior positive-genus polynomial theorem retains its different scope
+  without a Jacobian assumption. No arbitrary-Keller invariant, independent
+  endpoint-repair exclusion, nontrivial base-map semiconjugacy, literature
+  novelty, complete counterexample or JC2 proof is supplied.
+- Binding corrections narrow REVIEWER additions only: determinant1 is
+  a hypothesis, not a claimed necessary boundary of every possible theorem;
+  an iterate scales the relative form by c^e, not c; exact-area preservation
+  by a conjugating map is sufficient, not necessary. General conjugacy and
+  independent endpoint changes do not AUTOMATICALLY preserve the required
+  standard form/invariant. Producer and raw reviewer bytes are unchanged.
+  No new construction family or mathematical descendant is selected.
