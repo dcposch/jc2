@@ -6,6 +6,19 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-20
 
+- **Any preserved rational pencil now forces polynomial Keller invertibility.**
+  For any nonzero constant Jacobian, a nonconstant rational r satisfying
+  r composed F=phi composed r forces F to be an automorphism, even if the
+  original pencil is nonprimitive or has affine base points. The
+  [unified proof](xmodel/rational-pencil-unification-swarmHQ-root-20260920T033600Z.md)
+  eliminates periodic base points by vanishing order and extends the
+  genus-zero properness argument to rational morphisms. It removes the
+  previous modulus, closed-generator and exact-area dependencies while
+  retaining named geometric and hyperbolic-moduli imports.
+  [Independent Fable FIRST and binding integration](xmodel/rational-pencil-unification-integration-swarmHQ-root-20260920T040300Z.md)
+  confirm it: swarmHQ ROOT/Astra, PROMOTED/MANUAL. No preserved pencil
+  for an arbitrary hypothetical counterexample is established; JC2
+  remains unresolved.
 - **A preserved rational polynomial pencil forces Keller invertibility.**
   For primitive polynomial h of geometric generic genus zero,
   h composed F=psi composed h now forces a polynomial Keller map F to be

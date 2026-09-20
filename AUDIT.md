@@ -25219,3 +25219,64 @@ request was sent, and the Keller-specific headline itself is not refuted.
   affine base points and different endpoint pencils are outside the proof.
   Positive-genus fibers keep their separate accepted scopes. No automatic
   classification, new donor family, literature novelty or JC2 conclusion.
+
+## RATIONAL-PENCIL-UNIFICATION-1 — 2026-09-20
+
+- **PROMOTED / MANUAL**, conditional polynomial-source theorem with named
+  classical and accepted campaign imports. Producer swarmHQ ROOT/Astra;
+  same-model native co-check supplied the smoothness/chart cautions and
+  an alternate normalization justification. Independent Fable5.1 hostile
+  FIRST confirms all six proof interfaces at the stated import scope.
+  [Producer](xmodel/rational-pencil-unification-swarmHQ-root-20260920T033600Z.md),
+  reviewed at060df43f6461ce1119b2c5c188a8eb1ab51b2a14, full SHA256
+  3e0fa8f18601be655958dd3712df60fdcf9b30e0ab07daa4c39928f1a2c022b9,
+  manifest38a4de7badfec4d4c663d8ff7d38b2e71b8138a883d8ffb175c3339b1cd9090b;
+  [Fable FIRST](xmodel/rational-pencil-unification-first-swarmHQ-fable-20260920T034300Z.md),
+  full SHA256011661b86b3ee173388f0c7ea45ada84b014aaec06fa1ec27f28fb4563b58164;
+  [ROOT integration and binding clarifications](xmodel/rational-pencil-unification-integration-swarmHQ-root-20260920T040300Z.md),
+  full SHA256433840900e0edd661cce65557e1f05b8fbf8acc4dd00f90ece863c9d82896926,
+  manifest22f710574be6a977c337416573e1ac0640463f09c7e20d3f7a048b6f5ca8243b.
+- Let F:C2->C2 be polynomial with ANY constant detDF=c in C*. If there
+  is a nonconstant rational r with r composed F=phi composed r for a
+  rational phi, then F is a polynomial automorphism. No primitivity,
+  polynomial-pencil, genus, base-degree, affine-base-point or modulus
+  restriction is imposed. The conclusion also holds if a positive
+  iterate of F preserves such a pencil. No pencil is produced for an
+  arbitrary hypothetical noninvertible Keller map.
+- Resolve and Stein-factor the pencil; H1(O)=0 gives a primitive rational
+  generator h with the same base degree d. For independent reduced a,b,
+  quasifiniteness gives HF=GH with common constant unit, and N=d^2.
+  If d>1, finite forward-invariant V(a,b) would contain a periodic point;
+  an etale iterate preserves its positive ideal order while G^k multiplies
+  it at least by d^k. Thus h is a morphism on the original A2. For a
+  dependent pair, relative closure, divisorial fibers, and an omitted pole
+  give a polynomial generator after a Mobius change, without the earlier
+  closed-generator import. Bezout makes the new base map polynomial.
+- The genus-zero argument extends to any primitive MORPHISM A2->P1.
+  Full generic fibers are retained in source D(bF) over target D(b).
+  Finite curve maps descend and spread after clearing BASE denominators;
+  field degree alone is not used as properness. Nonproper components
+  are special-fiber components. The scheme-fiber cohomology argument makes
+  each reduced component smooth rational, even for reducible/nonreduced
+  fibers, and the inherited parametrization/no-A1 theorem excludes them.
+- Prove the degree-one-base lemma before using invariant production:
+  independent case N=1; dependent polynomial case uses genus-zero
+  properness or positive-genus punctured Riemann--Hurwitz. The remaining
+  dependent positive-genus d>=2 case uses ONLY the general dominant-map
+  conclusion of HYPERBOLIC-MOVING-PENCIL-1, then applies that degree-one
+  lemma to the supplied fixed invariant. Its exact-J=1 corollary is unused.
+  This removes DNT/modulus, the earlier closed-generator import and
+  exact-area dependencies from the combined conditional theorem. Named
+  surface/curve/cohomology/nonproperness and hyperbolic moduli/descent
+  imports remain; no fresh audit of their proofs or formal verification.
+- Binding reviewer clarifications: A1/Gm identification from one/two
+  punctures is ONLY under genus zero; positive genus uses its separate
+  RH inequality. Target coordinate rings are embedded by F*, not literally
+  identified with source variables. Producer and raw reviewer remain
+  unchanged. Delivery deviations and limited execution-trace coverage
+  are recorded separately in the integration, not erased by confirmation.
+- This unifies the earlier separate polynomial-Keller pencil scopes;
+  their original statements and evidence remain unchanged. Rational F,
+  unrelated endpoint pencils, pencil existence, literature novelty,
+  automatic classification/donor families and a JC2 conclusion are NOT
+  supplied. The exact-area RATIONAL-map theorem retains its distinct use.

@@ -364,45 +364,34 @@ exact area preservation in the rational statement. No invariant for general
 Keller maps, nontrivial base-map semiconjugacy, unrelated endpoint repair or
 new construction family is supplied; JC2 remains unresolved.
 
-The [homogeneous-pencil composition](xmodel/homogeneous-pencil-composition-swarmHQ-root-20260919T175300Z.md)
-now handles a different moving-base scope: polynomial F with constant
-0<|det DF|<=1, reduced r=a/b with ALGEBRAICALLY INDEPENDENT numerator and
-denominator, and r composed F=phi composed r. It forces deg(phi)=N(F)=1
-by N(F)=deg(phi)^2 versus lambda1(F)<=deg(phi) and the accepted Keller
-dynamical inequality. [Independent Fable FIRST and reviewer-scope correction](xmodel/homogeneous-pencil-first-integration-swarmHQ-root-20260919T181000Z.md)
-confirm it, PROMOTED/MANUAL with the retained dynamics import. It supplies
-no pencil for arbitrary Keller maps, excludes dependent reduced pairs
-(including polynomial r) from its proof, and makes no |det DF|>1 claim.
-Mere dominance cannot replace quasi-finiteness in the lift. No automatic
-invariant search, pencil-classification family or general JC2 conclusion.
+The [rational-pencil unification](xmodel/rational-pencil-unification-swarmHQ-root-20260920T033600Z.md)
+now covers EVERY nonconstant rational pencil preserved by a polynomial
+Keller map: r composed F=phi composed r implies F is an automorphism,
+for every nonzero constant determinant. No primitivity, generic genus,
+base-degree or affine-base-point restriction is imposed; a pencil for
+any positive iterate also suffices. [Independent Fable FIRST and binding integration](xmodel/rational-pencil-unification-integration-swarmHQ-root-20260920T040300Z.md)
+confirm it, PROMOTED/MANUAL with named geometric and hyperbolic-moduli
+imports. An etale periodic-point order argument eliminates affine base
+points; a genus-zero properness argument works for rational morphisms;
+dependent pairs reduce to polynomial pencils without a generator theorem.
+This removes the previous DNT/modulus and exact-area dependencies from
+the combined POLYNOMIAL-map conclusion, not from the separate rational-map
+theorem above. The global gap is still a preserved pencil for a
+hypothetical noninvertible map, or a different closing argument. No such
+pencil, unrelated endpoint repair, classification family or JC2 proof
+is supplied. Every automorphism is NOT asserted to preserve a pencil.
 
-The [hyperbolic moving-pencil theorem](xmodel/hyperbolic-moving-pencil-swarmHQ-root-20260919T203700Z.md)
-now handles a distinct polynomial-pencil scope. If h is primitive,
-h composed F=psi composed h with deg(psi)>=2, and its full smooth geometric
-generic affine fiber has 2g-2+n>0, a dominant polynomial F has N(F)=deg(psi)
-and a fixed rational function not in C(h). Pointed moduli and the quotient
-by the finite full fiber-automorphism group remove both variation and twists.
-[Independent Fable FIRST with wording clarifications](xmodel/hyperbolic-pencil-first-integration-swarmHQ-root-20260919T205600Z.md)
-confirms it, PROMOTED/MANUAL with named classical moduli imports. The accepted
-exact-area theorem excludes this configuration when J(F)=1. No such pencil
-is produced for arbitrary Keller maps; A1/Gm fibers, degree-one base maps
-and arbitrary constant determinant are outside the stated corollary.
-No automatic pencil-classification or construction-family successor follows.
-
-The [rational-polynomial-pencil theorem](xmodel/rational-polynomial-pencil-swarmHQ-root-20260920T011100Z.md)
-now closes the complementary GENUS-ZERO polynomial scope, including
-arbitrary C-star fibers: if h is primitive with rational geometric generic
-fiber and h composed F=psi composed h, a polynomial Keller F is an
-automorphism for EVERY nonzero constant determinant and positive base
-degree. Generic curve finiteness confines nonproperness to special
-h-fibers; a cohomological argument makes every reduced fiber component
-smooth rational, so the inherited no-A1-component theorem excludes it.
-[Independent Fable FIRST and integration](xmodel/rational-pencil-first-integration-swarmHQ-root-20260920T013400Z.md)
-confirm the result, PROMOTED/MANUAL with named classical imports.
-Reducible/nonreduced special fibers and nonsplit C-star fibers are allowed;
-no normal-form classification is needed. No preserved pencil for arbitrary
-Keller maps, general rational-pencil theorem, independent endpoint repair
-or JC2 solution is supplied. No automatic classification/donor family follows.
+The earlier [homogeneous-pair proof](xmodel/homogeneous-pencil-composition-swarmHQ-root-20260919T175300Z.md)
+and [genus-zero polynomial-pencil proof](xmodel/rational-polynomial-pencil-swarmHQ-root-20260920T011100Z.md)
+retain their original statements and reviews in AUDIT. The separate
+[hyperbolic moving-pencil theorem](xmodel/hyperbolic-moving-pencil-swarmHQ-root-20260919T203700Z.md)
+also retains a useful NON-KELLER statement: primitive polynomial h,
+h composed F=psi composed h with deg(psi)>=2, and full geometric generic
+fiber of positive affine Euler defect imply N(F)=deg(psi) and a fixed
+rational function not in C(h), for a dominant polynomial F.
+[Independent Fable FIRST](xmodel/hyperbolic-pencil-first-integration-swarmHQ-root-20260919T205600Z.md)
+confirms that moduli/descent theorem at its named classical import scope.
+No arbitrary-source pencil existence follows from any of these results.
 
 For the FIXED original Weierstrass source, the separate
 [one-puncture comparison](xmodel/one-puncture-target-swarmHQ-root-20260919T051000Z.md)
