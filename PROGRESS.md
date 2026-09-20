@@ -6,6 +6,17 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-20
 
+- **Any preserved algebraic foliation now forces polynomial Keller invertibility.**
+  For any nonzero constant Jacobian, a preserved algebraic foliation,
+  even one without a rational first integral, forces a polynomial plane
+  map to be an automorphism; preservation by a positive iterate suffices.
+  The [proof](xmodel/invariant-foliation-keller-swarmHQ-root-20260920T100525Z.md)
+  combines primitive polynomial one-forms, exterior differentiation,
+  Favre--Pereira Corollary B and the accepted rational-pencil theorem.
+  [Independent Fable FIRST and binding integration](xmodel/invariant-foliation-first-integration-swarmHQ-root-20260920T103300Z.md)
+  confirm all six interfaces: swarmHQ ROOT/Astra, PROMOTED/MANUAL with
+  named imports. No invariant foliation is supplied for a hypothetical
+  counterexample; this conditional result does not resolve JC2.
 - **Any preserved rational pencil now forces polynomial Keller invertibility.**
   For any nonzero constant Jacobian, a nonconstant rational r satisfying
   r composed F=phi composed r forces F to be an automorphism, even if the

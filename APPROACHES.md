@@ -14,7 +14,7 @@ historical. A searchable local copy is [in history](history/APPROACHES-through-2
 
 | Front | Missing mathematical step | Recent work / participating swarm |
 | --- | --- | --- |
-| [Global source geometry](#global-source-geometry) | Derive a global normality, integrality, or properness condition from the actual Keller source | swarmHQ: holomorphic density criterion, Gaussian core and Hamiltonian isotropy, September 18 |
+| [Global source geometry](#global-source-geometry) | Derive a global normality, integrality, or properness condition from the actual Keller source | swarmHQ: invariant-foliation criterion, September 20; analytic and source-symmetry criteria, September 18 |
 | [Trace and differential operators](#trace-and-differential-operators) | Obtain a source-specific constraint stronger than the tested trace and operator identities | swarmHQ: first commutator-layer lifting criterion, September 19 |
 | [Polynomial construction](#polynomial-construction) | Construct a complete characteristic-zero source, or algebraize an eligible formal pair | swarmHQ: donor filters, September 15; no candidate pair |
 | [Uniform descent and blocks](#uniform-descent-and-blocks) | Prove the missing source landing or exclusion uniformly over all remaining data | swarmHQ: retained open interfaces; current scopes below |
@@ -363,6 +363,22 @@ theorem gives automorphy. Arbitrary constant Jacobian is not a substitute for
 exact area preservation in the rational statement. No invariant for general
 Keller maps, nontrivial base-map semiconjugacy, unrelated endpoint repair or
 new construction family is supplied; JC2 remains unresolved.
+
+The [invariant-foliation theorem](xmodel/invariant-foliation-keller-swarmHQ-root-20260920T100525Z.md)
+now gives a broader conditional exclusion: a polynomial Keller map with
+ANY nonzero constant determinant preserving ANY algebraic foliation is
+an automorphism, including when only a positive iterate preserves one.
+A rational first integral is not required. Primitive polynomial defining
+forms have constant pullback multipliers; exterior differentiation reduces
+two distinct invariant foliations to a pencil. Favre--Pereira Corollary B
+supplies a second foliation in the no-first-integral case; all fibrations
+go directly through the accepted rational-pencil theorem below.
+[Independent Fable FIRST and binding integration](xmodel/invariant-foliation-first-integration-swarmHQ-root-20260920T103300Z.md)
+confirm it: PROMOTED/MANUAL with named imports. No invariant foliation
+for a hypothetical counterexample is supplied, and no universal claim
+about automorphisms or JC2 solution follows. A new existence argument,
+not another invariant-foliation classification, is needed to use this
+criterion for a global proof.
 
 The [rational-pencil unification](xmodel/rational-pencil-unification-swarmHQ-root-20260920T033600Z.md)
 now covers EVERY nonconstant rational pencil preserved by a polynomial

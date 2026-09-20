@@ -25280,3 +25280,57 @@ request was sent, and the Keller-specific headline itself is not refuted.
   unrelated endpoint pencils, pencil existence, literature novelty,
   automatic classification/donor families and a JC2 conclusion are NOT
   supplied. The exact-area RATIONAL-map theorem retains its distinct use.
+
+## INVARIANT-FOLIATION-KELLER-1 — 2026-09-20
+
+- **PROMOTED / MANUAL**, conditional polynomial-source theorem with named
+  accepted campaign, classical and primary-source imports. Producer
+  swarmHQ ROOT/Astra; same-model native co-check confirmed the algebraic
+  interfaces at the supplied import scope. Independent Fable5.1 hostile
+  FIRST confirmed all six interfaces and checked the primary corollary.
+  [Producer](xmodel/invariant-foliation-keller-swarmHQ-root-20260920T100525Z.md),
+  reviewed at d5bc2d536f50caa815ad24049e348ece68f1639d, full SHA256
+  1ccc0fc8d9f70ca9d9743efee2d63aa5d390219f0f87fb045be88d543e7a9054,
+  manifest 40cedeb33602a6167ba53ef0a3e0853cf301d7a50f632566d517644bd3245423;
+  [Fable FIRST](xmodel/invariant-foliation-first-swarmHQ-fable-20260920T101500Z.md),
+  full SHA256 343c2af486b6bba6089796e9f96f832ee0463e4c293e77c7c105e6ce705e0ad7;
+  [ROOT integration and binding simplification](xmodel/invariant-foliation-first-integration-swarmHQ-root-20260920T103300Z.md),
+  full SHA256 5bf434b3d273ffaf5cecbae754556553e0f27f8b5c3058edea84dd0b1e335a16,
+  manifest 84b307bd02b6fc34998cbf2da45a1e7e776822c6fb819287717686ea0ed97f7d.
+- Let F:C2->C2 be polynomial, with ANY constant detDF=c in C*. If F
+  preserves an algebraic foliation, F is a polynomial automorphism.
+  The same conclusion holds if any positive iterate preserves one.
+  Singular foliation points and foliations without rational first
+  integral are allowed. Preservation is pullback invariance, not
+  pointwise fixation of leaves. No invariant structure is produced.
+- A primitive polynomial one-form stays primitive under pullback:
+  inverse Jacobian matrix plus quasifiniteness excludes a common divisor
+  mapping into its finite singular set. Thus its multiplier is constant.
+  Its curl h satisfies c*h(F)=lambda*h. Nonconstant curl, or a closed
+  form's polynomial primitive, yields a pencil. Otherwise the curl is
+  constant nonzero and lambda=c. Two distinct foliations then have a
+  nonzero constant linear combination cancelling curls, which integrates
+  to a preserved polynomial pencil. No properness or unit-ideal premise.
+- Binding simplification: route EVERY rational-first-integral case,
+  regardless of genus, through resolution/Stein, H1(O)=0, relative
+  algebraic closure and rF=phi(r). Consume RATIONAL-PENCIL-UNIFICATION-1.
+  Only the remaining no-first-integral case uses Favre--Pereira
+  Corollary B to supply two invariant foliations on ORIGINAL P2 for
+  generic degree>1. Generic degree1 uses the birational-Keller endpoint.
+  An invertible positive iterate gives a polynomial inverse of F.
+- Source scope: Favre--Pereira, *Foliations invariant by rational maps*,
+  July8,2009 author PDF, Corollary B statement and whole corollary proof
+  read independently by ROOT and Fable; classification dependencies
+  remain named imports, not a full proof audit or published-version
+  comparison. The holomorphic-endomorphism Theorem C is NOT used.
+  The simplified routing avoids the higher-genus fibration branch and
+  the reviewer's additional product-descent explanation. Other named
+  imports and accepted pencil dependencies keep their prior scopes.
+- Producer and raw FIRST bytes remain unchanged; this ledger owns
+  promotion. Custody, repaired initial draft write, execution-trace
+  limitations and reviewer's iterate-robustness observation are recorded
+  in the integration. None is substituted for mathematical evidence.
+- This broadens the accepted pencil criterion, but supplies NO foliation
+  for a hypothetical noninvertible Keller map, NO universal assertion
+  about automorphisms, rational-map extension, literature novelty,
+  automatic classification/control-family successor or JC2 conclusion.
