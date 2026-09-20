@@ -6,6 +6,15 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-20
 
+- **Any preserved finite algebraic web forces polynomial Keller invertibility.**
+  The [discriminant proof](xmodel/invariant-web-keller-swarmHQ-root-20260920T123400Z.md)
+  extends the foliation criterion to an unordered finite algebraic set of
+  directions, for every nonzero constant Jacobian and positive iterate.
+  Its discriminant yields either a preserved pencil or a split finite-etale
+  direction cover. [Independent Fable FIRST and integration](xmodel/invariant-web-first-integration-swarmHQ-root-20260920T125600Z.md)
+  confirm all six interfaces: swarmHQ ROOT/Astra, PROMOTED/MANUAL with
+  named imports. No invariant web is produced for a hypothetical
+  counterexample; JC2 remains unresolved.
 - **Any preserved algebraic foliation now forces polynomial Keller invertibility.**
   For any nonzero constant Jacobian, a preserved algebraic foliation,
   even one without a rational first integral, forces a polynomial plane

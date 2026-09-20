@@ -25334,3 +25334,47 @@ request was sent, and the Keller-specific headline itself is not refuted.
   for a hypothetical noninvertible Keller map, NO universal assertion
   about automorphisms, rational-map extension, literature novelty,
   automatic classification/control-family successor or JC2 conclusion.
+
+## INVARIANT-WEB-KELLER-1 — 2026-09-20
+
+- **PROMOTED / MANUAL**, conditional polynomial-source theorem with named
+  accepted and classical imports. Producer swarmHQ ROOT/Astra; independent
+  Fable5.1 hostile FIRST confirmed all six interfaces. The
+  [producer](xmodel/invariant-web-keller-swarmHQ-root-20260920T123400Z.md)
+  was reviewed at 3006516257882da2649f8ccbd28eabd765825d06, full SHA256
+  2aa6cea16f98b04be251fed7a4c13bc156d271958583359be58a636a62758ede,
+  manifest d215629ce966ef0b9b9d8e78a3870468e1ada9384c2434950afd14e01b5161e6.
+  [Fable FIRST](xmodel/invariant-web-first-swarmHQ-fable-20260920T124000Z.md),
+  full SHA256 21fc3d5b2aaac5c355bd28802efbe7b8d29b6111211164e25759ff8d1303acea;
+  [ROOT integration](xmodel/invariant-web-first-integration-swarmHQ-root-20260920T125600Z.md),
+  full SHA256 c14d9f82a47d4290888fd7207d261976e2f1d1481c5712025d4ea76a73bc5723,
+  manifest 4d3ad46722b8aaa782f9c4757cd76a2f4701aef894993a8d730c2da8559e3299.
+- A polynomial F:A2_C->A2_C with ANY nonzero constant Jacobian which
+  preserves a reduced finite algebraic k-web, any k>=1, is an automorphism.
+  Preservation by a positive iterate also suffices. The web is the SAME
+  generic set of directions on the original plane; initial irreducibility,
+  special root collisions and isolated coefficient-base points are allowed.
+- A primitive polynomial binary form W stays primitive under pullback:
+  Sym^k(DF) is polynomially invertible and quasifiniteness excludes a
+  divisorial common factor. Its multiplier lambda is constant. For k>=2,
+  its nonzero discriminant satisfies
+  c^(k*(k-1))*Delta(F)=lambda^(2*k-2)*Delta. Nonconstant Delta gives a
+  preserved polynomial pencil, covered by RATIONAL-PENCIL-UNIFICATION-1.
+- Constant nonzero Delta makes the projective direction incidence cover
+  finite etale over the WHOLE A2. Both slope charts are retained, and no
+  base points or root collisions remain. The cover splits into algebraic
+  sections; DF permutes them by connectedness and pointwise invertibility,
+  without assuming F surjective. An iterate preserves a foliation on the
+  original plane. INVARIANT-FOLIATION-KELLER-1 closes this and the k=1 case.
+- Classical imports: etaleness/quasifiniteness of a Keller map,
+  proper-quasifinite finiteness, binary discriminants and triviality of
+  finite etale covers of A2_C. Analytic covering comparison/connectedness
+  plus simple connectivity and finite degree-one normality suffice; no
+  unrestricted nonproper GAGA assertion or new classification import.
+  The accepted foliation/pencil dependencies keep their previous scopes.
+- Producer and reviewer bytes remain unchanged. The integration records
+  source/import limits, custody and repaired delivery deviations; no
+  computation or formal certificate is substituted for the manual proof.
+  No invariant web, bounded direction orbit, local algebraization, arbitrary
+  finite-cover descent, necessity for automorphy, literature novelty,
+  automatic web/control-family successor or JC2 conclusion is supplied.

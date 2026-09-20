@@ -14,7 +14,7 @@ historical. A searchable local copy is [in history](history/APPROACHES-through-2
 
 | Front | Missing mathematical step | Recent work / participating swarm |
 | --- | --- | --- |
-| [Global source geometry](#global-source-geometry) | Derive a global normality, integrality, or properness condition from the actual Keller source | swarmHQ: invariant-foliation criterion, September 20; analytic and source-symmetry criteria, September 18 |
+| [Global source geometry](#global-source-geometry) | Derive a global normality, integrality, or properness condition from the actual Keller source | swarmHQ: invariant-web/foliation criteria, September 20; analytic and source-symmetry criteria, September 18 |
 | [Trace and differential operators](#trace-and-differential-operators) | Obtain a source-specific constraint stronger than the tested trace and operator identities | swarmHQ: first commutator-layer lifting criterion, September 19 |
 | [Polynomial construction](#polynomial-construction) | Construct a complete characteristic-zero source, or algebraize an eligible formal pair | swarmHQ: donor filters, September 15; no candidate pair |
 | [Uniform descent and blocks](#uniform-descent-and-blocks) | Prove the missing source landing or exclusion uniformly over all remaining data | swarmHQ: retained open interfaces; current scopes below |
@@ -379,6 +379,18 @@ for a hypothetical counterexample is supplied, and no universal claim
 about automorphisms or JC2 solution follows. A new existence argument,
 not another invariant-foliation classification, is needed to use this
 criterion for a global proof.
+
+The [finite-web extension](xmodel/invariant-web-keller-swarmHQ-root-20260920T123400Z.md)
+now covers ANY preserved reduced finite algebraic web, including preservation
+only by a positive iterate, for every nonzero constant Jacobian. A primitive
+binary form has constant pullback multiplier. Its discriminant either gives
+a preserved polynomial pencil, or is a nonzero constant and yields a split
+finite-etale direction cover of the original plane. An iterate then fixes
+a foliation. [Independent Fable FIRST and integration](xmodel/invariant-web-first-integration-swarmHQ-root-20260920T125600Z.md)
+confirm it, PROMOTED/MANUAL with inherited and classical imports. No web is
+produced for hypothetical noninvertibility: a target web and its Keller
+pullback need not be the same, and a local formal direction need not be
+algebraic. No automatic web-existence or classification task follows.
 
 The [rational-pencil unification](xmodel/rational-pencil-unification-swarmHQ-root-20260920T033600Z.md)
 now covers EVERY nonconstant rational pencil preserved by a polynomial
