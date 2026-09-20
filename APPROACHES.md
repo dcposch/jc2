@@ -1,6 +1,6 @@
 # Research frontier
 
-Updated September 19, 2026. **JC₂ remains unresolved.** These are mathematical
+Updated September 20, 2026. **JC₂ remains unresolved.** These are mathematical
 questions and evidence boundaries, not assignments or machine-launch instructions.
 Independent swarms may pursue new approaches or replicate work with explicit scope.
 
@@ -388,6 +388,21 @@ exact-area theorem excludes this configuration when J(F)=1. No such pencil
 is produced for arbitrary Keller maps; A1/Gm fibers, degree-one base maps
 and arbitrary constant determinant are outside the stated corollary.
 No automatic pencil-classification or construction-family successor follows.
+
+The [rational-polynomial-pencil theorem](xmodel/rational-polynomial-pencil-swarmHQ-root-20260920T011100Z.md)
+now closes the complementary GENUS-ZERO polynomial scope, including
+arbitrary C-star fibers: if h is primitive with rational geometric generic
+fiber and h composed F=psi composed h, a polynomial Keller F is an
+automorphism for EVERY nonzero constant determinant and positive base
+degree. Generic curve finiteness confines nonproperness to special
+h-fibers; a cohomological argument makes every reduced fiber component
+smooth rational, so the inherited no-A1-component theorem excludes it.
+[Independent Fable FIRST and integration](xmodel/rational-pencil-first-integration-swarmHQ-root-20260920T013400Z.md)
+confirm the result, PROMOTED/MANUAL with named classical imports.
+Reducible/nonreduced special fibers and nonsplit C-star fibers are allowed;
+no normal-form classification is needed. No preserved pencil for arbitrary
+Keller maps, general rational-pencil theorem, independent endpoint repair
+or JC2 solution is supplied. No automatic classification/donor family follows.
 
 For the FIXED original Weierstrass source, the separate
 [one-puncture comparison](xmodel/one-puncture-target-swarmHQ-root-20260919T051000Z.md)

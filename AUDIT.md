@@ -25169,3 +25169,53 @@ request was sent, and the Keller-specific headline itself is not refuted.
   A1/Gm generic fibers, d=1 and arbitrary constant determinant in the
   corollary remain outside this statement. No moduli classification,
   literature novelty, automatic pencil-family successor or JC2 conclusion.
+
+## RATIONAL-POLYNOMIAL-PENCIL-1 — 2026-09-20
+
+- **PROMOTED / MANUAL**, conditional polynomial-source theorem with named
+  classical imports. Producer swarmHQ ROOT/Astra; the same-model native
+  co-check contributed the cohomological component argument. Independent
+  Fable5.1 hostile FIRST confirms all four proof interfaces.
+  [Producer](xmodel/rational-polynomial-pencil-swarmHQ-root-20260920T011100Z.md),
+  reviewed at44652539d4099119b4dfdd1c5ba0059c382d4f7c, full SHA256
+  f06a1d0c931f1e7270f6b63132dbfd5b01588928e0f9e5e2ee8f115665367e88,
+  manifestf96995f75d6a28c9f9be26d7dab54f584f12168bf9df338509e610ee54e6f91a;
+  [Fable FIRST](xmodel/rational-pencil-first-swarmHQ-fable-20260920T011700Z.md),
+  full SHA256d1ec40c406ea5e964390dbd8ec57ce9ef5dbb9cdffd778f1ddb51bc495e4602c;
+  [ROOT integration and wording clarifications](xmodel/rational-pencil-first-integration-swarmHQ-root-20260920T013400Z.md),
+  full SHA2564fc8f4f6a2d978a2335bcd75e8a21297f78ac089c17e055bd31f81fd03dda382,
+  manifest488b59d50990f8b8df461452ab6e3448ddf20fff095da74f5950266665d8878b.
+- Let F:C2->C2 be polynomial with ANY nonzero constant determinant, and
+  let h be a nonconstant polynomial with C(h) relatively algebraically
+  closed in C(x,y) and smooth geometric generic fiber of genus zero.
+  If h composed F=psi composed h for a nonconstant polynomial psi, F is
+  an automorphism. All positive puncture counts/base degrees are covered;
+  reducible and nonreduced special fibers and nonsplit C-star fibers are
+  allowed. No Saito--Suzuki or other pencil normal form is assumed.
+- Over the algebraic closure of the target base, the source splits into
+  the full fibers over psi(s)=t. Equal puncture counts give finite curve
+  maps: polynomial maps on A1, unit monomials on Gm, and degree-one maps
+  by Riemann--Hurwitz for at least three punctures. Descent and monic
+  equations with target-base denominators make F finite off finitely
+  many h-levels. Thus every nonproper component is a fiber component.
+- Resolve h only at infinity, keeping the ORIGINAL A2 unchanged. For
+  any scheme fiber D and general G=P1, D~G, G nef, G^2=0 and K.G=-2.
+  Serre duality and H1(O_X)=0 give H1(O_D)=0. Passing to a reduced
+  component C gives arithmetic genus zero, hence smoothness/rationality.
+  Each nonproper component is therefore smooth; polynomial parametrization
+  makes it an abstract A1, excluded by the inherited Keller no-A1 theorem.
+  F is finite etale and hence an automorphism. The resolution/cohomology,
+  curve/descent and Jelonek/Chau imports retain their named scopes, not
+  formal verification or a fresh audit of every dependency proof.
+- The integration clarifies source factors versus a chosen isotrivial
+  identification, finiteness over the generic BASE versus mere finite
+  field degree, and specialization of the general projective fiber.
+  It does not change the statement. Producer/raw reviewer bytes stay
+  immutable; this ledger owns promotion. Delivery deviations are recorded
+  separately from the mathematical verdict in the integration.
+- This removes the rational-polynomial-pencil residual, including C-star,
+  beyond the earlier monomial calculation. It supplies NO pencil for an
+  arbitrary Keller map, and is not a general rational-pencil theorem:
+  affine base points and different endpoint pencils are outside the proof.
+  Positive-genus fibers keep their separate accepted scopes. No automatic
+  classification, new donor family, literature novelty or JC2 conclusion.

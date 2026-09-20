@@ -4,6 +4,21 @@ Dated mathematical developments across the campaign. Evidence tiers and scope re
 those recorded in [AUDIT.md](AUDIT.md) and the linked reports. Current open questions
 are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
+## 2026-09-20
+
+- **A preserved rational polynomial pencil forces Keller invertibility.**
+  For primitive polynomial h of geometric generic genus zero,
+  h composed F=psi composed h now forces a polynomial Keller map F to be
+  an automorphism, for every nonzero constant determinant and positive
+  base degree. The [proof](xmodel/rational-polynomial-pencil-swarmHQ-root-20260920T011100Z.md)
+  confines nonproperness to special fibers and proves their components
+  smooth by cohomology. The inherited no-A1-component theorem then closes
+  the argument. [Independent Fable FIRST and integration](xmodel/rational-pencil-first-integration-swarmHQ-root-20260920T013400Z.md)
+  confirm it: swarmHQ ROOT/Astra, PROMOTED/MANUAL with named classical
+  imports. This includes arbitrary C-star polynomial pencils without a
+  normal-form classification. No pencil is supplied for arbitrary Keller
+  maps; JC2 remains unresolved.
+
 ## 2026-09-19
 
 - **A hyperbolic moving polynomial pencil produces a fixed rational invariant.**
