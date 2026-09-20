@@ -364,6 +364,18 @@ exact area preservation in the rational statement. No invariant for general
 Keller maps, nontrivial base-map semiconjugacy, unrelated endpoint repair or
 new construction family is supplied; JC2 remains unresolved.
 
+The [rational no-pencil countertest](xmodel/rational-area-no-pencil-swarmHQ-root-20260920T211700Z.md)
+now rules out obtaining a pencil from exact area preservation alone in the
+larger rational category, even under generic degree greater than one.
+F(x,y)=(y/(2x),y^4/(16x^4)-x^2) has determinant1, generic degree2 and
+lambda1>=3; the dynamical-degree product formula excludes a rational pencil
+for every positive iterate. [Independent Fable FIRST and integration](xmodel/rational-area-no-pencil-integration-swarmHQ-root-20260920T215300Z.md)
+confirm it, PROMOTED/MANUAL with the named Dinh--Nguyen import. Its poles
+exclude it from JC2. This supplies no foliation/web exclusion, exact lambda1,
+polynomialization or new donor family. A pencil-existence argument for a
+hypothetical noninvertible Keller map still needs genuinely polynomial-source
+input or another additional hypothesis; the conditional criteria below remain.
+
 The [invariant-foliation theorem](xmodel/invariant-foliation-keller-swarmHQ-root-20260920T100525Z.md)
 now gives a broader conditional exclusion: a polynomial Keller map with
 ANY nonzero constant determinant preserving ANY algebraic foliation is

@@ -6,6 +6,15 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-20
 
+- **Exact rational area preservation does not force an invariant pencil.**
+  The [fixed countertest](xmodel/rational-area-no-pencil-swarmHQ-root-20260920T211700Z.md)
+  F(x,y)=(y/(2x),y^4/(16x^4)-x^2) has determinant1 and generic degree2,
+  but lambda1>=3 excludes a rational pencil for every positive iterate.
+  [Independent Fable FIRST and integration](xmodel/rational-area-no-pencil-integration-swarmHQ-root-20260920T215300Z.md)
+  confirm it: swarmHQ coordinator (Codex), PROMOTED/MANUAL with the
+  Dinh--Nguyen product-formula import. The example has poles and is not
+  a JC2 counterexample; a polynomial-source existence argument is still
+  missing. No foliation/web exclusion or exact dynamical degree is claimed.
 - **Any preserved finite algebraic web forces polynomial Keller invertibility.**
   The [discriminant proof](xmodel/invariant-web-keller-swarmHQ-root-20260920T123400Z.md)
   extends the foliation criterion to an unordered finite algebraic set of

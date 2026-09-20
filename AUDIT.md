@@ -25378,3 +25378,51 @@ request was sent, and the Keller-specific headline itself is not refuted.
   No invariant web, bounded direction orbit, local algebraization, arbitrary
   finite-cover descent, necessity for automorphy, literature novelty,
   automatic web/control-family successor or JC2 conclusion is supplied.
+
+## RATIONAL-AREA-NO-PENCIL-1 — 2026-09-20
+
+- **PROMOTED / MANUAL**, fixed rational countertest with a named classical
+  dynamical-degree import. Producer swarmHQ coordinator (Codex); independent
+  Fable5.1 hostile FIRST confirmed all seven interfaces. Hosted model
+  identities are not independently attested. The
+  [producer](xmodel/rational-area-no-pencil-swarmHQ-root-20260920T211700Z.md)
+  was reviewed at d9d50a11e21c9eb308e4ae1a27845d28442f2522, full SHA256
+  5eac76fbe32a7be2ea2bad8f56f8db51c06cf62f04004705c4c41a2c41957cdd,
+  manifest bdd3229d88c2b4c25afc8851a2e506dd3869817874ed426451ada1a0bcbc9998.
+  [Fable FIRST](xmodel/rational-area-no-pencil-first-swarmHQ-fable-20260920T213000Z.md),
+  full SHA256 ce214ac95597dc8e758e8a9ea5ef4722fb4d786ecfc5a7942e6aaccee2f4cf2e;
+  [ROOT integration and citation clarifications](xmodel/rational-area-no-pencil-integration-swarmHQ-root-20260920T215300Z.md),
+  full SHA256 bf9dbcdb60f9199da9c3c8e8f5b401329f5aae6a4608c2a74f64dc8477bfadae,
+  manifest c0d40ebc1e345ca787f647f2f85a290d934ec34a703ed8cb9eb4d7fb4ebec2dc.
+- Over C, F(x,y)=(y/(2x),y^4/(16x^4)-x^2) is rational with detDF=1,
+  generic degree2, lambda1(F)>=3 and lambda2(F)=2. No positive iterate
+  preserves any nonconstant rational pencil rF^m=phi(r), including
+  originally disconnected pencils. Only the lower bound on lambda1 is claimed.
+- F=H composed D, where D=(x^2,y/(2x)) and H=(v,v^4-u), both determinant1.
+  H is a polynomial automorphism and leaves the output field degree2.
+  T=(x,y/(2x)) gives G=TFT^{-1}=(v,v^3/2-u^2/(2v)). Weights(1,3)
+  give delta(u_n)=3^n and delta(v_n)=3^(n+1); the competing next-coordinate
+  weights are strictly different, so no cancellation occurs. A homogeneous
+  representation of G^n yields degree(G^n)>=3^n. This is an all-iterate
+  manual proof, not a sampled growth fit or uncancelled exact-degree claim.
+- Dinh--Nguyen, arXiv:0903.2621v1, Theorem1.1 gives lambda1=max(a,b),
+  lambda2=ab for a rational surface pencil, with a,b>=1. Proposition3.6
+  supplies relative positivity; degree-zero relative degree1 follows from
+  the defining mass formula. Birational invariance is recalled in the
+  introduction; iteration powers and topdegree are recorded in Section3.
+  Therefore any pencil for F^m would contradict 3^m>2^m. These are named
+  imports with applicable statements/selected definitions checked, not a
+  whole-paper proof audit. The integration precisely locates both items
+  about which Fable raised citation-precision notes; no proof gap remains.
+- Producer/reviewer bytes remain unchanged. Legacy receipt BODY_SEALED/CLEAN
+  is a marker boundary, not a canonical seal; the raw review's canonical
+  verification fails for its absent Body bytes declaration. The separately
+  finalized ROOT integration preserves this distinction, exact hashes,
+  receipt-first terminal collection, source scope and delivery limitations.
+- F has poles along x=0. Its regular etale open is NOT forward invariant:
+  F(x,0)=(0,-x^2). The statement refutes only the RATIONAL exact-area plus
+  degree>1 implication to a pencil. It gives NO polynomial Keller map,
+  foliation/web exclusion, exact lambda1, polynomialization, donor family,
+  novelty claim, general method-impossibility theorem or JC2 conclusion.
+  Accepted polynomial invariant-structure criteria and their existence gap
+  remain unchanged; no automatic control-family or classification successor.
