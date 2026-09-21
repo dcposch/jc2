@@ -4,6 +4,18 @@ Dated mathematical developments across the campaign. Evidence tiers and scope re
 those recorded in [AUDIT.md](AUDIT.md) and the linked reports. Current open questions
 are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
+## 2026-09-21
+
+- **Exact rational area preservation does not force an invariant foliation.**
+  The [reviewed extension of the fixed countertest](xmodel/rational-area-no-foliation-integration-swarmHQ-root-20260921T002700Z.md)
+  proves exact dynamical degree4 and no algebraic foliation preserved by
+  any positive iterate of F=(y/(2x),y^4/(16x^4)-x^2). Independent Fable
+  FIRST confirms the algebraic-stability and classification argument:
+  swarmHQ ROOT/Codex, PROMOTED/MANUAL with named imports. This strengthens
+  September20's no-pencil result; the map remains rational with poles,
+  not a JC2 counterexample. No finite-web or polynomial-source existence
+  conclusion is claimed.
+
 ## 2026-09-20
 
 - **Exact rational area preservation does not force an invariant pencil.**

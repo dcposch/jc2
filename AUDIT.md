@@ -25426,3 +25426,57 @@ request was sent, and the Keller-specific headline itself is not refuted.
   novelty claim, general method-impossibility theorem or JC2 conclusion.
   Accepted polynomial invariant-structure criteria and their existence gap
   remain unchanged; no automatic control-family or classification successor.
+
+## RATIONAL-AREA-NO-FOLIATION-1 — 2026-09-21
+
+- **PROMOTED / MANUAL**, fixed rational countertest with named classification
+  and dynamical-degree imports. Producer swarmHQ ROOT/Codex; independent
+  Fable5.1 hostile FIRST confirmed all eight interfaces, with four binding
+  citation/wording clarifications and no identified proof gap. Hosted model
+  identities are not independently attested. The
+  [producer](xmodel/rational-area-no-foliation-swarmHQ-root-20260921T000430Z.md)
+  was reviewed at5bcc24c69b4d453e55eff6c2112df0cad7128708, full SHA256
+  3170a730763f7fbd0f9f28cbac4b798906739d3004ae4e3a79f3db501b26e230,
+  manifest aba9f54c34240ffabba8f4eaa374de58b99beafde38c6035e6fa95e053bb2021;
+  [Fable FIRST](xmodel/rational-area-no-foliation-first-swarmHQ-fable-20260921T001000Z.md),
+  full SHA256a18cd6555a0e536ac1787b545b5ae05f65dbb1a14b500b65fb47ef986a5e4e83;
+  [ROOT integration and binding clarifications](xmodel/rational-area-no-foliation-integration-swarmHQ-root-20260921T002700Z.md),
+  full SHA256f95bcaf27ca8f0342c19f997035080121a93ca2f0287162930f2510288e76136,
+  manifest61464edec2d5e6c918eacfb3677ebed2d0af6845425093c7d00203cc20193636.
+- The SAME rational map F(x,y)=(y/(2x),y^4/(16x^4)-x^2) over C has
+  lambda1(F)=4, and no positive iterate preserves an algebraic foliation
+  on P2. RATIONAL-AREA-NO-PENCIL-1 supplies its unchanged determinant1,
+  generic degree2 and no-pencil facts. Its original lower-bound statement
+  and frozen evidence are retained, not silently rewritten.
+- The conjugate G=(v,v^3/2-u^2/(2v)) has reduced presentation
+  [2V^2Z^2:V^4-U^2Z^2:2VZ^3]. Its two contracted lines V=0,Z=0 both
+  map to regular fixed[0:1:0], away from basepoints[0:0:1],[1:0:0].
+  No generic curve ever reaches indeterminacy, so there is no common
+  divisorial factor in any iterated tuple and deg(G^n)=4^n.
+- For G^m, a foliation with rational first integral would give an excluded
+  rational pencil. Otherwise Favre--Pereira Theorems4.3/4.4 and Section4.5
+  give seven forms up to birational change and a map-lifting finite cyclic
+  cover. Same-dimensional dynamical degrees remain(4^m,2^m). Five forms
+  preserve a fibration upstairs, contradicting lambda1<=lambda2. The torus
+  form would make the smaller complex-eigenvalue squared modulus2^-m an
+  algebraic integer. An integral nonsingular monomial matrix similarly
+  forces a rational noninteger eigenvalue +/-2^-m. Both are impossible.
+- Binding source scope: Dinh--Nguyen arXiv:0903.2621v1 Corollary1.2 is the
+  direct same-dimensional comparison; Theorem1.1's projectivity hypothesis
+  holds here and supplies the curve-base product formula. Use rational
+  first integrals, consume the kodaira-one lift at its declared classification
+  import scope, and read the monomial row as integral nonsingular with
+  |det|>=2, not unimodular GL(2,Z). Favre--Pereira July8,2009 author PDF
+  statements/lifting passages were checked, not their full dependency proof.
+- The FIRST's new Dinh--Nguyen stream hash includes HTTP headers, so it
+  is NOT a PDF byte-identity certificate. The named parsed statements were
+  reviewed; no retry or silent hash reinterpretation occurred. Source/read
+  limits and delivery custody are recorded in the integration. Legacy raw
+  FIRST BODY_SEALED/CLEAN is not a canonical seal; raw bytes are unchanged,
+  with a separate canonical integration. Integrity is not proof evidence.
+- This rules out an AREA-ONLY rational foliation-existence argument, even
+  under generic degree>1. F has poles and is NOT a polynomial Keller map
+  or JC2 counterexample. No finite-web exclusion, polynomialization
+  obstruction, donor/parameter family, literature novelty, actual polynomial
+  invariant-structure existence premise or JC2 conclusion is supplied.
+  No automatic strengthening of this fixed example is selected.
