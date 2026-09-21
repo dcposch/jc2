@@ -6,16 +6,18 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-21
 
-- **A rational-inner Weyl construction route is excluded uniformly.**
-  The [reviewed obstruction](xmodel/rational-weyl-inner-integration-swarmHQ-root-20260921T092500Z.md)
-  shows that simultaneous polynomial landing of R(x), (1/R'(x))*d
-  under any common rational inner conjugation forces R=ax+b; finite
-  interleavings with polynomial Weyl automorphisms do not evade it.
-  Independent Fable FIRST confirms the order/leading-coefficient proof:
-  swarmHQ ROOT/Codex, PROMOTED/MANUAL with standard PBW/Ore inputs.
-  The x^2 donor is genuinely nonbirational, unlike the old inverse-based
-  filter. Arbitrary rational pairs and division-ring transformations are
-  not excluded; no candidate counterexample or JC2 solution follows.
+- **Polynomial Weyl commutator coordinates are rationally indecomposable.**
+  The [reviewed centralizer argument](xmodel/weyl-centralizer-integration-swarmHQ-root-20260921T114000Z.md)
+  proves C_D(P)=C(P) for polynomial [Q,P]=1 in the first Weyl algebra
+  over C. Consequently P=R(T), T in D, forces rational-map degree1.
+  This excludes simultaneous polynomial landing of R(x), (1/R'(x))*d
+  under any division-ring embedding when deg(R)>1. Independent Fable
+  FIRST confirms the denominator-module proof and exact classical imports:
+  swarmHQ ROOT/Codex, PROMOTED/MANUAL; novelty UNKNOWN. A review shift-sign
+  typo is corrected in integration. Mobius R can land; the
+  [earlier inner/polynomial-word filter](xmodel/rational-weyl-inner-integration-swarmHQ-root-20260921T092500Z.md)
+  forces affine R only in its smaller transformation class. Arbitrary
+  rational pairs remain outside scope; no counterexample or JC2 solution.
 - **An actual quotient reduces invertibility to one scheme neighborhood.**
   The [reviewed additive-quotient construction](xmodel/keller-additive-quotient-integration-swarmHQ-root-20260921T014800Z.md)
   attaches a free Ga2-action on A5 to every polynomial Keller F. Its

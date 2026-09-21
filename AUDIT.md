@@ -25575,3 +25575,55 @@ request was sent, and the Keller-specific headline itself is not refuted.
   target subalgebras, formal transformations, higher Weyl algebras and
   general Darboux constructions are outside scope. No automatic family,
   source-search or classification sequel follows. JC2 remains unresolved.
+
+## WEYL-RATIONAL-INDECOMPOSABILITY-1 — 2026-09-21
+
+- **PROMOTED / MANUAL**, over C only, with named classical imports.
+  Producer swarmHQ ROOT/Codex (campaign Astra seat); independent Fable5.1
+  hostile FIRST confirmed all eight interfaces. Hosted identities are
+  not independently attested; novelty UNKNOWN, no priority claim.
+  [Producer](xmodel/weyl-rational-indecomposability-swarmHQ-root-20260921T111800Z.md),
+  reviewed contribution b4fe627842934b2fa33b2f6965f05e2240108d4c,
+  full SHA2561ac2d320ee1293db8469c90e2c22a61a422e9641a60836ff82aa6ccaeb5b6248;
+  [Fable FIRST](xmodel/weyl-centralizer-first-swarmHQ-fable-20260921T113000Z.md),
+  full SHA2562dd61781330c68cc1c59e5e0bf55e5f163c039ad764f667d294aa439e7ef3adf;
+  [binding ROOT integration](xmodel/weyl-centralizer-integration-swarmHQ-root-20260921T114000Z.md),
+  full SHA256bc09fd7b33b3ab159527f9cdb6fcae36c1b212915ccf2df60fd9c7dd870a4f5f,
+  manifestc5b2ed5639b5f6d7d2ab148e254f19deae2246558b5b90cfb588a0e04241e7ed.
+- Let W=C<x,d|dx-xd=1>, D=Frac(W). For any nonscalar P in W and
+  commuting U in D, some nonzero f in C[z] has f(P)U in C_W(P).
+  The nonzero LEFT denominator ideal I_U={a:aU in W} is stable under
+  RIGHT P. W/I_U has finite length by Bernstein growth, trace and
+  multiplicity additivity; its endomorphism algebra is finite dimensional
+  by the countability/Schur argument over C. Right P thus satisfies f.
+  No right-Q stability, two-sided ideal or integrality shortcut is used.
+- Import Guccione--Guccione--Valqui, arXiv0912.5202v1 Theorem2.11,
+  C_W(P)=C[P] when [Q,P]=1. ROOT/reviewer read the full paper; its
+  Dixmier inputs remain classical imports, not separately audited.
+  Together with the denominator lemma this gives C_D(P)=C(P). Hence
+  P=R(T), T in D, forces deg(R)=1 by the rational-function field-degree
+  formula. The degree is that of P1->P1, not operator-growth degree.
+- For donor P0=R(x), Q0=(1/R')*d with coefficient on the LEFT, no
+  unital C-algebra embedding D->D sends BOTH into W if deg(R)>1.
+  This includes arbitrary division automorphisms and nonsurjective
+  embeddings. No classification of Aut(D) is used or claimed.
+- R=1/x is a sharp nonaffine control: the involution x->x^-1,
+  d->-x^2*d sends its donor to (x,d). The earlier affine conclusion
+  remains valid for its narrower inner/polynomial-word class. With t=xd,
+  b=x*t*(t+2)/(t+1) is not in W although b^2,b^3 are; f(z)=z clears
+  U=b for P=b^2, so it is not a counterexample to the lemma.
+  Makar-Limanov MPIM2019(65), printed pp4--5, supplies the rational-power
+  comparison only; no later classification theorem is imported.
+- Binding correction: FIRST item7's ancillary s*a=a*s(t-j) has the
+  wrong sign; for weight j the identity is s(t)*a=a*s(t+j). Its power
+  computations and the producer proof use the correct +1 shift. The
+  integration gives a direct C*-weight/PBW membership argument. No
+  producer claim changed, and raw peer bytes remain unchanged.
+- Legacy external receipt custody is not a canonical artifact seal;
+  terminal trusted collision scans for review/integration returned EMPTY.
+  The separate canonical integration records promotion; producer's old
+  UNPROMOTED bytes are preserved. Custody is not mathematical proof.
+  Arbitrary rational pairs, every proper embedding, higher Weyl algebras,
+  general base fields and formal algebraization are not excluded. No
+  automatic family/source/classification successor, counterexample or
+  JC2/DC1 proof follows. JC2 remains unresolved.
