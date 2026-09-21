@@ -25535,3 +25535,43 @@ request was sent, and the Keller-specific headline itself is not refuted.
   theorem, arbitrary-action/fibration theorem, counterexample or JC2 proof.
   Prior Picard/resolution, affine-fibration and Luna applicability gaps
   remain. No automatic classification, source-fit or control-family follows.
+
+## RATIONAL-INNER-WEYL-1 — 2026-09-21
+
+- **PROMOTED / MANUAL**, a uniform construction filter with standard
+  PBW/Ore imports, not a JC2/DC1 result. Producer swarmHQ ROOT/Codex;
+  independent Fable5.1 hostile FIRST confirmed all seven interfaces.
+  Hosted model identities are not independently attested; novelty UNKNOWN.
+  [Producer](xmodel/rational-weyl-inner-obstruction-swarmHQ-root-20260921T090600Z.md)
+  reviewed at aa3ca5ad7dccb2962881d145bfa5db9a3d24a7a5, full SHA256
+  cbc331aa5ff26d73fd59fba20b29b0cb32938c075c592ac0c1f6124f3f2f92a1;
+  [Fable FIRST](xmodel/rational-weyl-inner-first-swarmHQ-fable-20260921T092000Z.md),
+  full SHA2562d9201cfccc4e6395e1e995728935697c93b4167939169af87949214f2b52a65;
+  [binding ROOT integration](xmodel/rational-weyl-inner-integration-swarmHQ-root-20260921T092500Z.md),
+  full SHA2565b0f3e3dc1335ea19b6d603e81becb5870a159965fae397f4aa076ca5f52e1ae,
+  manifestcfde908b736ddbf074b9a914016ded20bffce13bdd04aa4940e161756ff4f298.
+- In W=C<x,d|dx-xd=1>, D=Frac(W), let R be nonconstant in C(x),
+  P=R(x), Q=(1/R')*d with the coefficient on the LEFT. If BOTH images
+  under one Ad_T, T in D*, lie in W, then R=ax+b, a!=0. The same holds
+  under any COMMON finite word of inner automorphisms of D and actual
+  Aut_C(W), extended to D. No order or size bound on T is imposed.
+- The right Ore fraction construction makes differential order and leading
+  coefficient multiplicative on D*. Commutativity of C(x) makes both inner
+  invariants. PBW landing forces R and 1/R' in C[x], hence R' a unit.
+  The identity alpha Ad_T alpha^-1=Ad_(alpha(T)) reduces the allowed words.
+- R=x^2 gives a proper division-ring embedding: the sign involution fixes
+  P,Q but not x. Simplicity of W and localization justify injectivity;
+  no index is claimed. This donor is outside the old birational-inverse
+  premise. R=x,T=1 is a positive control, while R=x,T=x yields d-x^-1,
+  so affine R is not sufficient for every prescribed conjugator.
+- Source scope: standard PBW, Ore localization and simplicity imports;
+  no new primary-source reading, computation, bispectrality premise or
+  Aut(D) classification. FIRST's ancillary broader comments are not promoted.
+- Raw FIRST is preserved: legacy BODY_SEALED/CLEAN is not a canonical
+  seal, and its collision checker failed closed on a literal ellipsis
+  placeholder. The separate canonical integration records these limits
+  and its own successful EMPTY scan. Integrity is not proof evidence.
+- Arbitrary rational CCR pairs, other division-ring transformations or
+  target subalgebras, formal transformations, higher Weyl algebras and
+  general Darboux constructions are outside scope. No automatic family,
+  source-search or classification sequel follows. JC2 remains unresolved.

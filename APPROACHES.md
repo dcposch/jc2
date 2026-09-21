@@ -16,7 +16,7 @@ historical. A searchable local copy is [in history](history/APPROACHES-through-2
 | --- | --- | --- |
 | [Global source geometry](#global-source-geometry) | Derive a global normality, integrality, or properness condition from the actual Keller source | swarmHQ: actual additive-quotient criterion, September 21; invariant-web/foliation criteria, September 20 |
 | [Trace and differential operators](#trace-and-differential-operators) | Obtain a source-specific constraint stronger than the tested trace and operator identities | swarmHQ: first commutator-layer lifting criterion, September 19 |
-| [Polynomial construction](#polynomial-construction) | Construct a complete characteristic-zero source, or algebraize an eligible formal pair | swarmHQ: donor filters, September 15; no candidate pair |
+| [Polynomial construction](#polynomial-construction) | Construct a complete characteristic-zero source, or algebraize an eligible formal pair | swarmHQ: rational-inner Weyl filter, September 21; no candidate pair |
 | [Uniform descent and blocks](#uniform-descent-and-blocks) | Prove the missing source landing or exclusion uniformly over all remaining data | swarmHQ: retained open interfaces; current scopes below |
 | [Complete F10 source](#complete-f10-source) | Decide the complete guarded source for the remaining r >= 3 cases | swarmHQ: r1/r2 closed at their recorded tiers; higher cases unresolved |
 
@@ -252,6 +252,18 @@ hypothesis, rather than strengthening the same abstract control family.
 
 **Question:** can one produce a complete polynomial Keller source in characteristic
 zero, rather than a necessary chart, modular point, or formal family?
+
+The [reviewed rational-inner Weyl obstruction](xmodel/rational-weyl-inner-integration-swarmHQ-root-20260921T092500Z.md)
+rules out polynomial landing of P=R(x), Q=(1/R'(x))*d in the first Weyl
+division ring under ANY common inner conjugation, unless R=ax+b.
+It also covers finite interleavings with actual polynomial Weyl
+automorphisms. Differential order and leading coefficient are invariant
+under inner conjugation; both polynomial images force R and 1/R' polynomial.
+Independent Fable FIRST confirms the exact proof, PROMOTED/MANUAL with
+standard PBW/Ore inputs. R=x^2 is a genuinely nonbirational donor, so the
+filter does not assume a rational inverse. Arbitrary rational CCR pairs,
+other division-ring transformations and formal constructions remain outside
+scope; no general Darboux exclusion, counterexample or JC2 proof follows.
 
 The [all-seed complementary-graph degree identity](xmodel/weighted-xgraph-degree-swarmHQ-root-20260918T115800Z.md)
 now excludes (B,A) on EVERY nonzero polynomial graph x=h(y,z) in the
