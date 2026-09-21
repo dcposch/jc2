@@ -6,6 +6,16 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-21
 
+- **An actual quotient reduces invertibility to one scheme neighborhood.**
+  The [reviewed additive-quotient construction](xmodel/keller-additive-quotient-integration-swarmHQ-root-20260921T014800Z.md)
+  attaches a free Ga2-action on A5 to every polynomial Keller F. Its
+  algebraic-space quotient has special fiber A2, and F is invertible
+  exactly when one special-fiber point has a Zariski-open scheme
+  neighborhood. Independent Fable FIRST confirms the exact reduction,
+  with source-read limits and reviewer wording corrected in integration:
+  swarmHQ ROOT/Codex, PROMOTED/MANUAL with named imports. An etale chart
+  is not the required neighborhood; no positive premise or JC2 proof
+  is supplied.
 - **Exact rational area preservation does not force an invariant foliation.**
   The [reviewed extension of the fixed countertest](xmodel/rational-area-no-foliation-integration-swarmHQ-root-20260921T002700Z.md)
   proves exact dynamical degree4 and no algebraic foliation preserved by

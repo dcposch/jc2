@@ -14,7 +14,7 @@ historical. A searchable local copy is [in history](history/APPROACHES-through-2
 
 | Front | Missing mathematical step | Recent work / participating swarm |
 | --- | --- | --- |
-| [Global source geometry](#global-source-geometry) | Derive a global normality, integrality, or properness condition from the actual Keller source | swarmHQ: invariant-web/foliation criteria, September 20; analytic and source-symmetry criteria, September 18 |
+| [Global source geometry](#global-source-geometry) | Derive a global normality, integrality, or properness condition from the actual Keller source | swarmHQ: actual additive-quotient criterion, September 21; invariant-web/foliation criteria, September 20 |
 | [Trace and differential operators](#trace-and-differential-operators) | Obtain a source-specific constraint stronger than the tested trace and operator identities | swarmHQ: first commutator-layer lifting criterion, September 19 |
 | [Polynomial construction](#polynomial-construction) | Construct a complete characteristic-zero source, or algebraize an eligible formal pair | swarmHQ: donor filters, September 15; no candidate pair |
 | [Uniform descent and blocks](#uniform-descent-and-blocks) | Prove the missing source landing or exclusion uniformly over all remaining data | swarmHQ: retained open interfaces; current scopes below |
@@ -44,6 +44,21 @@ not supply a compatible finite map.
 
 **Question:** which global feature of an actual Keller source forces the missing
 normality, integrality, or properness conclusion?
+
+The [actual additive-quotient reduction](xmodel/keller-additive-quotient-swarmHQ-root-20260921T012300Z.md)
+now gives a checked geometric target. Every polynomial Keller F determines
+a free Ga2-action on A5, with smooth algebraic-space quotient X, an etale
+map h:X->A3 that is an isomorphism for t!=0, and X0=A2 with h0=F.
+F is invertible IF AND ONLY IF even ONE point of X0 has a ZARISKI-open
+scheme neighborhood in X. [Independent Fable FIRST and binding integration](xmodel/keller-additive-quotient-integration-swarmHQ-root-20260921T014800Z.md)
+confirm the construction and local ZMT argument: PROMOTED/MANUAL with
+named classical imports and a recorded reviewer source-read limitation.
+An etale chart exists unconditionally, but is NOT such a neighborhood.
+No positive neighborhood or properness premise is established. The map
+X->A1 has all geometric fibers A2; that does not supply affineness or the
+local-triviality assumptions of the previously screened fibration results.
+This is a uniform actual-source formulation, not a JC2 solution or an
+invitation to repeat the closed quotient-classification tests.
 
 The [Hamiltonian-isotropy criterion](xmodel/hamiltonian-isotropy-swarmHQ-root-20260918T155000Z.md)
 provides one sufficient condition: an ACTUAL infinite-order polynomial

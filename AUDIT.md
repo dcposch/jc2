@@ -25480,3 +25480,58 @@ request was sent, and the Keller-specific headline itself is not refuted.
   obstruction, donor/parameter family, literature novelty, actual polynomial
   invariant-structure existence premise or JC2 conclusion is supplied.
   No automatic strengthening of this fixed example is selected.
+
+## KELLER-ADDITIVE-QUOTIENT-1 — 2026-09-21
+
+- **PROMOTED / MANUAL**, an actual-source quotient construction and exact
+  conditional criterion, with named classical imports. Producer swarmHQ
+  ROOT/Codex; independent Fable5.1 hostile FIRST confirmed all nine
+  interfaces. Hosted identities are not independently attested. The
+  [producer](xmodel/keller-additive-quotient-swarmHQ-root-20260921T012300Z.md)
+  was reviewed at a450b715198107cfdc219256985756e4e5acffb9, full SHA256
+  19d4f01376692efcd87b839dbbd088625b66c26e1bf5db94ecf98d8421b4ad3e,
+  manifest634e2e29dc229c07da5fe41e52ee56c7bf44df00109902a5732c01b45a424b8c;
+  [Fable FIRST](xmodel/keller-additive-quotient-first-swarmHQ-fable-20260921T013000Z.md),
+  full SHA256cdd5f8087ff18715797944a148ffd1d31a0023a0042a5f81a69e6674546c762d;
+  [ROOT integration and binding precision](xmodel/keller-additive-quotient-integration-swarmHQ-root-20260921T014800Z.md),
+  full SHA2567dccb96b03799408ac52524758dce1a4f709e54f5b4985b92afac1f31553ba92,
+  manifest30a55e6e68944a171e2ac58d8d327b70385cb7c9a39f0aff490577ff60753386.
+- For ANY polynomial Keller F=(P,Q) over C, detDF=c!=0, the action on
+  A5_(t,w,a) given by Phi_b=(t,w+tb,a-(F(w+tb)-F(w))/t) is polynomial
+  and scheme-theoretically free over arbitrary C-algebras. Its invariant
+  ring is C[t,Y], Y=F(w)+ta. The fppf quotient p:A5->X is a Ga2-torsor;
+  X is smooth, irreducible, finite type, dimension3, with affine diagonal.
+- The invariant map q factors through h:X->A3_(t,Y), etale and an
+  isomorphism over t!=0. For pi=t:X->A1, X0=A2_w and h0=F, and EVERY
+  geometric fiber of pi is A2. In contrast q^-1(0,Y)=F^-1(Y) x A2_a;
+  neither the different fiber assertions nor etaleness imply finiteness
+  of F or h. Surjectivity of F is not assumed.
+- F is an automorphism IFF SOME point of X0 has a ZARISKI-open scheme
+  neighborhood in X. Equivalently, within this exact construction, X is
+  a scheme, X is separated, X is affine, the action is proper, or it has
+  the producer's polynomial translation coordinates. Under hypothetical
+  noninvertibility, no point of X0 has such a neighborhood. This is not
+  the same as lacking an etale scheme chart: one is explicitly constructed.
+- The section a=0 gives a chart S=A3_(t,u)->X whose base change to the
+  torsor has determinant c. Together with the t!=0 open it covers X,
+  without assuming F surjective. For a Zariski scheme neighborhood instead,
+  an affine open V0 supplies separatedness and birationality; ZMT and
+  normality make V0->A3 an open immersion. Restricting to the nonempty
+  dense open V0 intersect X0 gives F birational. The unit/codimension-two
+  argument yields automorphy. Collision arcs obstruct properness; a
+  polynomial inverse supplies explicit translation coordinates.
+- Source scope: Stacks tag06PH is the applicable free-action quotient
+  theorem; tag05K0 DOES state the finite factorization used in the producer.
+  ROOT checked the displayed statements/immediate proofs, not all cited
+  dependencies. FIRST's extraction filter lost both theorem texts, so its
+  source attachment used prior knowledge; that limitation is retained.
+  Its contrary recollection of05K0, mistyped diagonal fiber product and
+  compressed quasi-finiteness wording are corrected in the integration.
+  No producer theorem change or new source acquisition was needed.
+- Original producer and raw reviewer bytes are unchanged. The legacy
+  FIRST marker seal is not a canonical artifact seal; a separate canonical
+  integration records custody and delivery limitations. This is a checked
+  uniform reduction, not a constructed neighborhood, positive properness
+  theorem, arbitrary-action/fibration theorem, counterexample or JC2 proof.
+  Prior Picard/resolution, affine-fibration and Luna applicability gaps
+  remain. No automatic classification, source-fit or control-family follows.
