@@ -17,6 +17,16 @@ model adapter or cloud provider. Start with the contribution tools; read a tool'
 
 Read [the replay guide](../docs/REPLAY.md) for mathematical and artifact requirements.
 Run focused tool tests with `python -m pytest ops/test_<tool>.py -q`.
+For a corpus frozen at a specific commit, run
+`python3 ops/open_collision.py <terminal-report> --root . --basis <full-40-hex-commit>`.
+This mode reads corpus and receipt-guard blobs from Git, not working lane files,
+and records the exact basis in its output; invalid or missing inputs fail closed.
+It preserves self and same-blind-round exclusions and includes the strategy archive.
+The input report is still read from disk: establish terminal custody first.
+Without `--basis`, the existing working-tree behavior is unchanged and can read
+working receipts; do not use that mode across live lane outputs. Neither mode
+certifies scientific validity, and a frozen scan does not cover later/unbanked work.
+
 The lane custody suite additionally requires a working OS sandbox: macOS Seatbelt
 or Linux bubblewrap. Run it on the configured coordinator host; no real model is used.
 

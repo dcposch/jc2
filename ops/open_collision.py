@@ -10,6 +10,11 @@ nouns and bounded-quantity vocabulary.
 The rendered Markdown always contains a ``COLLISIONS`` section.  Read or
 contract errors produce an ERROR block and a non-zero exit instead of a
 partial or silently empty result.
+
+Use ``--basis FULL_COMMIT_SHA`` to read the corpus (including any receipt
+guards) exclusively from that Git commit, never from working lane outputs.
+The input report itself is still read from disk: callers must first establish
+its terminal custody. The default working-tree mode is unchanged.
 """
 
 from __future__ import annotations
@@ -18,6 +23,7 @@ import argparse
 from dataclasses import dataclass
 from pathlib import Path
 import re
+import subprocess
 import sys
 from typing import Iterable, Sequence
 
@@ -382,24 +388,136 @@ def find_collisions(
 ) -> tuple[Collision, ...]:
     """Return deterministic lexical candidates; no result implies closure."""
 
+    def documents() -> Iterable[tuple[str, str]]:
+        try:
+            root_real = root.resolve(strict=True)
+        except OSError as exc:
+            raise CollisionError(f"cannot resolve corpus root {root}: {exc}") from exc
+        for path in corpus:
+            text = _read_utf8(path, "corpus file")
+            try:
+                display = path.resolve(strict=True).relative_to(root_real).as_posix()
+            except (OSError, ValueError) as exc:
+                raise CollisionError(f"corpus path escapes root: {path}") from exc
+            yield display, text
+
+    return _find_document_collisions(
+        questions, documents(), context_lines=context_lines,
+        max_candidates=max_candidates,
+    )
+
+
+def _git(root: Path, *arguments: str) -> bytes:
+    """Read local Git objects without hooks, replace refs or submodule traversal."""
+    try:
+        result = subprocess.run(
+            ["git", "--no-replace-objects", "-c", "submodule.recurse=false",
+             "-C", str(root), *arguments],
+            capture_output=True, timeout=30, check=False,
+        )
+    except (OSError, subprocess.TimeoutExpired) as exc:
+        raise CollisionError(f"frozen corpus Git read failed: {exc}") from exc
+    if result.returncode:
+        reason = result.stderr.decode("utf-8", errors="replace").strip()
+        raise CollisionError(f"frozen corpus Git read failed: {reason}")
+    return result.stdout
+
+
+def _git_entries(root: Path, tree: str, *paths: str) -> dict[str, tuple[str, str, str]]:
+    entries = {}
+    try:
+        for record in _git(root, "ls-tree", "-z", tree, "--", *paths).split(b"\0"):
+            if not record:
+                continue
+            header, name = record.split(b"\t", 1)
+            mode, kind, oid = header.decode("ascii").split()
+            entries[name.decode("utf-8")] = (mode, kind, oid)
+    except (UnicodeError, ValueError) as exc:
+        raise CollisionError(f"invalid frozen corpus tree: {exc}") from exc
+    return entries
+
+
+def _git_blob(root: Path, path: str, entry: tuple[str, str, str]) -> str:
+    mode, kind, oid = entry
+    if mode not in {"100644", "100755"} or kind != "blob":
+        raise CollisionError(f"frozen corpus entry is not a regular file: {path}")
+    try:
+        return _git(root, "cat-file", "blob", oid).decode("utf-8")
+    except UnicodeError as exc:
+        raise CollisionError(f"cannot decode frozen corpus file {path}: {exc}") from exc
+
+
+def frozen_corpus(
+    root: Path, report: Path, basis: str,
+) -> Iterable[tuple[str, str]]:
+    """Yield only selected committed blobs; never inspect working corpus paths.
+
+    Receipt guards and same-round/self exclusions mirror working-tree mode,
+    but invalid committed file modes or unreadable receipts fail closed.
+    Commit membership is not certification of a report's scientific validity.
+    """
+    if not re.fullmatch(r"[0-9a-f]{40}", basis):
+        raise CollisionError("basis must be a full lowercase 40-hex commit SHA")
+    try:
+        root = root.resolve(strict=True)
+        top = Path(_git(root, "rev-parse", "--show-toplevel").decode("utf-8").strip())
+        if top.resolve(strict=True) != root:
+            raise CollisionError("frozen corpus root must be the repository top level")
+        report_real = report.resolve(strict=True)
+    except (OSError, UnicodeError) as exc:
+        raise CollisionError(f"cannot resolve frozen corpus root/report: {exc}") from exc
+    try:
+        report_relative = report_real.relative_to(root).as_posix()
+    except ValueError:
+        report_relative = None  # a terminal input report may live outside this repo
+    if _git(root, "cat-file", "-t", basis).strip() != b"commit":
+        raise CollisionError("basis must name a commit object, not a tag/tree/blob")
+
+    top_entries = _git_entries(root, basis, "xmodel", *REQUIRED_TOP_LEVEL)
+    if "xmodel" not in top_entries or top_entries["xmodel"][:2] != ("040000", "tree"):
+        raise CollisionError("frozen corpus has no regular xmodel tree")
+    for name in REQUIRED_TOP_LEVEL:
+        if name not in top_entries:
+            raise CollisionError(f"required frozen corpus file missing: {name}")
+    entries = _git_entries(root, top_entries["xmodel"][2])
+    names = sorted(name for name in entries if name.endswith(".md"))
+    if not names:
+        raise CollisionError("frozen corpus has no xmodel/*.md files")
+    match = re.match(r"ideation-(\d{8}T\d{4}Z)-", report.name)
+    round_tag = match.group(1) if match else None
+    selected = {name: top_entries[name] for name in REQUIRED_TOP_LEVEL}
+    for name in names:
+        if round_tag and name.startswith(f"ideation-{round_tag}-") \
+                and not name.endswith("-packet.md"):
+            continue
+        if f"xmodel/{name}" == report_relative:
+            continue
+        receipt = str(Path(name).with_suffix(".run.v2"))
+        if receipt in entries:
+            text = _git_blob(root, f"xmodel/{receipt}", entries[receipt])
+            if "final_status=" not in text:
+                continue
+        selected[f"xmodel/{name}"] = entries[name]
+    for path, entry in sorted(selected.items()):
+        if path != report_relative:
+            yield path, _git_blob(root, path, entry)
+
+
+def _find_document_collisions(
+    questions: Sequence[OpenQuestion],
+    documents: Iterable[tuple[str, str]],
+    *,
+    context_lines: int = DEFAULT_CONTEXT_LINES,
+    max_candidates: int = DEFAULT_MAX_CANDIDATES,
+) -> tuple[Collision, ...]:
     if context_lines < 0 or context_lines > 50:
         raise CollisionError("context_lines must be between 0 and 50")
     if max_candidates < 1 or max_candidates > 1000:
         raise CollisionError("max_candidates must be between 1 and 1000")
-    try:
-        root_real = root.resolve(strict=True)
-    except OSError as exc:
-        raise CollisionError(f"cannot resolve corpus root {root}: {exc}") from exc
-
     matches: list[Collision] = []
-    for path in corpus:
-        text = _read_utf8(path, "corpus file")
+    for display_path, text in documents:
         lines = text.splitlines()
         line_terms = [_terms(line) for line in lines]
-        try:
-            display_path = path.resolve(strict=True).relative_to(root_real).as_posix()
-        except (OSError, ValueError) as exc:
-            raise CollisionError(f"corpus path escapes root: {path}") from exc
 
         for index, line in enumerate(lines):
             if not RELATION_RE.search(line):
@@ -506,6 +624,10 @@ def parser() -> argparse.ArgumentParser:
         help="repository root containing xmodel/ and the banked top-level files",
     )
     value.add_argument(
+        "--basis",
+        help="read corpus only from this full 40-hex Git commit (no working receipts)",
+    )
+    value.add_argument(
         "--context-lines",
         type=int,
         default=DEFAULT_CONTEXT_LINES,
@@ -525,19 +647,24 @@ def main(argv: list[str] | None = None) -> int:
     try:
         report_text = _read_utf8(args.report, "report")
         questions = extract_raised_opens(report_text)
-        corpus = banked_corpus(args.root, args.report)
-        collisions = find_collisions(
-            questions,
-            corpus,
-            args.root,
-            context_lines=args.context_lines,
-            max_candidates=args.max_candidates,
-        )
+        if args.basis is None:
+            corpus = banked_corpus(args.root, args.report)
+            collisions = find_collisions(
+                questions, corpus, args.root,
+                context_lines=args.context_lines, max_candidates=args.max_candidates,
+            )
+        else:
+            collisions = _find_document_collisions(
+                questions, frozen_corpus(args.root, args.report, args.basis),
+                context_lines=args.context_lines, max_candidates=args.max_candidates,
+            )
     except CollisionError as exc:
         print(_error_block(str(exc)), end="")
         print(f"open_collision: {exc}", file=sys.stderr)
         return 2
     print(render_collisions(questions, collisions), end="")
+    if args.basis is not None:
+        print(f"\nCorpus basis: `{args.basis}` (Git blobs only).")
     return 0
 
 
