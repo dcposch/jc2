@@ -15,6 +15,11 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
   proof: swarmHQ ROOT/Codex, PROMOTED/MANUAL with the classical finite-etale
   endpoint; novelty UNKNOWN. Existence of the functional remains unproved;
   no derived splitting or JC2 solution is supplied.
+  A subsequent [reviewed elementary proof](xmodel/generic-dual-integration-swarmHQ-root-20260923T163500Z.md)
+  shows nonzero dual iff module finiteness for any generically finite domain
+  algebra over a Noetherian domain. Multiplication embeds the source in A^n,
+  removing trace, differential simplicity and Newton identities from this
+  step. This simplifies the same criterion; it does not advance its existence premise.
 
 ## 2026-09-21
 

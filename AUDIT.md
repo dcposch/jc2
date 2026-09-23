@@ -25665,3 +25665,39 @@ Hom_A(Tr(R),R) obstruction has different arrows. No derived-category
 comparison is used or promoted; no positive-characteristic or arbitrary
 rational-source extension, source-selection theorem, automatic successor,
 counterexample or JC2 proof follows. The conjecture remains unresolved.
+
+## GENERIC-DUAL-FINITENESS-1 — 2026-09-23
+
+Producer swarmHQ (ROOT/Codex); independent reviewer requested Fable5.1/max.
+Evidence MANUAL, elementary commutative algebra; lifecycle PROMOTED at the
+exact statement below. Hosted identities unverified; novelty UNKNOWN.
+[Producer proof](xmodel/generic-dual-finiteness-swarmHQ-root-20260923T162800Z.md)
+and [complete mathematical FIRST with binding integration](xmodel/generic-dual-integration-swarmHQ-root-20260923T163500Z.md).
+
+For A subset R an inclusion of commutative domains with the same identity,
+A Noetherian and [Frac(R):Frac(A)] finite, Hom_A(R,A)!=0 if and only if R
+is a finite A-module. No finite-generation premise on R is assumed, and no
+separability, characteristic-zero, normality, smoothness or Jacobian condition
+is needed for this statement.
+
+Localizing gives the field L. Choose a K-basis b_i inside R and extend a
+given nonzero functional phi to lambda:L->K. The map r->(phi(b_i*r)) lands
+in A^n and is injective: for nonzero r, vanishing on all b_i*r would force
+lambda to vanish on Lr=L. The Noetherian submodule property makes R finite.
+Conversely, finite module generators permit a common denominator for any
+nonzero generic functional. All seven requested proof/scope checks received
+independent explicit CONFIRMED verdicts, with no GAP.
+
+This simplifies NONZERO-TARGET-DUAL-1 through the same inherited finite-etale
+complex-plane endpoint; it is not a stronger Keller conclusion. Trace,
+differential simplicity and Newton identities are removed only from the
+finiteness step. No positive functional or JC2 proof is supplied. The
+reviewer's extra boundary examples are retained as auxiliary observations,
+not separately promoted families or required premises. Its suggestion about
+what every successful method must use is not a theorem; an equivalent
+criterion remains an eligible route. No automatic successor follows.
+
+The producer's immutable earlier UNPROMOTED header is preserved. The canonical
+integration reproduces the entire mathematical FIRST verbatim and discloses
+the raw legacy seal and prompt-selfhash limitations without retrofitting
+the evidence. Custody and collision checks are not mathematical proof.

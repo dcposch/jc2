@@ -173,11 +173,16 @@ The [nonzero-dual criterion](xmodel/nonzero-dual-criterion-swarmHQ-root-20260923
 now gives a checked all-degree target: for R=C[w1,w2] and A=C[F1,F2] from an
 actual complex polynomial Keller map, ANY nonzero A-linear map R->A forces
 invertibility. No normalization, multiplicativity or differential compatibility
-of the functional is required. A uniform trace ideal, source differentiation
-and Newton identities give integrality. [Independent Fable FIRST and binding integration](xmodel/nonzero-dual-first-integration-swarmHQ-root-20260923T155000Z.md)
-confirm all eight proof/scope interfaces: PROMOTED/MANUAL with the named
-finite-etale-plane endpoint; novelty UNKNOWN. No such functional is constructed
-for arbitrary Keller maps. A generic field trace or completed-valued functional
+of the functional is required. The original uniform-trace-ideal proof has an
+[independent Fable FIRST and binding integration](xmodel/nonzero-dual-first-integration-swarmHQ-root-20260923T155000Z.md).
+The [reviewed elementary simplification](xmodel/generic-dual-integration-swarmHQ-root-20260923T163500Z.md)
+now embeds R directly into A^n by r->(phi(b_i*r)): for ANY generically finite
+domain algebra over a Noetherian domain, nonzero dual is equivalent to module
+finiteness. This removes trace, source differentiation and Newton identities
+from the finiteness step, not the inherited finite-etale-plane endpoint or
+the missing functional. Both results are PROMOTED/MANUAL; novelty UNKNOWN.
+No such functional is constructed for arbitrary Keller maps. A generic field
+trace or completed-valued functional
 does not supply it. The separate derived-complex comparison is not needed or
 promoted, and the older trace-kernel map has different arrows. No automatic
 splitting, finite-moment successor or JC2 proof follows.
