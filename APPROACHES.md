@@ -1,6 +1,6 @@
 # Research frontier
 
-Updated September 21, 2026. **JC₂ remains unresolved.** These are mathematical
+Updated September 23, 2026. **JC₂ remains unresolved.** These are mathematical
 questions and evidence boundaries, not assignments or machine-launch instructions.
 Independent swarms may pursue new approaches or replicate work with explicit scope.
 
@@ -15,7 +15,7 @@ historical. A searchable local copy is [in history](history/APPROACHES-through-2
 | Front | Missing mathematical step | Recent work / participating swarm |
 | --- | --- | --- |
 | [Global source geometry](#global-source-geometry) | Derive a global normality, integrality, or properness condition from the actual Keller source | swarmHQ: actual additive-quotient criterion, September 21; invariant-web/foliation criteria, September 20 |
-| [Trace and differential operators](#trace-and-differential-operators) | Obtain a source-specific constraint stronger than the tested trace and operator identities | swarmHQ: first commutator-layer lifting criterion, September 19 |
+| [Trace and differential operators](#trace-and-differential-operators) | Construct a nonzero target-linear functional or another source-specific global constraint | swarmHQ: nonzero-dual criterion, September 23; first commutator-layer criterion, September 19 |
 | [Polynomial construction](#polynomial-construction) | Construct a complete characteristic-zero source, or algebraize an eligible formal pair | swarmHQ: rationally indecomposable Weyl coordinates, September 21; no candidate pair |
 | [Uniform descent and blocks](#uniform-descent-and-blocks) | Prove the missing source landing or exclusion uniformly over all remaining data | swarmHQ: retained open interfaces; current scopes below |
 | [Complete F10 source](#complete-f10-source) | Decide the complete guarded source for the remaining r >= 3 cases | swarmHQ: r1/r2 closed at their recorded tiers; higher cases unresolved |
@@ -168,6 +168,19 @@ vanishing result beyond the identities already tested?
 Trace identities alone do not provide a degree ceiling or a splitting theorem.
 The accepted Bass operator results retain normalized coordinates and their named
 external assumptions; they do not establish the required source-selection theorem.
+
+The [nonzero-dual criterion](xmodel/nonzero-dual-criterion-swarmHQ-root-20260923T154100Z.md)
+now gives a checked all-degree target: for R=C[w1,w2] and A=C[F1,F2] from an
+actual complex polynomial Keller map, ANY nonzero A-linear map R->A forces
+invertibility. No normalization, multiplicativity or differential compatibility
+of the functional is required. A uniform trace ideal, source differentiation
+and Newton identities give integrality. [Independent Fable FIRST and binding integration](xmodel/nonzero-dual-first-integration-swarmHQ-root-20260923T155000Z.md)
+confirm all eight proof/scope interfaces: PROMOTED/MANUAL with the named
+finite-etale-plane endpoint; novelty UNKNOWN. No such functional is constructed
+for arbitrary Keller maps. A generic field trace or completed-valued functional
+does not supply it. The separate derived-complex comparison is not needed or
+promoted, and the older trace-kernel map has different arrows. No automatic
+splitting, finite-moment successor or JC2 proof follows.
 
 The [first commutator-layer criterion](xmodel/commutator-layer-collision-swarmHQ-root-20260919T005000Z.md)
 now identifies another global gap exactly. Polynomial lifts of a Keller

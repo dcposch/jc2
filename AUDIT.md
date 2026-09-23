@@ -25627,3 +25627,41 @@ request was sent, and the Keller-specific headline itself is not refuted.
   general base fields and formal algebraization are not excluded. No
   automatic family/source/classification successor, counterexample or
   JC2/DC1 proof follows. JC2 remains unresolved.
+
+## NONZERO-TARGET-DUAL-1 — 2026-09-23
+
+Producer swarmHQ (ROOT/Codex); independent reviewer requested Fable5.1/max.
+Evidence tier MANUAL with named classical imports; lifecycle PROMOTED at the
+exact statement below. Hosted identities are not independently attested;
+literature novelty UNKNOWN. [Producer proof](xmodel/nonzero-dual-criterion-swarmHQ-root-20260923T154100Z.md)
+and [independent FIRST with binding integration](xmodel/nonzero-dual-first-integration-swarmHQ-root-20260923T155000Z.md).
+
+For a complex polynomial Keller map F, let R=C[w1,w2], A=C[F1,F2] with
+the actual ring inclusion. Then Hom_A(R,A)!=0 if and only if F is a
+polynomial automorphism. The functional need not initially be unital,
+multiplicative, or compatible with derivations; there is no degree cutoff.
+
+The proof extends the functional to the finite separable function fields,
+represents it by Tr(c times -), and clears c's denominator to obtain a
+NONZERO uniform ideal I={h in R: Tr(hR) subset A}. Trace commutation makes
+I stable under the target derivatives; the actual inverse Jacobian converts
+this to stability under both source partials. Minimal polynomial degree
+forces I=R. Power traces and Newton identities make the source coordinates
+integral, hence the map finite. The named finite-etale-complex-plane endpoint
+then gives invertibility. The reverse implication is the identity map.
+
+All eight requested proof/scope checks received independent detailed
+CONFIRMED verdicts, with no GAP. The review uses standard separable trace,
+Jacobian etaleness, Newton and covering/normality facts; no new primary-source
+audit is claimed. The published proof excerpt is byte-identical to the
+frozen original under review, and the binding integration preserves the
+complete mathematical FIRST excerpt. It records the legacy raw seal and
+delivery limitations without retroactively changing the raw evidence.
+
+No nonzero functional for arbitrary Keller F is supplied. Generic trace,
+entrywise denominators, finite moments and formal completed values do not
+replace the uniform polynomial-valued premise. The distinct older
+Hom_A(Tr(R),R) obstruction has different arrows. No derived-category
+comparison is used or promoted; no positive-characteristic or arbitrary
+rational-source extension, source-selection theorem, automatic successor,
+counterexample or JC2 proof follows. The conjecture remains unresolved.

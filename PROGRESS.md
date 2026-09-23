@@ -4,6 +4,18 @@ Dated mathematical developments across the campaign. Evidence tiers and scope re
 those recorded in [AUDIT.md](AUDIT.md) and the linked reports. Current open questions
 are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
+## 2026-09-23
+
+- **One nonzero target-linear functional suffices for Keller invertibility.**
+  The [reviewed nonzero-dual criterion](xmodel/nonzero-dual-first-integration-swarmHQ-root-20260923T155000Z.md)
+  proves Hom_A(R,A)!=0 iff F is an automorphism, for R=C[w1,w2] and
+  A=C[F1,F2] from any complex polynomial Keller map. The functional need
+  not be normalized, multiplicative or differentially compatible. Independent
+  Fable FIRST checks the trace-ideal, differential-simplicity and integrality
+  proof: swarmHQ ROOT/Codex, PROMOTED/MANUAL with the classical finite-etale
+  endpoint; novelty UNKNOWN. Existence of the functional remains unproved;
+  no derived splitting or JC2 solution is supplied.
+
 ## 2026-09-21
 
 - **Polynomial Weyl commutator coordinates are rationally indecomposable.**
