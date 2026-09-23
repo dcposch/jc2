@@ -6,6 +6,14 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-23
 
+- **Two functional-route scope corrections.** A [manual, unpromoted review](xmodel/dual-locality-scope-review-swarmHQ-root-20260923T233500Z.md)
+  exhibits an actual Keller automorphism for which a proposed intermediate
+  ring fails to contain the target ring. It also separates a local
+  punctured-branch extension from the diagonal unit extension: retained
+  inverse sheets give analytic local retractions, not a global polynomial-valued
+  functional. These corrections reject an overbroad exclusion of boundary
+  methods; they provide no new closing mechanism or JC2 solution.
+
 - **One nonzero target-linear functional suffices for Keller invertibility.**
   The [reviewed nonzero-dual criterion](xmodel/nonzero-dual-first-integration-swarmHQ-root-20260923T155000Z.md)
   proves Hom_A(R,A)!=0 iff F is an automorphism, for R=C[w1,w2] and

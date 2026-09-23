@@ -187,6 +187,12 @@ does not supply it. The separate derived-complex comparison is not needed or
 promoted, and the older trace-kernel map has different arrows. No automatic
 splitting, finite-moment successor or JC2 proof follows.
 
+A [manual, unpromoted scope review](xmodel/dual-locality-scope-review-swarmHQ-root-20260923T233500Z.md)
+corrects two further extrapolations: C[F1,w2] need not contain A, and a
+nonzero local punctured-branch extension need not make the diagonal unit
+extension nonsplit. Analytic inverse-sheet retractions are not global
+polynomial-valued functionals. This is not a ban on boundary or descent methods.
+
 The [first commutator-layer criterion](xmodel/commutator-layer-collision-swarmHQ-root-20260919T005000Z.md)
 now identifies another global gap exactly. Polynomial lifts of a Keller
 pair to C<X,Y> preserving [X,Y] modulo I^2, where I=([X,Y]) is two-sided,
