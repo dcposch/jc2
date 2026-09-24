@@ -105,6 +105,19 @@ Gaussian or a JC2 counterexample. Whole-plane topology and positivity
 alone cannot supply the missing density premise; more Keller structure
 is needed. No new weight/control family is selected.
 
+The [leading-Hessian applicability test](xmodel/leading-hessian-integration-swarmHQ-root-20260924T123725Z.md)
+now excludes a specific regularization shortcut: in fixed source coordinates,
+a Keller potential |F|^2/2 has a globally bounded-distance C2 strictly PSH
+representative with uniformly comparable complex Hessian eigenvalues IF AND
+ONLY IF F is affine. Dilation preserves the comparison inequalities weakly,
+while a nonlinear Keller map's leading homogeneous Hessian has rank one
+somewhere. Independent Fable review confirms the elementary proof:
+MANUAL, UNPROMOTED; novelty UNKNOWN. Thus the W* hypothesis of
+Liu--Wang--Zeng2609.26810v1 is unavailable for nonlinear F in these coordinates.
+Nonlinear automorphisms are included: this excludes neither their existence
+nor anisotropic/coordinate-adapted methods. No positive density premise,
+new closing test or further control family is supplied.
+
 A [reviewed fixed-control calculation](xmodel/gaussian-spectral-gap-control-swarmHQ-root-20260918T184800Z.md)
 also blocks an automatic spectral upgrade: on the old rational two-sheet
 source, the real core and local Ric+Hess(phi)=2g coexist with a Rayleigh

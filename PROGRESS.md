@@ -6,6 +6,15 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-24
 
+- **A fixed-coordinate analytic shortcut is excluded.** The
+  [reviewed leading-Hessian argument](xmodel/leading-hessian-integration-swarmHQ-root-20260924T123725Z.md)
+  shows that a polynomial Keller weight admits bounded-distance isotropic
+  complex-Hessian regularization iff its map is affine. This blocks direct
+  use of the inspected weighted-Fock class for nonlinear maps, including
+  nonlinear automorphisms. Producer ROOT/Astra; independent Fable review;
+  MANUAL, UNPROMOTED, novelty UNKNOWN. No actual Keller map is ruled out,
+  and the positive holomorphic-density premise remains open.
+
 - **Collision-component duals and a construction-filter correction.** A
   [manual, unpromoted integration](xmodel/collision-endomorphism-scope-review-swarmHQ-root-20260924T112000Z.md)
   justifies End_A(R)=R for a polynomial Keller source at its named classical-
