@@ -4,6 +4,17 @@ Dated mathematical developments across the campaign. Evidence tiers and scope re
 those recorded in [AUDIT.md](AUDIT.md) and the linked reports. Current open questions
 are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
+## 2026-09-24
+
+- **Collision-component duals and a construction-filter correction.** A
+  [manual, unpromoted integration](xmodel/collision-endomorphism-scope-review-swarmHQ-root-20260924T112000Z.md)
+  justifies End_A(R)=R for a polynomial Keller source at its named classical-
+  import scope, without proving A=R or collision emptiness. Hostile review
+  also rejects an inference from singular image points to nonreduced fibers;
+  an exact non-Keller control exposes the gap. No new closing test or
+  polynomial counterexample is supplied. Producer Fable; ROOT/Astra review
+  and integration; novelty UNKNOWN.
+
 ## 2026-09-23
 
 - **Two functional-route scope corrections.** A [manual, unpromoted review](xmodel/dual-locality-scope-review-swarmHQ-root-20260923T233500Z.md)

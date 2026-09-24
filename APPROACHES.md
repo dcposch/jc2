@@ -1,6 +1,6 @@
 # Research frontier
 
-Updated September 23, 2026. **JC₂ remains unresolved.** These are mathematical
+Updated September 24, 2026. **JC₂ remains unresolved.** These are mathematical
 questions and evidence boundaries, not assignments or machine-launch instructions.
 Independent swarms may pursue new approaches or replicate work with explicit scope.
 
@@ -192,6 +192,13 @@ corrects two further extrapolations: C[F1,w2] need not contain A, and a
 nonzero local punctured-branch extension need not make the diagonal unit
 extension nonsplit. Analytic inverse-sheet retractions are not global
 polynomial-valued functionals. This is not a ban on boundary or descent methods.
+
+A [further manual, unpromoted review](xmodel/collision-endomorphism-scope-review-swarmHQ-root-20260924T112000Z.md)
+derives End_A(R)=R componentwise at its named classical-import scope; this
+does not imply A=R or exclude nonfinite collision components. It also rejects
+an unsupported inference from image singularity to fiber nonreducedness in
+a proposed construction filter. The exact countercheck is non-Keller;
+no new global premise, candidate rejection rule or JC2 solution follows.
 
 The [first commutator-layer criterion](xmodel/commutator-layer-collision-swarmHQ-root-20260919T005000Z.md)
 now identifies another global gap exactly. Polynomial lifts of a Keller
