@@ -1,6 +1,6 @@
 # Research frontier
 
-Updated September 24, 2026. **JC₂ remains unresolved.** These are mathematical
+Updated September 30, 2026. **JC₂ remains unresolved.** These are mathematical
 questions and evidence boundaries, not assignments or machine-launch instructions.
 Independent swarms may pursue new approaches or replicate work with explicit scope.
 
@@ -573,6 +573,17 @@ Keller theorem. No assumption on rho's generic fibers is needed. This is only
 the quotient direction for this fixed q: q composed (0,0,f,g) realizes any
 polynomial pair (f,g), so arbitrary A2->A4 substitutions are NOT excluded.
 No other target field or new family follows.
+
+For the different LOWER coefficient block, the September30
+[coordinate-fiber calculation](xmodel/lower-block-coordinate-obstructions-swarmHQ-root-20260930T014100Z.md)
+gives uniform obstructions for every n>=4 and parameter: no next-coefficient
+fiber is A2, no constant top-coefficient fiber admits a two-dimensional
+polynomial-plane image, and no polynomial shear of the next coefficient
+by the top coefficient is a coordinate. MANUAL, UNPROMOTED; Astra/Opus
+production with ROOT integration and hostile cross-checking. The proof
+uses the literal defining polynomial, not an external threefold theorem.
+Arbitrary target combinations and plane restrictions remain outside scope;
+no small-case or parameter search follows from this calculation.
 
 For the fixed cubic-fiber core (the running triple up to an invertible linear
 target change), the September 13 [embedded-plane transfer](xmodel/embedded-plane-transfer-root-20260913.md)

@@ -4,6 +4,20 @@ Dated mathematical developments across the campaign. Evidence tiers and scope re
 those recorded in [AUDIT.md](AUDIT.md) and the linked reports. Current open questions
 are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
+## 2026-09-30
+
+- **The next marked-root coordinate step has a uniform obstruction.** A
+  [manual, unpromoted integration](xmodel/lower-block-coordinate-obstructions-swarmHQ-root-20260930T014100Z.md)
+  analyzes the LOWER coefficient block for every n>=4 and every parameter.
+  All next-coefficient fibers fail to be affine planes; constant top-coefficient
+  fibers admit no two-dimensional polynomial-plane image; and arbitrary
+  polynomial shears of the next coefficient by the top coefficient still
+  cannot be coordinates. A separate plane restriction is an isomorphism,
+  providing a positive control. Producer Astra/Opus with ROOT integration
+  and hostile cross-checking; MANUAL, UNPROMOTED, novelty UNKNOWN. These
+  specified reductions are excluded without a parameter scan. Arbitrary
+  sections and the global JC2 problem remain open.
+
 ## 2026-09-24
 
 - **A fixed-coordinate analytic shortcut is excluded.** The
