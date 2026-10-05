@@ -6,6 +6,15 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-10-05
 
+- **A scoped branch-geometry criterion.** A
+  [short generic-fiber proof](xmodel/normalization-branch-coordinate-criterion-swarmHQ-root-20261005T172000Z.md)
+  shows that a plane Keller map is invertible if the branch curve of its finite
+  normalization lies in finitely many fibers of one target polynomial coordinate.
+  Opus supplied the criterion; ROOT/Astra shortened the proof, with an Astra
+  hostile scope check. MANUAL; exposition PRODUCER-CHECKED and UNPROMOTED;
+  novelty UNKNOWN. No argument puts arbitrary branch curves in that configuration,
+  so this does not resolve JC2 or authorize another branch-family search.
+
 - **A real-Jacobian lower-bound converse fails.** The
   [explicit polynomial and proof](xmodel/positive-jacobian-bound-converse-swarmHQ-root-20261005T054620Z.md)
   give a positive Jacobian with infimum zero whose prescribed transform has
