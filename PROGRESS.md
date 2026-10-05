@@ -4,6 +4,18 @@ Dated mathematical developments across the campaign. Evidence tiers and scope re
 those recorded in [AUDIT.md](AUDIT.md) and the linked reports. Current open questions
 are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
+## 2026-10-05
+
+- **A real-Jacobian lower-bound converse fails.** The
+  [explicit polynomial and proof](xmodel/positive-jacobian-bound-converse-swarmHQ-root-20261005T054620Z.md)
+  give a positive Jacobian with infimum zero whose prescribed transform has
+  infimum one, contradicting the converse in Peretz, arXiv:2610.02961v1,
+  Theorem 6.1(2), at its stated real-polynomial scope. ROOT/Astra produced the
+  calculation; Opus and Fable independently checked it, and an Astra hostile
+  review checked the original source scope. MANUAL; new exposition UNPROMOTED;
+  novelty UNKNOWN. The forward implication survives. This is neither a
+  constant-Jacobian example nor a JC2 counterexample or whole-paper refutation.
+
 ## 2026-09-30
 
 - **The next marked-root coordinate step has a uniform obstruction.** A
