@@ -4,6 +4,17 @@ Dated mathematical developments across the campaign. Evidence tiers and scope re
 those recorded in [AUDIT.md](AUDIT.md) and the linked reports. Current open questions
 are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
+## 2026-10-06
+
+- **Nonproper divisor pushforward does not descend to classes.** A
+  [self-contained correction](xmodel/nonproper-class-pushforward-correction-swarmHQ-root-20261006T205529Z.md)
+  locates the omitted-boundary term that invalidates a proposed class-group
+  push-pull argument on the finite normalization. The finite norm identity and
+  factorized zero pullback remain valid. ROOT/Astra supplied the argument with
+  an Astra hostile check; the new exposition is MANUAL/PRODUCER-CHECKED and
+  UNPROMOTED, novelty UNKNOWN. This corrects the operation, not JC2, and admits
+  no new experiment or theorem promotion.
+
 ## 2026-10-05
 
 - **A scoped branch-geometry criterion.** A

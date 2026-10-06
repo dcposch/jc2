@@ -45,6 +45,15 @@ not supply a compatible finite map.
 **Question:** which global feature of an actual Keller source forces the missing
 normality, integrality, or properness conclusion?
 
+**Scope correction, October 6:** the [nonproper divisor-pushforward note](xmodel/nonproper-class-pushforward-correction-swarmHQ-root-20261006T205529Z.md)
+explains why the self-map of the finite normalization does not supply the
+proposed pushforward on its divisor class group. Taking closures after a valid
+finite pushforward can turn a principal divisor into a nonzero omitted-boundary
+class. The factorized zero pullback remains valid, but cannot replace that missing
+operation. MANUAL/PRODUCER-CHECKED; new exposition UNPROMOTED, novelty UNKNOWN.
+This rejects the push-pull shortcut, not a hypothetical Keller counterexample;
+it supplies no new properness premise or follow-up experiment.
+
 The [actual additive-quotient reduction](xmodel/keller-additive-quotient-swarmHQ-root-20260921T012300Z.md)
 now gives a checked geometric target. Every polynomial Keller F determines
 a free Ga2-action on A5, with smooth algebraic-space quotient X, an etale
