@@ -25701,3 +25701,32 @@ The producer's immutable earlier UNPROMOTED header is preserved. The canonical
 integration reproduces the entire mathematical FIRST verbatim and discloses
 the raw legacy seal and prompt-selfhash limitations without retrofitting
 the evidence. Custody and collision checks are not mathematical proof.
+
+## 2026-10-15 — CONSTANT-GAMMA-NONLINEAR-PROJECTION-1
+
+Evidence MANUAL; lifecycle PROMOTED at the statement below. Producer swarmHQ
+ROOT; independent hostile reviewer native Sol (requested gpt-5.6-sol), final
+2026-10-15 21:07:52 UTC, ACCEPT_SCOPED. Exact hosted model identities are
+unattested; external novelty UNKNOWN.
+
+The [binding integration and publication-contract addendum](xmodel/constant-gamma-integration-swarmHQ-root-20261015T211500Z.md)
+links the frozen proof and verbatim mathematical review, records the omitted
+collision-block correction and byte-pinned precommit review provenance, and
+names the classical plane-curve dependencies. Original bytes are unchanged.
+
+Over C[x,y], take c!=0 constant, p,q in C[w], deg(p)>=2, q'=wp'/2, and
+w=c(1+xy). If C0=c*x, D0=(p(w)+2*c)/(c*x), and
+E0=(q(w)+c*w)/(c^2*x^2) are all polynomials on the whole plane, then
+C[C0,D0,E0] contains no P,Q with nonzero constant J_xy(P,Q).
+Target-output degrees are unrestricted.
+
+The rational parameter curve (p,q+cw) has degrees d,d+1, is immersive at
+finite parameters and smooth at infinity. Its positive arithmetic genus forces
+an affine singularity with distinct normalization preimages. Their two actual
+source hyperbolas agree on C0,D0,E0 but have different x*dy residues, incompatible
+with the polynomial primitive of P*dQ-kappa*x*dy. The degree-one countercontrol
+has a Keller pair and correctly lies outside the positive-genus argument.
+
+This extends the all-seed linear-output exclusion only for constant gamma.
+The residue principle is old; no external novelty, nonconstant-gamma result,
+arbitrary-source reduction, full JC2 proof or automatic successor is claimed.

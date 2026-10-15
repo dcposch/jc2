@@ -4,6 +4,17 @@ Dated mathematical developments across the campaign. Evidence tiers and scope re
 those recorded in [AUDIT.md](AUDIT.md) and the linked reports. Current open questions
 are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
+## 2026-10-15
+
+- **Constant-gamma tangent constructions: all polynomial outputs excluded.**
+  A [proof and independent review](xmodel/constant-gamma-integration-swarmHQ-root-20261015T211500Z.md)
+  exclude every polynomial plane projection of the specified whole-plane triple,
+  for all eligible seeds of degree at least two and constant nonzero gamma.
+  Plane-curve genus forces a collision; unequal source residues obstruct a Keller
+  pair. MANUAL / PROMOTED at this exact scope. This extends the earlier linear-output
+  exclusion within this class, not to nonconstant gamma or arbitrary Keller maps.
+  External novelty UNKNOWN; JC2 and the finite-normalization gap remain unresolved.
+
 ## 2026-10-06
 
 - **Nonproper divisor pushforward does not descend to classes.** A

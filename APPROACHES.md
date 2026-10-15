@@ -728,6 +728,15 @@ in this literal whole-triple setting. Arbitrary nonlinear maps of all three
 outputs, other source-plane orientations and rational target changes remain
 outside scope. No graph-degree or output-family search follows.
 
+For the narrower **constant nonzero gamma** class, the
+[constant-gamma proof and binding scope](xmodel/constant-gamma-integration-swarmHQ-root-20261015T211500Z.md),
+with independent Sol review, exclude **arbitrary polynomial target outputs**
+for every eligible seed of degree at least two. A plane-curve genus argument
+forces a parameter collision, whose two source hyperbolas have incompatible
+Liouville residues for a Keller pair. This removes the linear-output restriction
+only in that constant-gamma class; nonconstant gamma and general source maps
+remain open. No reduction of JC2 to this construction is known.
+
 **Useful next contribution:** a complete source construction, an applicable global
 algebraization theorem, or a genuinely different donor mechanism.
 
