@@ -6,6 +6,16 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-10-15
 
+- **Complete F10 inputs: full finite-normalization carrier identified.**
+  A [proof and independent review](xmodel/f10-full-normalization-integration-swarmHQ-root-20261015T223201Z.md)
+  identify the known two-chart surface with the full normalization over the
+  actual target, and its source complement with one smooth affine line of
+  generic ramification index2. MANUAL / PROMOTED, conditional on every complete
+  compact-source equation and guard. This removes a carrier-identification gap,
+  not the missing full-pair exclusion; no source point, F10 exclusion, source
+  surjectivity or general JC2 conclusion is obtained. Producer swarmHQ ROOT;
+  independent reviewer Sol5.6. External novelty UNKNOWN.
+
 - **Constant-gamma tangent constructions: all polynomial outputs excluded.**
   A [proof and independent review](xmodel/constant-gamma-integration-swarmHQ-root-20261015T211500Z.md)
   exclude every polynomial plane projection of the specified whole-plane triple,

@@ -783,8 +783,19 @@ The [simple-critical-line lemma](xmodel/simple-critical-line-f10-swarmHQ-root-20
 with [independent Sol review](xmodel/simple-critical-line-review-swarmHQ-sol-20260916T105619Z.md),
 now derives residue degree1 and transverse index2 for the literal F10
 receiver's g=0 boundary divisor. PROMOTED/MANUAL with standard curve
-imports. This supplies two hypotheses for that divisor, not uniqueness
+imports. By itself this supplies two hypotheses for that divisor, not uniqueness
 of the dicritical, a new trace inequality or an all-r exclusion test.
+
+The October15 [full-normalization carrier identification](xmodel/f10-full-normalization-integration-swarmHQ-root-20261015T223201Z.md)
+now supplies the missing whole-carrier statement for complete guarded compact
+F10 inputs: the known two-chart affine surface is the full finite normalization,
+and its reconstructed plane complement is exactly one smooth A1, with generic
+normal ramification index2. PROMOTED/MANUAL after independent Sol5.6 review.
+The proof uses every target-finite valuation and the full source inverse; the
+old auxiliary rank-three module alone did not establish this. Finiteness of
+the enlarged surface does not imply finiteness or surjectivity of the open
+plane map. A new full-pair constraint is still needed; no F10 exclusion or
+repair of the old one-dicritical trace/connectivity inequalities follows.
 
 The [reviewed degree countercontrol](xmodel/critical-image-degree-countercontrol-swarmHQ-root-20260916T120130Z.md)
 has the same simple critical line but critical-image degrees6 and9:

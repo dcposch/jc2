@@ -25730,3 +25730,35 @@ has a Keller pair and correctly lies outside the positive-genus argument.
 This extends the all-seed linear-output exclusion only for constant gamma.
 The residue principle is old; no external novelty, nonconstant-gamma result,
 arbitrary-source reduction, full JC2 proof or automatic successor is claimed.
+
+## 2026-10-15 — F10-FULL-NORMALIZATION-CARRIER-1, conditional whole carrier
+
+PROMOTED/MANUAL at the scope of the
+[integration](xmodel/f10-full-normalization-integration-swarmHQ-root-20261015T223201Z.md),
+with the [frozen proof](xmodel/f10-full-normalization-swarmHQ-root-20261015T222707Z.md)
+and [independent Sol5.6 review](xmodel/f10-full-normalization-review-swarmHQ-sol56-20261015T223114Z.md).
+Every stated full compact F10 equation, degree bound, leading guard and both
+inverse-chart polynomiality conditions remain premises. Over C, the two-chart
+smooth affine ring is the integral closure of C[A,B] in C(S,t), not merely a
+rank-three finite algebra over auxiliary C[p,S]. Target-finite DVRs cannot have
+an S-pole by the coprime weighted leading forms; the exact unit coefficient of
+p handles t-poles. Intersection over the normalization's height-one DVRs gives
+the missing global ring equality, without assuming properness in advance.
+
+The explicit inverse proves Y minus D0=A2_(U,V), with D0 the single graph
+z=p^2+ell*p-u and generic normal ramification index2. The V=0 source line is
+included; using only g=1/V would omit it. The corrected inverse S includes
+(1-U*V^2)*(p+ell). The independent control replacing the leading forms by
+powers of a common nonzero root admits target-finite valuations with S-poles;
+it deliberately violates the full Wronskian/Jacobian equation and is not an
+actual F10 source. A transcendental residue parameter makes that control a
+genuine injective function-field valuation, as the review clarification records.
+
+This finite map is from the enlarged Y, NOT the open affine-plane source.
+No source surjectivity/properness, source point, F10 exclusion, tangential
+degree-one proof, image-singularity bound, new trace/connectivity inequality
+or all-JC2 reduction follows here. Existing r1/r2 results and all higher-r
+gaps retain their scopes. The producer's historical UNREVIEWED header is
+unchanged: its first8315 bytes are the exact pre-review Git-pinned proof,
+SHA256 9b62c4432783e66337fd8ec0e8dee2e57e15b8570ec398048970699cbaa48193;
+the integration binds the independent review and this scoped promotion.
