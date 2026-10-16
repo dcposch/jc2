@@ -6,6 +6,14 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-10-16
 
+- **Nonsingularity does not force rational fibres in the carrier ring.** A
+  [fixed polynomial and independent review](xmodel/carrier-genus2-integration-swarmHQ-root-20261016T133911Z.md)
+  give a whole-plane submersion in the marked carrier ring with geometric generic
+  genus two. Its specific differential has no rational primitive, so this scalar
+  has no rational constant-Jacobian mate. This closes the scalar-rationality
+  shortcut, not the arbitrary-pair question or JC2. Producer swarmHQ ROOT;
+  independent Sol5.6 review; PROVED / PROMOTED, external novelty UNKNOWN.
+
 - **A simple repair of the finite-map control is excluded in every degree.**
   The [pencil proof and independent review](xmodel/carrier-pencil-review-integration-swarmHQ-sol56-root-20261016T063000Z.md)
   rule out `(p^2+alpha*H,U+beta*H)` for arbitrary H in the marked carrier ring.

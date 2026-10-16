@@ -844,6 +844,13 @@ or a carrier exclusion. A proposed test using only a few extreme equations fails
 dependent pairs with Jacobian zero satisfy those equations even at both ends.
 The full coupled equations, especially the constant-one row, remain essential.
 
+Scalar nonsingularity alone does not force rational generic fibres, even in T.
+The [reviewed fixed example](xmodel/carrier-genus2-integration-swarmHQ-root-20261016T133911Z.md)
+`f=p^4+(1/3-3c)*p^2+3*c^2-2*c-1-U`, with `c=UV^2`, is nonsingular on
+the whole source plane and has geometric generic genus two. Its specific fibre
+differential also excludes every rational constant-Jacobian mate. This refutes
+the scalar-rationality shortcut only; the arbitrary-pair question remains open.
+
 **Useful next contribution:** an exact full-source implication or certificate that
 changes the unresolved test. Prior timeouts and term limits are nondecisions.
 [Complete source](https://github.com/dcposch/jc2/blob/ec69252af5ca03245becb80436f5ddb0917ccef2/APPROACHES.md#2-complete-f10-source-the-remaining-r3-problem) ·

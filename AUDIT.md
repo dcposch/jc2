@@ -25862,3 +25862,34 @@ The reviewer confirmed all claims and the shorter polynomial proof without a
 mathematical correction. Whole report/manifest gates, canonical verification and
 postpins passed; the sealed producer header remains unchanged, with this binding
 integration recording promotion. No CAS computation or external theorem import.
+
+## 2026-10-16 — A nonsingular genus-two scalar in the marked carrier ring
+
+CARRIER-GENUS2-SUBMERSION-1 is PROVED / PROMOTED at the exact scope of the
+[proof and independent-review integration](xmodel/carrier-genus2-integration-swarmHQ-root-20261016T133911Z.md).
+Producer swarmHQ ROOT (Astra-assigned main session); independent native
+gpt-5.6-sol-assigned reviewer; integration ROOT. Assigned models are not
+independently hosted-attested. Contribution commit c8d790e2a392d5779500e311ffe30ffa4ad3648b;
+producer full SHA256934a82b0941992c894c68cb6a79e31a879d63ea279dc5758cc565a8d289d6d56.
+
+For c=UV^2, p=UV^3-V and B=C[U,UV,c,p], the polynomial
+f=p^4+(1/3-3c)p^2+3c^2-2c-1-U is nonsingular on all A2_(U,V), has
+geometrically integral generic fibre of genus two, and has no rational q in
+C(U,V) with J(f,q) a nonzero constant. The chart g=1/V,r=p-g yields
+G=p^2/3+r(r^2-2)p-r^2; all chart-critical points lie on excluded p=r,
+while f_U=-1 on V=0. Completing the square gives the squarefree degree-six
+curve H^2=9r^6-36r^4+48r^2+12t. The required mate differential
+3(p-r)dr/H has exactly one double pole on its compact genus-two model.
+A rational primitive would have one simple pole, contradicting genus two.
+
+This refutes only the proposed scalar-nonsingularity-to-rational-fibre implication
+in this B. It is not a Keller pair, a counterexample to JC2, an all-B-pair
+exclusion, or a finite-normalization/surjectivity result. Genus alone is not used
+to exclude a mate. External novelty UNKNOWN; no further family is authorized.
+The reviewer recomputed chart/critical equations, geometric integrality, infinity
+orders/signs and full rational-mate coverage; all three claims CONFIRMED without
+correction. Initial review followed canonical freezing but preceded Git banking;
+a separate metadata-only check bound the verdict to the exact contribution commit.
+Canonical and staged verification passed. Original report/header/seal unchanged;
+this binding integration supplies promotion and the collision block. No blanket
+protocol PASS, CAS verification, formal proof or external unreviewed theorem import.
