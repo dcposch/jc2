@@ -25828,8 +25828,9 @@ The next-layer equations are not jointly linear, and exponents2,3 do not cover
 arbitrary coprime exponents. No alternating-descent theorem, polynomial approximate
 root, finite-carrier exclusion, F10 exclusion or all-JC2 conclusion follows.
 
-The reviewer completed whole-input postchecks at04:38:00 UTC and returned before
-the04:40 target; all claimed implications were read and checked by the coordinator.
+The reviewer completed whole-input postchecks at04:38:00 UTC; its final review
+was collected by04:40:16, before the04:55 collection limit. All claimed implications
+were read and checked by the coordinator.
 Producer/reviewer display violations and the producer's late partial are retained,
 not certified as protocol passes. Legacy producer bytes remain unchanged; the
 integration has its own canonical artifact manifest and staged verification.
