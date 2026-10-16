@@ -25893,3 +25893,37 @@ a separate metadata-only check bound the verdict to the exact contribution commi
 Canonical and staged verification passed. Original report/header/seal unchanged;
 this binding integration supplies promotion and the collision block. No blanket
 protocol PASS, CAS verification, formal proof or external unreviewed theorem import.
+
+## 2026-10-16 — Affine-radial rational donors cannot be repaired in fixed targets
+
+AFFINE-RADIAL-OBSTRUCTION-1 is PROMOTED / MANUAL at the scope of the
+[producer proof](xmodel/affine-radial-obstruction-swarmHQ-root-20261016T214900Z.md) and
+[independent native Sol5.6 review integration](xmodel/affine-radial-review-integration-swarmHQ-sol56-root-20261016T220000Z.md).
+Producer ROOT gpt-6-astra; native Astra co-check; different-model native
+gpt-5.6-sol FIRST CONFIRMED; integration ROOT. Model assignments are not
+independent hosted-identity attestations. Frozen contribution commit
+b4d747e010535281ae0040ec8d4bec7cf844efc6 preceded FIRST; terminal observed.
+Producer full SHA25645e5cbfdecd1ce92e8cd3025bf232d6e45058501d8483cbd95888d47da607fbf;
+integration full SHA25629108d95efd3a0e25e627bbd91f907cd15ec54f4461c6d60ae1554efc491798d.
+
+For t=X/Y and rational A,B,C,D over C, suppose
+P=A(t)Y+B(t), Q=C(t)Y+D(t), J_(X,Y)(P,Q)=1. Every genuinely rational
+member is excluded from becoming a whole-plane polynomial Keller pair under
+any finite rational SOURCE field embedding in the UNCHANGED target coordinates.
+The generic Y=0 valuation is ramified of index2 when (B,D) is nonconstant.
+The accepted branch-attachment/Jelonek premise would force its image
+normalization to be A1. Writing B=b(h),D=d(h), an SL2 target combination gives
+0<deg b<deg d; b*d'-d*b'-P*d'+Q*b'=0 has constant nonzero leading coefficient.
+Thus h,B,D are integral. The Wronskian A'C-AC'=1 also makes X,Y integral over
+C[AY,CY], using all valuations including t=infinity. Transitivity and the
+accepted integral-back-coordinate criterion finish the obstruction.
+
+Those two named premises retain their accepted classical tiers; FIRST checks
+their applicability, not every source proof. Polynomial members are affine
+automorphisms, with no claim about invertibility of later Keller substitutions.
+No arbitrary birational target repair, general Keller normal form, actual
+finite-normalization emptiness, or JC2 conclusion follows. The cusp control
+uses A1 normalization without assuming smoothness. All controls independently
+checked; canonical/staged verification required for banking. Producer bytes,
+original UNPROMOTED header and seals remain unchanged; this integration promotes
+the scoped claim. External novelty UNKNOWN; no automatic descendant or farm.

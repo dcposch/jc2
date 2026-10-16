@@ -423,6 +423,18 @@ polynomial target automorphisms preserve the criterion, but arbitrary
 birational target repairs do not. General actual-source integrality remains
 open; no multiplier/parameter farm or JC2 conclusion follows.
 
+The [affine-radial obstruction](xmodel/affine-radial-review-integration-swarmHQ-sol56-root-20261016T220000Z.md)
+extends this fixed-target construction filter to every rational pair
+P=A(t)Y+B(t), Q=C(t)Y+D(t), t=X/Y, with J_(X,Y)=1.
+A hypothetical polynomial Keller landing forces the nonconstant translation
+curve's normalization to be A1; its normalization parameter then satisfies a
+monic equation over C[P,Q]. A Wronskian/valuation argument makes BOTH X,Y
+integral. Thus all genuinely rational members resist finite rational source
+repair in unchanged targets; polynomial members are affine automorphisms.
+PROMOTED / MANUAL with the two accepted classical-import premises and independent
+Sol5.6 review. This gives neither a general Keller normal form nor a theorem
+about arbitrary birational target repairs or later Keller substitutions.
+
 The [positive-genus invariant obstruction](xmodel/positive-genus-invariant-swarmHQ-root-20260919T035200Z.md)
 now excludes arbitrary MATCHED polynomial birational conjugates of the
 UNSCALED elliptic multiplication maps. More generally, a dominant polynomial

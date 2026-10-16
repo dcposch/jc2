@@ -6,6 +6,15 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-10-16
 
+- **An all-degree rational construction family is excluded in fixed targets.**
+  The [affine-radial proof and independent review](xmodel/affine-radial-review-integration-swarmHQ-sol56-root-20261016T220000Z.md)
+  rule out finite rational source repairs of genuinely rational constant-J pairs
+  affine in the radial variable. The proof combines branch-curve normalization,
+  a monic parameter equation and integrality of both original source coordinates.
+  Polynomial members are affine automorphisms. This is a construction filter,
+  not a general Keller normal form or JC2 proof; arbitrary birational target
+  repair remains outside scope. PROMOTED / MANUAL with accepted classical imports.
+
 - **Nonsingularity does not force rational fibres in the carrier ring.** A
   [fixed polynomial and independent review](xmodel/carrier-genus2-integration-swarmHQ-root-20261016T133911Z.md)
   give a whole-plane submersion in the marked carrier ring with geometric generic
