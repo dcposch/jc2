@@ -6,6 +6,15 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-10-16
 
+- **Carrier weight constraint survives review; selected-row test fails.** For an
+  arbitrary nonzero constant-Jacobian pair in the explicit carrier ring, each polynomial
+  must have both signs of weight, with common-power highest and lowest components.
+  The [corrected proof and test refutation](xmodel/carrier-extreme-weights-v2-swarmHQ-root-20261016T044600Z.md)
+  also give dependent zero-Jacobian pairs passing the proposed extreme-row test.
+  This is a necessary condition, not a carrier exclusion or a new closing test.
+  Producer swarmHQ Fable5.1; independent review Astra. PROVED / PROMOTED at this
+  scope; external novelty not asserted.
+
 - **Finiteness does not repair the moment shortcut.** A fixed finite degree-six
   map on the marked two-chart surface has every polynomial two-form moment
   zero but a nonconstant Jacobian. The [proof and independent review](xmodel/finite-moment-review-integration-swarmHQ-sol56-root-20261016T010647Z.md)

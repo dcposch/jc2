@@ -830,6 +830,14 @@ counterexample. The linked proof also shows why the current polynomial-moment
 conditions alone do not exclude it. The needed new contribution must use the
 constant-Jacobian condition, not just construct another finite map.
 
+The [reviewed extreme-weight constraint](xmodel/carrier-extreme-weights-v2-swarmHQ-root-20261016T044600Z.md)
+requires each member of any Keller pair in T to have both positive and negative
+weights for w(U)=-2,w(V)=1. The highest components, and separately the lowest,
+are powers of a common element of T. This is not a reduction to homogeneous pairs
+or a carrier exclusion. A proposed test using only a few extreme equations fails:
+dependent pairs with Jacobian zero satisfy those equations even at both ends.
+The full coupled equations, especially the constant-one row, remain essential.
+
 **Useful next contribution:** an exact full-source implication or certificate that
 changes the unresolved test. Prior timeouts and term limits are nondecisions.
 [Complete source](https://github.com/dcposch/jc2/blob/ec69252af5ca03245becb80436f5ddb0917ccef2/APPROACHES.md#2-complete-f10-source-the-remaining-r3-problem) ·

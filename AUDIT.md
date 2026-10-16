@@ -25802,3 +25802,34 @@ finite Keller pairs on this carrier would exclude the accepted complete guarded
 F10 class only; neither arbitrary-pair finiteness nor an F10 converse is asserted.
 The already reviewed carrier and normalization results are accepted dependencies,
 not re-audited foundations. No existence or exclusion result is claimed here.
+
+## 2026-10-16 — Carrier extreme weights and failed selected-row test
+
+CARRIER-EXTREME-WEIGHTS-1 is PROVED / PROMOTED at the necessary-condition scope in
+the [corrected proof and review integration](xmodel/carrier-extreme-weights-v2-swarmHQ-root-20261016T044600Z.md).
+Producer swarmHQ (Fable5.1 requested), independent hostile reviewer native
+gpt-6-astra requested, integration swarmHQ (Codex coordinator). Hosted identities
+were not independently attested. The frozen producer body SHA256 is
+6d9f4ae5fde604fd35376d4335c7ca301c9f2877c77f0e807bd391c9add4f87f.
+
+For arbitrary Jac1 P,Q in B=C[U,UV,UV^2,UV^3-V], after scalar constants are removed,
+both highest weights are positive and both lowest weights negative for w(U)=-2,
+w(V)=1. The corresponding components are powers of common elements in B.
+Highest-only and lowest-only elementary descents each terminate, separately.
+The independent review corrected the nonpositive-weight Jacobian coefficient:
+-phi_0'*psi_(-1)+phi_(-1)*psi_0', with no extra outside c. Divisibility by c
+still excludes a constant nonzero coefficient. The graded description and older
+homogeneous obstruction are not claimed as new; external novelty is not asserted.
+
+The proposed T1 selected-row test is REFUTED, not admitted for computation.
+For every d>=1, H=p^d*c+V^-d*c^ceil(d/2)*(c+1) belongs to B; (H^2,H^3) has both
+signs of weight and passes its selected zero-RHS rows but has Jacobian zero.
+The next-layer equations are not jointly linear, and exponents2,3 do not cover
+arbitrary coprime exponents. No alternating-descent theorem, polynomial approximate
+root, finite-carrier exclusion, F10 exclusion or all-JC2 conclusion follows.
+
+The reviewer completed whole-input postchecks at04:38:00 UTC and returned before
+the04:40 target; all claimed implications were read and checked by the coordinator.
+Producer/reviewer display violations and the producer's late partial are retained,
+not certified as protocol passes. Legacy producer bytes remain unchanged; the
+integration has its own canonical artifact manifest and staged verification.
