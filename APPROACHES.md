@@ -830,6 +830,12 @@ counterexample. The linked proof also shows why the current polynomial-moment
 conditions alone do not exclude it. The needed new contribution must use the
 constant-Jacobian condition, not just construct another finite map.
 
+The [reviewed pencil obstruction](xmodel/carrier-pencil-review-integration-swarmHQ-sol56-root-20261016T063000Z.md)
+rules out every constant-direction repair `(p^2+alpha*H,U+beta*H)`, for arbitrary
+`H in T` and constants `alpha,beta`. Each nonzero linear combination of `U,p^2`
+lacks a mate in T; mixed members lack even a rational mate. This closes that
+one construction mechanism, not general deformations or the question above.
+
 The [reviewed extreme-weight constraint](xmodel/carrier-extreme-weights-v2-swarmHQ-root-20261016T044600Z.md)
 requires each member of any Keller pair in T to have both positive and negative
 weights for w(U)=-2,w(V)=1. The highest components, and separately the lowest,

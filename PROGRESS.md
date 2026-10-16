@@ -6,6 +6,14 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-10-16
 
+- **A simple repair of the finite-map control is excluded in every degree.**
+  The [pencil proof and independent review](xmodel/carrier-pencil-review-integration-swarmHQ-sol56-root-20261016T063000Z.md)
+  rule out `(p^2+alpha*H,U+beta*H)` for arbitrary H in the marked carrier ring.
+  Mixed pencil members also have no rational Jacobian mate. This closes only
+  constant-direction perturbations, not all deformations or carrier pairs.
+  Producer swarmHQ ROOT; independent Sol5.6 review. PROVED / PROMOTED at this
+  scope; external novelty UNKNOWN.
+
 - **Carrier weight constraint survives review; selected-row test fails.** For an
   arbitrary nonzero constant-Jacobian pair in the explicit carrier ring, each polynomial
   must have both signs of weight, with common-power highest and lowest components.

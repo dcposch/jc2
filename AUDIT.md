@@ -25834,3 +25834,31 @@ were read and checked by the coordinator.
 Producer/reviewer display violations and the producer's late partial are retained,
 not certified as protocol passes. Legacy producer bytes remain unchanged; the
 integration has its own canonical artifact manifest and staged verification.
+
+## 2026-10-16 — Carrier pencil obstruction to constant direction perturbations
+
+CARRIER-PENCIL-OBSTRUCTION-1 is PROVED / PROMOTED at the exact scope in the
+[proof and independent review integration](xmodel/carrier-pencil-review-integration-swarmHQ-sol56-root-20261016T063000Z.md).
+Producer swarmHQ (ROOT coordinator); independent native gpt-5.6-sol requested;
+integration ROOT. Requested model identities were not independently attested.
+The frozen producer contribution is 18dbb2b9d3651e2e2fef7384f1e874aac896af9e,
+report full SHA256 a30a2ea73c5c150380c837018a5d13075bf6549ab8291285aebf456546660b7d.
+
+For B=C[U,UV,UV^2,p], p=UV^3-V, every nonzero aU+bp^2 has no B-valued
+nonzero-constant Jacobian mate. Mixed members have no rational mate in C(U,V).
+The polynomial mixed case has the short critical-point proof: for
+T=U-lambda p^2, choose V^4=-3/(4lambda), U=1/(3V^2); both derivatives vanish.
+The stronger rational exclusion uses the actual generic-fibre field
+w^2=g^6+4lambda g^2-4lambda t and the required differential g dg/w, regular
+and nonzero on the compact curve, including both infinity points, hence not
+the differential of a rational function. The endpoints retain narrower scopes:
+U has the polynomial mate V outside B; p^2 has a rational but no polynomial mate.
+
+Thus (p^2+alpha H,U+beta H) has no nonzero constant Jacobian for any H in B
+and constants alpha,beta. This is a constant-vector-direction perturbation only,
+not every dependent increment, general deformation, full carrier exclusion or
+JC2 result. External novelty UNKNOWN; no further construction family follows.
+The reviewer confirmed all claims and the shorter polynomial proof without a
+mathematical correction. Whole report/manifest gates, canonical verification and
+postpins passed; the sealed producer header remains unchanged, with this binding
+integration recording promotion. No CAS computation or external theorem import.
