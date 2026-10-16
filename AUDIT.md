@@ -25785,3 +25785,20 @@ This extends the earlier moment-control comparison only by an explicitly
 verified finite map on this specified surface. External novelty UNKNOWN.
 Producer sealed bytes remain unchanged; the review accepted at01:06:47 UTC
 and its exact pins, custody limitations and integration scope are linked above.
+
+## 2026-10-16 — Contributor question: proper-carrier scope
+
+The [concrete contributor question](APPROACHES.md#a-concrete-question-for-contributors)
+is reviewed exposition, not a new all-JC2 reduction. Producer swarmHQ (ROOT);
+independent native Sol5.6 review accepted the frozen excerpt at02:51:48 UTC.
+Reviewed APPROACHES blob50d3456fc8104df7fe911000f3faf12df02b88b0, lines805--831,
+60344bytes, SHA256 f97bab1272e1e368e3f544bc35867fad539af06257bdc5d37c7f87a20a77fdbc.
+
+The explicit substitution proves T=C[U,UV,UV^2,UV^3-V] is a proper subring of
+C[U,V]. Therefore any Jacobian1 pair in T would be a genuine JC2 counterexample:
+a polynomial inverse would force C[P,Q]=C[U,V], impossible inside T. The review
+also checked the displayed Jacobian of the existing NON-KELLER control. Excluding
+finite Keller pairs on this carrier would exclude the accepted complete guarded
+F10 class only; neither arbitrary-pair finiteness nor an F10 converse is asserted.
+The already reviewed carrier and normalization results are accepted dependencies,
+not re-audited foundations. No existence or exclusion result is claimed here.

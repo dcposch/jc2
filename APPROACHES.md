@@ -802,6 +802,34 @@ has the same simple critical line but critical-image degrees6 and9:
 primitivity does not force coprime degrees or degree divisibility.
 It refutes that proposed shortcut, not the F10 source contract.
 
+### A concrete question for contributors
+
+The [reviewed carrier presentation](xmodel/finite-moment-review-integration-swarmHQ-sol56-root-20261016T010647Z.md)
+puts one remaining question in a small explicit ring:
+
+```text
+R = C[U,V],   p = UV^3 - V,
+T = C[U, UV, UV^2, p]  inside R.
+Does T contain P,Q with P_U Q_V - P_V Q_U = 1?
+```
+
+Any such pair would be a counterexample to JC2, not merely an auxiliary map.
+Indeed, substituting `U=g^2+g^3*p, V=1/g` makes every generator of T polynomial
+in g,p, whereas V remains 1/g. Thus V is not in T; if P,Q had a polynomial
+inverse, `R=C[P,Q]` would contradict `C[P,Q]` being contained in the proper ring T.
+
+A narrower question adds that `Spec T -> A2_(P,Q)` is finite. Complete guarded
+F10 sources satisfy this extra condition by the reviewed normalization result
+above. Excluding even these finite pairs would close that carrier class, not
+all of JC2. Conversely, an arbitrary pair in T is not asserted to satisfy the
+other F10 source relations, and finiteness is not automatic from this formulation.
+
+There is already a finite degree-six map `(p^2,U)` on this very carrier.
+Its Jacobian is `-2*p*(3*U*V^2-1)`, not a nonzero constant; it is not a JC2
+counterexample. The linked proof also shows why the current polynomial-moment
+conditions alone do not exclude it. The needed new contribution must use the
+constant-Jacobian condition, not just construct another finite map.
+
 **Useful next contribution:** an exact full-source implication or certificate that
 changes the unresolved test. Prior timeouts and term limits are nondecisions.
 [Complete source](https://github.com/dcposch/jc2/blob/ec69252af5ca03245becb80436f5ddb0917ccef2/APPROACHES.md#2-complete-f10-source-the-remaining-r3-problem) ·
