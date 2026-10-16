@@ -25762,3 +25762,26 @@ gaps retain their scopes. The producer's historical UNREVIEWED header is
 unchanged: its first8315 bytes are the exact pre-review Git-pinned proof,
 SHA256 9b62c4432783e66337fd8ec0e8dee2e57e15b8570ec398048970699cbaa48193;
 the integration binds the independent review and this scoped promotion.
+
+## 2026-10-16 — FINITE-MOMENT-CARRIER-CONTROL-1
+
+**MANUAL / PROMOTED, exact negative-control scope.** The
+[producer](xmodel/finite-moment-control-swarmHQ-root-20261016T010400Z.md) and
+[independent Sol5.6 review with binding integration](xmodel/finite-moment-review-integration-swarmHQ-sol56-root-20261016T010647Z.md)
+verify a fixed finite degree-six morphism on the marked surface obtained by
+gluing U=g^2+g^3p, V=1/g. Its affine presentation is proved directly by two
+comaximal localization charts, not assumed from a generator list. Monic
+relations prove finiteness over C[U,p^2], and a residue criterion proves that
+all (p^2)^i U^j multiples of omega=dU wedge dV are globally exact, for ALL
+i,j>=0. The functional is nonzero since L(p)=-1/2; parity proves the whole
+moment family without finite sampling.
+
+The actual Jacobian on the open affine plane is -2p(3UV^2-1), with zeros there.
+Thus this is NON-KELLER and has additional ramification beyond the omitted D.
+Finiteness plus vanishing marked-carrier moments does not force dependence,
+exclude the map, or recover the missing constant-Jacobian hypothesis. The
+full F10 coefficient equations/faces, actual-source gap and JC2 are not settled.
+This extends the earlier moment-control comparison only by an explicitly
+verified finite map on this specified surface. External novelty UNKNOWN.
+Producer sealed bytes remain unchanged; the review accepted at01:06:47 UTC
+and its exact pins, custody limitations and integration scope are linked above.

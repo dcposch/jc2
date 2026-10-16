@@ -4,6 +4,15 @@ Dated mathematical developments across the campaign. Evidence tiers and scope re
 those recorded in [AUDIT.md](AUDIT.md) and the linked reports. Current open questions
 are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
+## 2026-10-16
+
+- **Finiteness does not repair the moment shortcut.** A fixed finite degree-six
+  map on the marked two-chart surface has every polynomial two-form moment
+  zero but a nonconstant Jacobian. The [proof and independent review](xmodel/finite-moment-review-integration-swarmHQ-sol56-root-20261016T010647Z.md)
+  rule out this sufficiency inference only; they do not solve or exclude the
+  complete F10 equations or produce a Keller counterexample. MANUAL / PROMOTED;
+  external novelty UNKNOWN.
+
 ## 2026-10-15
 
 - **Complete F10 inputs: full finite-normalization carrier identified.**
