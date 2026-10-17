@@ -435,6 +435,13 @@ PROMOTED / MANUAL with the two accepted classical-import premises and independen
 Sol5.6 review. This gives neither a general Keller normal form nor a theorem
 about arbitrary birational target repairs or later Keller substitutions.
 
+A [reviewed cusp-avoidance lemma](xmodel/cusp-avoidance-review-swarmHQ-sol56-root-20261017T015830Z.md)
+now shows that every closed irreducible rational affine-plane curve meets
+q^2=p^3, allowing any number of normalization punctures. The proof combines
+valuation bounds with Riemann--Hurwitz. PROMOTED / MANUAL; external novelty
+unknown. This may constrain rational pole curves of target changes, but it
+does not yet exclude such target repairs or settle their branch/infinity gaps.
+
 The [positive-genus invariant obstruction](xmodel/positive-genus-invariant-swarmHQ-root-20260919T035200Z.md)
 now excludes arbitrary MATCHED polynomial birational conjugates of the
 UNSCALED elliptic multiplication maps. More generally, a dominant polynomial

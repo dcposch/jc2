@@ -25927,3 +25927,29 @@ uses A1 normalization without assuming smoothness. All controls independently
 checked; canonical/staged verification required for banking. Producer bytes,
 original UNPROMOTED header and seals remain unchanged; this integration promotes
 the scoped claim. External novelty UNKNOWN; no automatic descendant or farm.
+
+## 2026-10-17 — CUSP-AVOIDANCE-1: closed rational curves meet q^2=p^3
+
+PROMOTED / MANUAL after different-model Sol5.6 FIRST at01:58:30 UTC.
+Producer: native Astra and swarmHQ ROOT. Exact base field C; D is a closed
+irreducible rational dimension-one affine-plane curve, with no puncture bound.
+[Producer](xmodel/cusp-avoidance-swarmHQ-astra-root-20261017T015255Z.md);
+[independent review/integration](xmodel/cusp-avoidance-review-swarmHQ-sol56-root-20261017T015830Z.md).
+Producer full SHA344bd60956c8859fd06402d44211e0caf4229627d28ff82747f29b996c06c17b;
+integration full SHA2223e51889b44e814003e93fe18c99094668ef9a8dd9e05d71a16ee619454750.
+
+On P1, set R=q^2/p^3,w=p^2/q. Closedness forces every point where both
+coordinates are regular to map into D. Avoidance gives upper bounds on ord(w)
+over R=0,infinity,1 and all other points. Their sum yields
+0<=deg(R)-n0-ninf-n1<=-2 by Riemann--Hurwitz. Constant and zero-coordinate
+cases also force cusp intersection. No cleared-denominator coprimality premise,
+restriction to A1/C*, or finite-degree experiment is used. The locally closed
+line q=0,p!=0 is a necessary negative control; its closure meets the cusp.
+
+This proves only the closed-curve lemma. Pole-component geometry, target changes
+at cusp infinity, additional branch components, and general birational target
+repair remain unproved. No Keller-map normal form or JC2 conclusion is claimed.
+Proof/manifest whole-read and unchanged postpins verified by the reviewer;
+canonical/staged verification required for integration banking. Producer's
+UNPROMOTED header and seal remain unchanged; this entry promotes the exact scope.
+External novelty UNKNOWN; no source-import or general target-repair credit.

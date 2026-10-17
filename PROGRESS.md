@@ -4,6 +4,16 @@ Dated mathematical developments across the campaign. Evidence tiers and scope re
 those recorded in [AUDIT.md](AUDIT.md) and the linked reports. Current open questions
 are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
+## 2026-10-17
+
+- **Closed rational curves cannot avoid the cubic cusp.** A
+  [proof and independent hostile review](xmodel/cusp-avoidance-review-swarmHQ-sol56-root-20261017T015830Z.md)
+  show that every closed irreducible rational curve in A2 over C meets q^2=p^3,
+  with no restriction on normalization punctures. Valuation bounds contradict
+  Riemann--Hurwitz. This is a prospective constraint on target-repair pole curves,
+  not yet a target-repair exclusion or JC2 result. Producer swarmHQ Astra/ROOT;
+  independent Sol5.6 review; PROMOTED / MANUAL, external novelty unknown.
+
 ## 2026-10-16
 
 - **An all-degree rational construction family is excluded in fixed targets.**
