@@ -25953,3 +25953,37 @@ Proof/manifest whole-read and unchanged postpins verified by the reviewer;
 canonical/staged verification required for integration banking. Producer's
 UNPROMOTED header and seal remain unchanged; this entry promotes the exact scope.
 External novelty UNKNOWN; no source-import or general target-repair credit.
+
+## 2026-10-17 — CUBIC-CUSP-ALL-TARGET-1
+
+PROMOTED / MANUAL with accepted classical imports after different-model Sol5.6
+FIRST at02:12:12 UTC. Producer ROOT with native Astra co-check.
+[Producer](xmodel/cubic-cusp-all-target-swarmHQ-root-astra-20261017T020131Z.md);
+[FIRST/integration](xmodel/cubic-cusp-all-target-review-swarmHQ-sol56-root-20261017T021212Z.md).
+Producer full SHAbd2524a665840827858501cacf797a937da91775c43ee79d94bedacb3bc8d98b;
+integration full SHAa222fc47d4bedb998fd226b435b94293a1effa6cdc54f1cb00ce4a55acf01dbd.
+
+For t=X/Y,p=Y-3t^2,q=-tY+2t^3 over C, EVERY nonzero-constant-J birational
+rational target change followed by ANY finite rational source-field embedding
+C(X,Y)->C(x,y) fails to give a whole-plane polynomial Keller pair. This extends
+the fixed-target obstruction for THIS donor, not every affine-radial donor.
+
+New geometric bridge: a nonpolynomial constant-J birational target map has
+a closed rational affine pole curve. CUSP-AVOIDANCE-1 forces it to meet the cusp.
+The cusp is neither contracted nor mapped wholly to infinity. If its new affine
+image has normalization A1, restricting a pole equation gives a(t-t0)^k in
+C[t^2,t^3], forcing t0=0. An inverse resolution then has no finite point above
+the old cusp singularity, so the new affine image is smooth A1. Generic cubic
+ramification2 persists under all finite source extensions and attaches this
+curve to the actual nonproperness set. Either A1 normalization fails or the
+accepted no-smooth-A1-component theorem contradicts the Keller landing.
+Additional branch components cannot undo this contradiction. Polynomial target
+automorphisms are handled separately by the accepted fixed-target obstruction.
+
+The accepted basepoint/surface/attachment interfaces retain their named classical
+tiers; FIRST checks applicability, not every original source chain. The constant-J
+inversion and nonconstant-J cusp-to-line controls pass; infinity exchange is not
+silently forbidden. No nonconstant-J target exclusion, arbitrary donor theorem,
+general Keller normal form, actual finite-normalization emptiness, or JC2 result
+is claimed. External novelty UNKNOWN. Producer bytes/seals remain unchanged;
+this independent integration promotes only the exact scope above.

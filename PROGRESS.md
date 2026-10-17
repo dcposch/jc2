@@ -6,13 +6,17 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-10-17
 
-- **Closed rational curves cannot avoid the cubic cusp.** A
-  [proof and independent hostile review](xmodel/cusp-avoidance-review-swarmHQ-sol56-root-20261017T015830Z.md)
-  show that every closed irreducible rational curve in A2 over C meets q^2=p^3,
-  with no restriction on normalization punctures. Valuation bounds contradict
-  Riemann--Hurwitz. This is a prospective constraint on target-repair pole curves,
-  not yet a target-repair exclusion or JC2 result. Producer swarmHQ Astra/ROOT;
-  independent Sol5.6 review; PROMOTED / MANUAL, external novelty unknown.
+- **The cubic-cusp donor is excluded under all constant-J birational target changes.**
+  The [proof and independent review](xmodel/cubic-cusp-all-target-review-swarmHQ-sol56-root-20261017T021212Z.md)
+  rule out every such target change followed by any finite rational source
+  embedding for t=X/Y, p=Y-3t^2, q=-tY+2t^3. A key
+  [reviewed lemma](xmodel/cusp-avoidance-review-swarmHQ-sol56-root-20261017T015830Z.md)
+  says every closed rational affine-plane curve meets the cusp, with no puncture
+  bound. Pole geometry and the behavior at infinity then force a forbidden
+  nonproperness component. Other donors, nonconstant-J target changes, and a
+  general Keller normal form remain open. Producer swarmHQ ROOT/Astra;
+  independent Sol5.6 FIRST; PROMOTED / MANUAL with accepted classical imports,
+  external novelty unknown. This does not resolve JC2.
 
 ## 2026-10-16
 

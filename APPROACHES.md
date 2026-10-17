@@ -440,7 +440,19 @@ now shows that every closed irreducible rational affine-plane curve meets
 q^2=p^3, allowing any number of normalization punctures. The proof combines
 valuation bounds with Riemann--Hurwitz. PROMOTED / MANUAL; external novelty
 unknown. This may constrain rational pole curves of target changes, but it
-does not yet exclude such target repairs or settle their branch/infinity gaps.
+does not by itself exclude target repairs.
+
+For the specific cubic donor t=X/Y, p=Y-3t^2, q=-tY+2t^3, the
+[all-target obstruction](xmodel/cubic-cusp-all-target-review-swarmHQ-sol56-root-20261017T021212Z.md)
+now excludes EVERY nonzero-constant-J birational target change followed by ANY
+finite rational source embedding. A nonpolynomial target change has a rational
+pole curve meeting the cusp. If the transformed branch has A1 normalization,
+the sole puncture must be the old cusp point, leaving a smooth affine branch;
+the accepted Keller nonproper-component obstruction then applies. Polynomial
+target automorphisms use the prior fixed-target result. PROMOTED / MANUAL with
+accepted classical imports and independent Sol5.6 FIRST. Other affine-radial
+donors, nonconstant-J target changes, and a general Keller normal form remain
+outside this result; no JC2 conclusion follows.
 
 The [positive-genus invariant obstruction](xmodel/positive-genus-invariant-swarmHQ-root-20260919T035200Z.md)
 now excludes arbitrary MATCHED polynomial birational conjugates of the
