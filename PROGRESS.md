@@ -4,6 +4,18 @@ Dated mathematical developments across the campaign. Evidence tiers and scope re
 those recorded in [AUDIT.md](AUDIT.md) and the linked reports. Current open questions
 are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
+## 2026-10-18
+
+- **Basepoint-free rational target pencils stay primitive under Keller pullback.**
+  The [proof and independent review](xmodel/basepoint-free-pencil-review-swarmHQ-sol56-root-20261018T170650Z.md)
+  show that C(f) is algebraically closed in the source field when f is a morphism
+  from the target plane to P1 with geometrically integral rational generic fibre.
+  This excludes finite rational source repairs of D_R=(R(s),t/R'(s)), deg R>1,
+  even after nonconstant-J birational target changes, PROVIDED the transformed
+  old-coordinate pencil has no affine basepoints. ROOT/Astra producer, independent
+  Sol5.6-assigned FIRST; PROMOTED/MANUAL with named imports, external novelty unknown.
+  Affine-basepoint pencils and the general missing-boundary problem remain open.
+
 ## 2026-10-17
 
 - **The cubic-cusp donor is excluded under all constant-J birational target changes.**

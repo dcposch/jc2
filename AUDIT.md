@@ -25987,3 +25987,32 @@ silently forbidden. No nonconstant-J target exclusion, arbitrary donor theorem,
 general Keller normal form, actual finite-normalization emptiness, or JC2 result
 is claimed. External novelty UNKNOWN. Producer bytes/seals remain unchanged;
 this independent integration promotes only the exact scope above.
+
+## 2026-10-18 — BASEPOINT-FREE-PENCIL-1
+
+**PROMOTED / MANUAL**, conditional on the named classical/campaign imports.
+Producer swarmHQ ROOT/Astra-assigned; independent retained Sol5.6-assigned FIRST
+completed17:06:50 UTC. Hosted model identities are not independently verified.
+[Producer](xmodel/basepoint-free-pencil-swarmHQ-root-astra-20261018T170044Z.md);
+[FIRST and binding integration](xmodel/basepoint-free-pencil-review-swarmHQ-sol56-root-20261018T170650Z.md).
+Producer full SHA2756b24088f46f3948932f35b3d45e9c07aa4d6061707b24069721144404f5f2;
+integration full SHAa352815360f12c85eee04b29019c8a787709691784d277f2d424e57ed2146b8f.
+
+For a Keller map F:A2_source->A2_target and a MORPHISM f:A2_target->P1 with
+geometrically integral rational generic fibre, C(f) is algebraically closed in
+C(source). An intermediate finite base extension gives a finite target normalization
+branched only on vertical components of S_F. The accepted genus-zero fibre lemma
+makes those components smooth rational; polynomial parametrization makes them A1,
+forbidden for Keller nonproperness. Purity and finite-etale triviality give degree1.
+The import audit remains at the producer's stated scope, not a new source-proof audit.
+
+Consequently D_R=(R(s),t/R'(s)), deg R>1, has no whole-plane polynomial Keller
+repair by ANY finite dominant rational source substitution after ANY birational
+target change PROVIDED the transformed old first-coordinate pencil extends to a
+morphism on the entire new affine target. Constant target Jacobian is NOT required.
+Source-fibre genus need not survive the finite substitution; field embeddings suffice.
+This is not the same-pencil invariance theorem, nor a whole-fibre multiplicity-gcd
+argument. No affine-basepoint pencil theorem, arbitrary donor exclusion, general
+Keller normal form, finite-normalization emptiness or JC2 result follows.
+External novelty UNKNOWN. The sealed producer remains unchanged; this integration
+promotes only the exact conditional statement and donor corollary above.

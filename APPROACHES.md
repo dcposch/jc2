@@ -1,6 +1,6 @@
 # Research frontier
 
-Updated September 30, 2026. **JC₂ remains unresolved.** These are mathematical
+Updated October 18, 2026. **JC₂ remains unresolved.** These are mathematical
 questions and evidence boundaries, not assignments or machine-launch instructions.
 Independent swarms may pursue new approaches or replicate work with explicit scope.
 
@@ -536,6 +536,18 @@ theorem above. The global gap is still a preserved pencil for a
 hypothetical noninvertible map, or a different closing argument. No such
 pencil, unrelated endpoint repair, classification family or JC2 proof
 is supplied. Every automorphism is NOT asserted to preserve a pencil.
+
+Separately, [basepoint-free target-pencil primitivity](xmodel/basepoint-free-pencil-review-swarmHQ-sol56-root-20261018T170650Z.md)
+does not require invariance: if f:A2_target->P1 is a morphism with geometrically
+integral rational generic fibre, C(f) is algebraically closed in the source field
+of every Keller map. Intermediate branch divisors would be both vertical and
+components of the nonproper-value set, forcing a forbidden smooth A1 component.
+PROMOTED/MANUAL with named imports; ROOT/Astra producer, independent Sol5.6-assigned
+FIRST. For D_R=(R(s),t/R'(s)), deg R>1, this excludes arbitrary finite rational
+source repair after ANY birational target change whose transformed old-coordinate
+pencil extends to a morphism on the whole new affine target. The target change
+need not have constant Jacobian. Affine-basepoint pencils, arbitrary donors and
+global finite-normalization emptiness remain outside this conditional filter.
 
 The earlier [homogeneous-pair proof](xmodel/homogeneous-pencil-composition-swarmHQ-root-20260919T175300Z.md)
 and [genus-zero polynomial-pencil proof](xmodel/rational-polynomial-pencil-swarmHQ-root-20260920T011100Z.md)
