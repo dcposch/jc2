@@ -26049,3 +26049,30 @@ change, all-pencil theorem, suitable-pencil existence, finite-normalization
 emptiness, global surjectivity or JC2 conclusion is promoted. Novelty UNKNOWN.
 The original producer remains byte-identical; acceptance is recorded here and in
 the separate sealed review. No formal verification or new source-proof audit.
+
+## 2026-10-18 — A pentagon obstruction for one degree-five quotient cover
+
+**PROMOTED / MANUAL**, with the stated moduli, surface-resolution and finite-group
+linearization imports. ROOT producer; independent retained Sol5.6-assigned FIRST
+confirmed22:21:55 UTC. Hosted model identity unverified; novelty unknown.
+[Producer](xmodel/a5-pentagon-chart-obstruction-swarmHQ-root-20261018T221810Z.md);
+[independent review](xmodel/a5-pentagon-chart-review-swarmHQ-sol56-root-20261018T222155Z.md).
+Producer full SHA1fc06a1cd68e1c4c2976322c32f4b9ed4f582c5af095f66eab918f4bf4759bb8;
+review full SHAb361e4792b8200af1c9b1c77f26b0cf2c8138f1d8c468c12b9d3fbaa24a5fd62.
+
+Let S=bar(M_0,5) be the degree-five del Pezzo surface, G=A5 its even label
+permutations, H=A4 the label-5 stabilizer, and pi:S/H->S/G the degree-five
+finite quotient map. No A2 opens U in S/H and V in S/G satisfy pi(U) subset V
+with pi|U everywhere etale. The12 involutions outside H are one H-conjugacy
+orbit, so their fixed curves give one irreducible curve E downstairs. At the
+pentagon configuration the stabilizer pair is D5/C2. Its smooth local quotient
+map (c,d)->(d,c^5-5c^3d+5cd^2) has two tangent critical branches on that same E.
+An irreducible curve multibranch at a smooth point cannot lie in an A2 boundary:
+resolution creates a cycle, whereas a common resolution with P2 has a tree
+boundary. Etaleness would force E into that boundary, a contradiction.
+
+This excludes exactly the fixed-cover affine-plane-chart construction. No
+classification of all fixed loci, arbitrary birational target change, other
+cover, rational Galois closure, actual Keller normalization or JC2 conclusion
+is promoted. Selected Bauer--Catanese source passages support the moduli/action
+premise only; no whole-paper audit or failed-source import. Sealed bytes unchanged.

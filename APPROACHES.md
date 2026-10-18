@@ -927,6 +927,15 @@ T2-local PASS under its stated contract. The theorem-chain interfaces remain
 unverified; this is not certification of the claimed DC(1) proof. A gap in that
 proof alone would not refute JC2. The old T2 queue entry is not a new experiment.
 
+The [pentagon obstruction](xmodel/a5-pentagon-chart-review-swarmHQ-sol56-root-20261018T222155Z.md)
+closes one nonlinear finite-group construction: for the degree-five del Pezzo
+surface S=bar(M_0,5), the fixed cover S/A4->S/A5 has no A2-open source/target
+charts on which it is everywhere etale. Two local critical branches at a D5
+pentagon belong to one irreducible ramification curve; placing it in an A2
+boundary would contradict the boundary-tree property. PROMOTED/MANUAL after
+independent FIRST, with standard imports; novelty unknown. Other covers,
+arbitrary birational target models and the actual-normalization gap remain open.
+
 [Evidence ledger](AUDIT.md) · [Recent progress](PROGRESS.md) ·
 [Historical avenue inventory](history/APPROACHES-before-20260906-cleanup.md#1-master-union-table) ·
 [Replay and scope checks](docs/REPLAY.md)

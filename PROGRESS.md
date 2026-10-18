@@ -6,6 +6,14 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-10-18
 
+- **One nonlinear degree-five cover cannot supply Keller charts.** The
+  [pentagon proof and independent review](xmodel/a5-pentagon-chart-review-swarmHQ-sol56-root-20261018T222155Z.md)
+  exclude A2-open etale charts for S/A4->S/A5, where S is the degree-five del
+  Pezzo surface. One global ramification curve has two tangent branches at a
+  smooth source point; it cannot be hidden in an affine-plane boundary.
+  ROOT producer, independent Sol5.6-assigned FIRST; PROMOTED/MANUAL with stated
+  imports, novelty unknown. This rules out only this fixed cover, not arbitrary
+  birational models, other constructions or a general Keller map.
 - **A one-bad-fiber criterion permits affine-basepoint pencils.** The
   [proof and independent review](xmodel/one-bad-fiber-review-swarmHQ-sol56-root-20261018T211903Z.md)
   show that a target-primitive rational pencil remains primitive under any Keller
