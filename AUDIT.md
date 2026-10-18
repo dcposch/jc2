@@ -26016,3 +26016,36 @@ argument. No affine-basepoint pencil theorem, arbitrary donor exclusion, general
 Keller normal form, finite-normalization emptiness or JC2 result follows.
 External novelty UNKNOWN. The sealed producer remains unchanged; this integration
 promotes only the exact conditional statement and donor corollary above.
+
+## 2026-10-18 — ONE-BAD-FIBER-PULLBACK-1
+
+**PROMOTED / MANUAL**, conditional on the stated standard Keller/curve facts.
+Producer swarmHQ ROOT; independent retained Sol5.6-assigned FIRST completed
+21:19:03 UTC, received by ROOT21:21:31. Hosted model identity is unverified.
+[Producer](xmodel/one-bad-fiber-pullback-swarmHQ-root-20261018T211327Z.md);
+[FIRST and binding integration](xmodel/one-bad-fiber-review-swarmHQ-sol56-root-20261018T211903Z.md).
+Producer full SHAb667e52762928375b7ae18b0ccb996527b938220ea48fb3c9cfc25c54063d827;
+integration full SHAa170f58d59986c0dcb4e65a77e6d199f21c7affd7343565c8fdd924cdd013934.
+
+For a Keller map F:A2_source->A2_target, let f=a/b be a nonconstant rational
+function with coprime a,b and C(f) algebraically closed in C(target). If all but
+at most ONE affine fiber divisor div(a-lambda b), including div(b) at infinity,
+are reduced, then C(f) is algebraically closed in C(source). Empty divisors are
+reduced. Affine basepoints and arbitrary generic-fiber genus are allowed.
+Reducedness is componentwise, so ramification over any good fiber forces the
+corresponding intermediate source-function fiber to be empty. There is at most
+one such empty value. Riemann-Hurwitz forces any nontrivial intermediate rational
+map to be a power up to source/target Mobius maps. Codimension-one surjectivity
+and etaleness descend that power to C(target), contradicting target primitivity.
+This closes a restricted case of the earlier multiplicity argument without its
+invalid whole-fiber-gcd inference. It does not import properness or S_F geometry.
+
+The pencil f=(v^2-u^3)/u^2 is target-primitive, has basepoint (0,0), and has only
+the nonreduced pole fiber 2{u=0}. Consequently H_R(s,t)=(t^2-R(s),t(t^2-R(s))),
+deg R>1, cannot become a polynomial Keller pair after any dominant finite rational
+source substitution, with these target functions fixed. The negative control
+F=id,f=u^n shows target primitivity is essential. No arbitrary birational target
+change, all-pencil theorem, suitable-pencil existence, finite-normalization
+emptiness, global surjectivity or JC2 conclusion is promoted. Novelty UNKNOWN.
+The original producer remains byte-identical; acceptance is recorded here and in
+the separate sealed review. No formal verification or new source-proof audit.

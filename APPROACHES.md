@@ -549,6 +549,20 @@ pencil extends to a morphism on the whole new affine target. The target change
 need not have constant Jacobian. Affine-basepoint pencils, arbitrary donors and
 global finite-normalization emptiness remain outside this conditional filter.
 
+The separate [one-bad-fiber pullback theorem](xmodel/one-bad-fiber-review-swarmHQ-sol56-root-20261018T211903Z.md)
+allows affine basepoints and arbitrary generic-fiber genus: for target-primitive
+f=a/b with coprime a,b, if all but at most ONE affine fiber divisor (including
+the pole fiber) are reduced, C(f) remains algebraically closed after any Keller
+pullback. Empty divisors count as reduced. Componentwise reducedness, the single
+possible omitted value of a rational source function, Riemann-Hurwitz and power
+descent close this restricted multiplicity argument. PROMOTED/MANUAL; ROOT producer,
+independent Sol5.6-assigned FIRST, standard Keller/curve imports, novelty unknown.
+The explicit pencil (v^2-u^3)/u^2 satisfies the hypotheses despite its basepoint.
+It excludes every finite rational source repair of the fixed-target donor
+H_R=(t^2-R(s),t(t^2-R(s))), deg R>1. Neither arbitrary target changes nor a
+suitable-pencil existence theorem for a general Keller map follows. This is a
+different hypothesis set from the basepoint-free result, not a replacement for it.
+
 The earlier [homogeneous-pair proof](xmodel/homogeneous-pencil-composition-swarmHQ-root-20260919T175300Z.md)
 and [genus-zero polynomial-pencil proof](xmodel/rational-polynomial-pencil-swarmHQ-root-20260920T011100Z.md)
 retain their original statements and reviews in AUDIT. The separate

@@ -6,6 +6,16 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-10-18
 
+- **A one-bad-fiber criterion permits affine-basepoint pencils.** The
+  [proof and independent review](xmodel/one-bad-fiber-review-swarmHQ-sol56-root-20261018T211903Z.md)
+  show that a target-primitive rational pencil remains primitive under any Keller
+  pullback if at most one affine fiber divisor, including the pole fiber, is
+  nonreduced. Componentwise reducedness avoids the earlier whole-fiber-gcd gap.
+  The basepoint pencil (v^2-u^3)/u^2 supplies an explicit client, excluding finite
+  rational source repairs of H_R=(t^2-R(s),t(t^2-R(s))), deg R>1, at fixed target
+  functions. ROOT producer, independent Sol5.6-assigned FIRST; PROMOTED/MANUAL
+  with standard imports, novelty unknown. General pencil selection, arbitrary
+  target changes and JC2 remain open.
 - **Basepoint-free rational target pencils stay primitive under Keller pullback.**
   The [proof and independent review](xmodel/basepoint-free-pencil-review-swarmHQ-sol56-root-20261018T170650Z.md)
   show that C(f) is algebraically closed in the source field when f is a morphism
@@ -14,7 +24,8 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
   even after nonconstant-J birational target changes, PROVIDED the transformed
   old-coordinate pencil has no affine basepoints. ROOT/Astra producer, independent
   Sol5.6-assigned FIRST; PROMOTED/MANUAL with named imports, external novelty unknown.
-  Affine-basepoint pencils and the general missing-boundary problem remain open.
+  General affine-basepoint pencils and the missing-boundary problem remain open;
+  the separate reduced-fiber criterion above addresses only its stated subclass.
 
 ## 2026-10-17
 
