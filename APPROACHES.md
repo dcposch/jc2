@@ -944,6 +944,16 @@ regular/nonzero at the specified point, and only birational source coordinates.
 PROMOTED/MANUAL, ROOT/Sol FIRST; no general normalization or target-form existence
 step follows. The A5 application retains that additional form hypothesis.
 
+The [SNC shifted-order criterion](xmodel/snc-order-coprimality-review-swarmHQ-sol56-root-20261019T112438Z.md)
+requires gcd(a+1,b+1)=1 at a two-component SNC crossing of a rational Darboux
+form generating the surface function field. On the actual finite Keller
+normalization this forces coprime ramification indices at smooth transverse
+crossings of exactly two ramification curves. PROMOTED/MANUAL, ROOT/Sol FIRST;
+novelty unknown. It allows distinct curves but requires SNC, unlike the cycle
+criterion. Existence of a forbidden crossing, treatment of singular/non-SNC
+points, and the global B=R implication remain open; no finite-source-extension
+or arbitrary-pencil theorem is inferred.
+
 [Evidence ledger](AUDIT.md) · [Recent progress](PROGRESS.md) ·
 [Historical avenue inventory](history/APPROACHES-before-20260906-cleanup.md#1-master-union-table) ·
 [Replay and scope checks](docs/REPLAY.md)

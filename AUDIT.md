@@ -26106,3 +26106,32 @@ normalization, and supplies no B=R argument. The old globally zero-free-target /
 smooth-branch criterion has different hypotheses and finite-source quantifiers;
 neither theorem supplies the other's missing premise. No new source retrieval,
 exit-price claim, formalization or JC2 resolution. Sealed producer bytes unchanged.
+
+## SNC-SHIFTED-ORDER-COPRIMALITY-1 — 2026-10-19
+
+**PROMOTED / MANUAL**, ROOT producer, independent Sol5.6-assigned FIRST;
+hosted identity unverified, standard surface imports explicit, novelty unknown.
+[Producer](xmodel/snc-order-coprimality-swarmHQ-root-20261019T111803Z.md) and
+[independent proof audit](xmodel/snc-order-coprimality-review-swarmHQ-sol56-root-20261019T112438Z.md).
+
+If a rational two-form on a smooth projective complex surface is c du wedge dv
+with C(S)=C(u,v) and c nonzero constant, then at an SNC point with exactly two
+divisor components of orders a,b, gcd(a+1,b+1)=1. All exceptional curves, even
+order-zero ones, must be included in the blowup boundary. Its edge gcd is
+preserved by subdivision; the standard plane has only primitive edges. On a
+common resolution an intermediate order-zero curve forces gcd1 itself, so no
+identification of the exceptional sets of the two morphisms is assumed.
+
+Consequently, for a finite normal surface cover over a regular/nonvanishing
+target area form, a smooth transverse crossing of exactly two ramification
+components must have coprime indices if the pulled-back form has rational
+Darboux coordinates generating the SOURCE function field. This applies to
+such points of the ACTUAL finite Keller normalization, whose field is the
+original source field. It does not force a forbidden crossing to exist, cover
+singular/non-SNC points, or automatically extend to larger finite source fields.
+
+The monomial form x^m*y^n dx wedge dy has such rational coordinates whenever
+gcd(m+1,n+1)=1; this is not a converse for general forms. The positive-cycle
+criterion has different hypotheses and neither supplies the other's missing
+premises. No general pencil/basepoint result, B=R, JC2 proof or counterexample.
+Sealed producer bytes and its historical provisional label remain unchanged.

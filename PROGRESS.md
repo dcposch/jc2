@@ -6,6 +6,14 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-10-19
 
+- **Ramification crossings have a coprimality constraint.** The
+  [proof and independent review](xmodel/snc-order-coprimality-review-swarmHQ-sol56-root-20261019T112438Z.md)
+  show that at an SNC crossing of a rational constant-area form, the two
+  divisor orders plus one are coprime. On the actual finite Keller
+  normalization this forces coprime ramification indices at smooth crossings
+  of exactly two ramification components. No forbidden crossing is forced
+  to exist; singular/non-SNC points and B=R remain gaps. ROOT producer,
+  independent Sol5.6-assigned FIRST; PROMOTED/MANUAL, novelty unknown.
 - **A multibranch zero curve obstructs rational constant-area coordinates.**
   The [proof and independent review](xmodel/positive-zero-cycle-review-swarmHQ-sol56-root-20261019T101735Z.md)
   show that an irreducible positive zero curve, multibranch at a pole-free point, forces a
