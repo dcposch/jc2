@@ -4,6 +4,18 @@ Dated mathematical developments across the campaign. Evidence tiers and scope re
 those recorded in [AUDIT.md](AUDIT.md) and the linked reports. Current open questions
 are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
+## 2026-10-19
+
+- **A multibranch zero curve obstructs rational constant-area coordinates.**
+  The [proof and independent review](xmodel/positive-zero-cycle-review-swarmHQ-sol56-root-20261019T101735Z.md)
+  show that an irreducible positive zero curve, multibranch at a pole-free point, forces a
+  cycle incompatible with the exceptional fibers of a birational plane model.
+  The finite-cover consequence survives constant-Jacobian birational target changes for
+  a specified area form, with birational source coordinates only. Its A5
+  application still requires a suitable global target area form. ROOT producer,
+  independent Sol5.6-assigned FIRST; PROMOTED/MANUAL with standard imports,
+  novelty unknown. No finite source enlargement or general B=R conclusion.
+
 ## 2026-10-18
 
 - **One nonlinear degree-five cover cannot supply Keller charts.** The

@@ -26076,3 +26076,33 @@ classification of all fixed loci, arbitrary birational target change, other
 cover, rational Galois closure, actual Keller normalization or JC2 conclusion
 is promoted. Selected Bauer--Catanese source passages support the moduli/action
 premise only; no whole-paper audit or failed-source import. Sealed bytes unchanged.
+
+## POSITIVE-ZERO-MULTIBRANCH-1 — 2026-10-19
+
+**PROMOTED / MANUAL**, ROOT producer, independent Sol5.6-assigned FIRST;
+hosted model identity unverified, standard surface imports explicit, novelty unknown.
+[Producer](xmodel/positive-zero-cycle-swarmHQ-root-20261019T101200Z.md) and
+[independent proof audit](xmodel/positive-zero-cycle-review-swarmHQ-sol56-root-20261019T101735Z.md).
+
+On a smooth projective complex surface S, a rational two-form omega cannot equal
+c du wedge dv with C(S)=C(u,v), c nonzero constant, if an irreducible positive-order
+zero curve is multibranch at a point with a pole-free neighborhood for omega.
+Resolving that point creates a persistent positive cycle. On a common resolution
+with the standard plane every positive component would be exceptional, whereas
+the exceptional graph over one point is a tree. A positive exceptional order
+alone does NOT imply that its center is outside an affine plane.
+
+For a finite normal surface cover, the same obstruction applies to a multibranch
+ramification curve at a smooth source point over a smooth target point when the
+chosen target area form is regular and nowhere zero there. It survives scalar-
+constant-Jacobian birational target changes, but requires BIRATIONAL source-field
+coordinates; no arbitrary finite source enlargement is covered. Rational as well
+as polynomial constant-Jacobian representatives are excluded at that fixed form.
+
+The A5 pentagon supplies the curve and smooth points, NOT an explicit global
+target-coordinate pair with the required area form. This conditional application
+does not exclude arbitrary target forms/models, other covers or actual Keller
+normalization, and supplies no B=R argument. The old globally zero-free-target /
+smooth-branch criterion has different hypotheses and finite-source quantifiers;
+neither theorem supplies the other's missing premise. No new source retrieval,
+exit-price claim, formalization or JC2 resolution. Sealed producer bytes unchanged.

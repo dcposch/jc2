@@ -936,6 +936,14 @@ boundary would contradict the boundary-tree property. PROMOTED/MANUAL after
 independent FIRST, with standard imports; novelty unknown. Other covers,
 arbitrary birational target models and the actual-normalization gap remain open.
 
+The [positive-zero multibranch criterion](xmodel/positive-zero-cycle-review-swarmHQ-sol56-root-20261019T101735Z.md)
+also obstructs rational Darboux coordinates when an irreducible positive zero curve is
+multibranch at a pole-free point. Its finite-cover application survives constant-
+Jacobian birational target changes only for an identified target area form
+regular/nonzero at the specified point, and only birational source coordinates.
+PROMOTED/MANUAL, ROOT/Sol FIRST; no general normalization or target-form existence
+step follows. The A5 application retains that additional form hypothesis.
+
 [Evidence ledger](AUDIT.md) · [Recent progress](PROGRESS.md) ·
 [Historical avenue inventory](history/APPROACHES-before-20260906-cleanup.md#1-master-union-table) ·
 [Replay and scope checks](docs/REPLAY.md)
