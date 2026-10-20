@@ -950,9 +950,21 @@ form generating the surface function field. On the actual finite Keller
 normalization this forces coprime ramification indices at smooth transverse
 crossings of exactly two ramification curves. PROMOTED/MANUAL, ROOT/Sol FIRST;
 novelty unknown. It allows distinct curves but requires SNC, unlike the cycle
-criterion. Existence of a forbidden crossing, treatment of singular/non-SNC
-points, and the global B=R implication remain open; no finite-source-extension
-or arbitrary-pencil theorem is inferred.
+criterion. Existence of a forbidden crossing and the global B=R implication
+remain open; the separate pole-free criterion below treats non-SNC zero support,
+not singular surface points. No finite-source-extension or arbitrary-pencil
+theorem is inferred.
+
+The [pole-free zero-support criterion](xmodel/pole-free-zero-snc-review-swarmHQ-sol56-root-20261020T105819Z.md)
+requires the reduced positive zero divisor of a FIELD-GENERATING rational
+Darboux form to be SNC wherever the form is regular. It excludes cusps,
+self-nodes, tangencies and triple points there by extending zero-free-model
+descent, then applying smooth-surface birational factorization. PROMOTED/MANUAL,
+ROOT/Sol FIRST; standard imports and unknown novelty. For a finite cover this
+excludes non-SNC reduced ramification at a smooth source point above a smooth
+target point with a specified regular/nonzero area form. It neither provides
+that form nor forces such a boundary point; disjoint smooth omitted curves
+already satisfy SNC. Finite source enlargement and the actual B=R gap remain.
 
 [Evidence ledger](AUDIT.md) · [Recent progress](PROGRESS.md) ·
 [Historical avenue inventory](history/APPROACHES-before-20260906-cleanup.md#1-master-union-table) ·

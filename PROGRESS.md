@@ -4,6 +4,21 @@ Dated mathematical developments across the campaign. Evidence tiers and scope re
 those recorded in [AUDIT.md](AUDIT.md) and the linked reports. Current open questions
 are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
+## 2026-10-20
+
+- **Pole-free zero support must be simple normal crossing.** The
+  [proof and independent review](xmodel/pole-free-zero-snc-review-swarmHQ-sol56-root-20261020T105819Z.md)
+  show that a rational two-form with Darboux coordinates generating the
+  surface function field has SNC reduced zero support wherever the form is
+  regular. This excludes cusps, self-nodes, tangencies and triple points there.
+  The proof extends the retained zero-free-model descent argument.
+  Conditional finite-cover use requires smooth source/target points and a
+  target area form regular and nonzero at the image; finite source-field
+  enlargement is not covered. ROOT producer, independent Sol5.6-assigned
+  FIRST; PROMOTED/MANUAL with standard imports, novelty unknown.
+  No forbidden configuration in an actual Keller normalization is forced,
+  so the global B=R gap remains.
+
 ## 2026-10-19
 
 - **Ramification crossings have a coprimality constraint.** The

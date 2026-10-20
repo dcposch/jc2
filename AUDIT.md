@@ -26135,3 +26135,40 @@ gcd(m+1,n+1)=1; this is not a converse for general forms. The positive-cycle
 criterion has different hypotheses and neither supplies the other's missing
 premises. No general pencil/basepoint result, B=R, JC2 proof or counterexample.
 Sealed producer bytes and its historical provisional label remain unchanged.
+
+## POLE-FREE-ZERO-SNC-1 — 2026-10-20
+
+**PROMOTED / MANUAL**, ROOT producer, independent Sol5.6-assigned FIRST;
+hosted identity unverified, standard surface imports explicit, novelty unknown.
+[Producer](xmodel/pole-free-zero-snc-swarmHQ-root-20261020T104840Z.md) and
+[independent proof audit](xmodel/pole-free-zero-snc-review-swarmHQ-sol56-root-20261020T105819Z.md).
+
+For a smooth projective complex surface S and rational two-form omega,
+if C(S)=C(u,v) and omega=c du wedge dv with c nonzero constant, the reduced
+positive zero divisor is SNC on the regular locus U of omega. Components
+are smooth, pairwise intersections transverse, with no triple points;
+cusps and self-nodes are excluded. Multiplicities need not be one.
+
+The proof extends retained zero-free-model descent from source nonvanishing
+to source regularity: all exceptional divisors over U have positive pulled-back
+volume order and must contract under the map to P2, whose area divisor is
+-3L_infinity. Normal graph descent makes that birational map regular on U.
+A resolution only outside U leaves U unchanged, where positive zero support
+is a reduced subdivisor of the SNC exceptional divisor of a smooth-surface
+birational morphism. This is a consequence of the retained descent mechanism,
+not a claim of an independent new global method.
+
+For finite normal surface covers, non-SNC reduced ramification at a smooth
+source point above a smooth target point obstructs such coordinates only
+when the target area form is regular/nonzero there. Birational source
+coordinates and scalar-constant-Jacobian birational target changes are
+covered; arbitrary target area changes and finite source-field enlargement
+are not. No target area form or forbidden actual-normalization point is
+constructed. The NON-KELLER degree-three control (x,y^3/3-x^3*y) has cuspidal
+Jacobian zero support and demonstrates why field generation is essential.
+
+This strengthens the positive-zero multibranch criterion at pole-free
+points and complements the shifted-order constraint at SNC crossings.
+It does not force the actual omitted boundary to violate either condition,
+prove B=R or JC2, give a counterexample, or improve a degree bound.
+No new source retrieval, CAS or formalization; sealed producer unchanged.
