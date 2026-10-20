@@ -991,6 +991,17 @@ The fixed-target source-repair obstruction extends accordingly, but neither
 boundary-to-pencil existence nor B=R is supplied. Arbitrary target changes
 remain outside this result.
 
+The complementary [three-double-fiber criterion](xmodel/three-double-fiber-review-swarmHQ-sol56-root-20261020T172346Z.md)
+allows at most THREE nonreduced affine fiber values when EVERY component
+multiplicity is at most TWO, with the same coprime independent a,b and
+target-primitivity hypotheses. Riemann-Hurwitz leaves only degree2/4
+intermediate curve maps; two wholly even fibers then force a square
+descending to K, a contradiction. PROMOTED/MANUAL, ROOT/Sol FIRST,
+standard imports and unknown novelty. This supplements, not replaces,
+TWO1323's unrestricted multiplicities at two values. The fixed-target
+source-repair consequence has the same limitations: no suitable pencil
+from the normalization boundary, general Keller degree bound or B=R.
+
 [Evidence ledger](AUDIT.md) · [Recent progress](PROGRESS.md) ·
 [Historical avenue inventory](history/APPROACHES-before-20260906-cleanup.md#1-master-union-table) ·
 [Replay and scope checks](docs/REPLAY.md)

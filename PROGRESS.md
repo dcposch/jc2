@@ -6,6 +6,17 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-10-20
 
+- **Three double-fiber values also preserve primitivity.** The
+  [proof and independent review](xmodel/three-double-fiber-review-swarmHQ-sol56-root-20261020T172346Z.md)
+  add the case of at most three nonreduced affine fiber divisors, with every
+  component multiplicity at most two, for target-primitive a/b with coprime,
+  algebraically independent a,b. Basepoints and the pole fiber are included.
+  Ramification counting leaves only quadratic or quartic intermediate maps;
+  both force a square that descends to the target, contradicting primitivity.
+  TWO1323 separately allows arbitrary multiplicities at two bad values.
+  No suitable boundary pencil, general degree bound or B=R is supplied.
+  ROOT producer, independent Sol5.6-assigned FIRST; PROMOTED/MANUAL,
+  standard imports, external novelty unknown.
 - **Two bad fibers suffice with independent numerator and denominator.** The
   [theorem and independent review](xmodel/two-bad-fiber-review-swarmHQ-astra-root-20261020T134316Z.md)
   extend the binomial result to any target-primitive a/b with coprime,

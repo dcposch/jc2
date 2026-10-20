@@ -26243,3 +26243,39 @@ No suitable pencil/compositeness relation is produced from the actual
 normalization boundary. No genus-zero, special-fiber irreducibility,
 surjectivity, degree bound, B=R, counterexample or JC2 conclusion follows.
 No new external source/CAS/formalization; all sealed evidence unchanged.
+
+## 2026-10-20 — THREE1708: three double-fiber values preserve pullback primitivity
+
+**Verdict: CONFIRMED; PROMOTED / MANUAL**, ROOT producer and independent
+Sol5.6-assigned hostile FIRST, completed17:23:46 UTC. Standard imports;
+hosted-model identity, machine verification and external novelty unasserted.
+
+For polynomial Keller F=(P,Q), let a,b in C[u,v] be coprime and
+algebraically independent, with f=a/b target-primitive. Suppose at most
+THREE affine fiber divisors div(a-lambda*b), including div(b) at infinity,
+are nonreduced, and EVERY component of EACH such divisor has multiplicity
+at most TWO. Then C(f) is relatively algebraically closed in C(x,y).
+Empty divisors count as reduced; affine basepoints are allowed.
+
+The predecessor's independence argument excludes divisor-empty intermediate
+fibers. Componentwise multiplicity detection forces all ramification indices
+of an intermediate rational map R to be2, over at most three values.
+Riemann-Hurwitz gives 2d-2<=3floor(d/2), leaving only d=2 or4 when d>1.
+In either case two branch-value fibers are wholly even, so a Mobius
+transform of f becomes a square in the source field. Index-one detection
+of every target prime and target UFD factorization descend that square,
+contradicting target primitivity.
+
+[Sealed producer](xmodel/three-double-fiber-pullback-swarmHQ-root-20261020T171607Z.md)
+and [independent FIRST / integrated proof](xmodel/three-double-fiber-review-swarmHQ-sol56-root-20261020T172346Z.md).
+No mathematical correction was required. The producer retains its historical
+PROVISIONAL label. Whole-input reads, verifiers and postpins passed; the
+review records one corrected wrong-cwd lookup without a scientific read.
+
+TWO1323 separately allows arbitrary multiplicities at at most two bad values;
+ONEBAD retains its polynomial/dependent-numerator scope. The fixed-target
+donor obstruction survives dominant rational source substitution, including
+rational-plane finite source enlargement, not arbitrary birational target
+changes. No suitable pencil/compositeness relation is produced from the
+normalization boundary. No generic-genus bound, general Keller field-degree
+bound, surjectivity, B=R, counterexample or JC2 conclusion follows.
