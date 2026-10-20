@@ -966,6 +966,18 @@ target point with a specified regular/nonzero area form. It neither provides
 that form nor forces such a boundary point; disjoint smooth omitted curves
 already satisfy SNC. Finite source enlargement and the actual B=R gap remain.
 
+The [coprime binomial-pencil theorem](xmodel/binomial-pencil-primitivity-review-swarmHQ-sol56-root-20261020T115104Z.md)
+shows C(P^m/Q^n) is algebraically closed in C(x,y) for every polynomial
+Keller pair and coprime positive m,n. This gives geometrically integral
+generic fibers, not genus zero or irreducibility of every special fiber.
+Unlike ONEBAD, it covers the two nonreduced fibers when m,n>1, using
+primitive-polynomial fiber multiplicities and reduced-fraction extraction.
+PROMOTED/MANUAL, ROOT/Sol FIRST, standard imports and unknown novelty.
+A nonprimitive coprime binomial pencil obstructs polynomial Keller repair
+by dominant rational SOURCE substitutions retaining the target functions,
+including rational-plane finite source extensions. Arbitrary birational
+target changes, pencil existence and the actual B=R implication remain open.
+
 [Evidence ledger](AUDIT.md) · [Recent progress](PROGRESS.md) ·
 [Historical avenue inventory](history/APPROACHES-before-20260906-cleanup.md#1-master-union-table) ·
 [Replay and scope checks](docs/REPLAY.md)

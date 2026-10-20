@@ -6,6 +6,16 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-10-20
 
+- **Coprime binomial pencils remain primitive.** The
+  [proof and independent review](xmodel/binomial-pencil-primitivity-review-swarmHQ-sol56-root-20261020T115104Z.md)
+  show that C(P^m/Q^n) is algebraically closed in C(x,y) for a polynomial
+  Keller pair and coprime positive m,n. Primitive-polynomial multiplicities
+  and reduced-fraction extraction handle two nonreduced target fibers,
+  beyond the retained ONEBAD scope. This obstructs fixed-target donor
+  repair by dominant rational source substitutions, but supplies no
+  generic-genus bound, arbitrary-target exclusion or B=R conclusion.
+  ROOT producer, independent Sol5.6-assigned FIRST; PROMOTED/MANUAL,
+  standard imports, external novelty unknown.
 - **Pole-free zero support must be simple normal crossing.** The
   [proof and independent review](xmodel/pole-free-zero-snc-review-swarmHQ-sol56-root-20261020T105819Z.md)
   show that a rational two-form with Darboux coordinates generating the

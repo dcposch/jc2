@@ -26172,3 +26172,36 @@ points and complements the shifted-order constraint at SNC crossings.
 It does not force the actual omitted boundary to violate either condition,
 prove B=R or JC2, give a counterexample, or improve a degree bound.
 No new source retrieval, CAS or formalization; sealed producer unchanged.
+
+## 2026-10-20: coprime binomial-pencil primitivity — scoped promotion
+
+ROOT producer; independent native Sol5.6-assigned FIRST, actual hosted
+identity unverified. CONFIRMED/MANUAL with standard curve-field and UFD
+imports; external novelty unknown, not formalized or peer reviewed.
+[Producer](xmodel/binomial-pencil-primitivity-swarmHQ-root-20261020T113905Z.md) and
+[independent proof audit](xmodel/binomial-pencil-primitivity-review-swarmHQ-sol56-root-20261020T115104Z.md).
+
+For a polynomial Keller pair P,Q and coprime positive m,n,
+C(P^m/Q^n) is algebraically closed in C(x,y). Thus this rational pencil's
+generic fiber is geometrically integral. No genus-zero or all-special-fiber
+irreducibility assertion follows.
+
+Primitive-generator reduction and nonvanishing of dr off PQ=0 force any
+off-{0,infinity} ramification of the one-variable factor to an omitted
+generator value. Moving it to infinity gives a primitive polynomial H;
+fiber multiplicity gcds are one and all zeros/poles of the factor are finite.
+Reduced-fraction extraction would force P,Q into C[H], a contradiction.
+Remaining ramification over only0,infinity makes r a dth power; squarefree
+P,Q and coprimality of m,n force d=1.
+
+This covers two nonreduced fibers outside the direct ONEBAD hypothesis.
+Nonprimitive coprime binomial pencils obstruct fixed-target polynomial
+Keller repair by dominant rational source substitutions, including finite
+extensions with rational-plane source. Arbitrary birational target changes,
+finite-normalization equality B=R, surjectivity and JC2 remain open.
+Noncoprime identity and NON-KELLER (x^2,y^2) controls retain sharp hypotheses.
+
+The original review reported incomplete required APPROACHES coverage;
+promotion waited for the separate complete exact-pin custody addendum.
+Both events are preserved in the review. No new source/CAS/formalization;
+sealed producer and all prior evidence remain unchanged.
