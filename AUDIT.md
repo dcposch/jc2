@@ -26205,3 +26205,41 @@ The original review reported incomplete required APPROACHES coverage;
 promotion waited for the separate complete exact-pin custody addendum.
 Both events are preserved in the review. No new source/CAS/formalization;
 sealed producer and all prior evidence remain unchanged.
+
+## 2026-10-20 — TWO1323: two-bad-fiber pullback with independent numerator and denominator
+
+Status: **PROMOTED / MANUAL**, at the exact hypotheses below; standard
+classical imports, external novelty unknown. ROOT producer, independent
+native Astra-assigned FIRST; no hosted identity verification or machine proof.
+
+For a polynomial Keller F=(P,Q), let a,b in the target polynomial ring be
+coprime and algebraically independent, with f=a/b target-primitive.
+If at most two affine fiber divisors div(a-lambda*b), including div(b)
+at infinity, are nonreduced, then C(f) is relatively algebraically closed
+in the source field C(x,y). Empty divisors count as reduced. Basepoints
+are allowed. No rational-generic-fiber assumption is needed.
+
+The new load-bearing step excludes every divisor-empty intermediate
+fiber: such a fiber gives a polynomial Mobius generator, after which
+reduced-fraction uniqueness contradicts independence of a(P,Q),b(P,Q).
+All branch values then lie among the two bad values. Riemann-Hurwitz
+forces a cyclic cover; every target prime is hit unramified, so its
+power descends by target UFD factorization, contradicting primitivity.
+
+[Sealed producer](xmodel/two-bad-fiber-pullback-swarmHQ-root-20261020T133400Z.md)
+and [independent FIRST / integrated proof](xmodel/two-bad-fiber-review-swarmHQ-astra-root-20261020T134316Z.md).
+FIRST completed13:43:16 UTC, CONFIRMED without correction; complete
+metadata/whole-read/post-pin custody reported with no deviations.
+The original producer's UNPROMOTED label is preserved as historical status.
+
+BIN1128 is a special case. ONEBAD still covers polynomial or dependent
+numerator/denominator cases not included here. For target f meeting these
+hypotheses, a donor with f composed D=R(H), deg(R)>1, cannot become
+polynomial Keller by dominant rational SOURCE substitution preserving
+the target functions, including rational-plane finite source enlargement.
+Arbitrary birational TARGET changes are not covered.
+
+No suitable pencil/compositeness relation is produced from the actual
+normalization boundary. No genus-zero, special-fiber irreducibility,
+surjectivity, degree bound, B=R, counterexample or JC2 conclusion follows.
+No new external source/CAS/formalization; all sealed evidence unchanged.

@@ -6,6 +6,17 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-10-20
 
+- **Two bad fibers suffice with independent numerator and denominator.** The
+  [theorem and independent review](xmodel/two-bad-fiber-review-swarmHQ-astra-root-20261020T134316Z.md)
+  extend the binomial result to any target-primitive a/b with coprime,
+  algebraically independent a,b and at most two nonreduced affine fiber
+  divisors (including the pole fiber; empty divisors count as reduced).
+  Independence excludes every divisor-empty intermediate fiber; the
+  resulting two-branch-value cover is cyclic, and powers descend by
+  unramified prime detection. Affine basepoints are allowed. This does not
+  supply a suitable pencil from a normalization boundary or prove B=R.
+  ROOT producer, independent Astra-assigned FIRST; PROMOTED/MANUAL,
+  standard imports, external novelty unknown.
 - **Coprime binomial pencils remain primitive.** The
   [proof and independent review](xmodel/binomial-pencil-primitivity-review-swarmHQ-sol56-root-20261020T115104Z.md)
   show that C(P^m/Q^n) is algebraically closed in C(x,y) for a polynomial

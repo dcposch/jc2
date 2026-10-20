@@ -978,6 +978,19 @@ by dominant rational SOURCE substitutions retaining the target functions,
 including rational-plane finite source extensions. Arbitrary birational
 target changes, pencil existence and the actual B=R implication remain open.
 
+The [two-bad-fiber theorem](xmodel/two-bad-fiber-review-swarmHQ-astra-root-20261020T134316Z.md)
+extends BIN1128: a target-primitive a/b with coprime, algebraically
+independent numerator and denominator remains primitive under Keller
+pullback if at most two affine fiber divisors are nonreduced (pole included;
+empty divisors reduced). Independence prevents every divisor-empty
+intermediate fiber, forcing any intermediate cover to be cyclic; its power
+then descends. Basepoints are allowed, with no generic-genus assumption.
+PROMOTED/MANUAL, ROOT/Astra FIRST; standard imports and unknown novelty.
+ONEBAD retains its separate polynomial/dependent-numerator scope.
+The fixed-target source-repair obstruction extends accordingly, but neither
+boundary-to-pencil existence nor B=R is supplied. Arbitrary target changes
+remain outside this result.
+
 [Evidence ledger](AUDIT.md) · [Recent progress](PROGRESS.md) ·
 [Historical avenue inventory](history/APPROACHES-before-20260906-cleanup.md#1-master-union-table) ·
 [Replay and scope checks](docs/REPLAY.md)
