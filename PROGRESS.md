@@ -4,6 +4,17 @@ Dated mathematical developments across the campaign. Evidence tiers and scope re
 those recorded in [AUDIT.md](AUDIT.md) and the linked reports. Current open questions
 are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
+## 2026-10-21
+
+- **A complete target curve can obstruct polynomial chart landing.** The
+  [corollary and explicit four-blowup chart](xmodel/complete-image-chart-review-swarmHQ-root-sol56-20261021T112534Z.md)
+  use the accepted zero-free-form extension to rule out every birational
+  Darboux target frame for a fixed source chart whose image contains a complete
+  curve in the target's regular-area locus. An affine line retaining one of
+  two cycle nodes gives this obstruction conditionally for a nodal quotient.
+  ROOT producer, Astra hostile and Sol5.6-assigned FIRST; PROMOTED/MANUAL.
+  No isogeny is constructed; other source charts and the normalization gap remain open.
+
 ## 2026-10-20
 
 - **Three double-fiber values also preserve primitivity.** The

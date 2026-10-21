@@ -1,6 +1,6 @@
 # Research frontier
 
-Updated October 18, 2026. **JC₂ remains unresolved.** These are mathematical
+Updated October 21, 2026. **JC₂ remains unresolved.** These are mathematical
 questions and evidence boundaries, not assignments or machine-launch instructions.
 Independent swarms may pursue new approaches or replicate work with explicit scope.
 
@@ -404,6 +404,16 @@ distinct components are allowed. Arbitrary branch resolution can create
 area-form zeros; no eligible-model existence theorem for arbitrary Keller
 extensions is supplied. No nonconstant-J target exclusion or automatic
 donor/blowup-depth family follows.
+
+A separate [complete-image corollary and explicit chart](xmodel/complete-image-chart-review-swarmHQ-root-sol56-20261021T112534Z.md)
+exclude polynomial landing in every field-generating birational Darboux target
+frame when a curve in the FIXED source chart maps onto a complete curve entirely
+in the zero-free target form's regular locus. Four blowups at a smooth point of
+a cuspidal cubic give an actual A2 chart retaining one node of an exceptional
+P1 and omitting the other; a degree-one map to a nodal normalization would
+therefore cover the entire target nodal curve. PROMOTED/MANUAL, Astra hostile
+and Sol5.6-assigned FIRST. No isogeny existence, other source chart, finite
+source substitution, or general finite-normalization conclusion is supplied.
 
 Exact properness of a complete eligible source ideal remains a sufficient endpoint;
 no such properness is known. Formal boundary pairs still need global algebraization.

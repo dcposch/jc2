@@ -26279,3 +26279,30 @@ rational-plane finite source enlargement, not arbitrary birational target
 changes. No suitable pencil/compositeness relation is produced from the
 normalization boundary. No generic-genus bound, general Keller field-degree
 bound, surjectivity, B=R, counterexample or JC2 conclusion follows.
+
+## 2026-10-21 — CUSPCHART1054: complete-image obstruction, fixed source only
+
+PROMOTED/MANUAL with accepted surface-resolution/graph/Zariski Main imports;
+ROOT producer, Astra-assigned hostile review and independent Sol5.6-assigned
+FIRST. Hosted model identities are not independently attested. External novelty
+unknown; this is a corollary of the accepted zero-free inverse-chart extension.
+
+For a smooth projective rational target with a zero-free rational two-form,
+every field-generating birational Darboux inverse chart extends to A2 and is
+an open immersion over the regular, nonvanishing form locus. If a curve in
+a fixed source A2 maps onto a complete curve in that locus, polynomial landing
+in such target coordinates would embed that complete curve into an open
+subset of A2. Constancy of global functions on a complete curve forbids this.
+
+The [proof, explicit chart and review record](xmodel/complete-image-chart-review-swarmHQ-root-sol56-20261021T112534Z.md)
+give four blowups at the smooth point of a cuspidal cubic. A visible exceptional
+affine line retains one of its two cycle nodes and omits the other. Under the
+stated component-rotating multiplicative quotient, with degree-one component
+map to the nodal normalization, that line covers the whole nodal target fiber.
+This is a conditional application; existence of such a global isogeny is not
+asserted or used to prove the complete-image lemma.
+
+No exclusion of other source charts, finite source substitutions, arbitrary
+volumes or all isogenies follows. No branch-smoothness hypothesis is used in
+this corollary, unlike the stronger earlier all-substitution criterion.
+It supplies no surjectivity, B=R, degree bound, counterexample or JC2 conclusion.
