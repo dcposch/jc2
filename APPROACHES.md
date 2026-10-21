@@ -415,6 +415,17 @@ therefore cover the entire target nodal curve. PROMOTED/MANUAL, Astra hostile
 and Sol5.6-assigned FIRST. No isogeny existence, other source chart, finite
 source substitution, or general finite-normalization conclusion is supplied.
 
+With the additional hypothesis that EVERY point of the complete target curve
+has an etale preimage on the fixed source curve, the
+[faithful-flat descent obstruction](xmodel/complete-image-arbitrary-postcomposition-swarmHQ-root-sol56-20261021T234829Z.md)
+excludes arbitrary rational postpairs whose compositions are regular and
+quasi-finite, hence polynomial Keller compositions. It needs no birationality,
+field-generation or two-form assumption. The earlier nodal application meets
+these premises only under its explicit whole-fiber finite-etale quotient
+assumption. PROMOTED/MANUAL; no donor existence, arbitrary source substitution
+or actual B=R conclusion follows. Generic etaleness or a merely dense curve
+image is insufficient for this proof.
+
 Exact properness of a complete eligible source ideal remains a sufficient endpoint;
 no such properness is known. Formal boundary pairs still need global algebraization.
 The separate AS109 integral-lift question concerns an exact polynomial lift and must

@@ -26306,3 +26306,39 @@ No exclusion of other source charts, finite source substitutions, arbitrary
 volumes or all isogenies follows. No branch-smoothness hypothesis is used in
 this corollary, unlike the stronger earlier all-substitution criterion.
 It supplies no surjectivity, B=R, degree bound, counterexample or JC2 conclusion.
+
+## FINITEPOST-COMPLETE — arbitrary rational postcomposition under etale complete-image hypotheses — 2026-10-21
+
+Producer swarmHQ ROOT (configured gpt-6-astra); native Astra-assigned hostile
+review and gpt-5.6-sol-assigned independent FIRST both CONFIRMED.
+Requested model assignments are recorded; hosted identities were not independently
+attested. Evidence tier MANUAL/desk-only; PROMOTED at the following exact scope.
+[Integrated proof and review chain](xmodel/complete-image-arbitrary-postcomposition-swarmHQ-root-sol56-20261021T234829Z.md).
+[Frozen candidate and checksum](box/complete-image-finitepost-swarmHQ-20261021T234829Z/README.md).
+
+For a dominant morphism f:U->S of smooth integral complex surfaces, assume
+an irreducible positive-dimensional curve C0 in U maps SET-SURJECTIVELY onto
+a complete irreducible reduced curve E in S, and f is etale along C0.
+Then no rational g:S-->A2 has a regular quasi-finite extension of g composed f.
+In particular, no polynomial Keller extension exists when U is a source-plane
+neighborhood of C0. At every y in E, faithful-flat local ideal contraction
+descends regularity of both postcoordinates from an etale preimage. The postmap
+is regular on a neighborhood of E and constant on E; the composition contracts
+C0, contradicting quasi-finiteness. Nodal E is allowed; its node must be covered.
+
+This adds an all-points etale-preimage hypothesis absent from the preceding
+birational-chart theorem, while removing target birationality/field-generation,
+the chosen two-form, and projectivity/rationality of the target surface.
+The preceding nodal quotient application supplies these hypotheses ONLY
+conditionally on its stated whole-fiber finite-etale quotient. No quotient,
+isogeny or eligible donor is constructed. Merely generic etaleness or dense
+curve image does not supply the proof. Dominance alone fails local descent
+for (s,t)->(s,st), where Y/X pulls back to t.
+
+Frozen candidate SHA256 8b1ccf044227e389a7bf2dfed17b87386cb4b7fb3d6299621264797a103af5c7.
+Sol review terminal23:45:10 UTC; Astra terminal postpins23:46:16 UTC;
+ROOT all16 input metadata pins matched23:46:49 UTC after both reviews.
+Sol reported corrected ACK formatting and oversized early displays, without
+clipping or omitted required reads; these are not computational verification.
+No external novelty, arbitrary finite source-substitution, all-donor exclusion,
+actual-normalization B=R, surjectivity or JC2 conclusion is claimed.

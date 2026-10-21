@@ -6,6 +6,14 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-10-21
 
+- **Complete-image obstruction now allows arbitrary rational postmaps, under an added hypothesis.**
+  The [faithful-flat descent proof](xmodel/complete-image-arbitrary-postcomposition-swarmHQ-root-sol56-20261021T234829Z.md)
+  excludes every rational postpair yielding a regular quasi-finite composition
+  when every point of a complete target curve has an etale preimage on the
+  fixed source curve. It applies to the earlier nodal setup only conditionally.
+  ROOT producer, Astra hostile and Sol5.6-assigned FIRST; PROMOTED/MANUAL.
+  No donor is constructed, and the actual finite-normalization gap is unchanged.
+
 - **A complete target curve can obstruct polynomial chart landing.** The
   [corollary and explicit four-blowup chart](xmodel/complete-image-chart-review-swarmHQ-root-sol56-20261021T112534Z.md)
   use the accepted zero-free-form extension to rule out every birational
