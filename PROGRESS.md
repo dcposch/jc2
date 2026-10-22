@@ -4,6 +4,18 @@ Dated mathematical developments across the campaign. Evidence tiers and scope re
 those recorded in [AUDIT.md](AUDIT.md) and the linked reports. Current open questions
 are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
+## 2026-10-22
+
+- **A fewnomial face condition is unavailable in generic real-affine Keller frames retaining a positive zero.**
+  The [frozen proof](xmodel/generic-real-frame-obstruction-swarmHQ-root-20261022T121815Z.md)
+  uses a self-contained vertex homotopy and the rank-one complex leading image.
+  For degree D>=2, four nonzero pure top terms and a nonzero constant, full face
+  condition(H) would force degree zero, contradicting same-sign Keller zeros.
+  [Independent Sol5.6-assigned hostile review](xmodel/generic-real-frame-hostile-review-swarmHQ-sol56-20261022T124020Z.md)
+  confirms the exact claim: PROMOTED/MANUAL; the frozen producer banner is historical.
+  Exceptional frames, zero constant and weaker face conditions remain outside scope.
+  This includes nonlinear automorphisms and excludes no Keller map; JC2 is unchanged.
+
 ## 2026-10-21
 
 - **Complete-image obstruction now allows arbitrary rational postmaps, under an added hypothesis.**

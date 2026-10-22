@@ -1,6 +1,6 @@
 # Research frontier
 
-Updated October 21, 2026. **JC₂ remains unresolved.** These are mathematical
+Updated October 22, 2026. **JC₂ remains unresolved.** These are mathematical
 questions and evidence boundaries, not assignments or machine-launch instructions.
 Independent swarms may pursue new approaches or replicate work with explicit scope.
 
@@ -126,6 +126,18 @@ Liu--Wang--Zeng2609.26810v1 is unavailable for nonlinear F in these coordinates.
 Nonlinear automorphisms are included: this excludes neither their existence
 nor anisotropic/coordinate-adapted methods. No positive density premise,
 new closing test or further control family is supplied.
+
+The [generic real-frame face obstruction](xmodel/generic-real-frame-obstruction-swarmHQ-root-20261022T121815Z.md)
+separately blocks applying full fewnomial face condition(H) to a degree-D>=2
+Keller map in a generic invertible real-affine frame retaining a positive zero.
+Nonzero constant and all four pure degree-D terms give a full simplex; deleting
+nonvertex terms preserves degree under(H), but the vertex image has real
+dimension at most two, contradicting the same nonzero sign of Keller zeros.
+[Independent Sol hostile review](xmodel/generic-real-frame-hostile-review-swarmHQ-sol56-20261022T124020Z.md)
+confirms this self-contained argument: PROMOTED/MANUAL, novelty unknown.
+The producer's UNREVIEWED banner is preserved history. Missing pure top terms,
+zero constant, weaker face conditions and nonlinear preprocessing are not covered.
+This excludes no Keller map and supplies no finite-normalization closing step.
 
 A [reviewed fixed-control calculation](xmodel/gaussian-spectral-gap-control-swarmHQ-root-20260918T184800Z.md)
 also blocks an automatic spectral upgrade: on the old rational two-sheet

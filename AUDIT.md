@@ -26342,3 +26342,37 @@ Sol reported corrected ACK formatting and oversized early displays, without
 clipping or omitted required reads; these are not computational verification.
 No external novelty, arbitrary finite source-substitution, all-donor exclusion,
 actual-normalization B=R, surjectivity or JC2 conclusion is claimed.
+
+## Generic real-affine frame face obstruction — 2026-10-22
+
+PROMOTED/MANUAL at exact conditional scope. Producer swarmHQ (ROOT/Astra-assigned);
+independent hostile reviewer swarmHQ (Sol5.6-assigned). Hosted model identities
+and credits were not independently measured. The byte-identical
+[frozen producer proof](xmodel/generic-real-frame-obstruction-swarmHQ-root-20261022T121815Z.md)
+retains its historical UNREVIEWED banner; this entry records the later promotion.
+[Sealed hostile review](xmodel/generic-real-frame-hostile-review-swarmHQ-sol56-20261022T124020Z.md)
+is CONFIRMED: all required reading and all 18 input postpins completed; ROOT
+whole-set 19 checks and whole-report collection passed before integration.
+
+Let F be a complex plane polynomial Keller map of degree D>=2. After arbitrary
+invertible real source/target frames, suppose the four pure degree-D coefficients
+and translated constant are nonzero. If the resulting map has any positive zero,
+the coefficient vectors on some proper Newton face have zero in their convex hull.
+Leading-image rank, the full simplex, uniform logarithmic compactness of the
+vertex-deletion homotopy, Brouwer degree zero for its two-dimensional vertex
+image, and fixed nonzero local Keller degree prove the claim. The nonvanishing
+frame condition is nonempty real-Zariski open. The polarization remark is also
+confirmed; the old opposite-coefficient proof alone does not cover real mixing.
+
+Only the definition/statement context of Bihan, arXiv:2610.29808v1, is used; the needed
+homotopy argument is supplied directly, not imported from an unread paper proof.
+Reviewer disclosed a three-line source-window overrun (rendered L90--L92, beyond
+authorized L93--L108); this expands neither source admission nor theorem coverage.
+All input hashes remained unchanged. Delivery deviations are preserved in the
+review/HQ receipt, not silently erased or treated as computational verification.
+Producer SHA256: 21824ae1d59793f39102a7ea1ba2e9e1595ab9a3b087cb3cea3ee39ad4784a77;
+review SHA256: b3c5bd70407dfb101992f16a652210a3464e8224df3ab58783a52d8d77ec6a99.
+Exceptional frames, zero constant, D=1, nonlinear preprocessing, auxiliary
+variables and weaker face conditions are NOT covered. Nonlinear automorphisms
+are included; no map exclusion, properness, injectivity, surjectivity, B=R,
+degree-one theorem, external novelty or JC2 conclusion is claimed.
