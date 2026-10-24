@@ -26466,3 +26466,11 @@ bound, residual R=0, k-isomorphism, descent, finite self-germ, properness,
 all-Keller attachment, infinitely singular coverage or JC2 conclusion follows.
 The intrinsic cusp conclusion supersedes only the earlier intrinsic-curve gap;
 it does not remove the separate ambient-smoothness hypothesis.
+
+Custody clarification for CONDITIONAL-CUSP-INDEX-1: ROOT read the review manifest
+first, then requested canonical verification and the first 24-line review window
+concurrently in one orchestration call. Verification returned PASS, all later
+windows followed it, and final postpins/staged checks passed. The preceding
+"before reading its body" wording should not be read as a strictly sequential
+verify-then-first-window certificate. This scheduling deviation changes no
+artifact bytes, mathematical verdict or stated conditional scope.
