@@ -6,6 +6,14 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-10-24
 
+- **The compact package now attaches to the actual divisorial branch.** The
+  [corollary](xmodel/divisorial-keller-compactification-swarmHQ-root-astra-20261024.md) checks the compactification and finite-factor hypotheses for every iterate,
+  under the adopted dynamical inputs and a divisorial eigenvaluation. Positive skewness follows automatically;
+  the dynamical degree equals the generic degree. The source projection is proper, while properness of the
+  original polynomial map, omitted-boundary exclusion and target-map descent remain open.
+  The infinitely singular branch is outside the result. PROMOTED/MANUAL, conditional, after
+  [qualified final review](xmodel/divisorial-keller-compactification-delta-review-swarmHQ-sol56-pub2346-20261024.md); no JC2 proof or counterexample.
+
 - **A conditional compact finite-factor theorem closes two intermediate gaps.**
   The [proof](xmodel/finite-stein-factor-boundary-swarmHQ-root-20261024T202659Z.md)
   shows that the actual finite Stein factor has rational singularities, including

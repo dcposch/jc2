@@ -26514,3 +26514,24 @@ publication by the corrected delta containing the full generated EMPTY output.
 ROOT read both manifests, completed canonical verification before reading each
 whole report, checked the coverage and independent input pins, and independently
 matched the corrected collision block. EMPTY is not a novelty certificate.
+
+## 2026-10-24 23:56:25 UTC — Actual divisorial attachment: PROMOTED / MANUAL / conditional
+
+The [corollary](xmodel/divisorial-keller-compactification-swarmHQ-root-astra-20261024.md) and its [final artifact review](xmodel/divisorial-keller-compactification-delta-review-swarmHQ-sol56-pub2346-20261024.md) are promoted at the following exact scope.
+
+The divisorial-branch corollary is PROMOTED at MANUAL/conditional scope. It attaches the three published compact results
+under adopted lambda>=N/eigenvaluation/A=0 inputs plus DIVISORIAL; these dynamical imports are not re-audited.
+No W-C=U premise or conclusion: source boundary mapping to the affine target is allowed. k is proper birational;
+properness of F, target self-germ descent, R=0 and the infinitely singular branch remain unresolved.
+The initial review imposed a stronger absent full-preimage hypothesis and retracted that GAP after ROOT's exact-hypothesis correction.
+The corrected review and final artifact delta are not blind; original sealed review and correction provenance remain preserved in HQ.
+Author/source-locator/display deviations and reviewer metadata24row-versus8row-cap deviation remain disclosed; no clean-gate claim.
+Source statements are named imports at the inspected FJ scopes; no new source proof, classification, or local-family adoption.
+
+
+- Producer:145LF/9332B,0444,full SHA256`aec957f402b229ed2c16c76b4d07076a202fa3bdcbd616517cd2c97748dddd3c`,body`f7e9a0cd5b84a4d1bb5b6cf8d6aa076d4a720f35488128494b8c4cb75e2bd8a4`; [manifest](xmodel/divisorial-keller-compactification-swarmHQ-root-astra-20261024.md.artifact.json) SHA256`9145cdedf4419fc114bde7beb36ea2702ee55d10e8a828e975f71be2e424fa0f`,basis`6308026911a151c043d10ae6caf752588f08a7b0`.
+- Final configured Sol5.6 delta:74LF/3162B,0444,full SHA256`93403bca184cf056fbf01e5fe730c857c3533adcd59a48e3bb2602de5f49725b`,body`e127c6c0f10afd42f645be3d6c463b9f574d62ef8f90961e27d868eb071f0f09`; [manifest](xmodel/divisorial-keller-compactification-delta-review-swarmHQ-sol56-pub2346-20261024.md.artifact.json) SHA256`df0a086bcc6b5dcb96e8e0037ee9db664fc512bb4856f164367cf4c583bcabf0`,basis`279348d0f688c1a6441b5ff65aaa61f4793a3c91`.
+- Both reports contain the complete generated EMPTY collision output at their exact Git bases. EMPTY is not a novelty certificate. Historical producer lifecycle banners are preserved; this audit records promotion.
+- ROOT read the whole final delta and coverage after manifest and completed canonical verification;75 input postpins,10 archive capture blobs and frozen launch STATE matched. Scientific scope remained unchanged. Prior procedural qualifications are retained, not erased by the successful final check.
+
+JC2 remains unresolved. No proof or counterexample is claimed.

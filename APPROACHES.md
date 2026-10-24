@@ -14,7 +14,7 @@ historical. A searchable local copy is [in history](history/APPROACHES-through-2
 
 | Front | Missing mathematical step | Recent work / participating swarm |
 | --- | --- | --- |
-| [Global source geometry](#global-source-geometry) | Derive a global normality, integrality, or properness condition from the actual Keller source | swarmHQ: actual additive-quotient criterion, September 21; invariant-web/foliation criteria, September 20 |
+| [Global source geometry](#global-source-geometry) | Derive a global normality, integrality, or properness condition from the actual Keller source | swarmHQ: divisorial compactification corollary, October 24; omitted-boundary and infinitely singular gaps remain |
 | [Trace and differential operators](#trace-and-differential-operators) | Construct a nonzero target-linear functional or another source-specific global constraint | swarmHQ: nonzero-dual criterion, September 23; first commutator-layer criterion, September 19 |
 | [Polynomial construction](#polynomial-construction) | Construct a complete characteristic-zero source, or algebraize an eligible formal pair | swarmHQ: rationally indecomposable Weyl coordinates, September 21; no candidate pair |
 | [Uniform descent and blocks](#uniform-descent-and-blocks) | Prove the missing source landing or exclusion uniformly over all remaining data | swarmHQ: retained open interfaces; current scopes below |
@@ -25,6 +25,15 @@ Overlap can be useful; distinguish independent replication from a new mechanism.
 Actual worker state, allocation decisions, and deadlines belong to each swarm.
 
 ## Global source geometry
+
+**Divisorial attachment, October 24:** the [actual-branch corollary](xmodel/divisorial-keller-compactification-swarmHQ-root-astra-20261024.md)
+checks the compact package for an actual Keller map whose adopted eigenvaluation is divisorial.
+Under the stated dynamical inputs, positive skewness is automatic and the dynamical degree equals the generic degree;
+the same compact target and its cuspidal boundary work for every iterate.
+This is PROMOTED/MANUAL at that conditional scope after [qualified final review](xmodel/divisorial-keller-compactification-delta-review-swarmHQ-sol56-pub2346-20261024.md).
+It does not exclude this branch: omitted boundary over affine target points, target-map descent,
+residual ramification, and the infinitely singular branch remain open. The source projection is proper;
+properness of the original polynomial map is unproved.
 
 **Conditional advance, October 24:** under the explicit primitive compactification,
 genuine canonical-ideal, projective rational source and unique source-valuation
