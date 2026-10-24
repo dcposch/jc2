@@ -26474,3 +26474,43 @@ windows followed it, and final postpins/staged checks passed. The preceding
 "before reading its body" wording should not be read as a strictly sequential
 verify-then-first-window certificate. This scheduling deviation changes no
 artifact bytes, mathematical verdict or stated conditional scope.
+
+
+## 2026-10-24 — SINGULAR-AMBIENT-CUSP-1 / LOCAL-CUSP-INDEX-2
+
+**PROMOTED / MANUAL, at two separate conditional scopes.**
+[Proof artifact](xmodel/singular-ambient-cusp-local-index-swarmHQ-root-astra-20261024T223151Z.md); [qualified final hostile delta](xmodel/singular-ambient-cusp-local-index-delta-review-swarmHQ-sol56-pub2227-corrected-20261024.md).
+
+1. Let a smooth projective rational surface resolve a connected normal compact
+   analytic surface `Y`, with nonempty reduced irreducible `B`, `Y\B=A²`, a
+   genuine meromorphic-form identification `omega_Y=I_B`, and the established
+   intrinsic ordinary cusp `q` on `B`. Then `Y` is smooth away from `q` and
+   singular at `q`. The proof uses rational singularities, a residue comparison
+   at smooth boundary points, and the compact topology/Noether contradiction.
+   The extra smooth-ambient-cusp branch of CONDITIONAL-CUSP-INDEX-1 is therefore
+   empty under these compact premises; its local inequality `e<=5m` remains valid.
+2. For every even `e>=2`, the explicit local construction has rational normal
+   source, a finite degree-`e` map, cusp isomorphisms, equal meromorphic volume
+   forms, compatible rational iterates, and exact local Cartier index `m=e/2`.
+   This disproves a uniform index bound from those local data alone. It supplies
+   neither globally proper `k`, a compact completion carrying both maps, nor
+   a polynomial Keller map on the entire source plane.
+
+The boundary-image qualification is binding: an actual exceptional image meets
+`B` at one boundary point; it is forced to be the cusp only for components
+meeting `C` at its cusp preimage. No assertion that all such images meet the cusp
+is promoted. Global descent, all-Keller attachment, and the singular-ambient
+actual-map constraint remain open. No novelty claim, formal certificate, JC2
+proof, or JC2 counterexample is asserted.
+
+Producer full SHA-256: `76ccef15fe3463a8ef4037c94e5c0b79634f0b82d377810b0a1cd8b60377a25e`.
+Corrected delta full SHA-256: `686101d91bafe963960c2d021aac04be20ff60d69d3f2a558aedcac6ed2ef996`.
+The configured Sol reviewer confirmed the exact scopes; actual hosted identity
+and cost are unmeasured. Earlier nonblind and noncanonical-input qualifications
+are retained, without a retrospective clean-compliance claim. The original
+[delta](xmodel/singular-ambient-cusp-local-index-delta-review-swarmHQ-sol56-pub2227-20261024.md)
+had an empty COLLISIONS section; it is preserved unchanged and superseded for
+publication by the corrected delta containing the full generated EMPTY output.
+ROOT read both manifests, completed canonical verification before reading each
+whole report, checked the coverage and independent input pins, and independently
+matched the corrected collision block. EMPTY is not a novelty certificate.

@@ -28,7 +28,21 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
   A local example shows why rationality alone cannot supply that bound; it has
   no required finite Keller map. Coordinator/Astra; PROMOTED/MANUAL, conditional,
   after the [qualified Sol5.6-assigned final review](xmodel/cuspidal-boundary-index-delta-review-swarmHQ-sol56-pub2127-20261024.md).
-  Ambient smoothness, actual-map index control and all-Keller attachment remain open.
+  The compact ambient-location question is resolved below; actual global-map
+  control and all-Keller attachment remain open.
+
+- **Singular ambient cusp and a stronger local countertest.** Under the explicit
+  compact canonical-ideal premises, the target is singular exactly at its
+  intrinsic cusp. This closes the ambient-location question and makes the
+  extra smooth-cusp branch empty in that compact setting.
+  Separately, finite local maps of every even degree `e` have rational source,
+  cusp isomorphisms, equal forms, compatible rational iterates, and exact
+  Cartier index `m=e/2`. Thus these local data alone cannot bound the index.
+  The construction does not supply a globally proper source projection or a
+  whole-plane polynomial Keller map. Global attachment and descent remain open.
+  [Proofs and exact scope](xmodel/singular-ambient-cusp-local-index-swarmHQ-root-astra-20261024T223151Z.md);
+  [qualified hostile review](xmodel/singular-ambient-cusp-local-index-delta-review-swarmHQ-sol56-pub2227-corrected-20261024.md).
+  PROMOTED/MANUAL; no JC2 proof or counterexample.
 
 ## 2026-10-22
 

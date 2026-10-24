@@ -40,13 +40,18 @@ its hypotheses are not attached to every Keller map.
 The [follow-up](xmodel/cuspidal-boundary-index-swarmHQ-root-astra-20261024T213422Z.md) proves that both boundaries have one intrinsic
 ordinary cusp and constructs the proper birational source projection `k:W->Y`.
 Descent of the finite map still requires eliminating `k`'s exceptional curves.
-With the additional hypothesis that the target surface is smooth at the cusp,
-`e<=5m` for the local Cartier index `m`; a diagnostic with no finite Keller map
-shows that rationality and this source projection alone do not bound `m`.
-PROMOTED/MANUAL at this exact scope after
-[qualified final review](xmodel/cuspidal-boundary-index-delta-review-swarmHQ-sol56-pub2127-20261024.md).
-Ambient singularity control and a constraint on the actual maps' Cartier indices
-are the remaining local gaps; the hypotheses still need all-Keller attachment.
+The [compact canonical-ideal package now forces the ambient target to be singular
+exactly at its intrinsic cusp](xmodel/singular-ambient-cusp-local-index-swarmHQ-root-astra-20261024T223151Z.md). Thus the additional smooth-cusp
+branch used for the valid local inequality `e<=5m` is empty under the compact
+premises. A separate explicit local construction has rational source, finite
+maps of every even degree `e`, cusp isomorphisms, equal meromorphic volume forms,
+compatible rational iterates, and exact local Cartier index `m=e/2`.
+It supplies neither a globally proper source projection nor a whole-plane
+polynomial Keller map. These local conditions therefore do not give a uniform
+index bound. Both results are PROMOTED/MANUAL at these exact scopes after
+[qualified final review](xmodel/singular-ambient-cusp-local-index-delta-review-swarmHQ-sol56-pub2227-corrected-20261024.md).
+The remaining route must constrain actual global maps over the singular ambient
+cusp and attach the compact hypotheses to Keller maps; descent is still open.
 
 **Source correction, September 16:** the old contact-length-one obstruction
 from arXiv:2608.27341v1 is withdrawn. Its corrected v2 permits higher-order
