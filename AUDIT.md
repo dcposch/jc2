@@ -26416,3 +26416,53 @@ self-germ, properness or descent is proved. In particular an intersection of R
 with a singular non-Cartier boundary need not be treated as a zero of a smooth
 residue. All-Keller attachment and the infinitely singular eigenvaluation case
 remain open. No novelty, counterexample or JC2-resolution claim is made.
+
+
+## 2026-10-24 — CONDITIONAL-CUSP-INDEX-1
+
+**PROMOTED / MANUAL / CONDITIONAL.** Coordinator/Astra contribution
+[proof package](xmodel/cuspidal-boundary-index-swarmHQ-root-astra-20261024T213422Z.md), producer commit
+`5052910d05fe7a2037d50b7bf2453a5898c2cbe6`, with
+[configured gpt-5.6-sol final-artifact review](xmodel/cuspidal-boundary-index-delta-review-swarmHQ-sol56-pub2127-20261024.md).
+The review confirms exactly the frozen public text; requested model provenance
+is recorded, while actual hosted identity and cost are unmeasured.
+
+Under every hypothesis of CONDITIONAL-STEIN-BOUNDARY-1, compact-support topology
+and the normalization formula force the boundary to have rational normalization
+and one intrinsic ordinary cusp. The same holds for the reduced source boundary.
+The proper image graph constructs a proper birational source projection k:W->Y,
+identity on U, with k restricted to C an isomorphism. Every k-exceptional curve
+meets C. This is a source-direction projection, not descent of the finite map h;
+descent would require k to be an isomorphism.
+
+Only after additionally assuming that Y is smooth at its cusp does the local
+cyclic intermediate ring and finite-trace argument give e<=5m, where m is the
+local Cartier index of C and m divides e. A weighted modification for e/m>=6
+has a genus-one exceptional curve, contradicting rationality. This proof does
+not assume that h itself is cyclic. The explicit weighted source modification
+has index n/gcd(n,3), unbounded with n, while preserving rational singularities,
+the cuspidal boundary and the stated source projection/residual divisor pattern.
+It lacks the required finite h and global Keller source, so it refutes only a
+bound derived from those weaker properties. For actual iterates the conditional
+inequality is merely N^j<=5m_j; no uniform bound on m_j is proved.
+
+ROOT retained complete exact-pin reads of the producer and prior mathematical
+reviews, read the entire final public review and coverage, verified its manifest
+and canonical seal before reading its body, and independently checked all 18
+consumed-input/governor pins plus the exact launch STATE Git blob. The final
+artifact delta is accepted as different-model mathematical critique. Earlier
+noncanonical governor displays, history count/row-limit overruns and prior verdict
+exposure remain explicitly qualified; this is not a fresh blind review or a
+procedural-compliance certificate. No source-paper proof or formal certificate
+was newly admitted. Desk proof checks and artifact/diff/link checks are the
+validation; EMPTY collision output is not a novelty assertion.
+
+Producer SHA256: `1e698be5889d651cbe71d3c01670ac3811680487fb0fbb679e73f248f9338f4b`.
+Producer manifest SHA256: `60d0f949c20377b9d8b87661da38d91c77d3e6b7050564982497ee3e17a278f7`.
+Review SHA256: `2ba17b9fdef0f7e248b73d6fb0b0d8c0bcc5aa438189e8d1543cb933ddcc451e`.
+Review manifest SHA256: `3b31ba66d6dd5c8a94aa66d27caa83ccb144cc13d3c767b82e530fc4c2594807`.
+No smoothness of the ambient surface at the cusp, uniform actual-map Cartier-index
+bound, residual R=0, k-isomorphism, descent, finite self-germ, properness,
+all-Keller attachment, infinitely singular coverage or JC2 conclusion follows.
+The intrinsic cusp conclusion supersedes only the earlier intrinsic-curve gap;
+it does not remove the separate ambient-smoothness hypothesis.

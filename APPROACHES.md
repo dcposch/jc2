@@ -37,6 +37,16 @@ The remaining implication must exclude the omitted affine boundary or prove
 descent from an actual Keller constraint. The theorem proves neither vanishing
 of residual ramification nor equality of the source and target compactifications;
 its hypotheses are not attached to every Keller map.
+The [follow-up](xmodel/cuspidal-boundary-index-swarmHQ-root-astra-20261024T213422Z.md) proves that both boundaries have one intrinsic
+ordinary cusp and constructs the proper birational source projection `k:W->Y`.
+Descent of the finite map still requires eliminating `k`'s exceptional curves.
+With the additional hypothesis that the target surface is smooth at the cusp,
+`e<=5m` for the local Cartier index `m`; a diagnostic with no finite Keller map
+shows that rationality and this source projection alone do not bound `m`.
+PROMOTED/MANUAL at this exact scope after
+[qualified final review](xmodel/cuspidal-boundary-index-delta-review-swarmHQ-sol56-pub2127-20261024.md).
+Ambient singularity control and a constraint on the actual maps' Cartier indices
+are the remaining local gaps; the hypotheses still need all-Keller attachment.
 
 **Source correction, September 16:** the old contact-length-one obstruction
 from arXiv:2608.27341v1 is withdrawn. Its corrected v2 permits higher-order

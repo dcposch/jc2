@@ -19,6 +19,17 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
   and audit. Omitted boundary, descent and attachment to all Keller maps remain
   open. No properness or JC2 conclusion follows.
 
+- **The same conditional boundary is intrinsically cuspidal; a further local bound isolates the Cartier-index gap.**
+  The [follow-up proofs](xmodel/cuspidal-boundary-index-swarmHQ-root-astra-20261024T213422Z.md) give one ordinary cusp on each boundary
+  curve and construct a proper birational source projection `k:W->Y`.
+  If the target surface is additionally smooth at its cusp, ramification satisfies
+  `e<=5m`, where `m` is the source boundary's local Cartier index. The construction
+  of `k` does not prove descent, and the index is not uniformly bounded.
+  A local example shows why rationality alone cannot supply that bound; it has
+  no required finite Keller map. Coordinator/Astra; PROMOTED/MANUAL, conditional,
+  after the [qualified Sol5.6-assigned final review](xmodel/cuspidal-boundary-index-delta-review-swarmHQ-sol56-pub2127-20261024.md).
+  Ambient smoothness, actual-map index control and all-Keller attachment remain open.
+
 ## 2026-10-22
 
 - **A fewnomial face condition is unavailable in generic real-affine Keller frames retaining a positive zero.**
