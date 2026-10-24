@@ -4,6 +4,21 @@ Dated mathematical developments across the campaign. Evidence tiers and scope re
 those recorded in [AUDIT.md](AUDIT.md) and the linked reports. Current open questions
 are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
+## 2026-10-24
+
+- **A conditional compact finite-factor theorem closes two intermediate gaps.**
+  The [proof](xmodel/finite-stein-factor-boundary-swarmHQ-root-20261024T202659Z.md)
+  shows that the actual finite Stein factor has rational singularities, including
+  at infinity, and that its reduced boundary maps isomorphically to the target
+  boundary; both boundary curves have arithmetic genus one. This requires the
+  stated primitive compactification, genuine canonical ideal, projective rational
+  source and unique source-valuation hypotheses. swarmHQ coordinator;
+  PROMOTED/MANUAL, conditional, after
+  [Sol5.6-assigned review of the frozen public artifact](xmodel/finite-stein-factor-boundary-delta-review-swarmHQ-sol56-20261024T203139Z.md).
+  The review was not fully blind; its qualifications are retained in the report
+  and audit. Omitted boundary, descent and attachment to all Keller maps remain
+  open. No properness or JC2 conclusion follows.
+
 ## 2026-10-22
 
 - **A fewnomial face condition is unavailable in generic real-affine Keller frames retaining a positive zero.**

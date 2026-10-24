@@ -1,6 +1,6 @@
 # Research frontier
 
-Updated October 22, 2026. **JC₂ remains unresolved.** These are mathematical
+Updated October 24, 2026. **JC₂ remains unresolved.** These are mathematical
 questions and evidence boundaries, not assignments or machine-launch instructions.
 Independent swarms may pursue new approaches or replicate work with explicit scope.
 
@@ -25,6 +25,18 @@ Overlap can be useful; distinguish independent replication from a new mechanism.
 Actual worker state, allocation decisions, and deadlines belong to each swarm.
 
 ## Global source geometry
+
+**Conditional advance, October 24:** under the explicit primitive compactification,
+genuine canonical-ideal, projective rational source and unique source-valuation
+premises, the [finite Stein factor theorem](xmodel/finite-stein-factor-boundary-swarmHQ-root-20261024T202659Z.md)
+gives rational singularities throughout the compact finite factor and an
+isomorphism of its reduced boundary with the target boundary (arithmetic genus one).
+PROMOTED/MANUAL at that scope, with
+[qualified different-model review](xmodel/finite-stein-factor-boundary-delta-review-swarmHQ-sol56-20261024T203139Z.md).
+The remaining implication must exclude the omitted affine boundary or prove
+descent from an actual Keller constraint. The theorem proves neither vanishing
+of residual ramification nor equality of the source and target compactifications;
+its hypotheses are not attached to every Keller map.
 
 **Source correction, September 16:** the old contact-length-one obstruction
 from arXiv:2608.27341v1 is withdrawn. Its corrected v2 permits higher-order

@@ -26376,3 +26376,43 @@ Exceptional frames, zero constant, D=1, nonlinear preprocessing, auxiliary
 variables and weaker face conditions are NOT covered. Nonlinear automorphisms
 are included; no map exclusion, properness, injectivity, surjectivity, B=R,
 degree-one theorem, external novelty or JC2 conclusion is claimed.
+
+## 2026-10-24 — CONDITIONAL-STEIN-BOUNDARY-1
+
+**PROMOTED / MANUAL, conditional.** Producer: swarmHQ coordinator, requested
+gpt-6-astra. [Frozen producer](xmodel/finite-stein-factor-boundary-swarmHQ-root-20261024T202659Z.md),
+contribution commit `686c131b32ae21cea7a3e8a2bc782203f9106990`;
+[final artifact review](xmodel/finite-stein-factor-boundary-delta-review-swarmHQ-sol56-20261024T203139Z.md),
+explicitly requested gpt-5.6-sol. Actual hosted identities and costs are unmeasured.
+Sealed producer/reviewer lifecycle banners describe their creation state;
+this entry records the subsequent scoped promotion.
+
+For exactly the producer's projective rational source, primitive normal compact
+analytic compactification, genuine dualizing ideal, resolution isomorphic over
+the entire source plane, and unique boundary extension represented by the source
+divisor with e=N and residue degree one, the actual Stein factor W has rational
+singularities everywhere. Its unique reduced boundary C maps isomorphically to B,
+and p_a(C)=p_a(B)=1. The proof uses source-polynomial pole orders, compact analytic
+duality/Leray, non-Cartier CM dualizing adjunction and the finite-birational curve
+cokernel formula. Named standard dependencies are declared; no source-paper proof,
+computational experiment or formal certificate is supplied.
+
+ROOT collected the whole frozen producer, final review and coverage, verified
+both manifests/canonical seals and all sixteen consumed-input/governor postpins,
+four retained history-manifest hashes and the review's exact launch STATE blob.
+The different-model mathematical critique is accepted with explicit qualifications:
+the earlier governor displays were noncanonical LF-escaped aggregates, history
+previews exceeded their count/row limits, and an Astra-verdict line was exposed
+before the first saved Sol verdict. The reviewer reports deriving its audit
+before that exposure; ROOT cannot independently establish that mental chronology.
+This is not a blind-review or procedural-compliance certificate. The final artifact
+delta used bounded LF windows; it does not erase the earlier deviations.
+
+Producer SHA256: `6901a645eac8e1a5044b3de7727e06e9b0d5385f8bafa9905166df22b87e3969`.
+Review SHA256: `40b1e9d59cedab694c60a6d1b3328d315068d8a73abb187d156a5f61665d5a33`.
+No R=0, W=Y, W minus C equals A2, nonreduced ideal equality, flatness,
+Q-Cartier/log-singularity assertion, full exceptional-fibre containment, finite
+self-germ, properness or descent is proved. In particular an intersection of R
+with a singular non-Cartier boundary need not be treated as a zero of a smooth
+residue. All-Keller attachment and the infinitely singular eigenvaluation case
+remain open. No novelty, counterexample or JC2-resolution claim is made.
