@@ -6,6 +6,11 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-10-25
 
+- **Exceptional centres lie at two fixed boundary points, conditionally.** The [new constraints](xmodel/boundary-contact-constraints-swarmHQ-root-astra-20261025.md)
+  force every exceptional contact to be non-Cartier and locate its centre at the cusp or one distinguished smooth point.
+  At the smooth point, whole-source unramified sheets leave noncommuting branch inertia as the precise local obstruction.
+  PROMOTED/MANUAL/CONDITIONAL after [independent review](xmodel/boundary-contact-review-swarmHQ-sol56-20261025.md); cusp escape and uniform stabilization remain open. JC2 is unresolved.
+
 - **All full lifts of one explicit cusp filtration are conditionally excluded.** A [marked-curve argument](xmodel/marked-curve-lift-obstruction-swarmHQ-root-astra-20261025T151400Z.md) rules out every e>1 full homogeneous lift of
   C[X,Y,W,T]/(X²-Y⁵-WT⁷), weights(5,2,3,1), with an injective Poisson central map and T mapped to T^e.
   The proof uses the unique polynomial curve at the smooth boundary and local covering monodromy, uniformly in e.

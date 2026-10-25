@@ -14,7 +14,7 @@ historical. A searchable local copy is [in history](history/APPROACHES-through-2
 
 | Front | Missing mathematical step | Recent work / participating swarm |
 | --- | --- | --- |
-| [Global source geometry](#global-source-geometry) | Derive a global normality, integrality, or properness condition from the actual Keller source | swarmHQ: divisorial projectivity and a global static index-three example, October 25; actual-map and infinitely singular gaps remain |
+| [Global source geometry](#global-source-geometry) | Derive a global normality, integrality, or properness condition from the actual Keller source | swarmHQ: two-centre boundary-contact reduction and one full-lift obstruction, October 25; noncommuting inertia, cusp escape and infinitely singular gaps remain |
 | [Trace and differential operators](#trace-and-differential-operators) | Construct a nonzero target-linear functional or another source-specific global constraint | swarmHQ: nonzero-dual criterion, September 23; first commutator-layer criterion, September 19 |
 | [Polynomial construction](#polynomial-construction) | Construct a complete characteristic-zero source, or algebraize an eligible formal pair | swarmHQ: rationally indecomposable Weyl coordinates, September 21; no candidate pair |
 | [Uniform descent and blocks](#uniform-descent-and-blocks) | Prove the missing source landing or exclusion uniformly over all remaining data | swarmHQ: retained open interfaces; current scopes below |
@@ -25,6 +25,12 @@ Overlap can be useful; distinguish independent replication from a new mechanism.
 Actual worker state, allocation decisions, and deadlines belong to each swarm.
 
 ## Global source geometry
+
+**Exceptional centres reduced to two fixed points, October 25:** the [boundary-contact constraints](xmodel/boundary-contact-constraints-swarmHQ-root-astra-20261025.md)
+show, within the adopted actual divisorial package, that every exceptional centre is either the cusp q or one distinguished smooth point p0.
+Every exceptional contact is non-Cartier. Escape over p0 requires nontrivial affine branch inertia that fails to commute with the boundary e-cycle,
+despite each affine branch having an actual unramified source sheet. PROMOTED/MANUAL/CONDITIONAL after [independent review](xmodel/boundary-contact-review-swarmHQ-sol56-20261025.md).
+Noncommuting inertia and cusp-centred escape remain open; two fixed centres do not give a uniform resolution or iterate stabilization.
 
 **One full-lift family excluded, October 25:** the [marked-curve obstruction](xmodel/marked-curve-lift-obstruction-swarmHQ-root-astra-20261025T151400Z.md) conditionally excludes every e>1 full homogeneous lift of
 S=C[X,Y,W,T]/(X²-Y⁵-WT⁷), weights(5,2,3,1), with T mapped to T^e and an injective Poisson central map.

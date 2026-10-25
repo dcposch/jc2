@@ -26619,3 +26619,23 @@ The static compactification remains a valid example; its geometry alone still do
 Its original EMPTY status is not accepted as evidence of that invocation's result. The separate [immutable correction](xmodel/marked-curve-lift-delta-review-collision-correction-swarmHQ-sol56-20261025T151400Z.md)
 reproduces ROOT's actual retained generated output for the same zero-OPEN case and frozen basis, without backfilling the reviewer execution record.
 The mathematical verdict is unchanged. The installed ledger differs from the reviewed draft only by this ROOT-checked custody paragraph; all original sealed bytes remain intact.
+
+## 2026-10-25 — Boundary-contact constraints in the actual divisorial package
+
+**Tier:** PROMOTED / MANUAL / CONDITIONAL after independent hostile review; no claim of novelty or JC2 resolution.
+**Scope:** The adopted actual divisorial attachment/projectivity hypotheses, including their dynamical and named standard dependencies, remain explicit.
+No assertion is transferred to the infinitely singular branch or to an arbitrary static surface.
+
+The [proof](xmodel/boundary-contact-constraints-swarmHQ-root-astra-20261025.md) gives a unique smooth p0 with L restricted to B equal to O_B(p0).
+Every integral curve meeting B only at a smooth point meets it at p0. A global section construction proves the induced boundary automorphism fixes p0, without requiring a rational curve or formal algebraization.
+The identity C.(nZ)=(e-1)/e<1, with nZ effective integral and positive on every exceptional prime, makes every exceptional contact non-Cartier.
+Rational exceptional curves and their one-place images then force every exceptional centre into {p0,q}, where q is the cusp.
+For escape over p0, each local affine branch has a fixed sheet in the same connected cover. At least one branch inertia must be nontrivial and fail to commute with the boundary e-cycle.
+This does not prove commutation, exclude cusp escape, bound exceptional depth, produce a common finite resolution, or settle JC2.
+
+**Independent gate and export:** [Sol5.6 hostile review](xmodel/boundary-contact-review-swarmHQ-sol56-20261025.md) returned PASS_CONDITIONAL on the whole producer argument.
+The public proof's seven scientific sections and the public review's verdict/audit are exact byte copies of the reviewed terminal sources; ROOT checked the new headers, scope qualifications and this ledger.
+No new mathematical appendix was added and no separate review of public formatting is claimed.
+Proof full SHA256 `5b3e32e2517c4c1dfa59476f11692517fa4b1b1c305630215f26fb46a619175d`, body `8dd0d1740bcd42c58cfe645dd1f922562dc43c4bceed4bc1ba6bd7ed09f5df4f`, manifest `43fdae98bbea1f87381444b5db609e5ac47c9f789bd66ddc218b35714dc81826`.
+Review full SHA256 `4e8fe9e06a4b3db5066eac12597a747de9ec667a9224e371c23ff8cd2a4bbfd2`, manifest `aeec37c95ed1951129ec1dc552223bc58bb6a5a15225b506742c4e99e4b0c06f`.
+Public basis `2ead4a746396b8a5ec0cb5793c3ef66658bae2b6`. ROOT's actual generated collision output is retained and reproduced separately for each terminal input; both exited zero and reported EMPTY because no new OPEN entry was raised. This is not a novelty certificate.
