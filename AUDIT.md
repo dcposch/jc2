@@ -26559,3 +26559,31 @@ No novelty claim is made, and generated EMPTY collision output is not a novelty 
 - The exact proposed APPROACHES/PROGRESS patch was reviewed and applied unchanged. Historical sealed lifecycle banners remain; this audit records promotion. ROOT's raw-response/literal-patch whitespace-check exceptions preserved exact evidence bytes and changed no mathematical scope. A ROOT collision-extraction whitespace mistake was corrected before any public mutation; both complete blocks matched.
 
 JC2 remains unresolved. No proof or counterexample is claimed.
+
+## GLOBAL-STATIC-INDEX3-1 — 2026-10-25
+
+**Status: PROMOTED / MANUAL, one exact static global construction.**
+
+**Claim.** The surface S=Proj C[X,Y,W,T]/(X²−Y⁵−WT⁷), with weights (5,2,3,1), and B=(T=0),
+is a normal projective compactification of the entire marked A². Its only singularity lies at the ordinary cusp of B and is rational.
+For the marked Omega=dx wedge dy, the genuine dualizing identity is omega_S=I_B·Omega.
+The canonical index and the Cartier index of B are exactly3; Cl(S)=Z[B], Pic(S)=Z[3B],3B is ample,and B²=1/3.
+A common boundary blowup has integral dual class L_E²=3. Thus the static whole-plane canonical-boundary package does not force Gorensteinness.
+
+**Proof.** [Exact global construction](xmodel/global-static-index-three-swarmHQ-root-astra-20261025.md).
+Its six mathematical sections are byte-identical to the HQ-reviewed producer; the proof is self-contained at the stated standard surface-theory dependencies.
+The index-cover hypersurface is not assumed rational: the quotient surface's rational singularities follow separately from projective duality and Leray.
+The boundary invariant ring is computed scheme-theoretically; the intersection calculation uses its normalization line-bundle transition.
+
+**Independent gate.** [Final public artifact and ledger review](xmodel/global-static-index-three-delta-review-swarmHQ-sol56-20261025.md), configured Sol5.6 role; actual hosted identity/cost unmeasured.
+Prior HQ mathematical review confirmed the exact static scope. Its sealed coverage misrecorded task67 as58LF and entry28 as30LF;
+a separate immutable clarification records the actual whole prior displays and corrects science accounting. Original review bytes were preserved.
+Producer metadata-display truncation/recovery and partial-return recovery qualifications remain; the final public gate does not erase them.
+
+**Canonical producer.** Full SHA256 `2df3edcab7d261d8fb08e2223a87333bfb1215d69bd5c03c72f749492c0233b8`; body SHA256 `e6bbe260ffb898a63ce1ca80b1bdffd15924d2c9ff1627fb1e145e4673771409`.
+Manifest SHA256 `0855c108cc46a69b0cc26775f04e280437c4bbdcb8ef62c3b545910881031412`; frozen basis `318c2eb42c209b13915527794d5f1fa8faf58721`.
+The complete generated collision block is EMPTY because no new OPEN entries are raised; this is not a novelty certificate.
+
+**Scope.** No actual finite h/proper k pair, iterate, Keller eigenvaluation, polynomial Keller pair, JC2 counterexample, unbounded-index family or uniform bound is supplied.
+The common static boundary resolution exists; it is not the missing simultaneous actual h/k pair.
+The published divisorial attachment and projectivity results retain all their actual-map and infinitely-singular gaps.

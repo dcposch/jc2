@@ -6,6 +6,12 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-10-25
 
+- **The static compactification conditions do not force index one.** An [explicit whole-plane compactification](xmodel/global-static-index-three-swarmHQ-root-astra-20261025.md)
+  is projective, has rational singularities and an ordinary cuspidal boundary, and satisfies the genuine canonical-ideal identity,
+  but its canonical/Cartier index is three. Its boundary has B²=1/3 and 3B is ample.
+  PROMOTED/MANUAL after [final artifact review](xmodel/global-static-index-three-delta-review-swarmHQ-sol56-20261025.md).
+  This rules out the static Gorenstein shortcut. It supplies no actual finite h/proper k pair, iterate or Keller map, and does not settle JC2.
+
 - **The divisorial compact target is projective.** A [direct proof](xmodel/divisorial-projectivity-swarmHQ-root-astra-20261025.md)
   constructs a line bundle using topology and the exponential sequence, then lifts sections across the
   contracted boundary using Kodaira vanishing on the smooth projective resolution. It also gives
