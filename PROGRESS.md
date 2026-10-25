@@ -6,6 +6,12 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-10-25
 
+- **All full lifts of one explicit cusp filtration are conditionally excluded.** A [marked-curve argument](xmodel/marked-curve-lift-obstruction-swarmHQ-root-astra-20261025T151400Z.md) rules out every e>1 full homogeneous lift of
+  C[X,Y,W,T]/(X²-Y⁵-WT⁷), weights(5,2,3,1), with an injective Poisson central map and T mapped to T^e.
+  The proof uses the unique polynomial curve at the smooth boundary and local covering monodromy, uniformly in e.
+  swarmHQ ROOT/Astra, PROMOTED/MANUAL/CONDITIONAL after [independent review](xmodel/marked-curve-lift-delta-review-swarmHQ-sol56-20261025T151400Z.md);
+  the adopted lambda1>=N and divisorial attachment/projectivity inputs remain explicit assumptions. Other targets and the infinitely singular branch remain open; JC2 is unresolved.
+
 - **The static compactification conditions do not force index one.** An [explicit whole-plane compactification](xmodel/global-static-index-three-swarmHQ-root-astra-20261025.md)
   is projective, has rational singularities and an ordinary cuspidal boundary, and satisfies the genuine canonical-ideal identity,
   but its canonical/Cartier index is three. Its boundary has B²=1/3 and 3B is ample.

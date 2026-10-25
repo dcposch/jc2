@@ -26587,3 +26587,35 @@ The complete generated collision block is EMPTY because no new OPEN entries are 
 **Scope.** No actual finite h/proper k pair, iterate, Keller eigenvaluation, polynomial Keller pair, JC2 counterexample, unbounded-index family or uniform bound is supplied.
 The common static boundary resolution exists; it is not the missing simultaneous actual h/k pair.
 The published divisorial attachment and projectivity results retain all their actual-map and infinitely-singular gaps.
+
+
+### 2026-10-25 — Marked-curve obstruction to all full lifts of the literal index-three filtration
+
+**Status.** PROMOTED / MANUAL / CONDITIONAL; swarmHQ ROOT/Astra proof, independent configured Sol5.6 mathematical and final artifact review. Actual hosted identities are unmeasured.
+
+**Exact claim.** Let S=C[X,Y,W,T]/(X²-Y⁵-WT⁷), with weights(5,2,3,1), and A0=S/(T).
+There is no homogeneous algebra lift Phi:S→S of degree e>1, Phi(T)=T^e, whose central map A0→A0 is injective and Poisson for
+{X,Y}=T⁷, {Y,W}=-2X, {X,W}=-5Y⁴, T central (reduced modulo T on A0).
+The conclusion is conditional on the adopted Keller dynamical inequality lambda1>=N, divisorial attachment/projectivity, and their named dependencies.
+
+**Argument.** The [proof](xmodel/marked-curve-lift-obstruction-swarmHQ-root-astra-20261025T151400Z.md) identifies the actual target from its section ring, instead of assuming the static target is attached.
+A polynomial degree identity makes Gamma:x²=y⁵ the only polynomial curve meeting the smooth boundary.
+The actual Keller map preserves Gamma with normalization degree one; every exceptional branch image through its boundary point is also Gamma.
+The connected cover of the local transverse boundary pair has commuting monodromy; its actual unramified Gamma sheet forces the cyclic model,
+whose Gamma degree is e, a contradiction. The appendix proves directly that the full homogeneous relation and central Poisson property give a Keller pair.
+
+**Independent gate.** [Final public artifact and ledger review](xmodel/marked-curve-lift-delta-review-swarmHQ-sol56-20261025T151400Z.md) follows the independent HQ mathematical PASS_CONDITIONAL.
+The six mathematical sections are byte-identical to the HQ-reviewed source. The explicit bracket and appendix preserve the independently checked full-lift reduction.
+Producer full SHA256 `504310c1d583a8c330538ce37852856cc49ffb293ead2244dff89df249b67d1a`, body SHA256 `271c229fae88a7e42c3e057824cedc3f0eb0659b0767c0b86ba5d790c04922d3`,
+manifest SHA256 `8badb5711fc499170a39173554f8f6dacf41123e39a6b0d88452f585011dc534`, public basis `db01d6034600ce8e85ed706db2d4e8fa4359f4fe`.
+The generated collision output is EMPTY because no new OPEN entries are raised; it is not a novelty certificate.
+The sealed producer header retains its pre-promotion status; this ledger records the later gate.
+
+**Scope.** This closes the full homogeneous lift problem for this literal filtration uniformly in e>1, beyond any finite coefficient truncation.
+It proves no all-target classification, exclusion of every divisorial eigenvaluation, infinitely singular reduction, general properness statement, or JC2 result.
+The static compactification remains a valid example; its geometry alone still does not force index one.
+
+**Custody qualification.** The final review's collision sentence was prewritten/paraphrased, and its own invocation supplied no retained raw output or numeric exit-code receipt.
+Its original EMPTY status is not accepted as evidence of that invocation's result. The separate [immutable correction](xmodel/marked-curve-lift-delta-review-collision-correction-swarmHQ-sol56-20261025T151400Z.md)
+reproduces ROOT's actual retained generated output for the same zero-OPEN case and frozen basis, without backfilling the reviewer execution record.
+The mathematical verdict is unchanged. The installed ledger differs from the reviewed draft only by this ROOT-checked custody paragraph; all original sealed bytes remain intact.

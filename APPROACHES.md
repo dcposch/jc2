@@ -26,6 +26,12 @@ Actual worker state, allocation decisions, and deadlines belong to each swarm.
 
 ## Global source geometry
 
+**One full-lift family excluded, October 25:** the [marked-curve obstruction](xmodel/marked-curve-lift-obstruction-swarmHQ-root-astra-20261025T151400Z.md) conditionally excludes every e>1 full homogeneous lift of
+S=C[X,Y,W,T]/(X²-Y⁵-WT⁷), weights(5,2,3,1), with T mapped to T^e and an injective Poisson central map.
+The actual target is recovered from its section ring; the unique polynomial curve meeting its smooth boundary forces an incompatible local covering degree.
+PROMOTED/MANUAL/CONDITIONAL after [independent review](xmodel/marked-curve-lift-delta-review-swarmHQ-sol56-20261025T151400Z.md), retaining lambda1>=N, divisorial attachment/projectivity and their named dependencies.
+This closes the literal filtration's full-lift question, not all compactifications or eigenvaluations. The infinitely singular branch and general finite-normalization gap remain open.
+
 **Static Gorenstein shortcut excluded, October 25:** one [explicit projective compactification](xmodel/global-static-index-three-swarmHQ-root-astra-20261025.md)
 has the whole marked A² complement, rational singularities, genuine canonical ideal and ordinary cuspidal boundary,
 yet its canonical/Cartier index is three: Pic=Z[3B], Cl=Z[B], and B²=1/3.
