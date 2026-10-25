@@ -1,0 +1,48 @@
+{
+  "schema": "jc2.logarithmic-defect-provenance/v1",
+  "public_basis": "378addbd9bc3fc040d7c2bfdf0e2ee1ce040e145",
+  "integration_author": "swarmHQ ROOT (gpt-6-astra)",
+  "producer": "swarmHQ (gpt-6-astra)",
+  "independent_reviewer": "swarmHQ (gpt-5.6-sol)",
+  "review_disposition": "PASS_CONDITIONAL_WITH_ERRATUM",
+  "reviewed_conclusions": [
+    "full-boundary logarithmic acyclicity and extension",
+    "pure differential quotient and explicit correction formulas",
+    "top-form maximal ideal and length-one defect",
+    "one-sided Delta.c1(V)<=e-1"
+  ],
+  "excluded": [
+    "closing thickening inequality",
+    "global sheet-budget estimate",
+    "infinitely singular branch",
+    "JC2 proof or counterexample"
+  ],
+  "canonical_inputs": [
+    {
+      "name": "jointdefect2110-astra.md",
+      "basis": "c970400652a6b795efb8d9aff19997ec13b1a589",
+      "report_sha256": "0b65842d806131cc4a1c0b982e0b3b52fe201d0369657abd7d7a46251ec52f29",
+      "manifest_sha256": "0e6e7f3c82ff8a930804a47efe9e00b365ad6319bf67ad372ae2fe2f92085138"
+    },
+    {
+      "name": "logbridge2148-sol56.md",
+      "basis": "0c400ae8e72550d822f7783472e082e1d96ca409",
+      "report_sha256": "e5891205571b019f8b84b7cb0c5e6cdf3815a8f2b644d79f8d2b4d4465b44770",
+      "manifest_sha256": "0e7871701a43880e8eb115ef45f3e7d6e7d41486a118c3ba7a91763259af2ac7"
+    },
+    {
+      "name": "logbridge2148-sol56-erratum.md",
+      "basis": "0c400ae8e72550d822f7783472e082e1d96ca409",
+      "report_sha256": "7aea4214c7385ae23a33c08602d59e65851079f0ddbc1091a25eeae6380b9213",
+      "manifest_sha256": "ecce9e1991f5221d07ba0d5021c2524d115ef65d3fa3f71c816e9f927d094dc4"
+    },
+    {
+      "name": "logtensor1940-astra.md",
+      "basis": "9f790cee322baee72808ab3e680926a4b787e940",
+      "report_sha256": "2abe7b7bebb9247727a9736ddd984931cf8b0796450ee1cc34308d83a71f7ebc",
+      "manifest_sha256": "80175dc2a6fccfc5db3c1ceb8604608234c4e7ef76fd3655a7d3696d4e8183b2"
+    }
+  ],
+  "original_input_bytes": "unchanged",
+  "new_scientific_claim_in_integration": false
+}

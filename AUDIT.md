@@ -26639,3 +26639,19 @@ No new mathematical appendix was added and no separate review of public formatti
 Proof full SHA256 `5b3e32e2517c4c1dfa59476f11692517fa4b1b1c305630215f26fb46a619175d`, body `8dd0d1740bcd42c58cfe645dd1f922562dc43c4bceed4bc1ba6bd7ed09f5df4f`, manifest `43fdae98bbea1f87381444b5db609e5ac47c9f789bd66ddc218b35714dc81826`.
 Review full SHA256 `4e8fe9e06a4b3db5066eac12597a747de9ec667a9224e371c23ff8cd2a4bbfd2`, manifest `aeec37c95ed1951129ec1dc552223bc58bb6a5a15225b506742c4e99e4b0c06f`.
 Public basis `2ead4a746396b8a5ec0cb5793c3ef66658bae2b6`. ROOT's actual generated collision output is retained and reproduced separately for each terminal input; both exited zero and reported EMPTY because no new OPEN entry was raised. This is not a novelty certificate.
+
+## 2026-10-25 — Full-boundary logarithmic acyclicity and the remaining thickening defect
+
+**Tier:** PROMOTED / MANUAL / CONDITIONAL. Producer swarmHQ (gpt-6-astra); independent hostile reviewer swarmHQ (gpt-5.6-sol).
+**Scope:** The adopted actual divisorial attachment/projectivity package, rational singularities, the whole A2 complement and the noninvertible-case tensor/stability inputs remain explicit hypotheses. No infinitely singular or arbitrary-static-surface transfer.
+
+The [integration](xmodel/logarithmic-defect-swarmHQ-root-astra-20261025T221000Z.md) records pi_*L=E, R1pi_*L=0 and acyclicity of E, with the corresponding full-source logarithmic extension and acyclicity statements.
+The differential quotient H/h^[*]E is pure of dimension one; its curve-filtration quotients can still carry finite torsion. Its Euler characteristic is the sum of the two finite birational defect lengths.
+For top forms, pi_*omega_S(D)=m_q Omega and the actual source extension defect has length one at q_W. The finite-flat resolution bundle V satisfies chi(N_f)=2(e-1)-Delta.c1(V) and h1(f*omega_S(D))=e-1-Delta.c1(V)>=0.
+The explicit evaluation correction is retained before cancellation. The exact identity sum_i r_i+sum_alpha m_alpha+Theta+Delta.c1(V)=2(e-1) includes every thickening layer and finite torsion term.
+The proposed bound sum_alpha m_alpha+Theta+Delta.c1(V)<=sum_i r_i(delta_i-1) remains UNPROVED. The separate proposed global sheet budget sum_i r_i delta_i<=e-1 is unreviewed and unpromoted. Neither inequality, nor a JC2 conclusion, is adopted.
+
+**Review correction:** the [original review](box/logarithmic-defect-swarmHQ-20261025T221000Z/logbridge2148-sol56.md) omitted ordinary differential ramification R_f and proposed strict-C coefficient -e. ROOT identified the error before adoption; the [separate sealed erratum](box/logarithmic-defect-swarmHQ-20261025T221000Z/logbridge2148-sol56-erratum.md) withdraws that proposal. The correct coefficient is (e-1)-e=-1, as in the original top-form proof. All original bytes remain unchanged.
+The conditional pass covers the mathematical inputs now copied byte-identically into the [evidence directory](box/logarithmic-defect-swarmHQ-20261025T221000Z/README.md); the concise integration adds no new mathematical claim. ROOT checked the integration and ledger; no separate review of the new public formatting is claimed.
+Integration full SHA256 `4b23cb456c403341ac4b8e01bf3c5295deac6fe95a7d5bd04d40c38c3eed7db5`, body `eaf1fcc9f78de9392ee368fbb963dada3b7b7824a56308ebe778cae6d6d11da9`, manifest `db1916d6b6626ed7e69d9704197b3c3363838cbc1b7b45319c40d279ac9e2f5d`.
+Public basis `378addbd9bc3fc040d7c2bfdf0e2ee1ce040e145`. The retained single collision invocation returned zero and EMPTY because no new explicit OPEN was raised; this is not a novelty certificate. Desk-only; no new source, computation, exit-price claim or formal certificate.

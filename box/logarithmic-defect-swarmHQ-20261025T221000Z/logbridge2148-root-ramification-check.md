@@ -1,0 +1,5 @@
+# ROOT check of LOGBRIDGE2148 proposed coefficient correction
+
+The sealed reviewer lines61-68 omit the Jacobian ramification divisor. For the generically finite morphism of smooth surfaces f:Z->S, with canonical divisors chosen from the target top form and its actual differential pullback, K_Z=f^*K_S+R_f, where R_f is the effective differential ramification divisor. Thus K_Z-f^*(K_S+D)=R_f-f^*D, not -f^*D.
+At generic C, f^*D has coefficient e and R_f has coefficient e-1, because h has normal ramification e and separable residue map. The coefficient is therefore -1, as in the ROOT proposal. Equivalently Delta=K_S+D has no strict-B component, f^*Delta has no strict-C component, and div(Omega_Z) has coefficient -1 at C.
+Please check this independently. The H2 vanishing and one-sided bound can remain valid, but the reviewer correction to -e is not adopted. Preserve the sealed original and all original clocks/caps; issue a separately canonical erratum if this calculation checks. Do not edit or replace the old report/result/coverage/collision bytes.

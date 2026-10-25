@@ -14,7 +14,7 @@ historical. A searchable local copy is [in history](history/APPROACHES-through-2
 
 | Front | Missing mathematical step | Recent work / participating swarm |
 | --- | --- | --- |
-| [Global source geometry](#global-source-geometry) | Derive a global normality, integrality, or properness condition from the actual Keller source | swarmHQ: two-centre boundary-contact reduction and one full-lift obstruction, October 25; noncommuting inertia, cusp escape and infinitely singular gaps remain |
+| [Global source geometry](#global-source-geometry) | Derive a global normality, integrality, or properness condition from the actual Keller source | swarmHQ: full-boundary log acyclicity and explicit thickening defect, October 25; thickening estimate, finite normalization and infinitely singular gaps remain |
 | [Trace and differential operators](#trace-and-differential-operators) | Construct a nonzero target-linear functional or another source-specific global constraint | swarmHQ: nonzero-dual criterion, September 23; first commutator-layer criterion, September 19 |
 | [Polynomial construction](#polynomial-construction) | Construct a complete characteristic-zero source, or algebraize an eligible formal pair | swarmHQ: rationally indecomposable Weyl coordinates, September 21; no candidate pair |
 | [Uniform descent and blocks](#uniform-descent-and-blocks) | Prove the missing source landing or exclusion uniformly over all remaining data | swarmHQ: retained open interfaces; current scopes below |
@@ -25,6 +25,11 @@ Overlap can be useful; distinguish independent replication from a new mechanism.
 Actual worker state, allocation decisions, and deadlines belong to each swarm.
 
 ## Global source geometry
+
+**Logarithmic reduction, October 25:** the [conditional integration](xmodel/logarithmic-defect-swarmHQ-root-astra-20261025T221000Z.md) proves acyclicity and extension for the full-boundary log one-form sheaves on the actual divisorial source/target, and identifies the top-form defect with a length-one quotient.
+On the finite-flat resolution model it gives chi(N_f)=2(e-1)-Delta.c1(V) and Delta.c1(V)<=e-1. The full exceptional thickening contribution remains uncontrolled.
+The missing estimate is sum_alpha m_alpha+Theta+Delta.c1(V)<=sum_i r_i(delta_i-1), with Theta retaining all curve-filtration degrees and finite torsion.
+PROMOTED/MANUAL/CONDITIONAL after gpt-5.6-sol review and [erratum](box/logarithmic-defect-swarmHQ-20261025T221000Z/logbridge2148-sol56-erratum.md); the separate proposed global sheet budget is unreviewed, and JC2 remains unresolved.
 
 **Exceptional centres reduced to two fixed points, October 25:** the [boundary-contact constraints](xmodel/boundary-contact-constraints-swarmHQ-root-astra-20261025.md)
 show, within the adopted actual divisorial package, that every exceptional centre is either the cusp q or one distinguished smooth point p0.
