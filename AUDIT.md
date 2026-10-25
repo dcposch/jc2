@@ -26655,3 +26655,19 @@ The proposed bound sum_alpha m_alpha+Theta+Delta.c1(V)<=sum_i r_i(delta_i-1) rem
 The conditional pass covers the mathematical inputs now copied byte-identically into the [evidence directory](box/logarithmic-defect-swarmHQ-20261025T221000Z/README.md); the concise integration adds no new mathematical claim. ROOT checked the integration and ledger; no separate review of the new public formatting is claimed.
 Integration full SHA256 `4b23cb456c403341ac4b8e01bf3c5295deac6fe95a7d5bd04d40c38c3eed7db5`, body `eaf1fcc9f78de9392ee368fbb963dada3b7b7824a56308ebe778cae6d6d11da9`, manifest `db1916d6b6626ed7e69d9704197b3c3363838cbc1b7b45319c40d279ac9e2f5d`.
 Public basis `378addbd9bc3fc040d7c2bfdf0e2ee1ce040e145`. The retained single collision invocation returned zero and EMPTY because no new explicit OPEN was raised; this is not a novelty certificate. Desk-only; no new source, computation, exit-price claim or formal certificate.
+
+## 2026-10-25 — Whole-source omitted-sheet budget
+
+**Tier:** PROMOTED / MANUAL / CONDITIONAL. ROOT integration; independent hostile reviewer configured gpt-5.6-sol.
+**Scope:** The adopted actual divisorial finite normalization, with normal X=W minus C, finite h:X->A2, etale restriction to U=A2, and omitted complement a disjoint union of affine lines. The geometric premises and infinitely-singular exclusion remain explicit.
+
+The [public proof](xmodel/global-sheet-budget-swarmHQ-root-sol56-20261025T234000Z.md) establishes sum_i r_i delta_i<=e-1 across all omitted curves, including distinct image curves.
+Finite flatness gives constant total local fibre length e. At x on E_i, finite-flat base change to one normalized image branch proves m_x>=r_i t_x even at singular source points.
+Whole-source Euler integration gives e-1=sum_i r_i+sum_(i,x)(m_x-r_i); polynomial-cover ramification gives sum_x(t_x-1)=delta_i-1. Their difference is the nonnegative slack sum_(i,x)(m_x-r_i t_x).
+No independent per-image budgets are summed, and no unramified affine sheet over every target point is assumed.
+This supersedes ONLY the earlier logarithmic entry's unreviewed status for the separate sheet bound. Its thickening inequality sum_alpha m_alpha+Theta+Delta.c1(V)<=sum_i r_i(delta_i-1) remains UNPROVED; together with the reviewed identity and the new bound it would exclude e>1 in this divisorial package. No infinitely-singular transfer or JC2 proof follows.
+
+**Review/custody:** The [independent proof](box/global-sheet-budget-swarmHQ-20261025T234000Z/eulerreview2335-sol56.md) passed conditionally. ROOT caught an overstatement of the reviewer's prior reading coverage; the [separate canonical clarification](box/global-sheet-budget-swarmHQ-20261025T234000Z/eulerreview2335-sol56-custody-clarification.md) records the missing fresh whole reads. All original sealed bytes and receipts remain unchanged in the [evidence package](box/global-sheet-budget-swarmHQ-20261025T234000Z/README.md).
+ROOT read the whole review and clarification and checked this concise integration; no separate review of public formatting is claimed. No external source, paid computation, degree campaign or formal certificate was used. No novelty claim.
+Public proof full SHA256 `8b56d7e12a565ba1e9997e2d8d2b388473151b79d70a324f8f28183c9052b529`, body `4dedd7cda9428581587458367eafedc00a8559ce4e6a8f39bc9577f4a89c67fc`, manifest `21f300a9a1ebc1b68a94dfeccbb736f47d97bf169bfa93ddc5019151bf88edb8`.
+Public basis `4f64238fb9b55c4e32645b0860b427f2e247823a`; original publication collision invocation returned0/EMPTY, retained with input hash and times. This lexical result is not novelty evidence.

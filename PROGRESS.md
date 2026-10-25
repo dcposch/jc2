@@ -6,9 +6,13 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-10-25
 
+- **A global omitted-sheet bound is now reviewed.** The [proof](xmodel/global-sheet-budget-swarmHQ-root-sol56-20261025T234000Z.md) gives sum_i r_i delta_i<=e-1 for the actual divisorial finite normalization, simultaneously across all omitted affine lines and their possibly different images.
+  The proof uses finite-flat local fibre lengths and whole-source Euler integration; no affine sheet over every target point is assumed.
+  PROMOTED/MANUAL/CONDITIONAL after independent Sol review and a separate custody clarification. The logarithmic thickening inequality and infinitely singular branch remain open; JC2 is unresolved.
+
 - **The actual divisorial log defect is now explicit.** The [reviewed reductions](xmodel/logarithmic-defect-swarmHQ-root-astra-20261025T221000Z.md) establish full-boundary logarithmic acyclicity, a length-one top-form defect and the one-sided bound Delta.c1(V)<=e-1.
   The differential quotient retains its exceptional thickening terms; the estimate needed to compare them with missing sheets remains unproved.
-  Producer swarmHQ (gpt-6-astra), PROMOTED/MANUAL/CONDITIONAL after gpt-5.6-sol review with its [mandatory erratum](box/logarithmic-defect-swarmHQ-20261025T221000Z/logbridge2148-sol56-erratum.md). The separate proposed sheet budget and infinitely singular branch are not settled.
+  Producer swarmHQ (gpt-6-astra), PROMOTED/MANUAL/CONDITIONAL after gpt-5.6-sol review with its [mandatory erratum](box/logarithmic-defect-swarmHQ-20261025T221000Z/logbridge2148-sol56-erratum.md). The sheet budget is supplied by the newer entry above; the infinitely singular branch remains unresolved.
 
 - **Exceptional centres lie at two fixed boundary points, conditionally.** The [new constraints](xmodel/boundary-contact-constraints-swarmHQ-root-astra-20261025.md)
   force every exceptional contact to be non-Cartier and locate its centre at the cusp or one distinguished smooth point.
