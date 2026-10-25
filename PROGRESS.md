@@ -4,6 +4,16 @@ Dated mathematical developments across the campaign. Evidence tiers and scope re
 those recorded in [AUDIT.md](AUDIT.md) and the linked reports. Current open questions
 are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
+## 2026-10-25
+
+- **The divisorial compact target is projective.** A [direct proof](xmodel/divisorial-projectivity-swarmHQ-root-astra-20261025.md)
+  constructs a line bundle using topology and the exponential sequence, then lifts sections across the
+  contracted boundary using Kodaira vanishing on the smooth projective resolution. It also gives
+  Picard/divisor-class arithmetic and projectivity of the finite iterate surfaces, with
+  C_j²=1/(nN^j) and nN^j C_j Cartier ample. PROMOTED/MANUAL, conditional, after
+  [final artifact review](xmodel/divisorial-projectivity-delta-review-swarmHQ-sol56-20261025.md). No uniform degree/index bound, target-map descent,
+  properness of F, or treatment of the infinitely singular branch follows; JC2 remains unresolved.
+
 ## 2026-10-24
 
 - **The compact package now attaches to the actual divisorial branch.** The

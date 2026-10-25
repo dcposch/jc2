@@ -26535,3 +26535,27 @@ Source statements are named imports at the inspected FJ scopes; no new source pr
 - ROOT read the whole final delta and coverage after manifest and completed canonical verification;75 input postpins,10 archive capture blobs and frozen launch STATE matched. Scientific scope remained unchanged. Prior procedural qualifications are retained, not erased by the successful final check.
 
 JC2 remains unresolved. No proof or counterexample is claimed.
+
+## 2026-10-25 02:08:01 UTC — Divisorial projectivity: PROMOTED / MANUAL / conditional
+
+The [direct proof](xmodel/divisorial-projectivity-swarmHQ-root-astra-20261025.md) and
+[final artifact review](xmodel/divisorial-projectivity-delta-review-swarmHQ-sol56-20261025.md)
+are promoted at the exact attached divisorial scope. The compact target Y is projective;
+Pic(Y)=Z[L], Cl(Y)=Z[B], L~nB is ample, n=L_E² is a positive integer, and B²=1/n.
+Each actual finite iterate surface W_j is projective, h_j and k_j are algebraic, and
+nN^j C_j is Cartier ample with C_j²=1/(nN^j). This Cartier multiple is not asserted to be the exact index.
+There is no uniform index/degree bound, Gorenstein/klt/E8 assumption, R_j Cartier/zero,
+target-map descent, finite self-germ, properness of F, equality W_j-C_j=U, or result for the infinitely singular branch.
+
+The proof constructs a line bundle on analytic Y by topology/exponential sequence,
+then uses Kodaira section lifting on the already projective smooth resolution and finite normalization.
+Kodaira is a named standard theorem checked at statement level, not a newly audited proof.
+Earlier attachment corrections and source-scope/nonblind/baseline-display qualifications remain binding.
+No novelty claim is made, and generated EMPTY collision output is not a novelty certificate.
+
+- Producer:166LF/11326B,0444,fullSHA256 `503833d453e0b790ee8e3b2783bd39dfdb01e3f0ae5225e9e2ea108ec060cbaf`,bodySHA256 `290fd3f580993300dabae6ec5c9978122b59275e6368583e4e4be97ebc3efc1b`; [manifest](xmodel/divisorial-projectivity-swarmHQ-root-astra-20261025.md.artifact.json) SHA256 `9e0cf947c2d98ebf51e62abedd52e6605c10619eba5578097a9d7c845b9eddfa`,basis `8b1fb2c39449ccaeb8f3399c22b6ddb96c7acf52`.
+- Final configured Sol5.6 delta:85LF/4443B,0444,fullSHA256 `3b6aefd9991b247c29e8043ae3959ba515a61ce063293d9d075bf95193233f4f`,bodySHA256 `4f2dc85d60dd509cd66107fad488ef0d382fe37caeead8940da3f60f5cfd2c67`; [manifest](xmodel/divisorial-projectivity-delta-review-swarmHQ-sol56-20261025.md.artifact.json) SHA256 `456938b5e1931c7569f243027a7ac2cf1b9ad109ae05669e67709508a8b764f3`,basis `3e88add27a747c67f49fe1f8729147bc5c6b7f7c`.
+- Both exact full generated collision blocks were checked. ROOT read the whole final delta and coverage after manifest/canonical gates;56 input postpins,ten archive launch blobs and frozen launch STATE matched.
+- The exact proposed APPROACHES/PROGRESS patch was reviewed and applied unchanged. Historical sealed lifecycle banners remain; this audit records promotion. ROOT's raw-response/literal-patch whitespace-check exceptions preserved exact evidence bytes and changed no mathematical scope. A ROOT collision-extraction whitespace mistake was corrected before any public mutation; both complete blocks matched.
+
+JC2 remains unresolved. No proof or counterexample is claimed.
