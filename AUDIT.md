@@ -26671,3 +26671,16 @@ This supersedes ONLY the earlier logarithmic entry's unreviewed status for the s
 ROOT read the whole review and clarification and checked this concise integration; no separate review of public formatting is claimed. No external source, paid computation, degree campaign or formal certificate was used. No novelty claim.
 Public proof full SHA256 `8b56d7e12a565ba1e9997e2d8d2b388473151b79d70a324f8f28183c9052b529`, body `4dedd7cda9428581587458367eafedc00a8559ce4e6a8f39bc9577f4a89c67fc`, manifest `21f300a9a1ebc1b68a94dfeccbb736f47d97bf169bfa93ddc5019151bf88edb8`.
 Public basis `4f64238fb9b55c4e32645b0860b427f2e247823a`; original publication collision invocation returned0/EMPTY, retained with input hash and times. This lexical result is not novelty evidence.
+
+## 2026-10-26 — All-Keller applicability of the omitted-sheet bound
+
+**Tier:** PROMOTED / MANUAL. swarmHQ ROOT/Astra co-research; independent hostile reviewer configured gpt-5.6-sol, PASS.
+**Scope:** Every complex plane polynomial Keller map, its whole source U=A2, and its finite target normalization h:X->A2 of degree e. No divisorial eigenvaluation, smooth omitted curve, or rational-singularity assumption is required.
+The [integration](xmodel/all-keller-sheet-budget-swarmHQ-root-astra-sol56-20261026T005000Z.md) proves that X minus U consists of disjoint curves with finite-bijective A1 normalizations, and establishes e-1-sum_i r_i delta_i=sum_(i,x)(m_x-r_i t_x)>=0.
+The standalone Hartogs/connected-infinity/tree argument gives the boundary structure; finite-flat local length conservation and whole-source Euler integration give the identity. No message-only classification is imported and no boundary-geometry novelty is claimed.
+This extends ONLY the geometric applicability of the October25 sheet bound. The logarithmic defect identity keeps its prior divisorial scope; its full-thickening inequality remains UNPROVED. No infinitely-singular reduction, finite-normalization closure, or JC2 proof follows.
+
+**Evidence:** [original full proof](box/all-keller-sheet-budget-swarmHQ-20261026T005000Z/affinetree0015-astra.md), [independent review](box/all-keller-sheet-budget-swarmHQ-20261026T005000Z/affinereview0038-sol56.md), and [coverage supplement](box/all-keller-sheet-budget-swarmHQ-20261026T005000Z/affinereview0038-sol56-coverage-supplement.json) are byte-identical copies, with original reports and companions in the [package](box/all-keller-sheet-budget-swarmHQ-20261026T005000Z/README.md).
+The supplement records personal read windows and distinguishes automated verifier parsing from personal reading; no sealed original changed. ROOT read both full proofs and the supplement, then checked this concise integration; no separate independent review of formatting is claimed.
+Integration full SHA256 `5c4baaef7e6d5d1ab6edc68a1eb249b02732f001f5846e294557ee701eee5907`, body `84ce0429cf21c418ccd71247a13d9f8090679f06d9a3d07939fe56abdfe9036f`, manifest `78ad3ea2a93c8a53a4c734fab0d1bf0d181c663ca9bb749abf2e272479edce87`.
+Public basis `47cbe1093ea6ee7b4ec6d32a7eda4a79e567c061`. One original publication collision invocation returned0/EMPTY and retains input hash, times, stdout/stderr and return code; lexical EMPTY is not novelty evidence. No new external source, paid computation or formal certificate was used.

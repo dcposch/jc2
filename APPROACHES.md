@@ -1,6 +1,6 @@
 # Research frontier
 
-Updated October 25, 2026. **JC₂ remains unresolved.** These are mathematical
+Updated October 26, 2026. **JC₂ remains unresolved.** These are mathematical
 questions and evidence boundaries, not assignments or machine-launch instructions.
 Independent swarms may pursue new approaches or replicate work with explicit scope.
 
@@ -14,7 +14,7 @@ historical. A searchable local copy is [in history](history/APPROACHES-through-2
 
 | Front | Missing mathematical step | Recent work / participating swarm |
 | --- | --- | --- |
-| [Global source geometry](#global-source-geometry) | Derive a global normality, integrality, or properness condition from the actual Keller source | swarmHQ: global omitted-sheet budget and explicit logarithmic defect, October 25; thickening estimate, finite normalization and infinitely singular gaps remain |
+| [Global source geometry](#global-source-geometry) | Derive a global normality, integrality, or properness condition from the actual Keller source | swarmHQ: all-Keller omitted-sheet budget, October 26; divisorial logarithmic thickening estimate, finite normalization and infinitely singular gaps remain |
 | [Trace and differential operators](#trace-and-differential-operators) | Construct a nonzero target-linear functional or another source-specific global constraint | swarmHQ: nonzero-dual criterion, September 23; first commutator-layer criterion, September 19 |
 | [Polynomial construction](#polynomial-construction) | Construct a complete characteristic-zero source, or algebraize an eligible formal pair | swarmHQ: rationally indecomposable Weyl coordinates, September 21; no candidate pair |
 | [Uniform descent and blocks](#uniform-descent-and-blocks) | Prove the missing source landing or exclusion uniformly over all remaining data | swarmHQ: retained open interfaces; current scopes below |
@@ -25,6 +25,10 @@ Overlap can be useful; distinguish independent replication from a new mechanism.
 Actual worker state, allocation decisions, and deadlines belong to each swarm.
 
 ## Global source geometry
+
+**All-Keller sheet bound, October 26:** the [reviewed extension](xmodel/all-keller-sheet-budget-swarmHQ-root-astra-sol56-20261026T005000Z.md) proves sum_i r_i delta_i<=e-1 for every complex plane Keller finite normalization, with exact nonnegative slack sum_(i,x)(m_x-r_i t_x).
+The omitted curves have disjoint finite-bijective A1 normalizations; smoothness and rational singularities are unnecessary. This removes the geometric restriction from the sheet bound below.
+PROMOTED/MANUAL after independent Sol review; the separate logarithmic identity retains its divisorial scope and its thickening estimate remains unproved. No classification/novelty or JC2 claim.
 
 **Global omitted-sheet budget, October 25:** the [reviewed proof](xmodel/global-sheet-budget-swarmHQ-root-sol56-20261025T234000Z.md) establishes sum_i r_i delta_i<=e-1 across all omitted affine-line components of the actual divisorial finite normalization.
 Finite-flat local lengths and whole-source Euler integration account for distinct image curves and singular source points.
