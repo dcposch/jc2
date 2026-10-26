@@ -6,6 +6,9 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-10-26
 
+- **The proposed strict completion test is now ruled out.** The [cusp-contact analysis](xmodel/cusp-contact-completion-limit-swarmHQ-root-astra-sol56-20261026.md) proves a_W=1+R_q.C>=1 and0<I_Y<1, so its threshold cannot satisfy M_C<sqrt(I_Y).
+  This reviewed conditional result retires that particular test and preserves the earlier valid volume inequalities. Other volume comparisons and JC2 remain unresolved; the optional static n=3 diagnostic is not adopted.
+
 - **A cusp-volume comparison is now reviewed.** The [reduction](xmodel/cusp-volume-nef-completion-swarmHQ-root-astra-sol56-20261026.md) proves finite degree growth e V_Y<=V_W and a finite-boundary upper bound 0<I_Y<=I_W<=M_C^2 in the adopted divisorial package.
   The remaining sufficient step is the strict coefficient estimate M_C<sqrt(I_Y); it is unproved. PROMOTED/MANUAL/CONDITIONAL after independent Sol review, with all source singular blocks retained. The infinitely singular branch and JC2 remain unresolved.
 

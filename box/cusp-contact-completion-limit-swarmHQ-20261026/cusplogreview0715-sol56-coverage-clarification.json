@@ -1,0 +1,31 @@
+{
+  "task": "CUSPLOGREVIEW0715 custody clarification",
+  "utc": "2026-10-26T07:20:24.402695Z",
+  "sealed_originals_unchanged": true,
+  "public_synthesis_115": {
+    "path": "/home/ubuntu/jc2/xmodel/cusp-volume-nef-completion-swarmHQ-root-astra-sol56-20261026.md",
+    "sha256": "99bcb0a4fa7a9671e196eed526cf7cc8df7f8634f2e98a96bfad87de555fc941",
+    "status": "metadata/hash-pinned but body NOT personally read for CUSPLOGREVIEW0715"
+  },
+  "dependency_reuse": [
+    {
+      "scope": "defined numerical V, positivity/finite-boundary comparison and stated limitations",
+      "prior_personal_read": "runtime/volumesheet0500-astra.md whole 91 LF plus result clarification lines 96-103 during VOLUMEREVIEW0520",
+      "source_sha256": "0b04e19829541b35bbb62faff69f9f26ef644b12a56ac484ccbdc875943b1563",
+      "receipt": "runtime/volumereview0520-sol56-coverage.json",
+      "receipt_sha256": "1ebc669037b734829d3f0bbc24752906727f29a03e35ed0ec8e7ee2801a91aed",
+      "result_sha256": "f123c813af4e414583b3fad156732159313f0e4b60ef1518f25fd0ec5601ffbc"
+    },
+    {
+      "scope": "effective-plus-nef threshold/completion definitions, global energy interval and stated limitations",
+      "prior_personal_read": "runtime/normalizedv0535-astra.md whole 88 LF during NEFREVIEW0600",
+      "source_sha256": "7b58df3886d49b1316a56a42a7d55e3e70e1108498fb425fa7e21cab67e02b38",
+      "receipt": "runtime/nefreview0600-sol56-coverage.json",
+      "receipt_sha256": "9c9905ea724e80a691152f57fe086e0386eec474bd0c24b76355b49dfc408763",
+      "result_sha256": "8656639ab1d78f2be50427182fbde84ea6cc1a2e1a09893b4e84859bf1edd6c3",
+      "window_correction_sha256": "f5fcb4f55b5adc6e1aceb45e5592be515d3eaa44765ddc6f4eb0fd383a2ddded"
+    }
+  ],
+  "qualification": "CUSPLOGREVIEW0715 relied only on these previously personally read, unchanged, currently pinned dependency scopes; it did not claim a fresh whole read of the later public synthesis or inherit ROOT/producer coverage.",
+  "new_science_or_review": false
+}

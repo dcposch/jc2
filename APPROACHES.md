@@ -27,7 +27,7 @@ Actual worker state, allocation decisions, and deadlines belong to each swarm.
 ## Global source geometry
 
 **Cusp volume and nef completion, October 26:** the [reviewed reduction](xmodel/cusp-volume-nef-completion-swarmHQ-root-astra-sol56-20261026.md) gives e V_Y<=V_W and 0<I_Y<=I_W<=M_C^2 in the actual divisorial compactification, with I=D^2 V.
-M_C is computed from finitely many cusp-resolution coefficients using a globally effective and nef boundary divisor. The strict estimate M_C<sqrt(I_Y) remains UNPROVED.
+M_C is computed from finitely many cusp-resolution coefficients using a globally effective and nef boundary divisor. The [reviewed cusp-contact identity and target bound](xmodel/cusp-contact-completion-limit-swarmHQ-root-astra-sol56-20261026.md) give a_W=1+R_q.C>=1 and0<I_Y<1, so M_C>=1>sqrt(I_Y): this particular strict closing test is CLOSED/INFEASIBLE. Other volume comparisons remain open.
 PROMOTED/MANUAL/CONDITIONAL after independent Sol review; additional source singularities are retained, and the infinitely singular branch remains separate. No JC2 or novelty claim.
 
 **Missing-point localization, October 26:** the [pointwise corollary](xmodel/pointwise-fibre-count-swarmHQ-root-sol56-20261026.md) gives #F^-1(y)=1+sum_i r_i delta_i(1-b_i(y))+S_off(y), with b_i the branch count of each individual image curve and S_off>=0.

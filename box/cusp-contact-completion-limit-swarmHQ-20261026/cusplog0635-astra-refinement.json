@@ -1,0 +1,20 @@
+{
+  "task": "CUSPLOG0635 strict target-volume refinement",
+  "status": "PRODUCER_CHECKED / INTERNAL / UNPROMOTED",
+  "utc": "2026-10-26T07:07:49.770992+00:00",
+  "basis": "ce05682d614f94a682c422b0cb1090114e294608",
+  "sealed_main": "runtime/cusplog0635-astra.md",
+  "sealed_main_full_sha256": "2d9db932cd0831e203a31baf7bd2a6eef8a65930fbf1fa3ce16e1141de89fd97",
+  "sealed_main_unchanged": true,
+  "scope": "Exactly the target hypotheses and numerical notation of the sealed main;no new input/source or successor.",
+  "claim": "0<I_Y<1; consequently M_C>=1+R_q.C>=1>sqrt(I_Y).",
+  "proof": [
+    "The main proves n z_i+l_i−1>=0 and z_i>0 for every exceptional component over q. Choose rational0<epsilon<n with epsilon z_i<l_i+n z_i for all i; finitely many strictly positive gaps permit this.",
+    "P_epsilon=−(n−epsilon)Z_B is exceptional relatively nef and <=L_Y. Maximality gives P_Y>=P_epsilon>−nZ_B coefficientwise.",
+    "Thus H=pi^*B+P_Y/n has coefficient1 on Bprime and strictly positive coefficient h_i=z_i+(P_Y)_i/n on every exceptional E_i. The main proves H.Bprime=0 and H.E_i=(P_Y.E_i)/n>=0.",
+    "Because P_Y is nonzero and the exceptional matrix is invertible, at least one P_Y.E_i is strictly positive. Expanding the effective divisor H in its boundary components therefore gives H^2=H.Bprime+sum_i h_i(H.E_i)>0.",
+    "Since H^2=1/n−V_Y/n^2, this proves I_Y=V_Y/n<1. Positivity is the already reviewed target result. The main cusp identity yields the stated strict opposite separation for M_C."
+  ],
+  "limit": "Only this sufficient completion consumer is infeasible;no JC2 conclusion and no general exclusion of other volume comparisons.",
+  "custody": "Separate ordinary refinement receipt;main canonical bytes unchanged. Whole receipt personally read;terminal SHA/mode recorded separately."
+}

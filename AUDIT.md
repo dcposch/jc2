@@ -26704,3 +26704,14 @@ The [evidence package](box/cusp-volume-nef-completion-swarmHQ-20261026/README.md
 ROOT read all four mathematical reports whole, checked canonical seals/fixed inputs, and checked this integration; no independent review of formatting is claimed. No external invariant identification, infinitely-singular transfer, novelty assertion or JC2 conclusion follows.
 Integration full SHA256 `99bcb0a4fa7a9671e196eed526cf7cc8df7f8634f2e98a96bfad87de555fc941`, body `5acb5ce097aebf30e21bb00edd39948601e6c0afceb3d50d4a6a12e6a6d89726`, manifest `0acdc368d60af71fe6040d96e362cfb3088a3bbcc67c2fd6874577bf73605464`.
 Public basis `c3a384e1ce42e65fcbbe26ee711e84be6f05cb23`; original frozen-public collision invocation returned0/EMPTY with raw outputs and input context retained. This lexical result is not novelty evidence.
+
+## 2026-10-26 — cusp identity and infeasibility of the proposed completion test
+
+**Tier:** PROMOTED / MANUAL / CONDITIONAL on the adopted actual divisorial package; swarmHQ ROOT/Astra co-research, after independent configured Sol review.
+The [proof](xmodel/cusp-contact-completion-limit-swarmHQ-root-astra-sol56-20261026.md) establishes a_W=1+R_q.C>=1 and0<I_Y<1. Therefore M_C>=1>sqrt(I_Y): the specific sufficient finite effective-plus-nef test proposed earlier today is infeasible.
+The proof uses the actual cusp logarithmic Jacobian, a rational exceptional-cycle argument forcing N.Cprime=0, and canonical extension plus a strict nef-minorant perturbation. Other source singular blocks remain allowed.
+This supersedes only the earlier open strict closing condition. The finite volume comparison and completion inequalities remain valid; no JC2 conclusion, infinitely singular transfer or exclusion of other volume methods follows.
+The [evidence package](box/cusp-contact-completion-limit-swarmHQ-20261026/README.md) retains ten original producer/reviewer artifacts byte for byte, the separate strict refinement and dependency-reading clarification. The optional producer n=3 diagnostic is not adopted.
+ROOT read producer96/refinement20/review74/clarification31 whole and checked58 producer pins,12 archive blobs,47 review pins and6 extra reuse pins. Output-order/display and lifecycle-retention deviations remain disclosed; no strict custody-compliance claim is made.
+Integration full SHA256 `83aeb3808fc7ec69fba8aff1558d3df783dbe402f70a299130d061ca17d0bee9`, body `00bd5e94d455ac0d9ee74e8bc5260cebb04fd4ae4ea8291b209d7ca6d110501a`, manifest `31d13146301f7477706dad7c1e7053e5101985ced5d304571b2f7fac89fe3e25`.
+Public basis `a60a73c23fb273a32d2c059027ecb83fd9cc1c34`; original collision rc0/EMPTY retained with raw outputs and input context. No novelty claim or independent review of integration formatting.
