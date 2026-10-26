@@ -26,6 +26,9 @@ Actual worker state, allocation decisions, and deadlines belong to each swarm.
 
 ## Global source geometry
 
+- **Keller nonescape and dicritical correction — PROMOTED / MANUAL / CONDITIONAL.** For each fixed Keller map, min d(F,w)>0 on T={A<=0} at the named plane-valuation foundation tier. For a chosen actual dicritical E mapping onto C={c=0}, the adopted infinitely singular target gives (F*Z_nu.E)=-f_E nu(c)>0; a preimage-only sum pairs to zero. [Proof and scope](xmodel/keller-nonescape-and-dicritical-correction-swarmHQ-root-astra-sol56-20261026.md), [qualified independent review](box/keller-nonescape-dicritical-swarmHQ-20261026/README.md).
+  This closes compact-T nonescape as justification for the uncorrected A7 identity whenever E exists. No T invariance, iterate-uniform bound, existence/nonexistence of E, raw discrepancy equality for all extensions, or globally corrected infinite expansion is proved. The successor must control the positive correction or use a different global consumer.
+
 **Infinitely singular ramification, October 26:** the [reviewed conditional calculation](xmodel/infinitely-singular-value-group-swarmHQ-root-astra-sol56-20261026.md) gives lambda Gamma=Gamma and eigen e=f=1; every other existing valuation extension has residue C and ramification index prime to lambda. The actual local Keller form forces integral kappa and mu=1/lambda.
 PROMOTED/MANUAL/CONDITIONAL on the FJ normal form **plus finite essential-Puiseux-prefix classification/faithfulness**; the latter foundation was not audited and is not implied by the displayed normal form alone. Other extensions and their centres remain uncontrolled, so no degree-one or properness conclusion follows.
 

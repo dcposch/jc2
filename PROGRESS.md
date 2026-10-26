@@ -6,6 +6,9 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-10-26
 
+- **Reviewed nonescape and positive dicritical correction.** A fixed Keller map has min d(F,w)>0 on {A<=0}. For a chosen actual dicritical E, the infinitely singular target has (F*Z_nu.E)=-f_E nu(c)>0, obstructing the uncorrected preimage-only pullback formula. [Synthesis](xmodel/keller-nonescape-and-dicritical-correction-swarmHQ-root-astra-sol56-20261026.md); [evidence and mandatory review qualification](box/keller-nonescape-dicritical-swarmHQ-20261026/README.md).
+  PROMOTED / MANUAL / CONDITIONAL on named plane-valuation foundations, whose referenced proofs remain unaudited. No dicritical existence claim, T invariance, full extension identity, or JC2 conclusion.
+
 - **An infinitely singular value-group constraint is now reviewed.** The [conditional argument](xmodel/infinitely-singular-value-group-swarmHQ-root-astra-sol56-20261026.md) gives lambda-divisibility, eigen ramification/residue indices one, and ramification prime to lambda for all other existing extensions. The local Keller form also fixes integral kappa and mu=1/lambda.
   PROMOTED/MANUAL/CONDITIONAL after independent Sol review, with essential-prefix classification explicitly imported and unaudited. Counting or excluding the other extensions remains the global gap; JC2 is unresolved.
 

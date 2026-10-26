@@ -1,0 +1,107 @@
+{
+  "created_utc": "2026-10-26T14:54:34.634723+00:00",
+  "public_basis": "3a60479fcfb114451c6e78da554af39707c518a7",
+  "tier": "PROMOTED / MANUAL / CONDITIONAL",
+  "integration": {
+    "path": "xmodel/keller-nonescape-and-dicritical-correction-swarmHQ-root-astra-sol56-20261026.md",
+    "sha256": "a1c60f4b1dd37acdfd8699f7810fae252cf2f3adaadda104010a71be36e93b80",
+    "manifest_sha256": "b95cbc183293698822b5bc7b43d09f24a076e1117107efc9b43d8a1c3107d24c"
+  },
+  "originals": [
+    {
+      "path": "nonescape1400-astra-collision-receipt.json",
+      "sha256": "eb8ef9b4dc5ed1b1733965a615c470eeb271f782b24fed2c9952e9be4755ff10",
+      "bytes": 415
+    },
+    {
+      "path": "nonescape1400-astra-coverage.json",
+      "sha256": "da6c6aa48f7726c7c97f4a46b5fe378103e48f6583e59722e1fb6f8b0733b80d",
+      "bytes": 2281
+    },
+    {
+      "path": "nonescape1400-astra-partial.json",
+      "sha256": "b46f9c89f452f4e69f44907dcdb3c6ce115eaee8d15e0ec2afff379710d3b754",
+      "bytes": 1516
+    },
+    {
+      "path": "nonescape1400-astra-postpins.json",
+      "sha256": "dd10dbb609a97a39aa8d93939989ba51f2212c929879ef7a022e922657df97df",
+      "bytes": 561
+    },
+    {
+      "path": "nonescape1400-astra-result.json",
+      "sha256": "f727c8bd49632dd0cb703b2407743cb995dc6e3e2f2cd2dde2a88742f03cdd61",
+      "bytes": 2912
+    },
+    {
+      "path": "nonescape1400-astra.md",
+      "sha256": "3426b6d4d95bacae333a2e7e642cbce7cfc149f2bef4bba27d8ecf5b4ad074c6",
+      "bytes": 12526
+    },
+    {
+      "path": "nonescape1400-astra.md.artifact.json",
+      "sha256": "403396a2b1741aca84ca648ead6a86d27a04c627bf434b05064ebc5b5fb445cb",
+      "bytes": 670
+    },
+    {
+      "path": "nonescapereview1430-sol56-coverage.json",
+      "sha256": "a4665a835c12e8845118ea17c8249690d09ccba86df7fa07f02f7d2fe1b9e30f",
+      "bytes": 948
+    },
+    {
+      "path": "nonescapereview1430-sol56-partial.json",
+      "sha256": "6ed83a08b94ba338fe12dee5c8e24d54ebd50b05ed9c3a03e663e6e5c1d91743",
+      "bytes": 174
+    },
+    {
+      "path": "nonescapereview1430-sol56-postpins.json",
+      "sha256": "9bd82c93a3ae2d928f488bd36d5ac86002e76b99b66a3dce76566736fdc26994",
+      "bytes": 272
+    },
+    {
+      "path": "nonescapereview1430-sol56-qualification.json",
+      "sha256": "750452502c59b138307ee96b4a7f3d9a232180ffee6cb819f876d4e4b18e0787",
+      "bytes": 2954
+    },
+    {
+      "path": "nonescapereview1430-sol56-result.json",
+      "sha256": "faabb3398ad2d633063f65b28661b06e01796450891ff986753c208910741140",
+      "bytes": 498
+    },
+    {
+      "path": "nonescapereview1430-sol56.md",
+      "sha256": "9c599df1cdece45d8fc825b1c2b76594a653c41d6985d6949b47276142ee9e70",
+      "bytes": 4431
+    },
+    {
+      "path": "nonescapereview1430-sol56.md.artifact.json",
+      "sha256": "d473afb4a4868da3e33e82c360e4f17902ca1f3a39c020b2efba101e715099be",
+      "bytes": 672
+    }
+  ],
+  "independent_review": "PASS / CONDITIONAL; mandatory nonescapereview1430-sol56-qualification.json controls the existence negation and inclusive reading count",
+  "source_scope": "Selected FJ2011 windows only; named classification/retraction and referenced foundations unaudited",
+  "root_collection_utc": "2026-10-26T14:39:08.614916+00:00",
+  "whole_root_reads": {
+    "producer_lf": 64,
+    "producer_companion_lf": 66,
+    "review_lf": 89,
+    "qualification_lf": 37,
+    "review_terminal_companions_lf": 4,
+    "integration_body_lf": 64,
+    "evidence_index_lf": 21
+  },
+  "qualifications": [
+    "Producer whole-STATE completion timestamp absent; exact 14:04 deadline uncertified.",
+    "Review initial 700 count incomplete; mandatory qualification corrects conservative inclusive count to 2200/2400, STATE separate.",
+    "No existence or nonexistence of a dicritical divisor is proved.",
+    "No JC2 conclusion or novelty claim."
+  ],
+  "collision": {
+    "utc": "2026-10-26T14:43:04.702545+00:00",
+    "rc": 0,
+    "stdout_sha256": "10357a7e083a26fb1127bcf93dc7ea28b4741e8a3d0e78396d8e8e78db5ad662",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout": "## COLLISIONS\n\nstatus: EMPTY\n\n- NONE \u2014 the report contains no explicitly raised `OPEN[...]` entries.\n\nCorpus basis: `3a60479fcfb114451c6e78da554af39707c518a7` (Git blobs only).\n"
+  }
+}
