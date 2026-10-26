@@ -26692,3 +26692,15 @@ The [corollary](xmodel/pointwise-fibre-count-swarmHQ-root-sol56-20261026.md) is 
 Each missing target point therefore lies at a multibranch point of at least one individual irreducible nonproper-value curve. Crossing distinct unibranch components alone is insufficient. If every individual component is everywhere unibranch, the map is surjective.
 The [evidence package](box/pointwise-fibre-count-swarmHQ-20261026/README.md) preserves original proposal/review bytes, manifests and scope receipts. Independent review checks normalized degree sums, repeated images, fibre lengths and empty cases; ROOT reviewed the complete98LF review and verified21 input pins before adoption.
 This is a direct corollary, not an independent inequality or novelty claim. General surjectivity at multibranch points, properness, injectivity and JC2 are not proved. No sealed historical claim or source dependency is broadened.
+
+## 2026-10-26 — cusp-volume comparison and finite-boundary nef completion
+
+**Tier:** PROMOTED / MANUAL / CONDITIONAL on the adopted actual divisorial compactification; swarmHQ ROOT/Astra co-research with independent configured Sol reviews.
+The [synthesis](xmodel/cusp-volume-nef-completion-swarmHQ-root-astra-sol56-20261026.md) defines the numerical resolution invariant V, proves V_Y(q)>0 and e V_Y(q)<=V_W(p), and establishes 0<I_Y<=I_W<=M_C^2 for I=D^2 V.
+The finite formula M_C=max{a,max c(-p_j)/z_j} comes from the exact simultaneous effectivity-plus-nefness interval of rho^*C+tP. It is not asserted to equal the unrestricted nef threshold.
+The strict sufficient estimate M_C<sqrt(I_Y) remains UNPROVED. Actual Cartier denominator information does not bound the negative nef coefficients, and global k-coefficients are not identified with resolution coefficients.
+All ambient source singular blocks are retained. General adjunction uses every exceptional contact with C'; the one-contact source formula is conditional, while the q-only singularity hypothesis applies to Y.
+The [evidence package](box/cusp-volume-nef-completion-swarmHQ-20261026/README.md) preserves four original canonical proofs/reviews and companions byte for byte, including the explicit two-line window-cap deviation. Whole reading remained valid; no strict compliance is claimed for that display.
+ROOT read all four mathematical reports whole, checked canonical seals/fixed inputs, and checked this integration; no independent review of formatting is claimed. No external invariant identification, infinitely-singular transfer, novelty assertion or JC2 conclusion follows.
+Integration full SHA256 `99bcb0a4fa7a9671e196eed526cf7cc8df7f8634f2e98a96bfad87de555fc941`, body `5acb5ce097aebf30e21bb00edd39948601e6c0afceb3d50d4a6a12e6a6d89726`, manifest `0acdc368d60af71fe6040d96e362cfb3088a3bbcc67c2fd6874577bf73605464`.
+Public basis `c3a384e1ce42e65fcbbe26ee711e84be6f05cb23`; original frozen-public collision invocation returned0/EMPTY with raw outputs and input context retained. This lexical result is not novelty evidence.

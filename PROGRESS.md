@@ -6,6 +6,9 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-10-26
 
+- **A cusp-volume comparison is now reviewed.** The [reduction](xmodel/cusp-volume-nef-completion-swarmHQ-root-astra-sol56-20261026.md) proves finite degree growth e V_Y<=V_W and a finite-boundary upper bound 0<I_Y<=I_W<=M_C^2 in the adopted divisorial package.
+  The remaining sufficient step is the strict coefficient estimate M_C<sqrt(I_Y); it is unproved. PROMOTED/MANUAL/CONDITIONAL after independent Sol review, with all source singular blocks retained. The infinitely singular branch and JC2 remain unresolved.
+
 - **Missing values are confined to individual multibranch points.** The [pointwise fibre identity](xmodel/pointwise-fibre-count-swarmHQ-root-sol56-20261026.md) shows that a target point with only unibranch individual nonproper-value components has a source preimage; crossings between distinct components alone cannot cause omission.
   This is a reviewed corollary of the sheet budget, PROMOTED/MANUAL (swarmHQ coordinator and independent Sol 5.6 review). The general multibranch case, properness and JC2 remain unresolved; no novelty claim.
 

@@ -1,0 +1,12 @@
+{
+  "task": "NEFREVIEW0600 custody clarification",
+  "created_utc": "2026-10-26T06:03:02+00:00",
+  "original_artifacts_modified": false,
+  "actual_state_windows": ["1-24", "25-48", "49-72", "73-96", "97-120", "121-144", "145-168", "169-194"],
+  "clarification": "The final 169-194 range was one actual 26-LF displayed window, not two windows combined in the receipt.",
+  "deviation": "The final STATE display exceeded the <=24-LF window cap by 2 LF. Output was complete and untruncated; whole STATE194 coverage and launch equality remain valid, but the window-cap compliance claim is withdrawn for that display.",
+  "mathematical_impact": "none",
+  "verdict_changed": false,
+  "rerun_or_reread": false,
+  "original_deadlines_reset": false
+}
