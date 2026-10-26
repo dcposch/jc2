@@ -1,0 +1,52 @@
+{
+  "status": "INTERNAL_UNPROMOTED_SCOPED_INDEX_PROGRESS_GLOBAL_GAP",
+  "utc": "2026-10-26T12:34:05.063555+00:00",
+  "basis": "9e18a9552f1a978847c64295de48d1c0fe8b4464",
+  "report": "runtime/valuegroup1200-astra.md",
+  "report_sha256": "e450a68322cf78de722e7dbf0504fbae9a653eb80ec0d6757f8e00b51e3b864d",
+  "manifest_sha256": "4a8b8d991687a9c51e566bfa1e64e8783548d794aa16b3fb3ffb673ae1a7ae4d",
+  "source_tier": "Explicit FJ plane-Puiseux/rigid-normal-form named imports; no whole classification proof audit. Stacks one-extension inequality only. Not independently reviewed.",
+  "results": [
+    "Scaling lambda differs from [Gamma:lambdaGamma]; the exact prime-height index formula is given.",
+    "At the FJ normal-form tier, essential Puiseux-prefix recurrence forces infinite height for every p|lambda, so the actual eigenextension has e=f=1.",
+    "Actual normalized Keller volume preservation gives kappa=c/(lambda\u22121) a positive integer, mu=1/lambda and constant local volume unit.",
+    "Every existing other extension is infinitely singular with residueC and ramification index coprime to lambda. No fixedness, V1 membership or total-degree equality follows."
+  ],
+  "first_failed_global_implication": "Eigenextension e=f=1 plus attraction and eventual contraction of visible boundary primes does not establish uniqueness of valuation extensions; other/infinitely-near centres and hidden resolution contributions remain uncontrolled. FJ fixed-eigenvaluation uniqueness is not preimage uniqueness.",
+  "no_degree_claim": "No lambda=N, global triangular degree count, summed fundamental equality, defectlessness, properness or N=1 asserted.",
+  "partial": "runtime/valuegroup1200-astra-partial.json",
+  "coverage": "runtime/valuegroup1200-astra-coverage.json",
+  "postpins": "runtime/valuegroup1200-astra-postpins.json",
+  "custody": "runtime/valuegroup1200-astra-custody.json",
+  "collision": {
+    "action": "collision",
+    "start": "2026-10-26T12:31:28.271700+00:00",
+    "end": "2026-10-26T12:31:47.493338+00:00",
+    "returncode": 0,
+    "raw": {
+      "stdout": {
+        "path": "/home/ubuntu/swarmHQ/runtime/.valuegroup1200-astra-collision.stdout",
+        "sha256": "025b3d290d63cbedf16f7fde6762a3e028ee554be14507b380f50155a12bdbab",
+        "bytes": 179
+      },
+      "stderr": {
+        "path": "/home/ubuntu/swarmHQ/runtime/.valuegroup1200-astra-collision.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    }
+  },
+  "begin_raw": {
+    "stdout": {
+      "path": "runtime/.valuegroup1200-astra-begin.stdout",
+      "sha256": "1c72fe30a97140825a12caed2024223f4a8b771ba921d0dffa0fa6d162f62ef6",
+      "bytes": 458
+    },
+    "stderr": {
+      "path": "runtime/.valuegroup1200-astra-begin.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  },
+  "no_promotion_or_successor": true
+}

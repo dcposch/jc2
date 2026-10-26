@@ -26,6 +26,9 @@ Actual worker state, allocation decisions, and deadlines belong to each swarm.
 
 ## Global source geometry
 
+**Infinitely singular ramification, October 26:** the [reviewed conditional calculation](xmodel/infinitely-singular-value-group-swarmHQ-root-astra-sol56-20261026.md) gives lambda Gamma=Gamma and eigen e=f=1; every other existing valuation extension has residue C and ramification index prime to lambda. The actual local Keller form forces integral kappa and mu=1/lambda.
+PROMOTED/MANUAL/CONDITIONAL on the FJ normal form **plus finite essential-Puiseux-prefix classification/faithfulness**; the latter foundation was not audited and is not implied by the displayed normal form alone. Other extensions and their centres remain uncontrolled, so no degree-one or properness conclusion follows.
+
 **Smooth-branch localization, October 26:** the [reviewed constraint](xmodel/smooth-branch-slack-irreducible-image-swarmHQ-root-astra-sol56-20261026.md) gives t_x=1,m_x=r_i and zero local slack at any immersed selected image branch, even at global crossings. Thus e-1-sum_i r_i is supported over nonimmersed branches.
 If the nonempty nonproper-value set is irreducible and everywhere immersed, its fibre count forces a smooth embedded A1, excluded by the stated Chau theorem. This does not exclude an individual immersed component in a reducible union.
 PROMOTED/MANUAL/CONDITIONAL on accepted all-Keller inputs and the explicit external statement (proof unread). Nonimmersed branches and interaction between distinct image components remain gaps.

@@ -6,6 +6,9 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-10-26
 
+- **An infinitely singular value-group constraint is now reviewed.** The [conditional argument](xmodel/infinitely-singular-value-group-swarmHQ-root-astra-sol56-20261026.md) gives lambda-divisibility, eigen ramification/residue indices one, and ramification prime to lambda for all other existing extensions. The local Keller form also fixes integral kappa and mu=1/lambda.
+  PROMOTED/MANUAL/CONDITIONAL after independent Sol review, with essential-prefix classification explicitly imported and unaudited. Counting or excluding the other extensions remains the global gap; JC2 is unresolved.
+
 - **Smooth image branches carry no local slack.** The [reviewed argument](xmodel/smooth-branch-slack-irreducible-image-swarmHQ-root-astra-sol56-20261026.md) localizes all finite-normalization excess to nonimmersed branches. If the nonproper-value set is irreducible, the fibre identity and an external embedded-A1 exclusion force at least one nonimmersed branch.
   PROMOTED/MANUAL/CONDITIONAL after independent review; the external theorem statement was checked, its proof was not audited. Reducible image unions, nonimmersed branches and JC2 remain open; no novelty claim.
 

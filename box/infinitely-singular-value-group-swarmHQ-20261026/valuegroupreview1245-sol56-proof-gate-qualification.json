@@ -1,0 +1,10 @@
+{
+  "task": "VALUEGROUPREVIEW1245 proof-gate qualification",
+  "sealed_report_unchanged": true,
+  "status": "PASS_CONDITIONAL",
+  "essential_prefix_gate": "Equality of the normalized infinitely singular valuations determines each finite essential Puiseux prefix inductively, up to a compatible root-of-unity conjugacy: the conjugate-prefix resultant records the first exponent where two candidate branches differ; after that exponent is fixed, the next resultant records the coefficient modulo the finite stabilizer of the preceding prefix. This is asserted only before first accumulation and requires the injectivity/classification of plane valuations by their essential Puiseux data.",
+  "source_tier_qualification": "That injectivity/classification premise is not proved by the displayed text of FJ Theorem 3.1(b) itself. It belongs to the named plane-valuation foundations that FJ cites to [30]/[28]; those underlying results were not audited. The PASS is conditional on that premise exactly, and must not be described as following from the triangular normal form alone.",
+  "denominator_gate": "For a prefix of denominator q_j, the product over distinct conjugates is a rational local polynomial/Laurent polynomial. At the chosen branch one factor contributes the next exponent and every other factor contributes only first differences from earlier exponents, so the correction lies in (1/q_j)Z. Choosing successive record p-heights prevents cancellation of the new p-denominator. The finite value survives analytic coordinate change because sufficiently high Taylor remainders have value at least k epsilon; hence the detected value is attained by a rational polynomial truncation.",
+  "limits": "No post-accumulation Hahn-tail equality, global extension uniqueness, degree sum, or N=1 inference is made.",
+  "new_source_or_research": false
+}
