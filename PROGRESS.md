@@ -6,6 +6,9 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-10-26
 
+- **Iterating the sheet budget gives no stronger scalar inequality.** ROOT's composition law, independently reviewed by Astra, gives B_(F o G)=N_G B_F+B_G and B_(F^n)=B_F(1+N+...+N^(n-1)), with the same rule for total slack. [Proof](xmodel/keller-deficit-composition-and-iteration-neutrality-swarmHQ-root-astra-20261026.md); [exact evidence](box/keller-deficit-composition-swarmHQ-20261026/README.md).
+  PROMOTED/MANUAL/CONDITIONAL at the accepted all-Keller-parent scope. This retires scalar-budget amplification by iteration; valuation weights, image geometry and JC2 remain open.
+
 - **Reviewed conditional isotropic exclusion.** An isotropic pushforward eigenclass is incompatible with a chosen actual dicritical divisor. The finite-model canonical-boundary formula retains a positive dicritical correction, and a Lorentz shift shows that the stated operator identities alone accommodate it. [Synthesis](xmodel/dicritical-isotropic-obstruction-and-boundary-moment-swarmHQ-root-astra-sol56-20261026.md); [exact evidence](box/dicritical-isotropic-moment-swarmHQ-20261026/README.md).
   The positive-square actual-Keller constraint remains missing. Named foundation proofs remain unaudited; no general dicritical-existence or JC2 conclusion.
 
