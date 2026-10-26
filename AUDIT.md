@@ -26684,3 +26684,11 @@ This extends ONLY the geometric applicability of the October25 sheet bound. The 
 The supplement records personal read windows and distinguishes automated verifier parsing from personal reading; no sealed original changed. ROOT read both full proofs and the supplement, then checked this concise integration; no separate independent review of formatting is claimed.
 Integration full SHA256 `5c4baaef7e6d5d1ab6edc68a1eb249b02732f001f5846e294557ee701eee5907`, body `84ce0429cf21c418ccd71247a13d9f8090679f06d9a3d07939fe56abdfe9036f`, manifest `78ad3ea2a93c8a53a4c734fab0d1bf0d181c663ca9bb749abf2e272479edce87`.
 Public basis `47cbe1093ea6ee7b4ec6d32a7eda4a79e567c061`. One original publication collision invocation returned0/EMPTY and retains input hash, times, stdout/stderr and return code; lexical EMPTY is not novelty evidence. No new external source, paid computation or formal certificate was used.
+
+## 2026-10-26 — pointwise fibre counts and missing-value localization
+
+PROMOTED / MANUAL, swarmHQ coordinator, after independent retained Sol 5.6 review.
+The [corollary](xmodel/pointwise-fibre-count-swarmHQ-root-sol56-20261026.md) is derived from the accepted all-Keller sheet budget: #F^-1(y)=1+sum_i r_i delta_i(1-b_i(y))+S_off(y), where b_i counts branches of each individual irreducible D_i and S_off is the nonnegative slack away from y.
+Each missing target point therefore lies at a multibranch point of at least one individual irreducible nonproper-value curve. Crossing distinct unibranch components alone is insufficient. If every individual component is everywhere unibranch, the map is surjective.
+The [evidence package](box/pointwise-fibre-count-swarmHQ-20261026/README.md) preserves original proposal/review bytes, manifests and scope receipts. Independent review checks normalized degree sums, repeated images, fibre lengths and empty cases; ROOT reviewed the complete98LF review and verified21 input pins before adoption.
+This is a direct corollary, not an independent inequality or novelty claim. General surjectivity at multibranch points, properness, injectivity and JC2 are not proved. No sealed historical claim or source dependency is broadened.

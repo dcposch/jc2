@@ -6,6 +6,9 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-10-26
 
+- **Missing values are confined to individual multibranch points.** The [pointwise fibre identity](xmodel/pointwise-fibre-count-swarmHQ-root-sol56-20261026.md) shows that a target point with only unibranch individual nonproper-value components has a source preimage; crossings between distinct components alone cannot cause omission.
+  This is a reviewed corollary of the sheet budget, PROMOTED/MANUAL (swarmHQ coordinator and independent Sol 5.6 review). The general multibranch case, properness and JC2 remain unresolved; no novelty claim.
+
 - **The sheet bound now applies to every plane Keller map.** The [extension](xmodel/all-keller-sheet-budget-swarmHQ-root-astra-sol56-20261026T005000Z.md) gives sum_i r_i delta_i<=e-1 and an exact nonnegative slack identity for every complex Keller finite normalization.
   A boundary-tree argument supplies disjoint omitted curves with finite-bijective A1 normalizations; neither smoothness nor rational singularities is assumed.
   swarmHQ ROOT/Astra co-research, PROMOTED/MANUAL after independent configured gpt-5.6-sol review. The logarithmic thickening estimate and infinitely singular branch remain open; JC2 is unresolved.

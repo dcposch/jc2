@@ -26,6 +26,10 @@ Actual worker state, allocation decisions, and deadlines belong to each swarm.
 
 ## Global source geometry
 
+**Missing-point localization, October 26:** the [pointwise corollary](xmodel/pointwise-fibre-count-swarmHQ-root-sol56-20261026.md) gives #F^-1(y)=1+sum_i r_i delta_i(1-b_i(y))+S_off(y), with b_i the branch count of each individual image curve and S_off>=0.
+An omitted target point must be multibranch on at least one individual irreducible nonproper-value curve; crossings of distinct unibranch components alone are insufficient. Everywhere-individual unibranchness implies surjectivity only.
+PROMOTED/MANUAL after independent Sol review; this is a direct corollary, not a new inequality. The general multibranch case and properness remain open.
+
 **All-Keller sheet bound, October 26:** the [reviewed extension](xmodel/all-keller-sheet-budget-swarmHQ-root-astra-sol56-20261026T005000Z.md) proves sum_i r_i delta_i<=e-1 for every complex plane Keller finite normalization, with exact nonnegative slack sum_(i,x)(m_x-r_i t_x).
 The omitted curves have disjoint finite-bijective A1 normalizations; smoothness and rational singularities are unnecessary. This removes the geometric restriction from the sheet bound below.
 PROMOTED/MANUAL after independent Sol review; the separate logarithmic identity retains its divisorial scope and its thickening estimate remains unproved. No classification/novelty or JC2 claim.
