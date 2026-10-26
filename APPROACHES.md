@@ -26,6 +26,9 @@ Actual worker state, allocation decisions, and deadlines belong to each swarm.
 
 ## Global source geometry
 
+- **Isotropic dicritical exclusion and boundary moment — PROMOTED / MANUAL / CONDITIONAL.** For the adopted infinitely singular eigenvaluation, alpha(nu)=0 excludes a chosen actual dicritical E. Thus existence of such E requires alpha(nu)>0; isotropy of the distinct pullback eigenclass does not supply alpha(nu)=0. [Proof and review](xmodel/dicritical-isotropic-obstruction-and-boundary-moment-swarmHQ-root-astra-sol56-20261026.md).
+  The finite-model moment retains sum r_E f_E[-nu_j(c_E)] with generic divisorial ramification r_E. An abstract Lorentz shift accommodates positive correction and all listed operator/cone identities. A positive-square contradiction therefore needs additional actual-Keller geometry; zero-moment and bare growth-budget shortcuts do not supply it. No new such global test was found.
+
 - **Keller nonescape and dicritical correction — PROMOTED / MANUAL / CONDITIONAL.** For each fixed Keller map, min d(F,w)>0 on T={A<=0} at the named plane-valuation foundation tier. For a chosen actual dicritical E mapping onto C={c=0}, the adopted infinitely singular target gives (F*Z_nu.E)=-f_E nu(c)>0; a preimage-only sum pairs to zero. [Proof and scope](xmodel/keller-nonescape-and-dicritical-correction-swarmHQ-root-astra-sol56-20261026.md), [qualified independent review](box/keller-nonescape-dicritical-swarmHQ-20261026/README.md).
   This closes compact-T nonescape as justification for the uncorrected A7 identity whenever E exists. No T invariance, iterate-uniform bound, existence/nonexistence of E, raw discrepancy equality for all extensions, or globally corrected infinite expansion is proved. The successor must control the positive correction or use a different global consumer.
 

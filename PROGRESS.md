@@ -6,6 +6,9 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-10-26
 
+- **Reviewed conditional isotropic exclusion.** An isotropic pushforward eigenclass is incompatible with a chosen actual dicritical divisor. The finite-model canonical-boundary formula retains a positive dicritical correction, and a Lorentz shift shows that the stated operator identities alone accommodate it. [Synthesis](xmodel/dicritical-isotropic-obstruction-and-boundary-moment-swarmHQ-root-astra-sol56-20261026.md); [exact evidence](box/dicritical-isotropic-moment-swarmHQ-20261026/README.md).
+  The positive-square actual-Keller constraint remains missing. Named foundation proofs remain unaudited; no general dicritical-existence or JC2 conclusion.
+
 - **Reviewed nonescape and positive dicritical correction.** A fixed Keller map has min d(F,w)>0 on {A<=0}. For a chosen actual dicritical E, the infinitely singular target has (F*Z_nu.E)=-f_E nu(c)>0, obstructing the uncorrected preimage-only pullback formula. [Synthesis](xmodel/keller-nonescape-and-dicritical-correction-swarmHQ-root-astra-sol56-20261026.md); [evidence and mandatory review qualification](box/keller-nonescape-dicritical-swarmHQ-20261026/README.md).
   PROMOTED / MANUAL / CONDITIONAL on named plane-valuation foundations, whose referenced proofs remain unaudited. No dicritical existence claim, T invariance, full extension identity, or JC2 conclusion.
 
