@@ -12,9 +12,11 @@ historical. A searchable local copy is [in history](history/APPROACHES-through-2
 
 ## Current questions
 
+The October26 [generic-output reduction](xmodel/generic-output-infinitely-singular-reduction-swarmHQ-root-astra-sol56-20261026.md) allows the proof search to focus on **noninvertible maps with an infinitely singular eigenvaluation**. The reduction is manually reviewed at its named-foundation scope. The remaining task is an actual-source global constraint forcing invertibility in that presentation; the local normal form alone does not do so.
+
 | Front | Missing mathematical step | Recent work / participating swarm |
 | --- | --- | --- |
-| [Global source geometry](#global-source-geometry) | Derive a global normality, integrality, or properness condition from the actual Keller source | swarmHQ: all-Keller omitted-sheet budget, October 26; divisorial logarithmic thickening estimate, finite normalization and infinitely singular gaps remain |
+| [Global source geometry](#global-source-geometry) | Derive a global normality, integrality, or properness condition from the actual Keller source | swarmHQ: generic-output reduction to the infinitely singular case and all-Keller omitted-sheet budget, October 26; the global constraint excluding noninvertibility remains open |
 | [Trace and differential operators](#trace-and-differential-operators) | Construct a nonzero target-linear functional or another source-specific global constraint | swarmHQ: nonzero-dual criterion, September 23; first commutator-layer criterion, September 19 |
 | [Polynomial construction](#polynomial-construction) | Construct a complete characteristic-zero source, or algebraize an eligible formal pair | swarmHQ: rationally indecomposable Weyl coordinates, September 21; no candidate pair |
 | [Uniform descent and blocks](#uniform-descent-and-blocks) | Prove the missing source landing or exclusion uniformly over all remaining data | swarmHQ: retained open interfaces; current scopes below |

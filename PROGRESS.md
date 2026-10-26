@@ -6,6 +6,9 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-10-26
 
+- **Generic output coordinates reduce the proof search to the infinitely singular case.** The [reviewed reduction](xmodel/generic-output-infinitely-singular-reduction-swarmHQ-root-astra-sol56-20261026.md) gives a nonempty Zariski-open set of determinant-one linear output changes with an infinitely singular FJ eigenvaluation. A direct local volume/DVR argument excludes the divisorial alternative at the resulting ordinary point at infinity.
+  PROMOTED/MANUAL/CONDITIONAL on the named FJ foundations; [exact proofs, review and custody qualifications](box/generic-output-reduction-swarmHQ-20261026/README.md). Excluding noninvertibility in this presentation would suffice for JC2; that remaining implication is open.
+
 - **Iterating the sheet budget gives no stronger scalar inequality.** ROOT's composition law, independently reviewed by Astra, gives B_(F o G)=N_G B_F+B_G and B_(F^n)=B_F(1+N+...+N^(n-1)), with the same rule for total slack. [Proof](xmodel/keller-deficit-composition-and-iteration-neutrality-swarmHQ-root-astra-20261026.md); [exact evidence](box/keller-deficit-composition-swarmHQ-20261026/README.md).
   PROMOTED/MANUAL/CONDITIONAL at the accepted all-Keller-parent scope. This retires scalar-budget amplification by iteration; valuation weights, image geometry and JC2 remain open.
 
