@@ -1,0 +1,20 @@
+{
+  "task": "PURITYREVIEW0905 wording/custody clarification",
+  "utc": "2026-10-26T09:11:01.193837Z",
+  "sealed_report_unchanged": true,
+  "correction": "Report lines 29-30 and the coverage scope_qualification must be read as excluding a hidden second OMITTED-BOUNDARY divisor over the selected smooth branch u=0 inside the selected finite local block. They do not exclude a non-omitted unramified divisor in that block lying over another target image branch. Such a transverse inverse-image divisor is compatible with, and harmless to, the cyclic model relative to u=0.",
+  "intended_scope": "Finiteness separates other points over y into local blocks. Disjointness separates other omitted curves. Connectedness of the complement of h^{-1}(u=0), cyclic monodromy, and normal extension control the divisor over u=0. No statement is made that every divisor over a different target branch occupies another block.",
+  "effect": "Wording repair only. The PASS/CONDITIONAL verdict, t=1, m=r, zero selected-branch slack, and one-common-image conclusion are unchanged.",
+  "partial_receipt": {
+    "path": "runtime/purityreview0905-sol56-partial.json",
+    "sha256": "f608c7b3fbfa6b00ca03cf3a3c0ee87250a9c5718168fea763c03c9a0c93d508"
+  },
+  "postpin_receipt": {
+    "path": "runtime/purityreview0905-sol56-coverage.json",
+    "sha256": "09b439309c7a3e15e11d000f8df3b96e253c40a361254c7c97e03979c112116c",
+    "result_path": "runtime/purityreview0905-sol56-result.json",
+    "result_sha256": "266075a05c2110b5196e7171b99dbd394f8c31e68381f7973eae3f4f31f74602",
+    "postpins": "31/31 PASS under input_metadata splitlines convention"
+  },
+  "new_mathematics_or_scope": false
+}

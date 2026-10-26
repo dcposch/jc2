@@ -6,6 +6,9 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-10-26
 
+- **Smooth image branches carry no local slack.** The [reviewed argument](xmodel/smooth-branch-slack-irreducible-image-swarmHQ-root-astra-sol56-20261026.md) localizes all finite-normalization excess to nonimmersed branches. If the nonproper-value set is irreducible, the fibre identity and an external embedded-A1 exclusion force at least one nonimmersed branch.
+  PROMOTED/MANUAL/CONDITIONAL after independent review; the external theorem statement was checked, its proof was not audited. Reducible image unions, nonimmersed branches and JC2 remain open; no novelty claim.
+
 - **The proposed strict completion test is now ruled out.** The [cusp-contact analysis](xmodel/cusp-contact-completion-limit-swarmHQ-root-astra-sol56-20261026.md) proves a_W=1+R_q.C>=1 and0<I_Y<1, so its threshold cannot satisfy M_C<sqrt(I_Y).
   This reviewed conditional result retires that particular test and preserves the earlier valid volume inequalities. Other volume comparisons and JC2 remain unresolved; the optional static n=3 diagnostic is not adopted.
 

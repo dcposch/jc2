@@ -26,6 +26,10 @@ Actual worker state, allocation decisions, and deadlines belong to each swarm.
 
 ## Global source geometry
 
+**Smooth-branch localization, October 26:** the [reviewed constraint](xmodel/smooth-branch-slack-irreducible-image-swarmHQ-root-astra-sol56-20261026.md) gives t_x=1,m_x=r_i and zero local slack at any immersed selected image branch, even at global crossings. Thus e-1-sum_i r_i is supported over nonimmersed branches.
+If the nonempty nonproper-value set is irreducible and everywhere immersed, its fibre count forces a smooth embedded A1, excluded by the stated Chau theorem. This does not exclude an individual immersed component in a reducible union.
+PROMOTED/MANUAL/CONDITIONAL on accepted all-Keller inputs and the explicit external statement (proof unread). Nonimmersed branches and interaction between distinct image components remain gaps.
+
 **Cusp volume and nef completion, October 26:** the [reviewed reduction](xmodel/cusp-volume-nef-completion-swarmHQ-root-astra-sol56-20261026.md) gives e V_Y<=V_W and 0<I_Y<=I_W<=M_C^2 in the actual divisorial compactification, with I=D^2 V.
 M_C is computed from finitely many cusp-resolution coefficients using a globally effective and nef boundary divisor. The [reviewed cusp-contact identity and target bound](xmodel/cusp-contact-completion-limit-swarmHQ-root-astra-sol56-20261026.md) give a_W=1+R_q.C>=1 and0<I_Y<1, so M_C>=1>sqrt(I_Y): this particular strict closing test is CLOSED/INFEASIBLE. Other volume comparisons remain open.
 PROMOTED/MANUAL/CONDITIONAL after independent Sol review; additional source singularities are retained, and the infinitely singular branch remains separate. No JC2 or novelty claim.
