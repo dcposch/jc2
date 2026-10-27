@@ -1,0 +1,14 @@
+{
+  "task": "NORMREVIEW2010",
+  "utc": "2026-10-27T20:11:50.024896Z",
+  "precheck": {"path":"runtime/normreview2010-sol-precheck.stdout","sha256":"9ce657ce47b76cf05097f561d7981cba7001db45ae3f4428246643938269be2a","stderr_sha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","returncode":0,"records":93,"archives":13,"head":"aaf986c020b6fdeb81ae185d72c29ff8d4d60640","parent_ancestor":true},
+  "postcheck": {"path":"runtime/normreview2010-sol-postcheck.stdout","sha256":"acdbd54f609d706cd78cfa740c125ef36075f06f5a0772debf70c758da85aa86","stderr_sha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","returncode":0,"records":93,"status":"PASS"},
+  "canonical_pre": {"returncodes":[0,0,0,0],"stdout_sha256":["fd512f243bbf7689d878e2f9d6c65352cb165aa2dab502c7aa3f54346840ae67","6c64271d1db12c91698de3f8ce9aac0828f681d69dd1f595c541bd2e30fb0bc5","6193d39d1e3f1c69c166913f34477532fa5d34b540734f9d8d8f09a0b09ba285","848f199c5f3e7665938543af4037dbf6746c19f10586822f9abc2653ba3646a9"]},
+  "canonical_post": {"returncodes":[0,0,0,0],"stdout_sha256":["fd512f243bbf7689d878e2f9d6c65352cb165aa2dab502c7aa3f54346840ae67","6c64271d1db12c91698de3f8ce9aac0828f681d69dd1f595c541bd2e30fb0bc5","6193d39d1e3f1c69c166913f34477532fa5d34b540734f9d8d8f09a0b09ba285","848f199c5f3e7665938543af4037dbf6746c19f10586822f9abc2653ba3646a9"]},
+  "raw_streams": "All pre/post and eight canonical stdout/stderr files use runtime/normreview2010-sol-* convention, mode0600 and file/directory fsync before return-code interpretation; canonical stderr files are empty SHA e3b0c442...",
+  "fixed": "93/93 PASS",
+  "archives": "13/13 origin:STATE.md and ancestry PASS",
+  "canonical": "4/4 pre and post VERIFIED",
+  "verdict": "PASS_CONDITIONAL",
+  "writer_idle": true
+}

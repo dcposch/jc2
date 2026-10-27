@@ -1,0 +1,14 @@
+{
+  "task": "NORMREVIEW2010",
+  "verdict": "PASS_CONDITIONAL",
+  "completion_utc": "2026-10-27T20:11:50.024896Z",
+  "basis": "ba2f44ed8d5eb227125974e51a55d6a4a609aece",
+  "norm_divisor": "On the finite normalization containing the whole source, pushforward of div(f) gives retained coefficient one and omitted coefficient delta_i*ord_Ei(f), with no transverse r_i. Negative orders and coincident factors are retained in the rational norm.",
+  "position_and_factor": "The same normalized H has I_H disjoint from regular fixed q. Every omitted or inverse centre lies in I_H; every relevant A1-normalized curve and forward image has unique infinity q. Hence ord_v(f_C)=-b_v*deg(C) simultaneously, and the invariant rational factor group makes generic-infinity degree multiply by lambda=d-S, S=sum b_i*delta_i*deg(D_i), with cancellations included.",
+  "tower_identity": "Norm transitivity and the finite-DVR identity ord_E Norm(f)=sum_v f_v ord_v(f), applied to one line whose infinity avoids I_H, give sum_v f_v*b_v=b_i*lambda^n. Existence and positive b_v force lambda>0; S>0 gives lambda<d.",
+  "iterate_primes": "A depth-n extension v maps under H^n to E_i and then under H to affine D_i, so its centre is an actual omitted height-one prime for H^(n+1), not a retained affine prime. Its residual degree onto D_i is f_v*delta_i. Stable q geometry and subsequence convergence give the same normalized eigenmeasure for H^(n+1).",
+  "atom_squeeze": "The fixed-model/refinement argument gives mu({v})>=b_v*f_v*delta_i*deg(D_i)/d^(n+1). First-exit times and terminal primes make labels disjoint. Summing all lower bounds yields (S/d)*sum_n(lambda/d)^n=1 when S>0, so probability saturation makes every bound exact and leaves no residual or A=0 mass.",
+  "moment_and_scope": "Using a_v=e_v*r_i and sum e_v*f_v=N^n recovers W/(d-N). If S=0, positivity of every omitted term means there are no omitted primes and the prior moment/THIN theorem gives mu(A=0)=1. The theorem proves neither S=0 nor W=0 and gives no finite support, Cartierness, valuativity, properness, N=1 or JC2.",
+  "foundations": "Conditional on named finite-normalization/DVR norm, curve-transport, resolution/duality, FRAME/RZ convergence/refinement, moment/THIN and finite valuation-extension foundations; primary proofs were not freshly audited.",
+  "repair": "No mathematical repair required. The original proposed d^n inverse-pole divergence test is correctly rejected because the exact factor is (d-S)^n."
+}

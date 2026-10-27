@@ -6,6 +6,9 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-10-27
 
+- **Exact norm loss determines the entire boundary measure in the hypothetical nonproper case.** The [conditional proof](xmodel/norm-loss-and-whole-atomic-measure-swarmHQ-root-astra-20261027T203000Z.md) retains S_pole=sum b_i delta_i deg(D_i), giving inverse-pole growth (d-S_pole)^n. If S_pole>0, the exact first-exit atoms exhaust the whole measure, with depth-n mass (S_pole/d)((d-S_pole)/d)^n and no zero-thinness mass. [Proof evidence and independent review](box/norm-loss-whole-measure-swarmHQ-20261027T203000Z/README.md).
+  PROVISIONAL / MANUAL / PASS_CONDITIONAL on the named finite-norm, Keller curve-transport and measure foundations. This rejects the proposed d^n-divergence test; it does not exclude the atomic configuration or prove properness or JC2. S_pole is distinct from the older sheet-budget slack.
+
 - **Finite positive-thinness moment for a normalized Keller map.** The [conditional proof](xmodel/finite-positive-thinness-moment-swarmHQ-root-astra-20261027T191000Z.md) gives M=W/(d-N), exact omitted-divisor weights on the killed set, and a countable divisorial carrier for positive-thinness mass. [Evidence and review](box/finite-positive-moment-swarmHQ-20261027T191000Z/README.md); [notation and custody clarification](box/finite-positive-moment-swarmHQ-20261027T191000Z/NOTATION.md).
   PROVISIONAL / MANUAL / PASS_CONDITIONAL on named FRAME, THIN, FJ convergence and finite-geometry foundations. This supplies the integrability premise; defect vanishing, the zero-thinness part and JC2 remain open.
 
