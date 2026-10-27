@@ -1,0 +1,13 @@
+{
+  "task": "SPLIT0645",
+  "status": "PASS_CONDITIONAL",
+  "completion_utc": "2026-10-27T07:00:36Z",
+  "basis": "dfff8d3f596df21a6b599137f4c00d950a72e25a",
+  "degree_inflation": "The triangular target automorphism preserves field degree and Keller status. After the determinant-one swap, the generic-output hypotheses have degrees d>D, nonempty leading-direction conditions and stable degree d^n. Every prime dividing d divides T and has v_p(d)>=N+1; every p<=N divides d.",
+  "group_step": "[Gamma:dGamma]<=N follows from distinct-coset linear independence in the degree-N extension. If Gamma is not p-divisible, the successive quotients p^jGamma/p^(j+1)Gamma each have at least p elements, so [Gamma:dGamma]>=p^v_p(d)>N. Hence Gamma is p-divisible for every p|d and dGamma=Gamma.",
+  "single_extension_step": "For any degree-N extension, f=1 because the base residue field is C. If e>1, a prime p|e satisfies p<=N; an order-p class in the finite quotient Gamma_w/Gamma contradicts p-divisibility of Gamma and torsion-freeness of Gamma_w. Thus e=f=1 for every prolongation.",
+  "count_and_iteration": "Imported residue-characteristic-zero defectlessness gives N=sum_w e_w f_w without henselianity, hence exactly N prolongations. Reapplying to each degree-N stage preserves raw group Gamma and residue C; restrictions distinguish parents, giving exactly N^n branches.",
+  "normalization": "Each raw branch is real-valued because its group equals the prescribed subgroup Gamma of R. Polynomial normalization has b>0, ALLTHIN applies to H^n and gives A=0. Proportional normalized branches restrict proportionally to nontrivial eta, forcing equal scale and equal raw valuation, so the N^n count survives normalization.",
+  "foundational_tier": "Conditional on the canonical generic-output eigenvaluation/type/residue foundations, FJ Jacobian identity used by ALLTHIN, and Kuhlmann Theorem 11.23 plus the nonhenselian defectless degree-sum convention.",
+  "excluded": "No alpha sign, V1 membership, fixedness of inverse branches, class-sum formula, boundary correction removal, N=1, JC2, novelty, or validation of the older unmodified value-group argument."
+}

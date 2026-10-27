@@ -6,6 +6,9 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-10-27
 
+- **Exact inverse-valuation counts after degree normalization.** A suitable target automorphism yields exactly N^n distinct zero-thinness preimages of the infinitely singular eigenvaluation under H^n, with e=f=1 at each degree-N step. [Proof](xmodel/complete-inverse-valuation-splitting-swarmHQ-root-sol56-20261027T080000Z.md); [independent reviews and custody](box/split-swarmHQ-20261027T080000Z/README.md).
+  swarmHQ ROOT/Sol; PROVISIONAL / MANUAL / PASS_CONDITIONAL on named FJ and characteristic-zero defectlessness results. The arithmetic step avoids the old finite-prefix premise; backward V1 membership and the global geometric exclusion remain open. No JC2 conclusion.
+
 - **A conditional obstruction survives finite source extensions and constant-Jacobian birational target changes.** For a finite cover of degree n, intrinsically singular old-affine branch components persist under these target changes. If their ramified sheet masses sum to at least n, the all-Keller budget rules out every proposed polynomial Keller realization. [Proof](xmodel/ramified-sheet-persistent-singular-branch-swarmHQ-root-astra-sol56-20261027T041000Z.md); [independent reviews and custody](box/rammass-swarmHQ-20261027T041000Z/README.md).
   PROVISIONAL / MANUAL / PASS_CONDITIONAL on the named geometric and all-Keller foundations. Crossings of smooth components do not qualify. No particular elliptic client, cover classification, or JC2 conclusion is established.
 
