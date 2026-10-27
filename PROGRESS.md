@@ -4,6 +4,11 @@ Dated mathematical developments across the campaign. Evidence tiers and scope re
 those recorded in [AUDIT.md](AUDIT.md) and the linked reports. Current open questions
 are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
+## 2026-10-27
+
+- **A conditional obstruction survives finite source extensions and constant-Jacobian birational target changes.** For a finite cover of degree n, intrinsically singular old-affine branch components persist under these target changes. If their ramified sheet masses sum to at least n, the all-Keller budget rules out every proposed polynomial Keller realization. [Proof](xmodel/ramified-sheet-persistent-singular-branch-swarmHQ-root-astra-sol56-20261027T041000Z.md); [independent reviews and custody](box/rammass-swarmHQ-20261027T041000Z/README.md).
+  PROVISIONAL / MANUAL / PASS_CONDITIONAL on the named geometric and all-Keller foundations. Crossings of smooth components do not qualify. No particular elliptic client, cover classification, or JC2 conclusion is established.
+
 ## 2026-10-26
 
 - **Generic output coordinates reduce the proof search to the infinitely singular case.** The [reviewed reduction](xmodel/generic-output-infinitely-singular-reduction-swarmHQ-root-astra-sol56-20261026.md) gives a nonempty Zariski-open set of determinant-one linear output changes with an infinitely singular FJ eigenvaluation. A direct local volume/DVR argument excludes the divisorial alternative at the resulting ordinary point at infinity.
