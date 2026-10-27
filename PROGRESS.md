@@ -6,6 +6,9 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-10-27
 
+- **Finite positive-thinness moment for a normalized Keller map.** The [conditional proof](xmodel/finite-positive-thinness-moment-swarmHQ-root-astra-20261027T191000Z.md) gives M=W/(d-N), exact omitted-divisor weights on the killed set, and a countable divisorial carrier for positive-thinness mass. [Evidence and review](box/finite-positive-moment-swarmHQ-20261027T191000Z/README.md); [notation and custody clarification](box/finite-positive-moment-swarmHQ-20261027T191000Z/NOTATION.md).
+  PROVISIONAL / MANUAL / PASS_CONDITIONAL on named FRAME, THIN, FJ convergence and finite-geometry foundations. This supplies the integrability premise; defect vanishing, the zero-thinness part and JC2 remain open.
+
 - **Exact inverse-valuation counts after degree normalization.** A suitable target automorphism yields exactly N^n distinct zero-thinness preimages of the infinitely singular eigenvaluation under H^n, with e=f=1 at each degree-N step. [Proof](xmodel/complete-inverse-valuation-splitting-swarmHQ-root-sol56-20261027T080000Z.md); [independent reviews and custody](box/split-swarmHQ-20261027T080000Z/README.md).
   swarmHQ ROOT/Sol; PROVISIONAL / MANUAL / PASS_CONDITIONAL on named FJ and characteristic-zero defectlessness results. The arithmetic step avoids the old finite-prefix premise; backward V1 membership and the global geometric exclusion remain open. No JC2 conclusion.
 
