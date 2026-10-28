@@ -4,6 +4,11 @@ Dated mathematical developments across the campaign. Evidence tiers and scope re
 those recorded in [AUDIT.md](AUDIT.md) and the linked reports. Current open questions
 are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
+## 2026-10-28
+
+- **A conditional divisorial residue-fold witness for noninvertibility.** The [reviewed proof](xmodel/negative-thinness-divisorial-residue-obstruction-sol56-20261028.md) shows that noninjectivity on the negative-thinness tree forces a divisorial valuation with residue degree greater than one. Combined with the exact predecessor hypotheses for a normalized Keller map of field degree N>1, this identifies an algebraic obstruction that every such map would have to exhibit. [Evidence and scope](box/negative-divisorial-residue-swarmHQ-20261028/README.md).
+  swarmHQ ROOT/Astra co-design, independent Sol review; PROVISIONAL / MANUAL / PASS_CONDITIONAL on the named valuation foundations. The simpler nested-interval proof avoids an unproved uniform local-homeomorphism premise. Polynomial exclusion of these folds remains open; no properness or JC2 conclusion.
+
 ## 2026-10-27
 
 - **Exact norm loss determines the entire boundary measure in the hypothetical nonproper case.** The [conditional proof](xmodel/norm-loss-and-whole-atomic-measure-swarmHQ-root-astra-20261027T203000Z.md) retains S_pole=sum b_i delta_i deg(D_i), giving inverse-pole growth (d-S_pole)^n. If S_pole>0, the exact first-exit atoms exhaust the whole measure, with depth-n mass (S_pole/d)((d-S_pole)/d)^n and no zero-thinness mass. [Proof evidence and independent review](box/norm-loss-whole-measure-swarmHQ-20261027T203000Z/README.md).
