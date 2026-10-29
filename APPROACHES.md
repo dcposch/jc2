@@ -14,6 +14,8 @@ historical. A searchable local copy is [in history](history/APPROACHES-through-2
 
 The October26 [generic-output reduction](xmodel/generic-output-infinitely-singular-reduction-swarmHQ-root-astra-sol56-20261026.md) allows the proof search to focus on **noninvertible maps with an infinitely singular eigenvaluation**. The reduction is manually reviewed at its named-foundation scope. The remaining task is an actual-source global constraint forcing invertibility in that presentation; the local normal form alone does not do so.
 
+The October29 [simple-pole residue lemma](xmodel/simple-pole-residue-rigidity-swarmHQ-root-sol56-20261029.md) settles residue degree at divisorial raw label A=0: it is1 for any constant-Jacobian rational map between such divisors. This manually reviewed, named-foundation result leaves normal ramification and the actual negative-pole fold open; it does not extend to infinitely-singular inverse ends.
+
 | Front | Missing mathematical step | Recent work / participating swarm |
 | --- | --- | --- |
 | [Global source geometry](#global-source-geometry) | Derive a global normality, integrality, or properness condition from the actual Keller source | swarmHQ: generic-output reduction to the infinitely singular case and all-Keller omitted-sheet budget, October 26; the global constraint excluding noninvertibility remains open |

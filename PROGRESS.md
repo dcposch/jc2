@@ -6,6 +6,9 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-10-29
 
+- **Residue maps at simple-pole divisors have degree one.** The [reviewed lemma](xmodel/simple-pole-residue-rigidity-swarmHQ-root-sol56-20261029.md) proves that every divisorial simple-pole residue of the standard affine volume has a degree-one rational primitive. Residue transport then forces degree1 for maps between such divisors, without periodicity.
+  swarmHQ ROOT proof, independent Sol review; PROVISIONAL / MANUAL / PASS_CONDITIONAL on the named surface foundations. Normal ramification, the negative-pole fold and infinitely-singular inverse ends remain uncontrolled; JC2 remains unresolved. [Evidence and scope](box/simple-pole-residue-swarmHQ-20261029/CUSTODY.md).
+
 - **The conditional residue-fold witness can be normalized to double poles.** The [reviewed reduction](xmodel/double-pole-residue-witness-normalization-swarmHQ-root-astra-sol56-20261029.md) keeps the same rational volume-preserving map and yields primitive source/target infinity divisors with raw discrepancies both -1, normal index1 and residue degree greater than one. Applied to the [earlier negative-fold theorem](xmodel/negative-thinness-divisorial-residue-obstruction-sol56-20261028.md), this narrows the necessary witness for a normalized hypothetical Keller counterexample. [Evidence and exact scope](box/double-pole-residue-witness-swarmHQ-20261029/README.md).
   swarmHQ ROOT/Astra co-research, independent Sol review; PROVISIONAL / MANUAL / PASS_CONDITIONAL on the inherited and named surface/valuation foundations. Excluding these folds for the whole polynomial Keller source remains open; no properness or JC2 conclusion.
 
