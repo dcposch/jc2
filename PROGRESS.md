@@ -4,6 +4,11 @@ Dated mathematical developments across the campaign. Evidence tiers and scope re
 those recorded in [AUDIT.md](AUDIT.md) and the linked reports. Current open questions
 are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
+## 2026-10-29
+
+- **The conditional residue-fold witness can be normalized to double poles.** The [reviewed reduction](xmodel/double-pole-residue-witness-normalization-swarmHQ-root-astra-sol56-20261029.md) keeps the same rational volume-preserving map and yields primitive source/target infinity divisors with raw discrepancies both -1, normal index1 and residue degree greater than one. Applied to the [earlier negative-fold theorem](xmodel/negative-thinness-divisorial-residue-obstruction-sol56-20261028.md), this narrows the necessary witness for a normalized hypothetical Keller counterexample. [Evidence and exact scope](box/double-pole-residue-witness-swarmHQ-20261029/README.md).
+  swarmHQ ROOT/Astra co-research, independent Sol review; PROVISIONAL / MANUAL / PASS_CONDITIONAL on the inherited and named surface/valuation foundations. Excluding these folds for the whole polynomial Keller source remains open; no properness or JC2 conclusion.
+
 ## 2026-10-28
 
 - **A conditional divisorial residue-fold witness for noninvertibility.** The [reviewed proof](xmodel/negative-thinness-divisorial-residue-obstruction-sol56-20261028.md) shows that noninjectivity on the negative-thinness tree forces a divisorial valuation with residue degree greater than one. Combined with the exact predecessor hypotheses for a normalized Keller map of field degree N>1, this identifies an algebraic obstruction that every such map would have to exhibit. [Evidence and scope](box/negative-divisorial-residue-swarmHQ-20261028/README.md).

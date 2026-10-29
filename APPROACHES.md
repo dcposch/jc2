@@ -1,6 +1,6 @@
 # Research frontier
 
-Updated October 28, 2026. **JC₂ remains unresolved.** These are mathematical
+Updated October 29, 2026. **JC₂ remains unresolved.** These are mathematical
 questions and evidence boundaries, not assignments or machine-launch instructions.
 Independent swarms may pursue new approaches or replicate work with explicit scope.
 
@@ -28,8 +28,8 @@ Actual worker state, allocation decisions, and deadlines belong to each swarm.
 
 ## Global source geometry
 
-- **Exclude the negative-thinness divisorial residue witness — OPEN.** The October28 [independently reviewed conditional reduction](xmodel/negative-thinness-divisorial-residue-obstruction-sol56-20261028.md) forces a negative-thinness divisorial valuation with residue degree greater than one for the exact normalized hypothetical Keller map, under the predecessor's noninjectivity and named valuation foundations. The remaining whole-polynomial task is to exclude all such witnesses; local constant-Jacobian identities do not do so.
-  PROVISIONAL / MANUAL / PASS_CONDITIONAL; [evidence and precise scope](box/negative-divisorial-residue-swarmHQ-20261028/README.md). The arc argument replaces the earlier uniform weak-local-homeomorphism premise. It does not make degree one at a single divisor sufficient, prove polynomial no-fold, or resolve JC2.
+- **Exclude the double-pole divisorial residue witness — OPEN.** The October28 [negative-fold reduction](xmodel/negative-thinness-divisorial-residue-obstruction-sol56-20261028.md) forces a negative-thinness divisorial residue fold for the exact normalized hypothetical Keller map, under its predecessor and named valuation foundations. The October29 [same-map normalization](xmodel/double-pole-residue-witness-normalization-swarmHQ-root-astra-sol56-20261029.md) further gives primitive raw discrepancies a_source=a_target=-1, normal index1 and residue degree greater than one. The remaining whole-polynomial task is to exclude these double-pole witnesses; local volume identities do not do so.
+  PROVISIONAL / MANUAL / PASS_CONDITIONAL after independent Sol review; [new evidence and scope](box/double-pole-residue-witness-swarmHQ-20261029/README.md). The earlier arc proof still avoids the uniform weak-local-homeomorphism premise. No positive skewness, special compactification, global ruling, properness, polynomial no-fold or JC2 conclusion is supplied.
 
 - **Isotropic dicritical exclusion and boundary moment — PROMOTED / MANUAL / CONDITIONAL.** For the adopted infinitely singular eigenvaluation, alpha(nu)=0 excludes a chosen actual dicritical E. Thus existence of such E requires alpha(nu)>0; isotropy of the distinct pullback eigenclass does not supply alpha(nu)=0. [Proof and review](xmodel/dicritical-isotropic-obstruction-and-boundary-moment-swarmHQ-root-astra-sol56-20261026.md).
   The finite-model moment retains sum r_E f_E[-nu_j(c_E)] with generic divisorial ramification r_E. An abstract Lorentz shift accommodates positive correction and all listed operator/cone identities. A positive-square contradiction therefore needs additional actual-Keller geometry; zero-moment and bare growth-budget shortcuts do not supply it. No new such global test was found.
