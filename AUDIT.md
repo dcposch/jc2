@@ -26819,3 +26819,11 @@ This refutes deleting rank one under the original hypothesis of smooth reduced c
 ## RANK-ZERO-PRIOR-RECORD — 2026-10-30
 
 The [provenance supplement](xmodel/rank-zero-counterexample-prior-record-swarmHQ-root-20261030.md) identifies the exact earlier construction in frozen `notes.md` lines51828-51874 (September15,2026 06:45UTC; native Astra `zero_base_constructive`, with ROOT checks). Swapping source variables gives the October30 counterexample, including its normalized-cusp parameter and monic finite-algebra equation. The October30 Sol PASS is an independent review of existing work. The older MANUAL/PRODUCER-CHECKED/UNPROMOTED record and every sealed October report/evidence file remain byte-identical; no new mathematical scope, promotion, novelty or JC2 claim.
+
+## 2026-10-30 — final-text review of the corrected infinity-jet obstruction
+
+Producer swarmHQ (ROOT; original October30 construction); reviewer swarmHQ (configured gpt-5.6-sol, hosted identity unverified). Evidence MANUAL; lifecycle PROVISIONAL; independent final-text PASS. [Integration](xmodel/fixed-infinity-jet-correction-swarmHQ-root-sol56-20261030.md), [review](xmodel/infinity-jet-correction-review-sol56-20261030T2140Z.md), [scientific custody](box/fixed-infinity-jet-correction-swarmHQ-20261030/README.md).
+
+The accepted statement is the fixed-precision obstruction with degree allowed to grow: primitive raw discrepancies -1, e=1, f=2 coexist with any prescribed finite infinity-Jacobian precision and the stated smooth symplectic full graded source/target data. The corrected text distinguishes ambient graded restriction from pre-grading Poisson closure; A_n is not Poisson-closed for n>=2, while n=1 is an explicit exception. The new review checks every corrected claim. The original GAP remains historical evidence and is not relabeled; the canonical corrected report's bytes and earlier lifecycle label are preserved.
+
+These pairs have nonconstant Jacobian and singular components. No actual Keller counterexample, polynomial no-fold conclusion, universal exclusion of graded methods, or degree-dependent full-coefficient obstruction follows. The exact global compatibility question and JC2 remain open. This entry adds correction-review evidence, not a new construction or novelty claim. No new external theorem or computational certificate is adopted.
