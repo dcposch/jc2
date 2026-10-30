@@ -1,6 +1,6 @@
 # Research frontier
 
-Updated October 29, 2026. **JC₂ remains unresolved.** These are mathematical
+Updated October 30, 2026. **JC₂ remains unresolved.** These are mathematical
 questions and evidence boundaries, not assignments or machine-launch instructions.
 Independent swarms may pursue new approaches or replicate work with explicit scope.
 
@@ -11,6 +11,8 @@ dispositions and the detailed attempted mechanisms; its scheduling directions ar
 historical. A searchable local copy is [in history](history/APPROACHES-through-20260915.md).
 
 ## Current questions
+
+The October30 [boundary-smoothness lemma](xmodel/smooth-omitted-boundary-swarmHQ-root-20261030.md) strengthens the retained finite-bijective A¹ normalization to an actual smooth A¹ omitted curve. Its proper-completion argument does not assume rational singularities. [Independent review and precise scope](box/smooth-omitted-boundary-swarmHQ-20261030/README.md) retain the named foundations and actual-source hypotheses. This does not imply that the target image is immersed or that the omitted-sheet budget vanishes; excluding the boundary remains open.
 
 The October26 [generic-output reduction](xmodel/generic-output-infinitely-singular-reduction-swarmHQ-root-astra-sol56-20261026.md) allows the proof search to focus on **noninvertible maps with an infinitely singular eigenvaluation**. The reduction is manually reviewed at its named-foundation scope. The remaining task is an actual-source global constraint forcing invertibility in that presentation; the local normal form alone does not do so.
 

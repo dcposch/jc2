@@ -26783,3 +26783,14 @@ Stage1 converts residue ramification at a chosen critical point into normal rami
 The application to a hypothetical Keller counterexample retains the exact normalized-map hypotheses and named foundations of the October28 negative-fold theorem. Standard surface/valuation foundations are named, not newly source-proved. Whole-polynomial exclusion remains OPEN; no positive skewness, special algebraic compactification, ruling, properness, N=1 or JC2 conclusion follows. No new named OPEN entry is raised; the frozen-basis collision result is EMPTY, not a novelty certificate.
 
 [Inherited custody qualifications](box/double-pole-residue-witness-swarmHQ-20261029/CUSTODY.md) retain the original late internal-seal check and native-receipt/display limitations; the independent review performed its own complete reads and pre-body predecessor seal check. The original sealed mathematical reports and checksum manifest are unchanged.
+
+
+## 2026-10-30 — Smoothness of the reduced omitted boundary
+
+**PROVISIONAL / MANUAL / PASS_CONDITIONAL.** Under the retained marked normal-affine extension and coordinate-ruling hypotheses, every reduced omitted prime curve is smooth. Together with the inherited finite birational A¹ normalization, it is isomorphic to A¹. Rational singularities of the ambient surface are not assumed.
+
+A proper normal completion of the ruling is dominated by point blowups of P¹×P¹. The direct blowup Čech calculation and low-degree Leray injection give H¹ of the structure sheaf zero over an affine base neighborhood. A two-affine cover gives H² vanishing for the fibre quotient kernel. The full possibly nonreduced fibre and then each reduced component have H¹(O)=0; the normalization exact sequence forces the component to be smooth rational.
+
+[Exact author proof](xmodel/smooth-omitted-boundary-swarmHQ-root-20261030.md); [independent Sol review](xmodel/fiber-normality-review-sol56-20261030T0210Z.md); [predecessor evidence and status](box/smooth-omitted-boundary-swarmHQ-20261030/README.md); [custody qualifications](box/smooth-omitted-boundary-swarmHQ-20261030/CUSTODY.md). The author's original UNREVIEWED label is historical and preserved in its sealed bytes; this addendum records the subsequent independent acceptance. Named standard foundations and attachment to the actual-Keller normalization package remain explicit conditions. The review's automatic own-report diff previews exceeded per-response display guidance; total reading remained within cap, all input windows were exact, and ROOT separately read the entire sealed review.
+
+This strengthens the old finite-bijective-only qualification for the omitted source curves. It does not assert smoothness of the ambient surface or total infinity fibre, target-image immersion, absence of ramification, vanishing sheet-budget slack, empty boundary, properness, surjectivity from the source plane, degree one or JC2. No novelty claim is made.

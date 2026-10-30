@@ -4,6 +4,11 @@ Dated mathematical developments across the campaign. Evidence tiers and scope re
 those recorded in [AUDIT.md](AUDIT.md) and the linked reports. Current open questions
 are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
+## 2026-10-30
+
+- **Omitted boundary curves are smooth affine lines in the retained normalization package.** The [reviewed proof](xmodel/smooth-omitted-boundary-swarmHQ-root-20261030.md) shows that the reduced omitted curves in a normal affine extension of the coordinate ruling are smooth, without assuming rational singularities. Together with the retained finite birational A¹ normalization, each is A¹. The proof uses a proper ruled completion and fibre cohomology. [Evidence and scope](box/smooth-omitted-boundary-swarmHQ-20261030/README.md).
+  ROOT proof, independent Sol review; PROVISIONAL / MANUAL / PASS_CONDITIONAL on the named foundations and inherited actual-source package. This closes the scheme-normality qualification for these curves. Target-image singularities, ramification, sheet-budget slack and exclusion of the boundary remain open; JC2 remains unresolved.
+
 ## 2026-10-29
 
 - **Residue maps at simple-pole divisors have degree one.** The [reviewed lemma](xmodel/simple-pole-residue-rigidity-swarmHQ-root-sol56-20261029.md) proves that every divisorial simple-pole residue of the standard affine volume has a degree-one rational primitive. Residue transport then forces degree1 for maps between such divisors, without periodicity.
