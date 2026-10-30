@@ -6,6 +6,8 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-10-30
 
+- **Rank-one points cannot ramify a smooth critical curve over its normalized image.** The [reviewed local proof](xmodel/rank-one-ramification-swarmHQ-root-sol56-20261030.md) uses coprime orders m and mk+1 for a finite map between smooth surface germs. PROVISIONAL / MANUAL; independent Sol PASS under named analytic foundations. Rank-zero points and singular normalization surfaces remain untreated; no global boundary degree-one conclusion follows. [Evidence and scope](box/rank-one-ramification-swarmHQ-20261030/README.md).
+
 - **Fixed infinity jets and graded geometry alone do not exclude the residue fold — UNPROMOTED.** The [corrected explicit construction](xmodel/fixed-infinity-jets-and-graded-fold-swarmHQ-root-20261030.md) retains raw discrepancies -1, normal index1 and residue degree2 while matching any prescribed finite infinity-Jacobian precision, with degree allowed to grow. Its full graded source is smooth, normal and symplectic.
   The first independent review returned **GAP** on Poisson closure: the graded target is closed under the ambient bracket, but the original target algebra is not closed for n>=2. The correction and original verdict are preserved; final-text delta review remains required before promotion. These non-Keller pairs do not exclude full filtered/global methods or degree-dependent full-coefficient certificates. [Evidence and scope](box/fixed-infinity-jets-swarmHQ-20261030/README.md).
 

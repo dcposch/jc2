@@ -1146,3 +1146,8 @@ from the normalization boundary, general Keller degree bound or B=R.
 [Evidence ledger](AUDIT.md) · [Recent progress](PROGRESS.md) ·
 [Historical avenue inventory](history/APPROACHES-before-20260906-cleanup.md#1-master-union-table) ·
 [Replay and scope checks](docs/REPLAY.md)
+
+
+### Local rank-one restriction on a smooth ramification curve
+
+The [reviewed local lemma](xmodel/rank-one-ramification-swarmHQ-root-sol56-20261030.md) proves local parameter order one over the normalized image for a finite map of smooth surface germs with a single smooth reduced ramification curve and rank-one differential. PROVISIONAL / MANUAL; independent Sol PASS at exactly that scope, named analytic foundations, novelty unassessed. The image may still be singular or nonimmersed. Rank-zero points and singular normalization points remain open; smoothness of omitted curves does not supply either missing hypothesis. No global boundary degree-one or JC2 inference follows. [Evidence](box/rank-one-ramification-swarmHQ-20261030/README.md).
