@@ -6,6 +6,9 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-10-30
 
+- **Fixed infinity jets and graded geometry alone do not exclude the residue fold — UNPROMOTED.** The [corrected explicit construction](xmodel/fixed-infinity-jets-and-graded-fold-swarmHQ-root-20261030.md) retains raw discrepancies -1, normal index1 and residue degree2 while matching any prescribed finite infinity-Jacobian precision, with degree allowed to grow. Its full graded source is smooth, normal and symplectic.
+  The first independent review returned **GAP** on Poisson closure: the graded target is closed under the ambient bracket, but the original target algebra is not closed for n>=2. The correction and original verdict are preserved; final-text delta review remains required before promotion. These non-Keller pairs do not exclude full filtered/global methods or degree-dependent full-coefficient certificates. [Evidence and scope](box/fixed-infinity-jets-swarmHQ-20261030/README.md).
+
 - **Omitted boundary curves are smooth affine lines in the retained normalization package.** The [reviewed proof](xmodel/smooth-omitted-boundary-swarmHQ-root-20261030.md) shows that the reduced omitted curves in a normal affine extension of the coordinate ruling are smooth, without assuming rational singularities. Together with the retained finite birational A¹ normalization, each is A¹. The proof uses a proper ruled completion and fibre cohomology. [Evidence and scope](box/smooth-omitted-boundary-swarmHQ-20261030/README.md).
   ROOT proof, independent Sol review; PROVISIONAL / MANUAL / PASS_CONDITIONAL on the named foundations and inherited actual-source package. This closes the scheme-normality qualification for these curves. Target-image singularities, ramification, sheet-budget slack and exclusion of the boundary remain open; JC2 remains unresolved.
 
