@@ -1,0 +1,48 @@
+{
+  "completed_utc": "2026-10-30T23:05:53.298210+00:00",
+  "sympy_version": "1.12",
+  "scope": "Exactly n=0,1,2 and displayed rational identities; all-n claims require the written proof.",
+  "script_sha256": "81da4064246c76d146ccf8a1ba97729fc01a46da5b24c9b929ce9742f597fa25",
+  "cases": [
+    {
+      "n": 0,
+      "G": "-1/2",
+      "Jacobian_identity": true,
+      "Q_gradient_ideal_is_unit": true,
+      "G_at_zero": "-1/2",
+      "G_at_one": "-1/2",
+      "error_coefficient": "-3/2"
+    },
+    {
+      "n": 1,
+      "G": "3*w/14 - 5/7",
+      "Jacobian_identity": true,
+      "Q_gradient_ideal_is_unit": true,
+      "G_at_zero": "-5/7",
+      "G_at_one": "-1/2",
+      "error_coefficient": "12/7"
+    },
+    {
+      "n": 2,
+      "G": "-w**2/7 + w/2 - 6/7",
+      "Jacobian_identity": true,
+      "Q_gradient_ideal_is_unit": true,
+      "G_at_zero": "-6/7",
+      "G_at_one": "-1/2",
+      "error_coefficient": "-13/7"
+    }
+  ],
+  "identities": {
+    "P_gradient_ideal_is_unit": true,
+    "u_inverse": true,
+    "w_inverse": true,
+    "source_volume": true,
+    "P_in_chart": true,
+    "source_graded_r_inverse": true,
+    "source_graded_s": true,
+    "target_a_inverse": true,
+    "target_b_inverse": true,
+    "target_volume": true
+  },
+  "status": "PASS"
+}

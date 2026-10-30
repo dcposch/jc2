@@ -1,0 +1,45 @@
+{
+  "basis": "f5926b84f588e6dbac090a51d4bc84dd2b6d436f",
+  "status": "PROVISIONAL / MANUAL / independent PASS",
+  "candidate": {
+    "path": "CANDIDATE.md",
+    "sha256": "f1a101e51b918c6c45d8ba1b64afd03630498b023f24069e4ca7d17bc6617070",
+    "body_sha256": "ff22b653e196973665efaf841d005ffd8d73a4c38a9b39530b9427b7d78afb83",
+    "historical_label_retained": true
+  },
+  "review": {
+    "path": "../../xmodel/nonsingular-hamiltonian-jet-review-sol56-20261030T2300Z.md",
+    "sha256": "ac2285e88f35d7a2ebb1bd29ed2edbb20137bcc6afe274c43ee1e187536bf726",
+    "body_sha256": "21904025bc3844c52554332c5d98cd170467622e4101453994733a7a6d5de2ba",
+    "verdict": "PASS",
+    "configured_model": "gpt-5.6-sol",
+    "hosted_identity": "UNVERIFIED"
+  },
+  "integration": {
+    "path": "../../xmodel/nonsingular-components-and-infinity-jets-swarmHQ-root-sol56-20261030.md",
+    "sha256": "b29ec3606fee5a8f2f74ec904651a2b316c72854c9c42138432dd287e90ed57d",
+    "proof_source_lines": [
+      7,
+      128
+    ],
+    "proof_bytes": 5411,
+    "proof_sha256": "968b485aff141f2bc579873cbc324fbb92181a44df703e445b16b17ac79dc742",
+    "proof_exact_substring": true
+  },
+  "check": {
+    "path": "check.py",
+    "sha256": "81da4064246c76d146ccf8a1ba97729fc01a46da5b24c9b929ce9742f597fa25",
+    "author_script_sha256": "9d12f155e3bf4d203041b13ae9713d69beab43c7658bad8bd9e632d687936318",
+    "unchanged_scientific_prefix_lines": 55,
+    "change": "Replace exclusive HQ output-file write with JSON on stdout.",
+    "repeat_reason": "Validate portable output export; no expansion beyond n=0,1,2.",
+    "scientific_fields_equal_original": true
+  },
+  "limits": [
+    "Every pair is non-Keller.",
+    "Degree grows with precision.",
+    "Filtered target is not Poisson closed.",
+    "No fixed-degree or global-method exclusion.",
+    "Novelty unassessed; no JC2 proof or counterexample."
+  ]
+}
