@@ -1,0 +1,11 @@
+{
+  "frozen_public_basis": "aadc008ce5982630c79fa844a7f18d6bcad61f7d",
+  "candidate_sha256": "78ceadc10bc09672b823cfe3a09610985e0b393e763ef557d9c8042bd4dbbba7",
+  "review_sha256": "1c5c71bea50deff500451b92022a6f5893b3d121f06c921a240734a1896241d7",
+  "producer_check_sha256": "8eac08d6526c3d98cd6faf24d1b106c07fa93c0fd772dcdedac3f36b60173618",
+  "portable_check_sha256": "a98c06af81d46dab855c95c50f8440fcb9a42a674ecc5f1b1ea6111df7f0a220",
+  "producer_result_sha256": "6e7aba7da68a73d2a4bf237f3f7a980d66ed08b31415202445a8992302886ff9",
+  "portable_change": "Removed only original lines22-24, which wrote the result to a host-specific path. All mathematical checks and stdout output are unchanged. Portable copy syntax-checked, not reexecuted.",
+  "producer_check_source_utf8": "\"\"\"Exactly the three fixed-map identities authorized by CREMONA2355.\"\"\"\nfrom pathlib import Path\nimport datetime\nimport hashlib\nimport json\nimport sympy as S\n\nu, v = S.symbols('u v')\nP = u**4 + u*v\nQ = 3*v**2 + 12*u**3*v + 8*u**6\nchecks = {\n    'Jacobian_6v2': S.expand(S.diff(P,u)*S.diff(Q,v)-S.diff(P,v)*S.diff(Q,u)-6*v**2)==0,\n    'cusp_pullback_v3_times_9v_plus_8u3': S.expand(Q**2-64*P**3-v**3*(9*v+8*u**3))==0,\n    'simultaneous_sign_deck_symmetry': all(S.expand(f.subs({u:-u,v:-v}, simultaneous=True)-f)==0 for f in (P,Q)),\n}\nout = {'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),\n       'status':'PASS' if all(checks.values()) else 'FAIL',\n       'scope':'Three polynomial identities for one previously reviewed map only; no field-degree/Galois/polynomialization or JC2 verification.',\n       'sympy_version':S.__version__,\n       'script_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),\n       'checks':checks}\nwith Path('/home/ubuntu/swarmHQ/runtime/cremona2355-fixed-check-result.json').open('x') as f:\n    json.dump(out,f,indent=2)\n    f.write('\\n')\nprint(json.dumps(out))\n",
+  "scope": "Three fixed identities only. No computational verification of all k, arbitrary automorphisms or source substitutions, the omitted-A1 premise, or JC2."
+}

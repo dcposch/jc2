@@ -4,6 +4,10 @@ Dated mathematical developments across the campaign. Evidence tiers and scope re
 those recorded in [AUDIT.md](AUDIT.md) and the linked reports. Current open questions
 are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
+## 2026-10-31
+
+- **A whole-source obstruction to one-step polynomialization of the fixed rank-zero map.** The [conditional proof](xmodel/one-step-polynomialization-obstruction-swarmHQ-root-sol56-20261031.md) rules out every integer monomial symplectic target step bracketed by arbitrary polynomial target automorphisms, even after arbitrary dominant rational source substitution. Persistent ramification would force an omitted affine line to dominate a rational affine curve with at least two punctures. ROOT proof; independent Sol PASS_CONDITIONAL on the explicitly stated omitted-A1 normalization package; PROVISIONAL / MANUAL. Three fixed polynomial identities PASS. This does not cover multiple nonpolynomial target steps or close an actual Keller gap; novelty is unassessed and JC2 remains unresolved. [Evidence and replay](box/one-step-polynomialization-obstruction-20261031/README.md).
+
 ## 2026-10-30
 
 - **Component nonsingularity does not repair the finite-infinity-jet obstruction.** The [reviewed all-n construction](xmodel/nonsingular-components-and-infinity-jets-swarmHQ-root-sol56-20261030.md) fixes P=x-x^3*y^5 and one infinity valuation, has globally nonsingular Q_n, and approximates Jacobian1 to arbitrary order although P has no exact polynomial mate. Its Hamiltonian image is not closed in the valuation topology. Full graded rings are smooth and symplectic, with e1/f2; filtered Poisson closure is absent. PROVISIONAL / MANUAL, independent PASS; three finite sanity cases and ten identities PASS. Every pair is non-Keller, degree grows, novelty is unassessed, and JC2 remains unresolved. [Evidence](box/nonsingular-components-infinity-jets-20261030/README.md).
