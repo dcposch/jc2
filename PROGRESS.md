@@ -6,6 +6,8 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-10-31
 
+- **Smooth ramification support does not force a smooth normal source.** The [reviewed degree4 finite-flat cover](xmodel/smooth-ramification-singular-source-swarmHQ-root-sol56-20261031T034712Z.md) has singular quadric-cone source and exactly one smooth reduced ramification-support line, which is non-Cartier at the singularity. Independent Sol PASS; PROVISIONAL / MANUAL. Its complement is A1 times G_m, so this refutes a local smoothness shortcut while leaving the actual whole-A2 normalization and JC2 unresolved. It derives from the known rank-zero donor; novelty is unassessed. [Exact proof and evidence](box/smooth-ramification-singular-source-swarmHQ-20261031T034712Z/README.md).
+
 - **A whole-source obstruction to one-step polynomialization of the fixed rank-zero map.** The [conditional proof](xmodel/one-step-polynomialization-obstruction-swarmHQ-root-sol56-20261031.md) rules out every integer monomial symplectic target step bracketed by arbitrary polynomial target automorphisms, even after arbitrary dominant rational source substitution. Persistent ramification would force an omitted affine line to dominate a rational affine curve with at least two punctures. ROOT proof; independent Sol PASS_CONDITIONAL on the explicitly stated omitted-A1 normalization package; PROVISIONAL / MANUAL. Three fixed polynomial identities PASS. This does not cover multiple nonpolynomial target steps or close an actual Keller gap; novelty is unassessed and JC2 remains unresolved. [Evidence and replay](box/one-step-polynomialization-obstruction-20261031/README.md).
 
 ## 2026-10-30

@@ -1,6 +1,6 @@
 # Research frontier
 
-Updated October 30, 2026. **JC₂ remains unresolved.** These are mathematical
+Updated October 31, 2026. **JC₂ remains unresolved.** These are mathematical
 questions and evidence boundaries, not assignments or machine-launch instructions.
 Independent swarms may pursue new approaches or replicate work with explicit scope.
 
@@ -11,6 +11,8 @@ dispositions and the detailed attempted mechanisms; its scheduling directions ar
 historical. A searchable local copy is [in history](history/APPROACHES-through-20260915.md).
 
 ## Current questions
+
+The October31 [singular-source counterexample](xmodel/smooth-ramification-singular-source-swarmHQ-root-sol56-20261031T034712Z.md) shows that a finite normal surface over a smooth plane can have one smooth reduced ramification-support line while the surface is singular. The explicit degree4 cover has non-Cartier E and complement A1 times G_m. PROVISIONAL / MANUAL, independent Sol PASS. It closes that local smoothness inference; smoothness of the actual whole-A2 normalization remains open. [Evidence](box/smooth-ramification-singular-source-swarmHQ-20261031T034712Z/README.md).
 
 The October30 [nonsingular-component construction](xmodel/nonsingular-components-and-infinity-jets-swarmHQ-root-sol56-20261030.md) strengthens the finite-infinity-jet control: one fixed globally nonsingular P has no polynomial mate, while globally nonsingular Q_n approach Jacobian1 to arbitrary order at one fixed raw-log-1/e1/f2 valuation. Both full graded rings are smooth and symplectic; the filtered target is not Poisson closed. PROVISIONAL / MANUAL, independent PASS. This leaves the actual global Keller constraint open; degree grows with precision and no fixed-degree exclusion follows. [Proof and checks](box/nonsingular-components-infinity-jets-20261030/README.md).
 
