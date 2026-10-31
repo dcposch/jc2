@@ -1170,3 +1170,8 @@ The [reviewed local lemma](xmodel/rank-one-ramification-swarmHQ-root-sol56-20261
 ### Rank zero defeats the smooth-support-only extension
 
 The [reviewed finite counterexample](xmodel/rank-zero-ramification-counterexample-swarmHQ-root-sol56-20261030.md), an [exact rediscovery of the September15 construction](xmodel/rank-zero-counterexample-prior-record-swarmHQ-root-20261030.md), has `P=u^4+uv, Q=3v^2+12u^3v+8u^6`, Jacobian `6v^2`, one smooth reduced critical line, and normalized-image parameter `t=u^2` at the rank-zero origin. PROVISIONAL / MANUAL; independent Sol PASS. The critical scheme is doubled, so this refutes removing rank one under the reduced-support hypothesis, without addressing a separately reduced Jacobian divisor. Its complement A1 times Gm is not the marked whole Keller source. A closing argument must supply additional whole-source information; no local-control family or donor-repair successor follows. [Evidence and qualifications](box/rank-zero-ramification-counterexample-swarmHQ-20261030/README.md).
+
+
+### Smooth radial pencils do not force an affine-line fibre
+
+The [reviewed explicit pencil](xmodel/smooth-pencil-no-A1-control-swarmHQ-root-sol56-20261031T1730Z.md) h=[xy-1:x+y(xy-1)] is smooth and surjective A2->P1, with every fibre irreducible and rational, but none containing A1. Its fibres are C* or A1 minus two points. MANUAL / PROVISIONAL / independent PASS; novelty unassessed. Thus even a special-A1-fibre shortcut needs more than smooth whole-plane pencil geometry. The actual Keller radial coordinate must be etale on every fibre; this nonconstant-Jacobian control fails that condition. Keller surjectivity and JC2 remain unresolved. [Evidence](box/smooth-pencil-no-A1-control-swarmHQ-20261031T1730Z/README.md).

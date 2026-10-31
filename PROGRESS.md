@@ -6,6 +6,8 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-10-31
 
+- **A smooth pencil need not have an affine-line fibre.** The [reviewed control](xmodel/smooth-pencil-no-A1-control-swarmHQ-root-sol56-20261031T1730Z.md) h=[xy-1:x+y(xy-1)] has only C* and twice-punctured affine-line fibres, all irreducible and rational. MANUAL / PROVISIONAL / independent PASS, novelty unassessed. This refutes the universal special-A1-fibre shortcut; its nonconstant Jacobian and radial critical points keep the actual Keller problem open. [Evidence](box/smooth-pencil-no-A1-control-swarmHQ-20261031T1730Z/README.md).
+
 - **Every nonproper connected component must contain a cycle.** The [reviewed localization](xmodel/nonproper-component-euler-bound-swarmHQ-root-sol56-20261031T1425Z.md) partitions the whole-source sheet deficit by target connected components. A contractible component in a disconnected locus would have inverse Euler characteristic at least two, contradicting the reviewed curve alternatives. Combined with the whole-curve theorem, this gives b1(D)>=b0(D) and chi_c(D)<=0. MANUAL / PROVISIONAL, independent PASS_CONDITIONAL; inherited foundations, novelty unassessed, JC2 unresolved. [Evidence](box/nonproper-component-euler-bound-swarmHQ-20261031T1425Z/README.md).
 
 - **Contractible whole nonproper-value curves are excluded, including reducible unions.** The [reviewed proof](xmodel/contractible-nonproper-curve-swarmHQ-root-sol56-20261031T1245Z.md) combines the topology of the full inverse curve with the sheet budget. MANUAL / PROVISIONAL, independent PASS_CONDITIONAL on named inherited foundations; noncontractible cases and JC2 remain open, and novelty is unassessed. [Evidence](box/contractible-nonproper-curve-swarmHQ-20261031T1245Z/README.md).

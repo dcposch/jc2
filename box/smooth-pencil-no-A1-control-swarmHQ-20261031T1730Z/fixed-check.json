@@ -1,0 +1,23 @@
+{
+  "utc": "2026-10-31T17:14:47.783052+00:00",
+  "sympy_version": "1.12",
+  "candidate": {
+    "f": "x*y - 1",
+    "g": "x + y*(x*y - 1)"
+  },
+  "checks": {
+    "bezout_correct": "-1",
+    "admission_bezout_prediction": "-2*x*y + 1",
+    "omega_dx": "1",
+    "omega_dy": "-x**2*y**2 + x**2 + 2*x*y - 1",
+    "omega_dy_expected_residual": "0",
+    "jacobian": "x*y**2 - x - y",
+    "fibre_identity_residual": "0",
+    "discriminant": "1 - 4*lambda**2",
+    "resultant_D_N": "-lambda**3",
+    "inverse_D_relation": "0",
+    "infinite_fibre_relation": "0"
+  },
+  "scope": "One fixed symbolic identity check; no parameter enumeration, theorem certification or independent review.",
+  "correction": "The prospective manual Bezout prediction had y^2-1 instead of y^2+1. The actual identity is (1+y^2)*f-y*g=-1. Preserve original admission; correct the candidate proof. All differential/fibre/discriminant/resultant predictions checked."
+}
