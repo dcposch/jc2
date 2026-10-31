@@ -1,0 +1,42 @@
+{
+  "scope": "Mathematical custody only; no provider log, credentials, private reasoning or fleet inventory.",
+  "candidate_sha256": "f4c7ef536022d81e757e0d7d124acfd9bc82f16bdb88773eac3d69d30e47a470",
+  "review_sha256": "5b01a778a1f3a1003d5f445857b7b4dd0911f381125bc7ab5742e09ef9989169",
+  "review_verdict": "PASS_CONDITIONAL",
+  "review_configured_model": "gpt-5.6-sol/ultra",
+  "producer_campaign_configured_model": "gpt-6-astra",
+  "hosted_identities": "UNVERIFIED",
+  "candidate_frozen_HQ_commit": "3cf804d146cfb709e0526c8917b8a499e59c1245",
+  "public_parent_basis": "88ce078b25b3884da052f3d15181fcf700a7e101",
+  "canonical_parent_sha256": {
+    "BUDGET.md": "5c4baaef7e6d5d1ab6edc68a1eb249b02732f001f5846e294557ee701eee5907",
+    "SMOOTH.md": "6fac5370b29226212461bebfa437fe00dde4c1351d2dedbc3f9ab796224a97a6"
+  },
+  "producer_reading": "Two complete sealed parents192LF within canonical200 but32 over conservatively overlapping history160; this qualification is not erased by review.",
+  "review_required_reading": {
+    "nonSTATE_LF": 1942,
+    "STATE_LF": 195,
+    "verified_windows": 54,
+    "repeated_body_LF": 0,
+    "conservative_nonSTATE_including_help_wrapper_governors": 2091,
+    "nonSTATE_cap": 3000,
+    "STATE_cap": 200
+  },
+  "ROOT_review_reading": {
+    "whole_LF": 105,
+    "cap": 200,
+    "repeated_LF": 0
+  },
+  "integrity": "All17 retained packet files and17 launcher postchecks unchanged; canonical input seals passed before body access. Original output seal valid before unchanged-byte freeze from664 to444.",
+  "report_ACK_previews_observed": 0,
+  "worker_failed_execs": 0,
+  "evidence_limits": [
+    "Actual model-context inclusion is not independently observable.",
+    "Flattened CLI log does not independently certify outer-response grouping.",
+    "The review uses inherited smooth-E and analytic/completion foundations; no new source-proof audit.",
+    "Public formatting/integration is ROOT work, not a separate independent review."
+  ],
+  "public_proof_source": "review.md lines24-76, byte-identical contiguous excerpt",
+  "new_computation": "none; desk-only proof",
+  "novelty": "unassessed"
+}
