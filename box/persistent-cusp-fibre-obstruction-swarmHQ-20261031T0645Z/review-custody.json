@@ -1,0 +1,77 @@
+{
+  "date": "2026-10-31T06:46:49.563907+00:00",
+  "scope": "Independent exact-candidate review; conditional on named foundations, no novelty or JC2 claim.",
+  "candidate": {
+    "path": "xmodel/persistent-cusp-ramified-fibre-candidate-swarmHQ-root-20261031T0630Z.md",
+    "sha256": "3032f55329fba0294b8b6f07f8fc55bc1d2e7f63eef356e5b3cd1fc42699ffe7",
+    "body_sha256": "eb40e4f81b565953b35aa56944caea1c30a8deacb2096c5a5737fd1dab135851",
+    "basis": "22d3eb834cd0d985f74472502c66300267f68dbe"
+  },
+  "review": {
+    "original_path": "xmodel/persistent-cusp-fibre-review-sol56-20261031T0635Z.md",
+    "retained_path": "box/persistent-cusp-fibre-obstruction-swarmHQ-20261031T0645Z/independent-review.md",
+    "sha256": "5a599239ef04873655e5a45bd56a4cc4af31ac0035a07990ddef6a77a87f96e4",
+    "body_sha256": "9a248930cf0e71fe6bbd92898c6c092d8d57cee7839b521314b07a7d2b9699b0",
+    "basis": "a12c5f367f87f599f1fd1cdf731eca3e7acdb596",
+    "verdict": "PASS_CONDITIONAL",
+    "configured_model": "gpt-5.6-sol",
+    "reasoning": "ultra",
+    "hosted_identity": "UNVERIFIED",
+    "terminal": "NORMAL_EXIT",
+    "exit_code": 0,
+    "utc_end": "2026-10-31T06:41:54.295531Z",
+    "elapsed_seconds": 338.789158257
+  },
+  "canonical_inputs": [
+    {
+      "name": "CANDIDATE.md",
+      "path": "xmodel/persistent-cusp-ramified-fibre-candidate-swarmHQ-root-20261031T0630Z.md",
+      "sha256": "3032f55329fba0294b8b6f07f8fc55bc1d2e7f63eef356e5b3cd1fc42699ffe7"
+    },
+    {
+      "name": "PERSISTENCE.md",
+      "path": "xmodel/ramified-sheet-persistent-singular-branch-swarmHQ-root-astra-sol56-20261027T041000Z.md",
+      "sha256": "8e9a2c92d7443bce1afe267492c803f4d429759f804f000c377a53e8351c746b"
+    },
+    {
+      "name": "BUDGET.md",
+      "path": "xmodel/all-keller-sheet-budget-swarmHQ-root-astra-sol56-20261026T005000Z.md",
+      "sha256": "5c4baaef7e6d5d1ab6edc68a1eb249b02732f001f5846e294557ee701eee5907"
+    },
+    {
+      "name": "COVER.md",
+      "path": "xmodel/smooth-ramification-singular-source-swarmHQ-root-sol56-20261031T034712Z.md",
+      "sha256": "2429561cbda33049a4d1737d04cd46771b58dd7d363002900adc24f755f5536b"
+    }
+  ],
+  "proof_extract": {
+    "review_lines": "16-44",
+    "LF": 29,
+    "bytes": 3890,
+    "sha256": "e65f421f0dab03374b03e0bbc73c79ce565cc920f110273e78d7f58fe10e512a",
+    "byte_identical": true
+  },
+  "reading": {
+    "required_nonSTATE": 2095,
+    "STATE": 188,
+    "windows": 61,
+    "repeats": 0,
+    "conservative_nonSTATE_including_wrapper_default_help": 2245,
+    "cap": 3000,
+    "ROOT_whole_review_LF": 61
+  },
+  "integrity": {
+    "all18charged_inputs_unchanged": true,
+    "terminal_unit_and_six_observed_PIDs_absent": true,
+    "canonical_seal_verified": true,
+    "reviewer_artifact_finalize_certified": false
+  },
+  "qualification": [
+    "All10 nonreader execution metadata records inspected; exec4/5 are the pinned reader general/window help commands.",
+    "Per-command byte/line contracts, complete returned text and frozen hashes verified. Flattened CLI log does not independently certify outer response grouping or actual model-context inclusion. No stronger claim.",
+    "Reviewer source scope is conditional on named foundations; AM article body was not source-audited.",
+    "Legacy external lane custody; no artifact_finalize certification claimed for the reviewer report.",
+    "Private CLI reasoning neither copied nor displayed; private log metadata/hash only."
+  ],
+  "publication": "ROOT integration restates the reviewed hypotheses; proof is the exact independent-review substring. No independent review of final formatting is claimed. Private logs, credentials, operational policies and packets are not published."
+}
