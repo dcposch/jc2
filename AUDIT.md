@@ -26917,3 +26917,15 @@ For f:Y -> P^2 generically finite of degree N>1 over C, with Y smooth projective
 The proof uses MINIMAL-RESOLUTION-RAMIFICATION-GENUS-1 at its retained named-foundation tier, excludes every Q-negative extremal contraction, handles Q numerically zero by the boundary basis and finite-etale A^2 endpoint, and excludes Q^2=0 by Riemann--Roch and a movable-pencil argument. Hodge index and adjunction identify the null curves. Standard cone/contraction, rational-surface, duality, Bertini/Stein, localization and finite-etale foundations remain named imports. No semiampleness theorem or fresh source-proof audit is claimed.
 
 These are constraints on the SAME minimal model. An extra boundary blowup gives R_new.E=-1 and Q_new.E=-2, so arbitrary refinements are outside the claim. No opposing intersection/genus inequality, trace-pole removal, integrality, properness, surjectivity or JC2 proof follows. No new OPEN identifier or computational certificate.
+
+## FILTERED-EULER-LIFT-RIGIDITY-1 — 2026-11-07
+
+Producer swarmHQ ROOT; independent reviewer configured gpt-5.6-sol / ultra, hosted identity unverified. **MANUAL / PROVISIONAL / CONFIRM_EXACT_FILTRATION_THEOREM**; literature novelty unassessed.
+
+Let B=C[x,y], w=x^2-y^5, with the normal-form filtration delta(x,y,w)=(5,2,3) and x-exponent at most one. If a polynomial Keller map F^*:x->P,y->Q satisfies delta(F^*f)=e delta(f) for every nonzero f in B and an integer e>=1, then e=1, P=alpha x, Q=beta y, alpha^2=beta^5. For Jacobian one, alpha beta=1 and alpha^7=1. This is a full filtration-scaling assumption, not a claim about arbitrary Keller maps or just prescribed leading terms.
+
+[Proof](xmodel/filtered-euler-lift-rigidity-swarmHQ-root-sol56-20261107T1755Z.md); [frozen producer and independent review](box/filtered-euler-lift-rigidity-swarmHQ-20261107T1755Z/README.md). The canonical seals and unchanged input hashes passed, and ROOT read the entire 189-LF independent review. The public disposition records the help-count correction and overlong ROOT authored-report display, which received zero additional body-reading credit; no private reasoning or sealed mathematical body was altered.
+
+The polynomial transported Euler derivation has finite filtered order. A positive leading part would annihilate the entire injective graded image, hence its finite separable fraction-field extension, a contradiction. Explicit degree-zero derivation rigidity, including the yw term, and divergence then force the diagonal map. This assumes no integral source extension, properness, boundary derivation extension, or complete flow.
+
+Corollary: on S=C[X,Y,W,T]/(X^2-Y^5-WT^7), no e>1 full homogeneous polynomial lift with weights(5e,2e,3e), T->T^e and an injective Poisson central map exists. The full relation itself forces the specialized Jacobian to be one. Thus the previously open k>=2 full-polynomial-lift cases in this exact filtration are closed. Merely rational/completed-local lifts, arbitrary filtrations, their realization by a hypothetical Keller map, finite normalization and JC2 remain open. No computational certificate or new OPEN identifier.

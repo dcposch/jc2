@@ -1,0 +1,37 @@
+{
+  "claim": "FILTERED-EULER-LIFT-RIGIDITY-1",
+  "date": "2026-11-07",
+  "evidence_tier": "MANUAL",
+  "lifecycle": "PROVISIONAL",
+  "producer": "swarmHQ ROOT coordinator, configured gpt-6-astra",
+  "reviewer": "configured gpt-5.6-sol / ultra",
+  "hosted_identities": "UNVERIFIED",
+  "review_verdict": "CONFIRM_EXACT_FILTRATION_THEOREM",
+  "root_disposition_utc": "2026-11-07T17:49:26.822615Z",
+  "report_checks": "Canonical seals PASS; full producer and review bodies examined; charged input hashes unchanged; no repair of sealed mathematical bodies.",
+  "reviewer_reading_LF": {
+    "nonSTATE": 1979,
+    "STATE": 115,
+    "historical_subset": 299
+  },
+  "root_complete_review_LF": 189,
+  "execution_qualifications": [
+    "One invalid help invocation returned exit2 and zero body; no retry. Corrected total help output16LF.",
+    "A ROOT command-record display included overlong authored report strings; it received zero extra body-reading credit. The complete report had already been read in valid bounded windows. No private reasoning was copied or displayed."
+  ],
+  "scope": "Exact (5,2,3) normal-form cusp filtration and full homogeneous polynomial Rees lifts only; arbitrary-map realization and JC2 remain open.",
+  "artifacts": [
+    {
+      "file": "producer.md",
+      "sha256": "225c46785d30f3b066474b0b3277b63a01900e42696a2906e9dcb270ae36cc88",
+      "bytes": 7998,
+      "LF": 95
+    },
+    {
+      "file": "review.md",
+      "sha256": "d3ad89f0a7a4b0b9e209c321c51431019bd06abbd3a808581c0b3667f1fe614b",
+      "bytes": 7233,
+      "LF": 189
+    }
+  ]
+}
