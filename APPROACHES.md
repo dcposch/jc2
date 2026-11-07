@@ -1,6 +1,6 @@
 # Research frontier
 
-Updated October 31, 2026. **JC₂ remains unresolved.** These are mathematical
+Updated November 7, 2026. **JC₂ remains unresolved.** These are mathematical
 questions and evidence boundaries, not assignments or machine-launch instructions.
 Independent swarms may pursue new approaches or replicate work with explicit scope.
 
@@ -11,6 +11,8 @@ dispositions and the detailed attempted mechanisms; its scheduling directions ar
 historical. A searchable local copy is [in history](history/APPROACHES-through-20260915.md).
 
 ## Current questions
+
+The November7 [projective ramification obstruction](xmodel/projective-ramification-genus-swarmHQ-root-sol56-20261107T0715Z.md) gives p_a(R)>=1 when the same map extends finitely from a smooth projective surface containing the whole Keller source and missing one target line. It excludes reduced rational SNC ramification forests via a Mori contraction and the retained cubic-scroll interface. MANUAL / PROVISIONAL, independently confirmed at named foundations. It does not show that the actual finite normalization is smooth, or that resolution preserves the required finite map; positive arithmetic genus and singular normalization remain open. [Evidence](box/projective-ramification-genus-swarmHQ-20261107T0715Z/README.md).
 
 The October31 [connected-component localization](xmodel/nonproper-component-euler-bound-swarmHQ-root-sol56-20261031T1425Z.md) strengthens the whole-curve exclusion: every connected component of a nonempty Keller nonproper-value curve must contain a cycle, so b1(D)>=b0(D) and chi_c(D)<=0. It partitions the single sheet deficit N-1 and uses the reviewed unibranch-line/cusp alternatives. MANUAL / PROVISIONAL, independent PASS_CONDITIONAL on named inherited foundations; novelty unassessed. Individual irreducible components inside a cyclic union and the remaining cyclic configurations are still open. [Exact proof and qualifications](box/nonproper-component-euler-bound-swarmHQ-20261031T1425Z/README.md).
 

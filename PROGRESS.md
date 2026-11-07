@@ -4,6 +4,10 @@ Dated mathematical developments across the campaign. Evidence tiers and scope re
 those recorded in [AUDIT.md](AUDIT.md) and the linked reports. Current open questions
 are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
+## 2026-11-07
+
+- **A smooth finite completion forces positive ramification arithmetic genus.** The [reviewed proof](xmodel/projective-ramification-genus-swarmHQ-root-sol56-20261107T0715Z.md) shows p_a(R)>=1 for a finite degree N>1 map from a smooth projective surface containing the whole Keller source A^2 into P^2, with the source avoiding the pullback of one target line. Thus the full ramification divisor cannot be a reduced rational SNC forest. MANUAL / PROVISIONAL, independent CONFIRMED_AT_NAMED_FOUNDATIONS. Actual normalization smoothness and the loss of finiteness on resolution remain gaps; arithmetic genus is not geometric genus, novelty is unassessed, and JC2 is unresolved. [Evidence](box/projective-ramification-genus-swarmHQ-20261107T0715Z/README.md).
+
 ## 2026-10-31
 
 - **A smooth pencil need not have an affine-line fibre.** The [reviewed control](xmodel/smooth-pencil-no-A1-control-swarmHQ-root-sol56-20261031T1730Z.md) h=[xy-1:x+y(xy-1)] has only C* and twice-punctured affine-line fibres, all irreducible and rational. MANUAL / PROVISIONAL / independent PASS, novelty unassessed. This refutes the universal special-A1-fibre shortcut; its nonconstant Jacobian and radial critical points keep the actual Keller problem open. [Evidence](box/smooth-pencil-no-A1-control-swarmHQ-20261031T1730Z/README.md).
