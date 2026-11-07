@@ -1,0 +1,37 @@
+{
+  "claim": "COPRIME-CUSP-FILTERED-EULER-RIGIDITY-1",
+  "date": "2026-11-07",
+  "evidence_tier": "MANUAL",
+  "lifecycle": "PROVISIONAL",
+  "producer": "swarmHQ ROOT, configured gpt-6-astra",
+  "reviewer": "configured gpt-5.6-sol / ultra",
+  "hosted_identities": "UNVERIFIED",
+  "verdict": "CONFIRM_UNIFORM_CUSP_THEOREM",
+  "root_adopted_utc": "2026-11-07T18:22:15.603101Z",
+  "root_whole_review_LF": 204,
+  "worker_whole_LF": {
+    "nonSTATE": 2043,
+    "STATE": 122,
+    "historical_subset": 378
+  },
+  "checks": "Both input report seals, final review seal, all18 charged files and all tool/prompt pre/post hashes passed. All66 commands and54 reading windows inspected. No failed worker commands or retries.",
+  "qualifications": [
+    "Reported help subtotal29LF was30LF, within100LF cap; no repeated body or own-report preview.",
+    "ROOT exact-write AST check first omitted the valid -B flag, stopped before mutation, then was corrected; no charged run or sealed body changed."
+  ],
+  "scope": "General degree-zero Poisson/divergence rigidity lemma plus explicitly verified coprime binomial-cusp application. No arbitrary-filtration Liouville existence, actual-map reduction, or general finite-normalization/JC2 claim.",
+  "artifacts": [
+    {
+      "file": "producer.md",
+      "sha256": "136603ace7abb1279bed04341f7cf42e89de52af7c2bfbb16d1299767033af9e",
+      "bytes": 8439,
+      "LF": 164
+    },
+    {
+      "file": "review.md",
+      "sha256": "8d8e21cc6a8c8be42f9598d38cd3c32200ee4514bd55e4c8119e956e65dfafe6",
+      "bytes": 9754,
+      "LF": 204
+    }
+  ]
+}
