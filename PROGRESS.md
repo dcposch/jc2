@@ -6,6 +6,8 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-11-07
 
+- **Ramification and its adjoint are nef and big on the actual minimal model.** The [reviewed positivity theorem](xmodel/minimal-resolution-ramification-positivity-swarmHQ-root-sol56-20261107T122700Z.md) gives nonnegative intersection with every curve, with zero intersection only on contracted smooth rational (-2)-curves. It also gives p_a(R)>=2 and at least two adjoint sections. MANUAL / PROVISIONAL, independent CONFIRMED_AT_NAMED_FOUNDATIONS, relative to the preceding genus interface and named standard foundations. Singular normalizations remain allowed; extra boundary blowups are excluded. A conflicting whole-source condition is still missing, novelty is unassessed, and JC2 remains unresolved. [Evidence](box/minimal-resolution-ramification-positivity-swarmHQ-20261107T1220Z/README.md).
+
 - **The ramification-genus obstruction now reaches the actual minimal resolution.** The [reviewed extension](xmodel/minimal-resolution-ramification-genus-swarmHQ-root-sol56-20261107T0755Z.md) gives p_a(R)>=1 on the minimal resolution of a hypothetical Keller counterexample's finite projective normalization. It uses a nef-and-big pullback and minimality, so it needs neither a smooth normalization nor a finite resolved map. MANUAL / PROVISIONAL, independent CONFIRMED_AT_NAMED_FOUNDATIONS; the [earlier smooth-finite theorem](xmodel/projective-ramification-genus-swarmHQ-root-sol56-20261107T0715Z.md) remains a dependency. An opposing genus bound is still missing, arbitrary boundary blowups change the invariant, novelty is unassessed, and JC2 remains unresolved. [Evidence](box/minimal-resolution-ramification-genus-swarmHQ-20261107T0755Z/README.md).
 
 ## 2026-10-31
