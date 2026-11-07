@@ -6,7 +6,7 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-11-07
 
-- **A smooth finite completion forces positive ramification arithmetic genus.** The [reviewed proof](xmodel/projective-ramification-genus-swarmHQ-root-sol56-20261107T0715Z.md) shows p_a(R)>=1 for a finite degree N>1 map from a smooth projective surface containing the whole Keller source A^2 into P^2, with the source avoiding the pullback of one target line. Thus the full ramification divisor cannot be a reduced rational SNC forest. MANUAL / PROVISIONAL, independent CONFIRMED_AT_NAMED_FOUNDATIONS. Actual normalization smoothness and the loss of finiteness on resolution remain gaps; arithmetic genus is not geometric genus, novelty is unassessed, and JC2 is unresolved. [Evidence](box/projective-ramification-genus-swarmHQ-20261107T0715Z/README.md).
+- **The ramification-genus obstruction now reaches the actual minimal resolution.** The [reviewed extension](xmodel/minimal-resolution-ramification-genus-swarmHQ-root-sol56-20261107T0755Z.md) gives p_a(R)>=1 on the minimal resolution of a hypothetical Keller counterexample's finite projective normalization. It uses a nef-and-big pullback and minimality, so it needs neither a smooth normalization nor a finite resolved map. MANUAL / PROVISIONAL, independent CONFIRMED_AT_NAMED_FOUNDATIONS; the [earlier smooth-finite theorem](xmodel/projective-ramification-genus-swarmHQ-root-sol56-20261107T0715Z.md) remains a dependency. An opposing genus bound is still missing, arbitrary boundary blowups change the invariant, novelty is unassessed, and JC2 remains unresolved. [Evidence](box/minimal-resolution-ramification-genus-swarmHQ-20261107T0755Z/README.md).
 
 ## 2026-10-31
 
